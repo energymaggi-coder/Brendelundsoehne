@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neuro+ Professional Tools — Brendel &amp; Söhne</title>
+<meta name="description" content="Paul Mitchell Neuro+ Profi-Tools für Friseursalons: Dry+ Föhn, Style+, Curl+, Smooth. SmartSense+, NeutraHeat. B2B über Brendel & Söhne.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#18181A;--paper:#EFEFEF;--paper2:#E7E7E4;--muted:#8C8A86;--hair:#DCDCD9;--black:#0E0E10}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",-apple-system,sans-serif;color:var(--ink);background:var(--paper);font-weight:400;line-height:1.7;-webkit-font-smoothing:antialiased;font-size:16px}
+img{max-width:100%;display:block}a{color:inherit}
+.serif{font-family:"Cormorant Garamond",Georgia,serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+.eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);font-weight:500}
+h1,h2,h3,h4{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;line-height:1.06;letter-spacing:.01em}
+
+header{position:sticky;top:0;z-index:50;background:rgba(239,239,239,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair)}
+.hdr{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:1120px;margin:0 auto}
+.logo{font-size:13px;letter-spacing:.22em;font-weight:500}
+.hdr-r{display:flex;gap:26px;align-items:center;font-size:13px}
+.hdr-r a{text-decoration:none;color:var(--muted);letter-spacing:.04em;cursor:pointer}
+.hdr-r a.cta{color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px}
+
+/* HERO — Vollflächen-Video + Verlauf, Text darüber */
+.hero{position:relative;min-height:94vh;background:#0a0a0c;color:#F3F0E9;overflow:hidden;display:flex;align-items:center}
+.hero #heroVideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
+  transform:translate3d(0,0,0) scale(1.12);will-change:transform;backface-visibility:hidden}
+.hero .scrim{position:absolute;inset:0;z-index:1;background:
+  linear-gradient(90deg,rgba(10,10,12,.94) 0%,rgba(10,10,12,.78) 34%,rgba(10,10,12,.42) 60%,rgba(10,10,12,.12) 100%),
+  linear-gradient(0deg,rgba(10,10,12,.55) 0%,rgba(10,10,12,0) 45%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-block:90px}
+.hero .eyebrow{color:#b7afa0}
+.hero h1{font-size:clamp(46px,7vw,92px);font-weight:300;margin:24px 0 0;color:#F6F3EC;max-width:760px}
+.hero h1 em{font-style:italic;color:#cdbf9f}
+.hero .sub{margin-top:26px;max-width:430px;font-size:16.5px;line-height:1.75;color:#d7d2c8;font-weight:300}
+.hero-cta{margin-top:38px;display:flex;gap:14px;flex-wrap:wrap}
+
+.btn{display:inline-block;padding:14px 28px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:.18s;border:1px solid transparent;cursor:pointer;font-family:inherit}
+.btn-solid{background:#F3F0E9;color:var(--black)}.btn-solid:hover{background:#fff}
+.btn-line{border-color:rgba(243,240,233,.45);color:#F3F0E9;background:transparent}.btn-line:hover{border-color:#F3F0E9}
+.btn-ink{background:var(--ink);color:var(--paper)}.btn-ink:hover{background:#000}
+
+.tech{border-bottom:1px solid var(--hair)}
+.tech .wrap{display:grid;grid-template-columns:repeat(3,1fr);padding:58px 32px}
+.tech .col{padding:0 36px;border-left:1px solid var(--hair)}.tech .col:first-child{padding-left:0;border-left:none}
+.tech .num{font-family:"Cormorant Garamond",serif;font-size:26px;color:var(--muted)}
+.tech h3{font-size:22px;margin:6px 0 8px}.tech p{font-size:13.5px;color:#5c574d;font-weight:300;line-height:1.65}
+
+section.block{padding:84px 0}
+.sec-head{max-width:640px;margin-bottom:44px}
+.sec-head h2{font-size:clamp(30px,4.2vw,46px);font-weight:300;margin:14px 0 0}
+.sec-head .lead{margin-top:16px;color:#5c574d;font-weight:300;font-size:16.5px}
+
+/* Galerie (Hauptbild + Thumbs) */
+.gal .main{background:#fff;border:1px solid var(--hair);display:flex;align-items:center;justify-content:center;cursor:zoom-in;position:relative}
+.gal .main img{width:auto;object-fit:contain}
+.gal .thumbs{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.gal .thumbs button{width:56px;height:56px;background:#fff;border:1px solid var(--hair);padding:5px;cursor:pointer;border-radius:0}
+.gal .thumbs button.active{border-color:var(--ink)}
+.gal .thumbs img{width:100%;height:100%;object-fit:contain}
+.zoomhint{position:absolute;right:10px;bottom:9px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* Herzstück */
+.hero-prod{display:grid;grid-template-columns:1fr 1.04fr;gap:56px;align-items:center}
+.hero-prod .main{aspect-ratio:4/5;padding:28px}.hero-prod .main img{max-height:430px}
+.hero-prod .tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.hero-prod h2{font-size:clamp(34px,4.6vw,56px);font-weight:300;margin:8px 0 2px}
+.hero-prod .why{color:#5c574d;font-weight:300;max-width:460px;margin:14px 0 18px;font-size:16px}
+.specs{margin:16px 0 22px;max-width:430px}
+.specs .row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--hair);font-size:13px}
+.specs .row:first-child{border-top:1px solid var(--hair)}
+.specs .v{font-weight:500;font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.specs .k{color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.priceline{display:flex;align-items:baseline;gap:12px;margin-bottom:18px}
+.priceline .uvp{font-size:15px;font-weight:500;font-variant-numeric:tabular-nums}
+.priceline .req{font-size:12.5px;color:var(--muted)}
+
+.cat-h{display:flex;align-items:baseline;gap:18px;margin:0 0 26px}
+.cat-h h3{font-size:25px;white-space:nowrap}.cat-h .line{flex:1;height:1px;background:var(--hair)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.dev .main{aspect-ratio:1/1;padding:20px}.dev .main img{max-height:200px}
+.dev h4{font-size:23px;font-weight:500;margin-top:14px}
+.dev .cat{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.dev .sp{font-size:13px;color:#5c574d;font-weight:300;margin-top:8px;min-height:38px}
+.dev .pr{margin-top:8px}.dev .pr .uvp{font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
+.dev .pr .req{font-size:11px;color:var(--muted);display:block;margin-top:1px}
+.imgcount{position:absolute;left:10px;bottom:9px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.add{margin-top:12px;background:none;border:none;border-bottom:1px solid var(--ink);padding:0 0 3px;font-family:inherit;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);cursor:pointer}
+.add:hover{opacity:.55}
+.swatches{display:flex;gap:9px;margin-top:11px}
+.swatches button{width:24px;height:24px;border-radius:50%;border:1px solid var(--hair);cursor:pointer;padding:0}
+.swatches button.active{outline:1.5px solid var(--ink);outline-offset:2px}
+.artgal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.artgal img{width:100%;height:300px;object-fit:cover;cursor:zoom-in;border:1px solid var(--hair)}
+@media(max-width:880px){.artgal{grid-template-columns:1fr 1fr}.artgal img{height:220px}}
+
+.statement{background:var(--black);color:#F3F0E9}
+.statement .wrap{padding:88px 32px}
+.statement .q{font-family:"Cormorant Garamond",serif;font-size:clamp(28px,3.6vw,44px);font-weight:300;line-height:1.18;max-width:900px}
+.statement .q em{font-style:italic;color:#cdbf9f}
+
+.order{background:var(--paper2)}
+.order .wrap{padding:84px 32px;text-align:center}
+.order .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:38px;max-width:760px;margin:40px auto 38px;text-align:left}
+.order .step .n{font-family:"Cormorant Garamond",serif;font-size:26px;color:var(--muted)}
+.order .step p{font-size:14.5px;color:#5c574d;font-weight:300;margin-top:6px}
+.order .alt{margin-top:22px;font-size:13.5px;color:var(--muted);font-weight:300}
+.order .alt a{color:var(--ink);border-bottom:1px solid var(--hair);text-decoration:none;cursor:pointer}
+
+/* Lightbox */
+.lb{position:fixed;inset:0;z-index:120;background:rgba(10,10,12,.94);display:none;align-items:center;justify-content:center}
+.lb.open{display:flex}
+.lb img{max-width:88vw;max-height:84vh;object-fit:contain}
+.lb .x{position:absolute;top:22px;right:28px;color:#F3F0E9;font-size:30px;cursor:pointer;background:none;border:none}
+.lb .nav{position:absolute;top:50%;transform:translateY(-50%);color:#F3F0E9;font-size:40px;cursor:pointer;background:none;border:none;padding:0 24px;opacity:.8}
+.lb .prev{left:0}.lb .next{right:0}
+
+/* Drawer */
+.overlay{position:fixed;inset:0;background:rgba(16,15,13,.5);opacity:0;visibility:hidden;transition:.25s;z-index:80}
+.overlay.open{opacity:1;visibility:visible}
+.cart{position:fixed;top:0;right:0;height:100dvh;width:440px;max-width:92vw;background:var(--paper);z-index:90;transform:translateX(100%);transition:transform .28s ease;display:block;overflow-y:auto;-webkit-overflow-scrolling:touch;box-shadow:-20px 0 60px rgba(16,15,13,.18)}
+.cart.open{transform:translateX(0)}
+.cart-top{position:sticky;top:0;z-index:2;background:var(--paper);display:flex;justify-content:space-between;align-items:center;padding:22px 28px;border-bottom:1px solid var(--hair)}
+.cart-top h3{font-size:26px}.cart-close{background:none;border:none;font-size:26px;cursor:pointer;color:var(--muted)}
+.cart-body{padding:8px 28px 4px}
+.cart-empty{color:var(--muted);font-weight:300;padding:40px 0;text-align:center}
+.crow{display:flex;gap:14px;padding:18px 0;border-bottom:1px solid var(--hair)}
+.crow img{width:64px;height:56px;object-fit:contain;flex:none;background:#fff;border:1px solid var(--hair)}
+.crow .cn{font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:500;line-height:1.1}
+.crow .cs{font-size:11.5px;color:var(--muted)}
+.qty{display:flex;align-items:center;margin-top:8px;border:1px solid var(--hair);width:fit-content}
+.qty button{width:28px;height:26px;border:none;background:none;cursor:pointer;font-size:15px}.qty span{width:30px;text-align:center;font-size:13px}
+.crow .rm{background:none;border:none;color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;align-self:flex-start}
+.cart-foot{border-top:1px solid var(--hair);padding:18px 28px calc(28px + env(safe-area-inset-bottom));background:var(--paper)}
+.sumnote{font-size:12.5px;color:#5c574d;margin-bottom:14px;font-weight:300}
+.cfields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}.cfields .full{grid-column:1/-1}
+.cfields label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:5px}
+.cfields input,.cfields textarea{width:100%;font-family:inherit;font-size:14px;padding:8px 2px;border:none;border-bottom:1px solid #cfc9bd;background:transparent}
+.cfields input:focus,.cfields textarea:focus{outline:none;border-bottom:1px solid var(--ink)}
+.req{color:var(--ink)}
+.cart-foot .btn{width:100%;text-align:center;margin-bottom:9px}
+.cart-foot .chat{display:block;text-align:center;font-size:12.5px;color:var(--muted);text-decoration:none;font-weight:300}.cart-foot .chat a{color:var(--ink);border-bottom:1px solid var(--hair)}
+.minibar{position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--ink);color:var(--paper);display:none;justify-content:space-between;align-items:center;padding:14px 22px;cursor:pointer}
+.minibar.show{display:flex}.minibar .r{font-size:12px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--paper);padding-bottom:2px}
+
+footer{background:var(--paper);border-top:1px solid var(--hair);padding:54px 32px}
+.foot{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;font-size:13.5px;color:#5c574d;font-weight:300}
+.foot a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--hair)}
+.foot .nm{font-family:"Cormorant Garamond",serif;font-size:19px;color:var(--ink)}
+.foot small{display:block;color:var(--muted);margin-top:14px;font-size:11.5px;max-width:440px}
+
+@media(max-width:880px){
+  .hero .scrim{background:linear-gradient(0deg,rgba(10,10,12,.92) 0%,rgba(10,10,12,.55) 45%,rgba(10,10,12,.3) 100%)}
+  .tech .wrap{grid-template-columns:1fr;gap:28px;padding:42px 32px}
+  .tech .col{padding:0;border-left:none;border-top:1px solid var(--hair);padding-top:22px}.tech .col:first-child{border-top:none;padding-top:0}
+  .hero-prod{grid-template-columns:1fr;gap:26px}
+  .grid3{grid-template-columns:1fr;gap:22px}.grid4{grid-template-columns:repeat(2,1fr)}
+  .order .steps{grid-template-columns:1fr;gap:20px}.cfields{grid-template-columns:1fr}.wrap{padding:0 24px}
+}
+</style>
+</head>
+<body>
+
+<header><div class="hdr">
+  <div class="logo serif">BRENDEL &amp; SÖHNE</div>
+  <div class="hdr-r"><a href="tel:+43676842752300">+43 676 842 752 300</a><a class="cta" onclick="openCart()">Anfrage (<span id="cartCount">0</span>)</a></div>
+</div></header>
+
+<section class="hero">
+  <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="media/neuro_hero_poster.jpg"><source src="media/neuro_hero.mp4" type="video/mp4"></video>
+  <div class="scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow">Für Friseursalons — Neuro+ Professional Tools</span>
+    <h1>Werkzeug, das <em>mitdenkt</em>.</h1>
+    <p class="sub">Föhne, Eisen und Tools von Paul Mitchell Neuro+ — SmartSense+ regelt die Temperatur tausendfach pro Sekunde. Profi-Technik für jeden Tag im Salon.</p>
+    <div class="hero-cta"><a class="btn btn-solid" href="#geraete">Geräte ansehen</a><a class="btn btn-line" href="#besuch" onclick="openVisit();return false;">Im Salon ansehen</a></div>
+  </div>
+</section>
+
+<div class="tech"><div class="wrap">
+  <div class="col"><div class="num serif">I</div><h3 class="serif">NeutraHeat</h3><p>Ionenverstärkte Keramik: gleichmäßige Hitze, neutralisiert statisches Haar — mehr Glanz, weniger Schäden.</p></div>
+  <div class="col"><div class="num serif">II</div><h3 class="serif">SmartSense+</h3><p>Mikrochip regelt die Temperatur beim Föhn 1.000×/Sek., beim Eisen 250×/Sek. — präzise, schonend.</p></div>
+  <div class="col"><div class="num serif">III</div><h3 class="serif">BLDC-Motor</h3><p>Bürstenloser Motor im Dry+ mit 110.000 U/min — kraftvoll, langlebig, leise.</p></div>
+</div></div>
+
+<!-- HERZSTÜCK -->
+<section class="block" id="dryplus"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Das Herzstück</span><h2 class="serif">Neuro Dry+</h2>
+    <p class="lead">Der Föhn, der sich rechnet: kraftvoll mit nur 1.500 Watt — spürbar weniger Verbrauch als viele 2.000-Watt-Salonföhne, Tag für Tag.</p></div>
+  <div class="hero-prod">
+    <div class="gal" data-id="dryplus" data-big="1"></div>
+    <div>
+      <div class="tag">Föhn · Art. 604052</div>
+      <h2 class="serif">Leicht. Stark. Sparsam.</h2>
+      <p class="why">Ultraleichte 350 g, zusammenklappbar, BLDC-Motor mit 110.000 U/min. Drei magnetische Aufsätze, Kaltluft, Auto-Pause — und 24 Stunden Frizz-Kontrolle.</p>
+      <div class="specs">
+        <div class="row"><span class="v">1.500 W</span><span class="k">Leistung</span></div>
+        <div class="row"><span class="v">350 g</span><span class="k">Gewicht</span></div>
+        <div class="row"><span class="v">110.000 U/min</span><span class="k">BLDC-Motor</span></div>
+        <div class="row"><span class="v">24 Std</span><span class="k">Frizz-Kontrolle</span></div>
+        <div class="row"><span class="v">3 Aufsätze</span><span class="k">Diffusor · Düse · Pick</span></div>
+        <div class="row"><span class="v">2 Jahre</span><span class="k">Garantie</span></div>
+      </div>
+      <div class="priceline"><span class="uvp">UVP 265 €</span><span class="req">· Salonpreis (netto) auf Anfrage</span></div>
+      <button class="btn btn-ink" onclick="addToCart('dryplus')">Auf die Anfrageliste</button>
+    </div>
+  </div>
+</div></section>
+
+<section class="block" id="geraete" style="padding-top:0"><div class="wrap">
+  <div class="cat-h"><h3 class="serif">Die ganze Neuro+ Familie</h3><div class="line"></div></div>
+  <div class="grid3" id="devGrid"></div>
+</div></section>
+
+<!-- Kämme & Bürsten -->
+<section class="block" id="kaemme" style="padding-top:0"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Kämme &amp; Bürsten</span><h2 class="serif">Die kleinen Helden</h2>
+  <p class="lead">Vom grobzinkigen Detangler in vier Farben bis zur belüfteten Föhnbürste — Werkzeug, das jeden Handgriff schöner macht.</p></div>
+  <div class="grid3" id="kaemmeGrid"></div>
+</div></section>
+
+<!-- Artistic / Im Einsatz -->
+<section class="block" style="padding-top:0"><div class="wrap">
+  <div class="cat-h"><h3 class="serif">Im Einsatz</h3><div class="line"></div></div>
+  <div class="artgal" id="artGrid"></div>
+</div></section>
+
+<section class="statement"><div class="wrap"><p class="q serif">Gutes Werkzeug arbeitet leiser, schneller und schonender — und <em>zahlt sich</em> jeden Tag ein Stück mehr aus.</p></div></section>
+
+<section class="block"><div class="wrap">
+  <div class="cat-h"><h3 class="serif">Zubehör</h3><div class="line"></div></div>
+  <div class="grid4" id="accGrid"></div>
+</div></section>
+
+<section class="order" id="bestellen"><div class="wrap">
+  <span class="eyebrow">B2B — nur für Salons</span>
+  <h2 class="serif" style="font-size:clamp(30px,4vw,44px);font-weight:300;margin-top:12px">Anfragen oder im Salon ansehen</h2>
+  <p class="lead" style="margin:16px auto 0;max-width:620px;color:#5c574d">Wir verkaufen die Tools ausschließlich an Friseursalons. Leg dir deine Wunschgeräte auf die Anfrageliste — wir senden dir ein Salonangebot. Oder wir bringen die Tools zum Ansehen vorbei.</p>
+  <div class="steps">
+    <div class="step"><div class="n serif">I</div><p>Geräte/Zubehör auf die Anfrageliste setzen.</p></div>
+    <div class="step"><div class="n serif">II</div><p>Salon, Name und Adresse eintragen.</p></div>
+    <div class="step"><div class="n serif">III</div><p>Per WhatsApp senden — wir machen dir ein Angebot.</p></div>
+  </div>
+  <a class="btn btn-ink" onclick="openCart()">Anfrageliste öffnen</a>
+  <p class="alt" id="besuch">Lieber persönlich? <a onclick="openVisit()">Tools im Salon ansehen</a> &nbsp;·&nbsp; <a href="https://wa.me/43676842752300" target="_blank">WhatsApp-Chat</a> &nbsp;·&nbsp; <a href="mailto:office@brendel.at">office@brendel.at</a></p>
+</div></section>
+
+<footer><div class="foot">
+  <div><div class="nm">Brendel &amp; Söhne</div>Offizieller Paul Mitchell Vertrieb · Wien &amp; Niederösterreich · Verkauf ausschließlich an Salons (B2B)<br>
+  <a href="mailto:office@brendel.at">office@brendel.at</a> &nbsp;·&nbsp; <a href="tel:+43676842752300">+43 676 842 752 300</a> &nbsp;·&nbsp; <a href="https://wa.me/43676842752300" target="_blank">WhatsApp</a>
+  <small>Alle Preise UVP in Euro; Salon-Netto auf Anfrage. Irrtümer vorbehalten.</small></div>
+  <div style="text-align:right"><div class="nm" style="font-style:italic">Paul Mitchell Neuro+</div>SmartSense+ · NeutraHeat<br><span style="color:var(--muted)">Professional Tools</span></div>
+</div></footer>
+
+<div class="minibar" id="minibar" onclick="openCart()"><span><span id="mbCount">0</span> auf Anfrageliste</span><span class="r">Ansehen</span></div>
+<div class="overlay" id="overlay" onclick="closeAll()"></div>
+
+<!-- Lightbox -->
+<div class="lb" id="lb"><button class="x" onclick="lbClose()">×</button><button class="nav prev" onclick="lbStep(-1)">‹</button><img id="lbImg" src=""><button class="nav next" onclick="lbStep(1)">›</button></div>
+
+<aside class="cart" id="cart">
+  <div class="cart-top"><h3 class="serif">Deine Anfrageliste</h3><button class="cart-close" onclick="closeAll()">×</button></div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-foot">
+    <p class="sumnote">Salonpreis (netto) auf Anfrage — wir senden dir nach deiner Nachricht ein individuelles Angebot. UVP nur zur Orientierung.</p>
+    <div class="cfields">
+      <div><label>Vorname <span class="req">*</span></label><input id="f_vorname"></div>
+      <div><label>Nachname <span class="req">*</span></label><input id="f_nachname"></div>
+      <div class="full"><label>Salon <span class="req">*</span></label><input id="f_salon"></div>
+      <div class="full"><label>Adresse (Straße, PLZ, Ort) <span class="req">*</span></label><input id="f_adresse"></div>
+      <div><label>Telefon</label><input id="f_tel"></div>
+      <div><label>UID/Kundennr. (optional)</label><input id="f_uid"></div>
+      <div class="full"><label>Nachricht (optional)</label><textarea id="f_msg" rows="2"></textarea></div>
+    </div>
+    <button class="btn btn-ink" onclick="sendOrder()">Anfrage per WhatsApp senden</button>
+    <span class="chat">oder <a href="https://wa.me/43676842752300" target="_blank">einfach einen WhatsApp-Chat starten</a></span>
+  </div>
+</aside>
+
+<aside class="cart" id="visit">
+  <div class="cart-top"><h3 class="serif">Tools im Salon ansehen</h3><button class="cart-close" onclick="closeAll()">×</button></div>
+  <div class="cart-body">
+    <p style="font-size:14.5px;color:#5c574d;font-weight:300;line-height:1.65;padding:10px 0 2px">Wir bringen die Neuro+ Geräte direkt zu dir in den Salon — in die Hand nehmen, ausprobieren, ganz ohne Kaufzwang. Termin per WhatsApp oder beim nächsten Besuch.</p>
+    <label style="display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:16px 0 9px">Welche Tools möchtest du sehen? (optional)</label>
+    <div id="visitModels" style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px"></div>
+  </div>
+  <div class="cart-foot">
+    <div class="cfields">
+      <div><label>Vorname <span class="req">*</span></label><input id="b_vorname"></div>
+      <div><label>Nachname <span class="req">*</span></label><input id="b_nachname"></div>
+      <div class="full"><label>Salon <span class="req">*</span></label><input id="b_salon"></div>
+      <div class="full"><label>Ort / Adresse <span class="req">*</span></label><input id="b_ort"></div>
+      <div><label>Telefon</label><input id="b_tel"></div>
+      <div><label>Wunsch-Zeitraum</label><input id="b_zeit" placeholder="z. B. KW 28"></div>
+      <div class="full"><label>Nachricht (optional)</label><textarea id="b_msg" rows="2"></textarea></div>
+    </div>
+    <button class="btn btn-ink" onclick="sendVisit()">Besuch per WhatsApp anfragen</button>
+    <span class="chat">oder <a href="https://wa.me/43676842752300" target="_blank">einfach einen WhatsApp-Chat starten</a></span>
+  </div>
+</aside>
+
+<script>
+const ORDER_WA="43676842752300";
+const IMGN={dryplus:5,styleplus:6,curlplus:4,smooth:4,pinkdry:4,unclipped:3,texture3:3,detbrush:1,vented:2,clippercomb:1,faerbekamm:1,sharkclips:1,prostix:1};
+const VARIANTS={detanglercomb:[["Clear","detcomb_clear","#f3f3f3"],["Guava","detcomb_pink","#e7a6b6"],["Night Sky","detcomb_nightsky","#2a3350"],["Seafoam","detcomb_seafoam","#bfe3d0"]]};
+const COLORSEL={detanglercomb:"Seafoam"};
+const imgs=id=>{const m=(typeof ALL!=='undefined')&&ALL[id];if(m&&m.img)return[m.img];return VARIANTS[id]?VARIANTS[id].map(v=>`images/${v[1]}.jpg`):Array.from({length:IMGN[id]||1},(_,i)=>`images/${id}_${i+1}.jpg`);};
+const DRY={id:"dryplus",n:"Neuro Dry+",cat:"Föhn",art:"604052",uvp:265,sp:"1.500 W · 350 g · BLDC 110.000 U/min."};
+const DEVICES=[
+ {id:"styleplus",n:"Neuro Style+",cat:"Glätt- & Stylingeisen",art:"604053",uvp:175,sp:"CeraShine 2,5 cm · 6 Wärmestufen · 156 % mehr Glanz."},
+ {id:"curlplus",n:"Neuro Curl+",cat:"Lockenstab 32 mm",art:"604054",uvp:175,sp:"TensionTune · SmartSense+ · NeutraHeat."},
+ {id:"smooth",n:"Neuro Smooth 1.25\"",cat:"Glätt-/Styling-Eisen",art:"604055",uvp:175,sp:"CeraShine · CurvEdge · SmartSense+ (250×/Sek.)."},
+ {id:"unclipped",n:"Unclipped 3-in-1",cat:"Lockenstab-Set · klemmlos",art:"604037",uvp:175,sp:"Zwei Konen + Stab, ohne Klemme — natürliche Wellen &amp; Locken."},
+ {id:"texture3",n:"Texture 3-in-1",cat:"Styling-Tool",art:"604066",uvp:null,sp:"Wandelbares Set mit Kamm-Aufsatz &amp; Hitzeschutz."},
+ {id:"pinkdry",n:"Dry+ Limited Edition",cat:"Föhn · Pink Edition",art:"706375",uvp:164.95,sp:"Der ikonische Dry+ in limitiertem Pink."},
+];
+const KAEMME=[
+ {id:"detanglercomb",n:"Detangler Comb",cat:"Grobzinkiger Kamm · 4 Farben",art:"604161–64",uvp:8.95,sp:"Sanftes Entwirren, nass &amp; trocken — in vier Farben."},
+ {id:"detbrush",n:"Detangler Brush",cat:"Entwirr-Bürste",art:"604169",uvp:29.95,sp:"Flexible Borsten, gleitet durch jedes Haar."},
+ {id:"dressingbrush",n:"Dressing Brush",cat:"Finish-Bürste",art:"604170",uvp:null,sp:"Für Glanz und das perfekte Finish.",img:"images/art_dressingbrush.jpg"},
+ {id:"vented",n:"1016 Vented Styling Brush",cat:"Föhnbürste",art:"604107",uvp:14.95,sp:"Belüftet — schnelleres Föhnen, mehr Volumen."},
+ {id:"clippercomb",n:"Clipper Comb 318",cat:"Schneidekamm",art:"604158",uvp:16.45,sp:"Profi-Schneidekamm für präzise Übergänge."},
+ {id:"faerbekamm",n:"Y.S. Park Färbekamm",cat:"Färbe-Tool",art:"604131",uvp:null,sp:"Kamm und Pinsel in einem — für sauberes Auftragen."},
+];
+const ACC=[
+ {id:"sharkclips",n:"Y.S. Park Shark Clips",art:"604133",uvp:null},
+ {id:"prostix",n:"Paul Mitchell Prostix",art:"706168",uvp:null},
+];
+const ARTGAL=["art_comb_seafoam","art_comb_pink","art_comb_nightsky","pinkdry_5","art_detbrush","art_unclipped"];
+const ALL={};[DRY,...DEVICES,...KAEMME,...ACC].forEach(m=>ALL[m.id]=m);
+const primaryImg=id=>{const m=ALL[id]||{};return m.img?m.img:(VARIANTS[id]?`images/${VARIANTS[id].find(v=>v[0]===COLORSEL[id])[1]}.jpg`:`images/${id}_1.jpg`);};
+const eur=v=>v.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2})+' €';
+const CART={};
+
+/* ---- Galerie rendern (Hauptbild + Thumbs) ---- */
+const currentIdx={};
+function galHTML(id){
+  const list=imgs(id);
+  if(VARIANTS[id]){
+    const sel=VARIANTS[id].findIndex(v=>v[0]===COLORSEL[id]); currentIdx[id]=sel<0?0:sel;
+    const sw=VARIANTS[id].map((v,i)=>`<button class="${v[0]===COLORSEL[id]?'active':''}" style="background:${v[2]}" title="${v[0]}" onclick="pickColor('${id}',${i},this)"></button>`).join('');
+    return `<div class="main" onclick="lbOpen('${id}',currentIdx['${id}']||0)"><img id="m_${id}" src="${primaryImg(id)}" alt="Detangler Comb"><span class="zoomhint">4 Farben · Vergrößern</span></div><div class="swatches">${sw}</div>`;
+  }
+  const thumbs=list.length>1?`<div class="thumbs">${list.map((s,i)=>`<button class="${i===0?'active':''}" onclick="swap('${id}',${i},this)"><img src="${s}"></button>`).join('')}</div>`:'';
+  return `<div class="main" onclick="lbOpen('${id}',currentIdx['${id}']||0)"><img id="m_${id}" src="${list[0]}" alt="${(ALL[id]||{}).n||id}"><span class="zoomhint">${list.length>1?list.length+' Bilder · ':''}Vergrößern</span></div>${thumbs}`;
+}
+function swap(id,i,btn){currentIdx[id]=i;document.getElementById('m_'+id).src=imgs(id)[i];
+  if(btn){btn.parentNode.querySelectorAll('button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');}}
+function pickColor(id,i,btn){COLORSEL[id]=VARIANTS[id][i][0];currentIdx[id]=i;document.getElementById('m_'+id).src=imgs(id)[i];
+  btn.parentNode.querySelectorAll('button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');}
+
+const priceHTML=m=>m.uvp?`<span class="uvp">UVP ${eur(m.uvp)}</span><span class="req">Salonpreis auf Anfrage</span>`:`<span class="uvp">Preis auf Anfrage</span>`;
+const card=m=>`<div class="dev"><div class="gal">${galHTML(m.id)}</div><h4 class="serif">${m.n}</h4><div class="cat">${m.cat} · Art. ${m.art}</div><div class="sp">${m.sp}</div><div class="pr">${priceHTML(m)}</div><button class="add" onclick="addToCart('${m.id}')">+ Auf Anfrageliste</button></div>`;
+(function build(){
+  document.querySelectorAll('.gal[data-id]').forEach(el=>el.innerHTML=galHTML(el.dataset.id));
+  document.getElementById('devGrid').innerHTML=DEVICES.map(card).join('');
+  document.getElementById('kaemmeGrid').innerHTML=KAEMME.map(card).join('');
+  document.getElementById('artGrid').innerHTML=ARTGAL.map((k,i)=>`<img src="images/${k}.jpg" alt="Neuro+ Tools im Einsatz" onclick="lbOpenList(${i})">`).join('');
+  document.getElementById('accGrid').innerHTML=ACC.map(m=>`
+    <div class="dev"><div class="main" style="aspect-ratio:1/1;padding:18px" onclick="lbOpen('${m.id}',0)"><img src="images/${m.id}_1.jpg" alt="${m.n}"><span class="zoomhint">Vergrößern</span></div>
+      <h4 class="serif" style="font-size:19px;margin-top:12px">${m.n}</h4><div class="cat">Art. ${m.art}</div>
+      <div class="pr"><span class="uvp">${m.uvp?('UVP '+eur(m.uvp)):'Auf Anfrage'}</span></div>
+      <button class="add" onclick="addToCart('${m.id}')">+ Auf Anfrageliste</button></div>`).join('');
+  document.getElementById('visitModels').innerHTML=[DRY,...DEVICES].map(m=>`<label style="display:flex;gap:8px;align-items:center;font-size:12.5px;cursor:pointer"><input type="checkbox" value="${m.n}"> ${m.n}</label>`).join('');
+})();
+
+/* ---- Lightbox ---- */
+let lbList=[],lbIdx=0;
+function lbShow(){document.getElementById('lbImg').src=lbList[lbIdx]||'';}
+function lbOpen(id,i){lbList=imgs(id);lbIdx=i||0;lbShow();document.getElementById('lb').classList.add('open');}
+function lbOpenList(i){lbList=ARTGAL.map(k=>`images/${k}.jpg`);lbIdx=i||0;lbShow();document.getElementById('lb').classList.add('open');}
+function lbClose(){document.getElementById('lb').classList.remove('open');}
+function lbStep(d){if(!lbList.length)return;lbIdx=(lbIdx+d+lbList.length)%lbList.length;lbShow();}
+document.getElementById('lb').addEventListener('click',e=>{if(e.target.id==='lb')lbClose();});
+addEventListener('keydown',e=>{if(!document.getElementById('lb').classList.contains('open'))return;if(e.key==='Escape')lbClose();if(e.key==='ArrowRight')lbStep(1);if(e.key==='ArrowLeft')lbStep(-1);});
+
+/* ---- Drawer + Anfrageliste ---- */
+function openCart(){closeAll(true);cart.classList.add('open');overlay.classList.add('open');}
+function openVisit(){closeAll(true);visit.classList.add('open');overlay.classList.add('open');}
+function closeAll(keep){cart.classList.remove('open');visit.classList.remove('open');if(!keep)overlay.classList.remove('open');}
+const CART_COLOR={};
+function cartThumb(id){const m=ALL[id]||{};if(m.img)return m.img;if(VARIANTS[id]){const c=CART_COLOR[id]||COLORSEL[id];return `images/${VARIANTS[id].find(v=>v[0]===c)[1]}.jpg`;}return `images/${id}_1.jpg`;}
+function addToCart(id){CART[id]=(CART[id]||0)+1;if(VARIANTS[id])CART_COLOR[id]=COLORSEL[id];renderCart();openCart();}
+function setQty(id,d){CART[id]=(CART[id]||0)+d;if(CART[id]<=0)delete CART[id];renderCart();}
+function removeItem(id){delete CART[id];renderCart();}
+const priceLabel=m=>m.uvp?('UVP '+eur(m.uvp)):'Preis auf Anfrage';
+function renderCart(){
+  const ids=Object.keys(CART),body=document.getElementById('cartBody');
+  body.innerHTML=ids.length?ids.map(id=>{const m=ALL[id],q=CART[id];return `<div class="crow"><img src="${cartThumb(id)}"><div style="flex:1"><div class="cn">${m.n}${CART_COLOR[id]?(' · '+CART_COLOR[id]):''}</div><div class="cs">${priceLabel(m)}${m.art?(' · Art. '+m.art):''}</div><div class="qty"><button onclick="setQty('${id}',-1)">−</button><span>${q}</span><button onclick="setQty('${id}',1)">+</button></div></div><button class="rm" onclick="removeItem('${id}')">Entf.</button></div>`;}).join(''):'<div class="cart-empty">Noch nichts gewählt.<br>Tippe bei einem Gerät auf »Auf Anfrageliste«.</div>';
+  const c=Object.values(CART).reduce((a,b)=>a+b,0);
+  cartCount.textContent=c;mbCount.textContent=c;minibar.classList.toggle('show',ids.length>0&&innerWidth<=880);
+}
+function sendOrder(){
+  const ids=Object.keys(CART);if(!ids.length){alert('Deine Anfrageliste ist leer.');return;}
+  const v=id=>document.getElementById(id).value.trim();
+  if(!v('f_vorname')||!v('f_nachname')||!v('f_salon')||!v('f_adresse')){alert('Bitte Vorname, Nachname, Salon und Adresse ausfüllen.');return;}
+  const lines=ids.map(id=>{const m=ALL[id];return `• ${CART[id]}× ${m.n}${CART_COLOR[id]?(' · '+CART_COLOR[id]):''} (${priceLabel(m)})`;});
+  const parts=["*Tool-Anfrage (B2B)*","",...lines,"",`Name: ${v('f_vorname')} ${v('f_nachname')}`,`Salon: ${v('f_salon')}`,`Adresse: ${v('f_adresse')}`,v('f_tel')?`Telefon: ${v('f_tel')}`:'',v('f_uid')?`UID/Kundennr.: ${v('f_uid')}`:'',v('f_msg')?`Nachricht: ${v('f_msg')}`:'',"","Bitte um ein Salonangebot (netto)."].filter(Boolean);
+  window.open(`https://wa.me/${ORDER_WA}?text=${encodeURIComponent(parts.join('\n'))}`,'_blank');
+}
+function sendVisit(){
+  const v=id=>document.getElementById(id).value.trim();
+  if(!v('b_vorname')||!v('b_nachname')||!v('b_salon')||!v('b_ort')){alert('Bitte Vorname, Nachname, Salon und Ort ausfüllen.');return;}
+  const picks=[...document.querySelectorAll('#visitModels input:checked')].map(i=>i.value);
+  const parts=["*Anfrage: Tools im Salon ansehen*","",`Name: ${v('b_vorname')} ${v('b_nachname')}`,`Salon: ${v('b_salon')}`,`Ort/Adresse: ${v('b_ort')}`,v('b_tel')?`Telefon: ${v('b_tel')}`:'',v('b_zeit')?`Wunsch-Zeitraum: ${v('b_zeit')}`:'',picks.length?`Interesse an: ${picks.join(', ')}`:'',v('b_msg')?`Nachricht: ${v('b_msg')}`:'',"","Bitte bringt die Neuro+ Tools zum Ansehen vorbei."].filter(Boolean);
+  window.open(`https://wa.me/${ORDER_WA}?text=${encodeURIComponent(parts.join('\n'))}`,'_blank');
+}
+/* ---- Hero-Video: Autoplay robust + sehr sanftes Parallax ---- */
+const hv=document.getElementById('heroVideo');
+function kick(){hv.muted=true;const p=hv.play();if(p&&p.catch)p.catch(()=>{});}
+hv.addEventListener('loadeddata',kick);if(hv.readyState>=2)kick();
+['click','scroll','touchstart','keydown','mousemove'].forEach(e=>addEventListener(e,kick,{once:true,passive:true}));
+let ticking=false;
+addEventListener('scroll',()=>{if(ticking)return;ticking=true;requestAnimationFrame(()=>{const y=Math.min(scrollY,800);hv.style.transform=`translate3d(0,${y*0.08}px,0) scale(1.12)`;ticking=false;});},{passive:true});
+renderCart();
+</script>
+</body>
+</html>
