@@ -546,10 +546,9 @@ renderCart();
 // Schleif-Hinweis: dezentes Toast, einmal pro Besuch — nach 40 Sek. ODER beim Scrollen zu den Modellen
 function hideToast(){var t=document.getElementById('toast');if(t)t.classList.remove('show');}
 (function(){
-  try{ if(sessionStorage.getItem('schleifSeen')) return; }catch(e){}
+  // Erscheint bei JEDEM Seitenaufruf und bleibt stehen, bis man es wegklickt (oder den Warenkorb oeffnet)
   var t=document.getElementById('toast'); if(!t) return; var shown=false;
-  function show(){ if(shown) return; shown=true; try{sessionStorage.setItem('schleifSeen','1');}catch(e){}
-    t.classList.add('show'); setTimeout(hideToast,14000); }
+  function show(){ if(shown) return; shown=true; t.classList.add('show'); }
   var timer=setTimeout(show,40000);
   var mod=document.getElementById('modelle');
   function onScroll(){ if(mod && mod.getBoundingClientRect().top < window.innerHeight*0.6){ show(); window.removeEventListener('scroll',onScroll); clearTimeout(timer); } }
