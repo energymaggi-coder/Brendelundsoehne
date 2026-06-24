@@ -185,6 +185,19 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
   border-bottom:1px solid #cdbf9f;padding-bottom:2px;white-space:nowrap;color:#F3F0E9}
 @media(max-width:520px){.promobar{font-size:12.5px;gap:8px;padding:11px 18px}}
 
+/* Schleif-Hinweis (dezentes Toast, einmal pro Besuch) */
+.toast{position:fixed;left:24px;bottom:24px;z-index:75;max-width:330px;background:var(--ink);color:#F3F0E9;
+  padding:16px 34px 16px 18px;box-shadow:0 14px 44px rgba(16,15,13,.30);border-radius:2px;
+  transform:translateY(160%);opacity:0;transition:transform .45s cubic-bezier(.22,1,.36,1),opacity .45s ease;font-weight:300;line-height:1.5}
+.toast.show{transform:translateY(0);opacity:1}
+.toast h4{font-family:"Cormorant Garamond",serif;font-size:19px;font-weight:500;margin-bottom:3px;color:#F6F3EC}
+.toast p{font-size:13.5px;color:#cfc9bd}
+.toast .tx{position:absolute;top:8px;right:10px;background:none;border:none;color:#b7afa0;font-size:19px;line-height:1;cursor:pointer}
+.toast .tx:hover{color:#F3F0E9}
+@media(max-width:520px){.toast{left:12px;right:12px;bottom:12px;max-width:none}}
+/* Gutschein-Hinweis im Warenkorb (unauffaellig) */
+.gutschein-hint{font-size:11.5px;line-height:1.5;color:var(--muted);font-weight:300;margin:2px 0 14px}
+
 @media(max-width:880px){
   .hero-grid{grid-template-columns:1fr}.hero-img{min-height:46vh;order:-1}.hero-img img{position:relative}
   .action .wrap{grid-template-columns:1fr;gap:34px;padding:48px 32px}
@@ -254,7 +267,7 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
         <div class="tag">Bestseller — breiteste Streuung</div>
         <h3 class="serif">Iconic <span style="font-size:.5em;color:var(--muted)">6.0″</span></h3>
         <p class="why">Der Eyecatcher unter den Scheren: unverwechselbares Design und ein Offset-Griff für maximale Ergonomie. Das breite, kopflastige Blatt liegt satt in der Hand und gleitet mit der feinen Pure-Edge-10-Schneide weich durch jeden Schnitt.</p>
-        <div class="priceline"><span class="old">445 €</span><span class="new">400,50 €</span><span class="brut">· <b>480,60 €</b> inkl. MwSt.</span></div>
+        <div class="priceline"><span class="old">445 €</span><span class="new">400,50 €</span><span class="brut">· <b>476,60 €</b> inkl. MwSt.</span></div>
         <div class="ptsline" style="font-size:12.5px;color:var(--muted);margin-top:4px">Salon-Netto · oder 8.900 Punkte</div>
         <button class="add" onclick="addToCart('iconic')">+ In den Warenkorb</button>
       </div>
@@ -266,7 +279,7 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
         <div class="tag">Umsatz-Champion — der Team-Liebling</div>
         <h3 class="serif">Fine Pro <span style="font-size:.5em;color:var(--muted)">6.5″</span></h3>
         <p class="why">Die leichteste im Sortiment: ein hauchdünnes, perfekt ausbalanciertes Blatt mit Offset-Daumenführung. Ermüdungsarmes Arbeiten über den ganzen Tag — die Flex-Edge-9-Schneide setzt jeden Schnitt exakt.</p>
-        <div class="priceline"><span class="old">375 €</span><span class="new">337,50 €</span><span class="brut">· <b>405,00 €</b> inkl. MwSt.</span></div>
+        <div class="priceline"><span class="old">375 €</span><span class="new">337,50 €</span><span class="brut">· <b>401,63 €</b> inkl. MwSt.</span></div>
         <div class="ptsline" style="font-size:12.5px;color:var(--muted);margin-top:4px">Salon-Netto · oder 7.500 Punkte</div>
         <button class="add" onclick="addToCart('finepro')">+ In den Warenkorb</button>
       </div>
@@ -333,7 +346,7 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
       <div class="nm">Brendel &amp; Söhne</div>
       Offizieller Paul Mitchell &amp; Donald Scott NYC Vertrieb · Wien &amp; Niederösterreich<br>
       <a href="mailto:office@brendel.at">office@brendel.at</a> &nbsp;·&nbsp; <a href="tel:+43676842752300">+43 676 842 752 300</a> &nbsp;·&nbsp; <a href="https://wa.me/43676842752300" target="_blank">WhatsApp</a>
-      <small>Aktion gültig 1. Juli – 31. August 2026. Preise in Euro: Salon-Netto-EK sowie Endkundenpreis inkl. 20 % MwSt. ausgewiesen. Irrtümer und Zwischenverkauf vorbehalten.</small>
+      <small>Aktion gültig 1. Juli – 31. August 2026. Preise in Euro: Salon-Netto-EK sowie Endkundenpreis inkl. 19 % MwSt. (dt. USt.) ausgewiesen. Irrtümer und Zwischenverkauf vorbehalten.</small>
     </div>
     <div class="r">
       <div class="nm" style="font-style:italic">Donald Scott NYC</div>
@@ -349,6 +362,13 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
   <span class="r">Warenkorb ansehen</span>
 </div>
 
+<!-- Schleif-Hinweis -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <button class="tx" onclick="hideToast()" aria-label="Hinweis schließen">×</button>
+  <h4>Gut zu wissen</h4>
+  <p>Auf jede Donald Scott Schere gibt's den <strong style="color:#F6F3EC;font-weight:500">ersten Schliff gratis</strong> — der Schleifservice ist inklusive.</p>
+</div>
+
 <!-- Warenkorb-Drawer -->
 <div class="overlay" id="overlay" onclick="closeAll()"></div>
 <aside class="cart" id="cart" aria-label="Warenkorb">
@@ -357,7 +377,7 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
   <div class="cart-foot">
     <div class="sumline"><span style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Summe netto</span><span class="t" id="cartSum" style="font-size:18px">0,00 €</span></div>
     <div class="sumline"><span style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)">Summe inkl. MwSt.</span><span class="t" id="cartSumBrutto">0,00 €</span></div>
-    <p class="sumnote">Salonpreise netto (EK), inkl. 10 % Aktionsrabatt. Endkundenpreis inkl. 20 % MwSt. Gravur kostenlos.</p>
+    <p class="sumnote">Salonpreise netto (EK), inkl. 10 % Aktionsrabatt. Endkundenpreis inkl. 19 % MwSt. Gravur kostenlos.</p>
     <div class="cfields">
       <div><label>Vorname <span class="req">*</span></label><input id="f_vorname"></div>
       <div><label>Nachname <span class="req">*</span></label><input id="f_nachname"></div>
@@ -367,6 +387,7 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
       <div class="full"><label>Gravur-Wunsch (gratis)</label><input id="f_gravur" placeholder="Name oder Salonname (nur Text)"></div>
       <div class="full"><label>Nachricht (optional)</label><textarea id="f_msg" rows="2"></textarea></div>
     </div>
+    <p class="gutschein-hint">Deiner Lieferung liegt ein Gutschein für den gratis Erstschliff bei — am besten gleich aufbewahren.</p>
     <button class="btn btn-ink" onclick="sendOrder()">Bestellung per WhatsApp senden</button>
     <span class="chat">oder <a href="https://wa.me/43676842752300" target="_blank">einfach einen WhatsApp-Chat starten</a></span>
   </div>
@@ -427,8 +448,8 @@ const MODELS = [
 const MAP={}; MODELS.forEach(g=>g.items.forEach(m=>MAP[m.id]=m));
 const eur = v => v.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2})+' €';
 const akt = p => Math.round(p*0.9*100)/100;
-const bruttoAkt = p => Math.round(p*0.9*1.2*100)/100; // Aktionspreis inkl. 20 % MwSt.
-const bruttoSum = n => Math.round(n*1.2*100)/100;
+const bruttoAkt = p => Math.round(p*0.9*1.19*100)/100; // Aktionspreis inkl. 19 % MwSt. (dt. USt.)
+const bruttoSum = n => Math.round(n*1.19*100)/100;
 const CART = {};
 
 (function buildCatalog(){
@@ -453,7 +474,7 @@ const CART = {};
     `<label><input type="checkbox" value="${m.n} ${m.size}"> ${m.n} <span style="color:var(--muted)">${m.size}</span></label>`).join('');
 })();
 
-function openCart(){closeAll(true);document.getElementById('cart').classList.add('open');document.getElementById('overlay').classList.add('open');}
+function openCart(){hideToast();closeAll(true);document.getElementById('cart').classList.add('open');document.getElementById('overlay').classList.add('open');}
 function openVisit(){closeAll(true);document.getElementById('visit').classList.add('open');document.getElementById('overlay').classList.add('open');}
 function closeAll(keepOverlay){document.getElementById('cart').classList.remove('open');document.getElementById('visit').classList.remove('open');if(!keepOverlay)document.getElementById('overlay').classList.remove('open');}
 function closeCart(){closeAll();}
@@ -514,12 +535,26 @@ function sendOrder(){
     ...lines,"",`*Summe netto: ${eur(sum)}* (inkl. 10 %, Gravur gratis)`,`Summe inkl. MwSt.: ${eur(bruttoSum(sum))}`,"",
     `Name: ${vor} ${nach}`,`Adresse: ${adr}`,
     v('f_salon')?`Salon: ${v('f_salon')}`:"",v('f_tel')?`Telefon: ${v('f_tel')}`:"",
-    v('f_gravur')?`Gravur: ${v('f_gravur')}`:"",v('f_msg')?`Nachricht: ${v('f_msg')}`:""
+    v('f_gravur')?`Gravur: ${v('f_gravur')}`:"",v('f_msg')?`Nachricht: ${v('f_msg')}`:"",
+    "","Gutschein für den gratis Erstschliff liegt der Lieferung bei — bitte aufbewahren."
   ].filter(x=>x!==undefined);
   window.open(`https://wa.me/${ORDER_WA}?text=${encodeURIComponent(parts.join('\n'))}`,'_blank');
 }
 window.addEventListener('resize',renderCart);
 renderCart();
+
+// Schleif-Hinweis: dezentes Toast, einmal pro Besuch — nach 40 Sek. ODER beim Scrollen zu den Modellen
+function hideToast(){var t=document.getElementById('toast');if(t)t.classList.remove('show');}
+(function(){
+  try{ if(sessionStorage.getItem('schleifSeen')) return; }catch(e){}
+  var t=document.getElementById('toast'); if(!t) return; var shown=false;
+  function show(){ if(shown) return; shown=true; try{sessionStorage.setItem('schleifSeen','1');}catch(e){}
+    t.classList.add('show'); setTimeout(hideToast,14000); }
+  var timer=setTimeout(show,40000);
+  var mod=document.getElementById('modelle');
+  function onScroll(){ if(mod && mod.getBoundingClientRect().top < window.innerHeight*0.6){ show(); window.removeEventListener('scroll',onScroll); clearTimeout(timer); } }
+  window.addEventListener('scroll',onScroll,{passive:true});
+})();
 </script>
 </body>
 </html>
