@@ -175,6 +175,57 @@
   .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
   footer a{color:#d6e2e6;text-decoration:none}
 </style>
+
+<style id="bxc-style">
+.bxc-add{display:inline-block;margin-top:14px;font-family:inherit;font-size:13px;font-weight:600;
+ letter-spacing:.02em;padding:9px 18px;border:1px solid #1a1a1a;background:#fff;color:#1a1a1a;
+ border-radius:4px;cursor:pointer;transition:.15s;line-height:1.2}
+.bxc-add:hover{background:#1a1a1a;color:#fff}
+.bxc-fab{position:fixed;right:20px;bottom:20px;z-index:9997;font-family:inherit;font-size:14px;
+ font-weight:600;letter-spacing:.02em;padding:13px 20px;border:none;border-radius:40px;cursor:pointer;
+ background:#1a1a1a;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.28);display:flex;align-items:center;gap:9px}
+.bxc-fab .bxc-fabc{background:#fff;color:#1a1a1a;min-width:20px;height:20px;border-radius:20px;
+ font-size:12px;display:inline-flex;align-items:center;justify-content:center;padding:0 5px}
+.bxc-ov{position:fixed;inset:0;background:rgba(15,15,15,.42);z-index:9998;opacity:0;visibility:hidden;transition:.25s}
+.bxc-ov.open{opacity:1;visibility:visible}
+.bxc-drawer{position:fixed;top:0;right:0;height:100%;height:100dvh;width:430px;max-width:94vw;background:#fff;
+ z-index:9999;transform:translateX(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);
+ display:flex;flex-direction:column;font-family:inherit;color:#1a1a1a;box-shadow:-14px 0 44px rgba(0,0,0,.16)}
+.bxc-drawer.open{transform:translateX(0)}
+.bxc-top{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid #eae7e0}
+.bxc-top h3{margin:0;font-size:19px;font-weight:700}
+.bxc-x{background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:#8a857b}
+.bxc-body{flex:1;overflow-y:auto;padding:6px 24px}
+.bxc-empty{color:#8a857b;font-weight:300;text-align:center;padding:44px 8px;line-height:1.6}
+.bxc-row{display:flex;align-items:flex-start;gap:12px;padding:16px 0;border-bottom:1px solid #eee}
+.bxc-ci{flex:1}
+.bxc-n{font-size:14px;font-weight:600;line-height:1.35}
+.bxc-pp{font-size:12px;color:#8a857b;margin-top:2px}
+.bxc-q{display:inline-flex;align-items:center;border:1px solid #ddd;margin-top:8px}
+.bxc-q button{width:28px;height:26px;border:none;background:none;cursor:pointer;font-size:16px;color:#1a1a1a}
+.bxc-q span{min-width:26px;text-align:center;font-size:13px}
+.bxc-rt{font-size:13px;font-weight:600;white-space:nowrap;margin-top:1px}
+.bxc-rm2{background:none;border:none;color:#b3ada0;font-size:17px;cursor:pointer;line-height:1;margin-top:-2px}
+.bxc-foot{border-top:1px solid #eae7e0;padding:16px 24px calc(18px + env(safe-area-inset-bottom));background:#fafafa}
+.bxc-sumrow{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.bxc-sumrow .l{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8a857b}
+.bxc-sumrow .v{font-size:19px;font-weight:700}
+.bxc-f{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;margin-bottom:10px}
+.bxc-f .full{grid-column:1/3}
+.bxc-f label{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:#8a857b;display:block;margin-bottom:2px}
+.bxc-f input,.bxc-f textarea{width:100%;font-family:inherit;font-size:14px;padding:7px 2px;border:none;
+ border-bottom:1px solid #cfc9bd;background:transparent;color:#1a1a1a}
+.bxc-f input:focus,.bxc-f textarea:focus{outline:none;border-bottom:1px solid #1a1a1a}
+.bxc-req{color:#b23}
+.bxc-check{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:#4a453c;margin:2px 0 12px;line-height:1.4;font-weight:300}
+.bxc-check input{width:16px;height:16px;margin-top:1px}
+.bxc-send{width:100%;font-family:inherit;font-size:15px;font-weight:600;padding:13px;border:none;border-radius:4px;
+ background:#1a1a1a;color:#fff;cursor:pointer}
+.bxc-send:hover{background:#000}
+.bxc-note{font-size:11.5px;color:#8a857b;font-weight:300;margin-top:9px;text-align:center;line-height:1.5}
+.bxc-note a{color:#1a1a1a}
+@media(max-width:520px){.bxc-fab{right:14px;bottom:14px;padding:12px 16px}}
+</style>
 </head>
 <body>
 
@@ -440,14 +491,14 @@
         <div style="font-family:Montserrat;font-weight:300;font-size:20px;color:var(--teal);margin:8px 0 4px">HydraSoft Glossing Treatment</div>
         <div style="color:#6f8880;font-size:14px">21× 236 ml</div>
         <div style="font-family:Montserrat;font-weight:600;font-size:34px;color:var(--teal);margin-top:14px">418,95 €</div>
-        <div style="font-size:12.5px;color:#6f8880">netto · ab 400 €</div>
+        <div style="font-size:12.5px;color:#6f8880">netto · ab 400 €</div><div style="text-align:center;margin-top:16px"><button type="button" class="bxc-add" data-n="HydraSoft Glossing Treatment – Glossing-Kit" data-p="418.95">+ In die Bestellliste</button></div>
       </div>
       <div style="background:#fff;border:1px solid var(--sage);border-top:5px solid var(--style);border-radius:8px;padding:30px 34px;text-align:center">
         <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--petrol)">Sea-Spray-Kit</div>
         <div style="font-family:Montserrat;font-weight:300;font-size:20px;color:var(--teal);margin:8px 0 4px">Texturizing Sea Spray</div>
         <div style="color:#6f8880;font-size:14px">25× 150 ml</div>
         <div style="font-family:Montserrat;font-weight:600;font-size:34px;color:var(--teal);margin-top:14px">406,25 €</div>
-        <div style="font-size:12.5px;color:#6f8880">netto · ab 400 €</div>
+        <div style="font-size:12.5px;color:#6f8880">netto · ab 400 €</div><div style="text-align:center;margin-top:16px"><button type="button" class="bxc-add" data-n="Texturizing Sea Spray – Sea-Spray-Kit" data-p="406.25">+ In die Bestellliste</button></div>
       </div>
     </div>
   </div>
@@ -484,7 +535,7 @@
       <div style="padding:28px 38px;color:#3c524b;font-size:15px">
         <b style="color:var(--teal)">Inhalt:</b> Komplettbestückung Repair, Hydrate &amp; Style – inkl. KeraTriplex- &amp; HydraTriplex-Treatments und Take-Home-Kit.<br>
         <b style="color:var(--teal)">Plus Free:</b> Liter-Nachfüller (Shampoo, Conditioner, Cream Rinse, Intensive Treatment), Fahne, Poster, Produktwissen &amp; Endverbraucher­broschüren.
-        <div style="margin-top:16px;font-size:12.5px;color:#6f8880">Salon-EK (netto), zzgl. USt. · gültig bis 06.07.2027</div>
+        <div style="margin-top:16px;font-size:12.5px;color:#6f8880">Salon-EK (netto), zzgl. USt. · gültig bis 06.07.2027</div><div style="text-align:center;margin-top:16px"><button type="button" class="bxc-add" data-n="Startangebot – Restage Kit" data-p="911.55">+ In die Bestellliste</button></div>
       </div>
     </div>
   </div>
@@ -507,7 +558,7 @@
           <li><span>6× Cream Rinse 250 ml</span><span>106,50 €</span></li>
           <li><span>6× Intensive Treatment 150 ml</span><span>122,70 €</span></li>
           <li><span>2× KeraTriplex Treatment 10er</span><span>103,90 €</span></li>
-        </ul>
+        </ul><div style="text-align:center;margin-top:16px"><button type="button" class="bxc-add" data-n="Nur Repair-Linie · Bestell-Korb" data-p="434.80">+ In die Bestellliste</button></div>
       </div>
       <div style="background:#fff;border:1px solid var(--sage);border-top:5px solid var(--style);border-radius:6px;padding:28px 30px;display:flex;flex-direction:column">
         <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--petrol)">Nur Verkaufsware</div>
@@ -519,7 +570,7 @@
           <li><span>4× Repair Shampoo 250 ml</span><span>67,80 €</span></li>
           <li><span>4× Repair Cream Rinse 250 ml</span><span>71,00 €</span></li>
           <li><span>2× HydraTriplex Treatment 4er</span><span>47,90 €</span></li>
-        </ul>
+        </ul><div style="text-align:center;margin-top:16px"><button type="button" class="bxc-add" data-n="Nur Verkaufsware · Bestell-Korb" data-p="404.50">+ In die Bestellliste</button></div>
       </div>
       <div style="background:#fff;border:1px solid var(--sage);border-top:5px solid var(--hydrate);border-radius:6px;padding:28px 30px;display:flex;flex-direction:column">
         <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--petrol)">Nur Literware · Backbar</div>
@@ -529,7 +580,7 @@
           <li><span>3× Repair Cream Rinse 1 L</span><span>121,35 €</span></li>
           <li><span>3× HydraSoft Shampoo 1 L</span><span>113,85 €</span></li>
           <li><span>2× Intensive Treatment 500 ml</span><span>93,90 €</span></li>
-        </ul>
+        </ul><div style="text-align:center;margin-top:16px"><button type="button" class="bxc-add" data-n="Nur Literware · Bestell-Korb" data-p="442.95">+ In die Bestellliste</button></div>
       </div>
     </div>
     <p class="fine" style="color:#6f8880;margin-top:22px">Summen aus regulären Netto-Einkaufspreisen (Produkt-Master). Frei anpassbar – jede Position auch einzeln bestellbar. Kein zusätzlicher Rabatt.</p>
@@ -586,6 +637,93 @@
   window.addEventListener('scroll', onScroll, {passive:true});
   window.addEventListener('resize', onScroll);
   apply();
+})();
+</script>
+<script>window.BX_LABEL="Awapuhi Wild Ginger";</script>
+<button type="button" class="bxc-fab" id="bxc-fab" aria-label="Bestellliste oeffnen">
+  Bestellliste <span class="bxc-fabc" id="bxc-fabc">0</span></button>
+<div class="bxc-ov" id="bxc-ov"></div>
+<aside class="bxc-drawer" id="bxc-drawer" aria-label="Bestellliste">
+  <div class="bxc-top"><h3>Ihre Bestellliste</h3><button class="bxc-x" id="bxc-x" aria-label="Schliessen">&times;</button></div>
+  <div class="bxc-body" id="bxc-body"></div>
+  <div class="bxc-foot">
+    <div class="bxc-sumrow"><span class="l">Summe netto</span><span class="v" id="bxc-sum">0,00 &euro;</span></div>
+    <label class="bxc-check"><input type="checkbox" id="bxc_neu"> Ich bin noch kein Brendel-Kunde (Neukunde) &ndash; dann bitte Salon &amp; Lieferadresse angeben.</label>
+    <div class="bxc-f">
+      <div><label>Vorname <span class="bxc-req">*</span></label><input id="bxc_vor"></div>
+      <div><label>Nachname <span class="bxc-req">*</span></label><input id="bxc_nach"></div>
+      <div class="full"><label>Salon <span class="bxc-req">*</span></label><input id="bxc_salon"></div>
+      <div class="full"><label>Lieferadresse (Stra&szlig;e, PLZ, Ort)</label><input id="bxc_adr"></div>
+      <div><label>Telefon</label><input id="bxc_tel"></div>
+      <div><label>Kundennr. (falls bekannt)</label><input id="bxc_knr"></div>
+      <div class="full"><label>Nachricht / Sonderwunsch</label><textarea id="bxc_msg" rows="2"></textarea></div>
+    </div>
+    <button class="bxc-send" id="bxc-send">Bestellung per WhatsApp senden</button>
+    <div class="bxc-note">&Ouml;ffnet WhatsApp mit Ihrer fertigen Bestellung an Brendel &amp; S&ouml;hne.<br>
+      Oder direkt <a href="https://wa.me/43676842752300" target="_blank" rel="noopener">einen WhatsApp-Chat starten</a>.</div>
+  </div>
+</aside>
+
+<script id="bxc-js">
+(function(){
+  if(window.__bxc) return; window.__bxc=true;
+  var WA="43676842752300";
+  var LABEL=window.BX_LABEL||(document.title.split('|')[0].split('–')[0].trim());
+  var CART=[];
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function eur(v){return v.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2})+' €';}
+  var D=function(id){return document.getElementById(id);};
+  function openD(){render();D('bxc-drawer').classList.add('open');D('bxc-ov').classList.add('open');}
+  function closeD(){D('bxc-drawer').classList.remove('open');D('bxc-ov').classList.remove('open');}
+  function add(n,p){for(var i=0;i<CART.length;i++){if(CART[i].n===n){CART[i].q++;render();openD();return;}}
+    CART.push({n:n,p:p,q:1});render();openD();}
+  function setq(i,d){if(!CART[i])return;CART[i].q+=d;if(CART[i].q<=0)CART.splice(i,1);render();}
+  function rm(i){CART.splice(i,1);render();}
+  function count(){var c=0;CART.forEach(function(it){c+=it.q;});return c;}
+  function render(){
+    var body=D('bxc-body'),sum=0;
+    if(!CART.length){body.innerHTML='<div class="bxc-empty">Ihre Bestellliste ist noch leer.<br>Tippen Sie bei einem Angebot auf »In die Bestellliste«.</div>';}
+    else{var h='';CART.forEach(function(it,i){var lt=it.p*it.q;sum+=lt;
+      h+='<div class="bxc-row"><div class="bxc-ci"><div class="bxc-n">'+esc(it.n)+'</div>'
+        +'<div class="bxc-pp">'+eur(it.p)+' / Stück</div>'
+        +'<div class="bxc-q"><button type="button" data-qi="'+i+'" data-qd="-1">−</button><span>'+it.q+'</span>'
+        +'<button type="button" data-qi="'+i+'" data-qd="1">+</button></div></div>'
+        +'<div class="bxc-rt">'+eur(lt)+'</div>'
+        +'<button type="button" class="bxc-rm2" data-rm="'+i+'" aria-label="Entfernen">×</button></div>';});
+      body.innerHTML=h;}
+    D('bxc-sum').textContent=eur(sum);
+    D('bxc-fabc').textContent=count();
+  }
+  function send(){
+    if(!CART.length){alert('Ihre Bestellliste ist noch leer. Bitte legen Sie zuerst ein Angebot hinein.');return;}
+    var g=function(id){var el=D(id);return el?el.value.trim():'';};
+    var vor=g('bxc_vor'),nach=g('bxc_nach'),salon=g('bxc_salon'),adr=g('bxc_adr'),tel=g('bxc_tel'),knr=g('bxc_knr'),msg=g('bxc_msg');
+    var neu=D('bxc_neu').checked;
+    if(!vor||!nach){alert('Bitte Vor- und Nachname angeben.');return;}
+    if(!salon){alert('Bitte den Namen Ihres Salons angeben.');return;}
+    if(neu&&!adr){alert('Als Neukunde geben Sie bitte Ihre Lieferadresse an.');return;}
+    var sum=0,lines=[];
+    CART.forEach(function(it){var lt=it.p*it.q;sum+=lt;lines.push('• '+it.q+'× '+it.n+' — '+eur(lt));});
+    var parts=['*Bestellung · '+LABEL+'*',''].concat(lines);
+    parts.push('','*Summe netto: '+eur(sum)+'* (zzgl. USt.)');
+    if(neu&&sum<400)parts.push('(Hinweis: Mindestbestellwert 400 € für Neukunden)');
+    parts.push('','Status: '+(neu?'Neukunde':'Bestandskunde'),'Salon: '+salon,'Name: '+vor+' '+nach);
+    if(adr)parts.push('Lieferadresse: '+adr);
+    if(tel)parts.push('Telefon: '+tel);
+    if(knr)parts.push('Kundennr.: '+knr);
+    if(msg)parts.push('Nachricht: '+msg);
+    window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(parts.join('\n')),'_blank');
+  }
+  D('bxc-fab').addEventListener('click',openD);
+  D('bxc-ov').addEventListener('click',closeD);
+  D('bxc-x').addEventListener('click',closeD);
+  D('bxc-send').addEventListener('click',send);
+  document.addEventListener('click',function(e){
+    var q=e.target.closest('[data-qi]');if(q){setq(+q.dataset.qi,+q.dataset.qd);return;}
+    var r=e.target.closest('[data-rm]');if(r){rm(+r.dataset.rm);return;}
+    var a=e.target.closest('.bxc-add');if(a){add(a.dataset.n,parseFloat(a.dataset.p));}
+  });
+  render();
 })();
 </script>
 </body>

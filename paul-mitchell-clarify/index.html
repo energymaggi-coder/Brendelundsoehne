@@ -99,7 +99,58 @@
   .cta-final p{font-size:17px;color:var(--grey);max-width:600px;margin:0 auto 30px;font-weight:300}
   footer{background:var(--ink);color:#9aa1a8;padding:46px 0;font-size:13px}
   .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}footer a{color:#d3d8dc;text-decoration:none}
-</style></head><body>
+</style>
+<style id="bxc-style">
+.bxc-add{display:inline-block;margin-top:14px;font-family:inherit;font-size:13px;font-weight:600;
+ letter-spacing:.02em;padding:9px 18px;border:1px solid #1a1a1a;background:#fff;color:#1a1a1a;
+ border-radius:4px;cursor:pointer;transition:.15s;line-height:1.2}
+.bxc-add:hover{background:#1a1a1a;color:#fff}
+.bxc-fab{position:fixed;right:20px;bottom:20px;z-index:9997;font-family:inherit;font-size:14px;
+ font-weight:600;letter-spacing:.02em;padding:13px 20px;border:none;border-radius:40px;cursor:pointer;
+ background:#1a1a1a;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.28);display:flex;align-items:center;gap:9px}
+.bxc-fab .bxc-fabc{background:#fff;color:#1a1a1a;min-width:20px;height:20px;border-radius:20px;
+ font-size:12px;display:inline-flex;align-items:center;justify-content:center;padding:0 5px}
+.bxc-ov{position:fixed;inset:0;background:rgba(15,15,15,.42);z-index:9998;opacity:0;visibility:hidden;transition:.25s}
+.bxc-ov.open{opacity:1;visibility:visible}
+.bxc-drawer{position:fixed;top:0;right:0;height:100%;height:100dvh;width:430px;max-width:94vw;background:#fff;
+ z-index:9999;transform:translateX(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);
+ display:flex;flex-direction:column;font-family:inherit;color:#1a1a1a;box-shadow:-14px 0 44px rgba(0,0,0,.16)}
+.bxc-drawer.open{transform:translateX(0)}
+.bxc-top{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid #eae7e0}
+.bxc-top h3{margin:0;font-size:19px;font-weight:700}
+.bxc-x{background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:#8a857b}
+.bxc-body{flex:1;overflow-y:auto;padding:6px 24px}
+.bxc-empty{color:#8a857b;font-weight:300;text-align:center;padding:44px 8px;line-height:1.6}
+.bxc-row{display:flex;align-items:flex-start;gap:12px;padding:16px 0;border-bottom:1px solid #eee}
+.bxc-ci{flex:1}
+.bxc-n{font-size:14px;font-weight:600;line-height:1.35}
+.bxc-pp{font-size:12px;color:#8a857b;margin-top:2px}
+.bxc-q{display:inline-flex;align-items:center;border:1px solid #ddd;margin-top:8px}
+.bxc-q button{width:28px;height:26px;border:none;background:none;cursor:pointer;font-size:16px;color:#1a1a1a}
+.bxc-q span{min-width:26px;text-align:center;font-size:13px}
+.bxc-rt{font-size:13px;font-weight:600;white-space:nowrap;margin-top:1px}
+.bxc-rm2{background:none;border:none;color:#b3ada0;font-size:17px;cursor:pointer;line-height:1;margin-top:-2px}
+.bxc-foot{border-top:1px solid #eae7e0;padding:16px 24px calc(18px + env(safe-area-inset-bottom));background:#fafafa}
+.bxc-sumrow{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.bxc-sumrow .l{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8a857b}
+.bxc-sumrow .v{font-size:19px;font-weight:700}
+.bxc-f{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;margin-bottom:10px}
+.bxc-f .full{grid-column:1/3}
+.bxc-f label{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:#8a857b;display:block;margin-bottom:2px}
+.bxc-f input,.bxc-f textarea{width:100%;font-family:inherit;font-size:14px;padding:7px 2px;border:none;
+ border-bottom:1px solid #cfc9bd;background:transparent;color:#1a1a1a}
+.bxc-f input:focus,.bxc-f textarea:focus{outline:none;border-bottom:1px solid #1a1a1a}
+.bxc-req{color:#b23}
+.bxc-check{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:#4a453c;margin:2px 0 12px;line-height:1.4;font-weight:300}
+.bxc-check input{width:16px;height:16px;margin-top:1px}
+.bxc-send{width:100%;font-family:inherit;font-size:15px;font-weight:600;padding:13px;border:none;border-radius:4px;
+ background:#1a1a1a;color:#fff;cursor:pointer}
+.bxc-send:hover{background:#000}
+.bxc-note{font-size:11.5px;color:#8a857b;font-weight:300;margin-top:9px;text-align:center;line-height:1.5}
+.bxc-note a{color:#1a1a1a}
+@media(max-width:520px){.bxc-fab{right:14px;bottom:14px;padding:12px 16px}}
+</style>
+</head><body>
 <header><div class="wrap nav"><span class="brand">Paul Mitchell <span>· Clarify</span></span>
 <nav class="links"><a href="#herkunft">Herkunft</a><a href="#wirkung">Wirkung</a><a href="#kunde">Für Ihre Kundin</a><a href="#sortiment">Sortiment</a><a href="#startangebot">Startangebot</a><a class="cta" href="#kontakt">Beratung anfordern</a></nav></div></header>
 <section class="hero"><div class="wrap hero-inner"><div class="hero-copy"><span class="cat">Clarify · Tiefenreinigung</span>
@@ -118,7 +169,7 @@
 <div class="imgfull"><img src="./assets/consumer.jpg" alt="Clarify"></div></div></section>
 <div class="px-band"><video class="px-vid" muted loop autoplay playsinline preload="auto" poster="./assets/videos/poster-clarify-shampoo-two.jpg"><source src="./assets/videos/pm-clarify-shampoo-two.mp4" type="video/mp4"></video>
 <div class="px-cap"><span class="px-cap-brand">Paul Mitchell Clarify · auf dem Salon-Screen</span>Shampoo Two</div></div>
-<section id="kits"><div class="wrap"><div class="sec-head"><span class="eyebrow">Sortenrein bestellbar</span><h2>Als <span>400-€-Kit.</span></h2><p>Die Bestseller auch als sortenreines Kit – ein Produkt, Wert 400 € netto. Reguläre Netto-EK, kein Rabatt.</p></div><div class="kits"><div class="kit"><div class="k1">Shampoo-Kit</div><div class="k2">Shampoo Two</div><div class="k3">37× 300 ml</div><div class="k4">405,15 €</div><div class="k5">netto · ab 400 €</div></div><div class="kit"><div class="k1">ACV-Kit</div><div class="k2">Foaming ACV Rinse</div><div class="k3">28× 150 ml</div><div class="k4">404,60 €</div><div class="k5">netto · ab 400 €</div></div></div></div></section>
+<section id="kits"><div class="wrap"><div class="sec-head"><span class="eyebrow">Sortenrein bestellbar</span><h2>Als <span>400-€-Kit.</span></h2><p>Die Bestseller auch als sortenreines Kit – ein Produkt, Wert 400 € netto. Reguläre Netto-EK, kein Rabatt.</p></div><div class="kits"><div class="kit"><div class="k1">Shampoo-Kit</div><div class="k2">Shampoo Two</div><div class="k3">37× 300 ml</div><div class="k4">405,15 €</div><div class="k5">netto · ab 400 €</div><button type="button" class="bxc-add" data-n="Shampoo Two – Shampoo-Kit" data-p="405.15">+ In die Bestellliste</button></div><div class="kit"><div class="k1">ACV-Kit</div><div class="k2">Foaming ACV Rinse</div><div class="k3">28× 150 ml</div><div class="k4">404,60 €</div><div class="k5">netto · ab 400 €</div><button type="button" class="bxc-add" data-n="Foaming ACV Rinse – ACV-Kit" data-p="404.60">+ In die Bestellliste</button></div></div></div></section>
 <div class="px-band"><video class="px-vid" muted loop autoplay playsinline preload="auto" poster="./assets/videos/poster-clarify-acv-rinse.jpg"><source src="./assets/videos/pm-clarify-acv-rinse.mp4" type="video/mp4"></video>
 <div class="px-cap"><span class="px-cap-brand">Paul Mitchell Clarify · auf dem Salon-Screen</span>Foaming ACV Rinse</div></div>
 <section style="background:#fafbfb" id="sortiment"><div class="wrap"><div class="sec-head"><span class="eyebrow">Das Sortiment</span><h2>Shampoo Two, Three &amp; <span>ACV.</span></h2><p>Tiefenreinigung und Balance – der frische Reset. UVP-Preise (Endkunde).</p></div>
@@ -126,13 +177,100 @@
 <section id="startangebot"><div class="wrap"><div class="sec-head"><span class="eyebrow">Für neue Salonpartner</span><h2>Ihr <span>Startangebot.</span></h2><p>Das Paul Mitchell Salon Kit bringt die komplette Marke ins Regal – zum einmaligen Salon-Special.</p></div>
 <div class="offer"><div class="top"><div><div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)">Paul Mitchell · ART 703122</div><div style="font-weight:800;font-size:24px;margin-top:6px;text-transform:uppercase">Salon Kit</div></div>
 <div class="r"><div class="strike">Listenwert 4.999,35 €</div><div class="price">3.366,35 €</div><div class="save">Sie sparen 1.633,00 €</div></div></div>
-<div class="body"><b style="color:var(--ink)">Inhalt:</b> Komplettbestückung der Paul-Mitchell-Care- &amp; Style-Kategorien (inkl. Clarify) – plus Qualitätsmuster &amp; Salonmaterial.<br><span style="font-size:12.5px;color:var(--grey)">Salon-EK (netto), zzgl. USt. · gültig bis 06.07.2027</span></div></div></div></section>
+<div class="body"><b style="color:var(--ink)">Inhalt:</b> Komplettbestückung der Paul-Mitchell-Care- &amp; Style-Kategorien (inkl. Clarify) – plus Qualitätsmuster &amp; Salonmaterial.<br><span style="font-size:12.5px;color:var(--grey)">Salon-EK (netto), zzgl. USt. · gültig bis 06.07.2027</span></div><div style="text-align:center;margin-top:16px"><button type="button" class="bxc-add" data-n="Startangebot – Salon Kit" data-p="3366.35">+ In die Bestellliste</button></div></div></div></section>
 <section class="revenue" id="koerbe"><div class="wrap"><div class="sec-head"><span class="eyebrow" style="color:var(--accent)">Frei zusammenstellen</span><h2>Fertige <span style="color:#fff">Bestell-Körbe.</span></h2><p>Sinnvoll kuratiert zum regulären Netto-EK. Kein Rabatt, Mindestbestellwert 400 € für Neukunden.</p></div>
-<div class="calc"><div class="card"><h3>Nur Verkaufsware · Take-Home</h3><div class="big">407,30 €</div><ul><li><span>12× Shampoo Two 300 ml</span><span>131,40 €</span></li><li><span>12× Shampoo Three 300 ml</span><span>131,40 €</span></li><li><span>10× Foaming ACV Rinse 150 ml</span><span>144,50 €</span></li></ul></div><div class="card"><h3>Nur Literware · Backbar</h3><div class="big">407,55 €</div><ul><li><span>10× Shampoo Two 1 L</span><span>214,50 €</span></li><li><span>9× Shampoo Three 1 L</span><span>193,05 €</span></li></ul></div></div><p class="fine">Summen aus regulären Netto-Einkaufspreisen (Produkt-Master). Frei anpassbar – jede Position auch einzeln bestellbar. Kein Rabatt.</p></div></section>
+<div class="calc"><div class="card"><h3>Nur Verkaufsware · Take-Home</h3><div class="big">407,30 €</div><ul><li><span>12× Shampoo Two 300 ml</span><span>131,40 €</span></li><li><span>12× Shampoo Three 300 ml</span><span>131,40 €</span></li><li><span>10× Foaming ACV Rinse 150 ml</span><span>144,50 €</span></li></ul><button type="button" class="bxc-add" data-n="Nur Verkaufsware · Take-Home · Bestell-Korb" data-p="407.30">+ In die Bestellliste</button></div><div class="card"><h3>Nur Literware · Backbar</h3><div class="big">407,55 €</div><ul><li><span>10× Shampoo Two 1 L</span><span>214,50 €</span></li><li><span>9× Shampoo Three 1 L</span><span>193,05 €</span></li></ul><button type="button" class="bxc-add" data-n="Nur Literware · Backbar · Bestell-Korb" data-p="407.55">+ In die Bestellliste</button></div></div><p class="fine">Summen aus regulären Netto-Einkaufspreisen (Produkt-Master). Frei anpassbar – jede Position auch einzeln bestellbar. Kein Rabatt.</p></div></section>
 <section class="cta-final" id="kontakt"><div class="wrap"><h2>Der frische <span>Reset</span> für Ihren Salon.</h2><p>Wir zeigen den Tiefenreinigungs-Service, richten die Take-Home-Empfehlung ein und schulen das Clarify-Erlebnis. Ihr Brendel-&-Söhne-Außendienst begleitet Sie.</p>
 <a class="btn btn-primary" href="mailto:office@brendel.at?subject=Paul%20Mitchell%20Clarify%20Beratung">Persönliche Beratung anfordern</a></div></section>
 <footer><div class="wrap foot"><div><strong style="color:#fff;letter-spacing:.12em">BRENDEL &amp; SÖHNE</strong><br>Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich</div>
 <div style="text-align:right">Paul Mitchell® Clarify · Shampoo Two · Three · ACV<br><a href="mailto:office@brendel.at">office@brendel.at</a></div></div><div class="wrap" style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(140,140,140,.25);font-size:12px;letter-spacing:.02em;opacity:.85;display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span>© 2026 Brendel Handelsagentur</span><span>·</span><a href="/impressum/">Impressum</a><span>·</span><a href="/kontakt/">Kontakt</a><span>·</span><a href="/datenschutz/">Datenschutz</a></div>
 </footer>
 <script>(function(){document.querySelectorAll('.px-vid').forEach(function(v){if(v.play){var p=v.play();if(p&&p.catch)p.catch(function(){});}});})();</script>
+<script>window.BX_LABEL="Paul Mitchell Clarify";</script>
+<button type="button" class="bxc-fab" id="bxc-fab" aria-label="Bestellliste oeffnen">
+  Bestellliste <span class="bxc-fabc" id="bxc-fabc">0</span></button>
+<div class="bxc-ov" id="bxc-ov"></div>
+<aside class="bxc-drawer" id="bxc-drawer" aria-label="Bestellliste">
+  <div class="bxc-top"><h3>Ihre Bestellliste</h3><button class="bxc-x" id="bxc-x" aria-label="Schliessen">&times;</button></div>
+  <div class="bxc-body" id="bxc-body"></div>
+  <div class="bxc-foot">
+    <div class="bxc-sumrow"><span class="l">Summe netto</span><span class="v" id="bxc-sum">0,00 &euro;</span></div>
+    <label class="bxc-check"><input type="checkbox" id="bxc_neu"> Ich bin noch kein Brendel-Kunde (Neukunde) &ndash; dann bitte Salon &amp; Lieferadresse angeben.</label>
+    <div class="bxc-f">
+      <div><label>Vorname <span class="bxc-req">*</span></label><input id="bxc_vor"></div>
+      <div><label>Nachname <span class="bxc-req">*</span></label><input id="bxc_nach"></div>
+      <div class="full"><label>Salon <span class="bxc-req">*</span></label><input id="bxc_salon"></div>
+      <div class="full"><label>Lieferadresse (Stra&szlig;e, PLZ, Ort)</label><input id="bxc_adr"></div>
+      <div><label>Telefon</label><input id="bxc_tel"></div>
+      <div><label>Kundennr. (falls bekannt)</label><input id="bxc_knr"></div>
+      <div class="full"><label>Nachricht / Sonderwunsch</label><textarea id="bxc_msg" rows="2"></textarea></div>
+    </div>
+    <button class="bxc-send" id="bxc-send">Bestellung per WhatsApp senden</button>
+    <div class="bxc-note">&Ouml;ffnet WhatsApp mit Ihrer fertigen Bestellung an Brendel &amp; S&ouml;hne.<br>
+      Oder direkt <a href="https://wa.me/43676842752300" target="_blank" rel="noopener">einen WhatsApp-Chat starten</a>.</div>
+  </div>
+</aside>
+
+<script id="bxc-js">
+(function(){
+  if(window.__bxc) return; window.__bxc=true;
+  var WA="43676842752300";
+  var LABEL=window.BX_LABEL||(document.title.split('|')[0].split('–')[0].trim());
+  var CART=[];
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function eur(v){return v.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2})+' €';}
+  var D=function(id){return document.getElementById(id);};
+  function openD(){render();D('bxc-drawer').classList.add('open');D('bxc-ov').classList.add('open');}
+  function closeD(){D('bxc-drawer').classList.remove('open');D('bxc-ov').classList.remove('open');}
+  function add(n,p){for(var i=0;i<CART.length;i++){if(CART[i].n===n){CART[i].q++;render();openD();return;}}
+    CART.push({n:n,p:p,q:1});render();openD();}
+  function setq(i,d){if(!CART[i])return;CART[i].q+=d;if(CART[i].q<=0)CART.splice(i,1);render();}
+  function rm(i){CART.splice(i,1);render();}
+  function count(){var c=0;CART.forEach(function(it){c+=it.q;});return c;}
+  function render(){
+    var body=D('bxc-body'),sum=0;
+    if(!CART.length){body.innerHTML='<div class="bxc-empty">Ihre Bestellliste ist noch leer.<br>Tippen Sie bei einem Angebot auf »In die Bestellliste«.</div>';}
+    else{var h='';CART.forEach(function(it,i){var lt=it.p*it.q;sum+=lt;
+      h+='<div class="bxc-row"><div class="bxc-ci"><div class="bxc-n">'+esc(it.n)+'</div>'
+        +'<div class="bxc-pp">'+eur(it.p)+' / Stück</div>'
+        +'<div class="bxc-q"><button type="button" data-qi="'+i+'" data-qd="-1">−</button><span>'+it.q+'</span>'
+        +'<button type="button" data-qi="'+i+'" data-qd="1">+</button></div></div>'
+        +'<div class="bxc-rt">'+eur(lt)+'</div>'
+        +'<button type="button" class="bxc-rm2" data-rm="'+i+'" aria-label="Entfernen">×</button></div>';});
+      body.innerHTML=h;}
+    D('bxc-sum').textContent=eur(sum);
+    D('bxc-fabc').textContent=count();
+  }
+  function send(){
+    if(!CART.length){alert('Ihre Bestellliste ist noch leer. Bitte legen Sie zuerst ein Angebot hinein.');return;}
+    var g=function(id){var el=D(id);return el?el.value.trim():'';};
+    var vor=g('bxc_vor'),nach=g('bxc_nach'),salon=g('bxc_salon'),adr=g('bxc_adr'),tel=g('bxc_tel'),knr=g('bxc_knr'),msg=g('bxc_msg');
+    var neu=D('bxc_neu').checked;
+    if(!vor||!nach){alert('Bitte Vor- und Nachname angeben.');return;}
+    if(!salon){alert('Bitte den Namen Ihres Salons angeben.');return;}
+    if(neu&&!adr){alert('Als Neukunde geben Sie bitte Ihre Lieferadresse an.');return;}
+    var sum=0,lines=[];
+    CART.forEach(function(it){var lt=it.p*it.q;sum+=lt;lines.push('• '+it.q+'× '+it.n+' — '+eur(lt));});
+    var parts=['*Bestellung · '+LABEL+'*',''].concat(lines);
+    parts.push('','*Summe netto: '+eur(sum)+'* (zzgl. USt.)');
+    if(neu&&sum<400)parts.push('(Hinweis: Mindestbestellwert 400 € für Neukunden)');
+    parts.push('','Status: '+(neu?'Neukunde':'Bestandskunde'),'Salon: '+salon,'Name: '+vor+' '+nach);
+    if(adr)parts.push('Lieferadresse: '+adr);
+    if(tel)parts.push('Telefon: '+tel);
+    if(knr)parts.push('Kundennr.: '+knr);
+    if(msg)parts.push('Nachricht: '+msg);
+    window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(parts.join('\n')),'_blank');
+  }
+  D('bxc-fab').addEventListener('click',openD);
+  D('bxc-ov').addEventListener('click',closeD);
+  D('bxc-x').addEventListener('click',closeD);
+  D('bxc-send').addEventListener('click',send);
+  document.addEventListener('click',function(e){
+    var q=e.target.closest('[data-qi]');if(q){setq(+q.dataset.qi,+q.dataset.qd);return;}
+    var r=e.target.closest('[data-rm]');if(r){rm(+r.dataset.rm);return;}
+    var a=e.target.closest('.bxc-add');if(a){add(a.dataset.n,parseFloat(a.dataset.p));}
+  });
+  render();
+})();
+</script>
 </body></html>
