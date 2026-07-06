@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tea Tree – Kopfhautpflege aus australischem Teebaum | Brendel &amp; Söhne</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--moss:#385B3B;--moss-d:#2b4a2e;--beige:#F1F0EB;--beige2:#E7E5DC;--beige3:#dcd9cd;--sand:#9c8a5f;--sand-l:#c7bb98;--ink:#242820;--grey:#5c6355;--shadow:0 22px 60px rgba(36,40,32,.16);}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{font-family:"Inter","Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:"Cormorant Garamond",Georgia,serif}
+  .eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:11.5px;font-weight:600;color:var(--sand)}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px}section{padding:100px 0}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;font-size:14px;padding:15px 30px;border-radius:2px;letter-spacing:.04em}
+  .btn-primary{background:var(--moss);color:#fff}.btn-ghost{border:1px solid var(--moss);color:var(--moss)}
+  header{position:sticky;top:0;z-index:50;background:rgba(241,240,235,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--beige3)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .nav .brand{font-family:"Cormorant Garamond",serif;font-weight:600;color:var(--moss);letter-spacing:.2em;font-size:22px;text-transform:uppercase}
+  .nav .links{display:flex;gap:24px;align-items:center}
+  .nav .links a{color:var(--moss);text-decoration:none;font-size:13px;font-weight:500;opacity:.85}.nav .links a:hover{opacity:1}
+  .nav a.cta{background:var(--moss);color:#fff;opacity:1;padding:10px 20px;border-radius:2px;font-size:12.5px;letter-spacing:.05em}
+  @media(max-width:900px){.nav .links a:not(.cta){display:none}}
+  .hero{background:linear-gradient(160deg,#f6f5f0,var(--beige) 55%,var(--beige2))}
+  .hero-inner{display:grid;grid-template-columns:1.02fr .98fr;gap:50px;align-items:center;min-height:90vh}
+  .hero-copy{padding:70px 0}
+  .hero h1{font-weight:500;font-size:clamp(50px,6.6vw,92px);line-height:1.0;color:var(--moss);margin:18px 0 22px}.hero h1 i{font-style:italic;color:var(--sand)}
+  .hero p.lead{font-size:19px;color:#3f473b;max-width:500px;font-weight:300}
+  .hero-actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero-trust{margin-top:32px;display:flex;gap:24px;flex-wrap:wrap;color:var(--moss);font-size:12.5px}
+  .hero-trust span{display:flex;align-items:center;gap:8px}.hero-trust i{width:7px;height:7px;background:var(--sand);border-radius:50%;display:inline-block}
+  .hero-img{position:relative;height:100%;min-height:560px}
+  .hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% center}
+  @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-img{min-height:420px}.hero-copy{padding:56px 0 10px}}
+  .story{position:relative;color:#fff}.story .bg{position:relative;min-height:600px;display:flex;align-items:center}
+  .story .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%}
+  .story .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,38,28,.84),rgba(28,38,28,.4) 60%,rgba(28,38,28,.15))}
+  .story .content{position:relative;z-index:2;max-width:560px;padding:80px 0}
+  .story h2{font-weight:500;font-size:clamp(32px,4vw,50px);line-height:1.08;margin:14px 0 18px}
+  .story p{font-size:16px;color:#e7ebe2;font-weight:300;margin-bottom:16px}
+  .sec-head{max-width:720px;margin:0 auto 56px;text-align:center}
+  .sec-head h2{font-weight:500;font-size:clamp(34px,4.4vw,54px);line-height:1.05;color:var(--moss);margin:12px 0 16px}.sec-head h2 i{font-style:italic;color:var(--sand)}
+  .sec-head p{font-size:17px;color:var(--grey);font-weight:300}
+  .anker{background:var(--beige)}.anker-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;text-align:center}
+  .anker .num{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(34px,4vw,50px);color:var(--moss);line-height:1}
+  .anker .bar{width:40px;height:2px;background:var(--sand);margin:12px auto 12px}
+  .anker p{font-size:14px;color:var(--grey);max-width:230px;margin:0 auto}
+  @media(max-width:820px){.anker-grid{grid-template-columns:1fr 1fr;gap:36px 20px}}
+  /* SERIES GRID */
+  .series{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .scard{display:block;text-decoration:none;border:1px solid var(--beige3);border-radius:8px;overflow:hidden;background:#fff;transition:transform .2s,box-shadow .2s}
+  .scard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .scard .imgw{aspect-ratio:4/3;overflow:hidden}
+  .scard .imgw img{width:100%;height:100%;object-fit:cover}
+  .scard .body{padding:24px 26px}
+  .scard .cat{font-family:Inter;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--sand)}
+  .scard h3{font-weight:600;font-size:24px;color:var(--moss);margin:6px 0 6px}
+  .scard p{font-size:14px;color:var(--grey);margin-bottom:12px}
+  .scard .more{font-family:Inter;font-size:13px;font-weight:600;color:var(--moss)}
+  .scard .more::after{content:" →"}
+  @media(max-width:820px){.series{grid-template-columns:1fr}}
+  .offer{max-width:760px;margin:0 auto;border:1px solid var(--beige3);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+  .offer .top{background:linear-gradient(160deg,var(--moss),var(--moss-d));color:#fff;padding:34px 38px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+  .offer .top .r{text-align:right}.offer .strike{font-size:13px;color:#cdd8cb;text-decoration:line-through}
+  .offer .price{font-family:Inter;font-weight:700;font-size:34px;line-height:1}
+  .offer .save{display:inline-block;margin-top:6px;background:var(--sand);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:40px}
+  .offer .body{padding:26px 38px;color:#3c443a;font-size:15px}
+  .pills{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;margin-top:44px}
+  .pill{border:1px solid var(--beige3);color:var(--moss);padding:9px 18px;border-radius:40px;font-size:13px;font-weight:500;background:#fff}
+  .cta-final{background:var(--beige);text-align:center}
+  .cta-final h2{font-weight:500;font-size:clamp(36px,4.6vw,58px);color:var(--moss);margin-bottom:16px}.cta-final h2 i{font-style:italic;color:var(--sand)}
+  .cta-final p{font-size:17px;color:var(--grey);max-width:600px;margin:0 auto 30px;font-weight:300}
+  footer{background:var(--moss-d);color:#b9c7b6;padding:46px 0;font-size:13px}
+  .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}footer a{color:#dbe5d8;text-decoration:none}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <span class="brand">Tea Tree</span>
+  <nav class="links">
+    <a href="#serien">Serien</a><a href="#herkunft">Herkunft</a><a href="#startangebot">Startangebot</a>
+    <a class="cta" href="#kontakt">Beratung anfordern</a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="wrap hero-inner">
+  <div class="hero-copy">
+    <span class="eyebrow">Paul Mitchell® · Kopfhautpflege</span>
+    <h1>Die Kraft des <i>Teebaums.</i></h1>
+    <p class="lead">Kopfhaut ist Ihr nächstes Service-Feld – und Tea Tree macht es fühlbar: das berühmte Prickeln überzeugt sofort. Acht Kategorien aus 100 % australischem Teebaum geben Ihnen für jeden Typ ein Werkzeug und eine Wash-House-Erlebniswelt, die Kundinnen wiederkommen lässt.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#serien">Alle Serien</a>
+      <a class="btn btn-ghost" href="#herkunft">Die Herkunft</a>
+    </div>
+    <div class="hero-trust">
+      <span><i></i> #1 Kopfhautpflege (US)</span><span><i></i> EcoVadis Platinum</span><span><i></i> 20 Jahre Aufforstung</span>
+    </div>
+  </div>
+  <div class="hero-img"><img src="./assets/hero.jpg" alt="Tea Tree – Kopfhautpflege"></div>
+</div></section>
+
+<section class="story" id="herkunft"><div class="bg">
+  <img src="./assets/story.jpg" alt="Australischer Teebaum">
+  <div class="wrap"><div class="content">
+    <span class="eyebrow" style="color:var(--sand-l)">Die Herkunft</span>
+    <h2>Aus Australiens ältestem Heilmittel.</h2>
+    <p>Melaleuca alternifolia – der australische Teebaum – ist eines der stärksten natürlichen Antiseptika. Tea Tree verwendet 100 % australischen Teebaum von einer verantwortungsvoll zertifizierten Farm (EcoVadis Platinum) und ist seit Jahren konsequent auf Nachhaltigkeit umgestellt.</p>
+    <p>Aus einer gewöhnlichen Haarwäsche wird ein Wohlfühlmoment: das berühmte, kühlende Prickeln – von der Kopfhaut bis in die Zehenspitzen.</p>
+  </div></div>
+</div></section>
+
+<section class="anker"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Warum Tea Tree</span><h2>Eine Marke, <i>die trägt.</i></h2></div>
+  <div class="anker-grid">
+    <div><div class="num">#1</div><div class="bar"></div><p>Salonmarke für Kopfhautpflege in den USA*</p></div>
+    <div><div class="num">100%</div><div class="bar"></div><p>australischer Teebaum, verantwortungsvoll geerntet</p></div>
+    <div><div class="num">8</div><div class="bar"></div><p>Kategorien rund um Kopfhaut &amp; Haar</p></div>
+    <div><div class="num">Platinum</div><div class="bar"></div><p>EcoVadis-Nachhaltigkeitsrating</p></div>
+  </div>
+  <p class="sec-head" style="margin:30px auto 0;font-size:12px;color:var(--grey)">*Kline-Daten US-Markt Q1 2022 – Q2 2023. Nicht auf Österreich übertragbar.</p>
+</div></section>
+
+<section id="serien"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Die Serien</span><h2>Für jedes <i>Bedürfnis.</i></h2><p>Fünf Welten, ein Fundament aus Teebaum. Jede Serie mit eigener Seite, Sortiment und Startangebot.</p></div>
+  <div class="series">
+    <a class="scard" href="/tea-tree-special/">
+      <div class="imgw"><img src="./assets/thumb-special.jpg" alt="Tea Tree Special"></div>
+      <div class="body"><div class="cat">Der Klassiker</div><h3>Special</h3><p>Frische, Prickeln &amp; Tiefenreinigung mit dem Tingle Complex.</p><span class="more">Zur Serie</span></div>
+    </a>
+    <a class="scard" href="/tea-tree-lavender-mint/">
+      <div class="imgw"><img src="./assets/thumb-lavendermint.jpg" alt="Tea Tree Lavender Mint"></div>
+      <div class="body"><div class="cat">Feuchtigkeit &amp; Locken</div><h3>Lavender Mint</h3><p>Nährende Öle &amp; Definition für trockenes, texturiertes Haar.</p><span class="more">Zur Serie</span></div>
+    </a>
+    <a class="scard" href="/tea-tree-lemon-sage/">
+      <div class="imgw"><img src="./assets/thumb-lemonsage.jpg" alt="Tea Tree Lemon Sage"></div>
+      <div class="body"><div class="cat">Volumen</div><h3>Lemon Sage</h3><p>Zitrone &amp; Salbei für sichtbar mehr Fülle bei feinem Haar.</p><span class="more">Zur Serie</span></div>
+    </a>
+    <a class="scard" href="/tea-tree-scalp-care/">
+      <div class="imgw"><img src="./assets/thumb-scalpcare.jpg" alt="Tea Tree Scalp Care"></div>
+      <div class="body"><div class="cat">Kopfhaut &amp; Fülle</div><h3>Scalp Care</h3><p>Regeniplex bei dünner werdendem Haar – plus tägliche Seren.</p><span class="more">Zur Serie</span></div>
+    </a>
+    <a class="scard" href="/tea-tree-hemp/">
+      <div class="imgw"><img src="./assets/thumb-hemp.jpg" alt="Tea Tree Hemp"></div>
+      <div class="body"><div class="cat">Regeneration</div><h3>Hemp</h3><p>Hanfsamenöl als 2-in-1-System für Haar &amp; Haut.</p><span class="more">Zur Serie</span></div>
+    </a>
+    <div class="scard" style="cursor:default;background:var(--beige)">
+      <div class="body" style="padding:34px 30px">
+        <div class="cat">Und mehr</div><h3>Special Color &amp; Detox</h3>
+        <p>Farbschutz mit Prickeln und Kopfhaut-Peeling – auf der Special-Seite.</p>
+        <a class="more" style="text-decoration:none" href="/tea-tree-special/">Zu Special</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section style="background:var(--beige)" id="startangebot"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Für neue Salonpartner</span><h2>Ihr <i>Startangebot.</i></h2><p>Das Tea Tree Full Service Kit – die komplette Markenwelt in einem, zum einmaligen Salon-Special.</p></div>
+  <div class="offer">
+    <div class="top">
+      <div><div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--sand-l)">Tea Tree · ART 702792</div><div class="serif" style="font-size:26px;margin-top:6px">Full Service Kit</div></div>
+      <div class="r"><div class="strike">Listenwert 1.940,50 €</div><div class="price">1.349,55 €</div><div class="save">Sie sparen 590,95 €</div></div>
+    </div>
+    <div class="body"><b style="color:var(--moss)">Inhalt:</b> Komplettbestückung aller Tea-Tree-Serien (Special, Lavender Mint, Lemon Sage, Styling …) – plus Qualitätsmuster &amp; Liter-Nachfüller.<br><span style="font-size:12.5px;color:var(--grey)">Salon-EK (netto), zzgl. USt. · gültig bis 06.07.2027</span></div>
+  </div>
+  <div class="pills">
+    <span class="pill">100 % australischer Teebaum</span><span class="pill">EcoVadis Platinum</span><span class="pill">Vegan</span><span class="pill">Signature „Tingle"</span><span class="pill">Für jeden Kopfhaut-Typ</span>
+  </div>
+</div></section>
+
+<section class="cta-final" id="kontakt"><div class="wrap">
+  <h2>Holen Sie das <i>Prickeln</i> in Ihren Salon.</h2>
+  <p>Wir richten die Tea-Tree-Wash-House-Zone ein, wählen die passenden Serien für Ihre Kundschaft und schulen das Erlebnis. Ihr Brendel-&amp;-Söhne-Außendienst begleitet Sie.</p>
+  <a class="btn btn-primary" href="mailto:office@brendel.at?subject=Tea%20Tree%20Beratung">Persönliche Beratung anfordern</a>
+</div></section>
+
+<footer><div class="wrap foot">
+  <div><strong style="color:#fff;letter-spacing:.16em;font-family:'Cormorant Garamond',serif;font-size:16px">BRENDEL &amp; SÖHNE</strong><br>Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich</div>
+  <div style="text-align:right">Paul Mitchell® Tea Tree · „Das Prickeln"<br><a href="mailto:office@brendel.at">office@brendel.at</a></div>
+</div><div class="wrap" style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(140,140,140,.25);font-size:12px;letter-spacing:.02em;opacity:.85;display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span>© 2026 Brendel Handelsagentur</span><span>·</span><a href="/impressum/">Impressum</a><span>·</span><a href="/kontakt/">Kontakt</a><span>·</span><a href="/datenschutz/">Datenschutz</a></div>
+</footer>
+</body>
+</html>

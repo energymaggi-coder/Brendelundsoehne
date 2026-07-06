@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bond Rx – Schluss mit Haarbruch | Brendel &amp; Söhne</title>
+<style>
+  :root{
+    --navy:#0a2a52;
+    --navy-2:#123f74;
+    --ice:#c8d8e8;
+    --ice-light:#eef3f9;
+    --ice-mid:#dbe6f2;
+    --ink:#0a2a52;
+    --grey:#5a6b80;
+    --white:#ffffff;
+    --shadow:0 18px 50px rgba(10,42,82,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Inter","Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.eyebrow{font-family:"Montserrat","Inter",sans-serif;letter-spacing:.02em}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+  .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:12px;font-weight:700;color:var(--navy-2)}
+  section{padding:96px 0}
+  .hex{clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%)}
+
+  /* ---------- NAV ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--ice-mid)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .nav img{height:24px}
+  .nav .brand{font-weight:700;color:var(--navy);letter-spacing:.14em;font-size:14px;text-transform:uppercase}
+  .nav a.cta{background:var(--navy);color:#fff;text-decoration:none;padding:10px 20px;border-radius:2px;font-size:13px;font-weight:600;letter-spacing:.03em}
+  .nav .links{display:flex;gap:26px;align-items:center}
+  .nav .links a{color:var(--grey);text-decoration:none;font-size:13px;font-weight:500}
+  .nav .links a:hover{color:var(--navy)}
+  @media(max-width:820px){.nav .links a:not(.cta){display:none}}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;background:linear-gradient(160deg,#0a2a52 0%,#123f74 55%,#1c5290 100%);color:#fff;overflow:hidden;padding:0}
+  .hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;min-height:88vh}
+  .hero-copy{padding:60px 0}
+  .hero .eyebrow{color:#9fc0e6}
+  .hero h1{font-size:clamp(38px,5.4vw,68px);line-height:1.02;font-weight:800;margin:18px 0 22px;text-transform:uppercase}
+  .hero h1 span{color:#8fc2f2}
+  .hero p.lead{font-size:19px;color:#d7e4f4;max-width:520px;font-weight:300}
+  .hero-actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;font-size:15px;padding:15px 30px;border-radius:2px;letter-spacing:.02em}
+  .btn-primary{background:#fff;color:var(--navy)}
+  .btn-ghost{border:1px solid rgba(255,255,255,.5);color:#fff}
+  .hero-img{position:relative;height:100%;min-height:520px;background:radial-gradient(circle at 60% 40%,#eef4fb 0%,#d6e4f3 100%);display:flex;align-items:center;justify-content:center}
+  .hero-img img{width:100%;height:100%;object-fit:contain;padding:34px;filter:drop-shadow(0 26px 40px rgba(10,42,82,.28))}
+  .hero-badges{position:absolute;bottom:28px;left:0;right:0;display:flex;gap:14px;justify-content:flex-start;z-index:3;flex-wrap:wrap}
+  .award{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:8px 16px;border-radius:2px;font-size:12px;color:#dceafa}
+  @media(max-width:820px){.hero-inner{grid-template-columns:1fr}.hero-img{min-height:360px}.hero-copy{padding:50px 0 20px}}
+
+  /* floating hexagons */
+  .hexfloat{position:absolute;border:1px solid rgba(255,255,255,.14);pointer-events:none}
+  .hexfloat.f1{width:180px;height:200px;top:8%;left:44%;clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%);opacity:.5}
+  .hexfloat.f2{width:90px;height:100px;top:60%;left:38%;clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%);opacity:.35}
+
+  /* ---------- STAT BAND ---------- */
+  .stats{background:var(--ice-light);padding:70px 0}
+  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center}
+  .stat{position:relative}
+  .stat .hexnum{width:150px;height:165px;margin:0 auto 18px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Montserrat",sans-serif;font-weight:800;font-size:44px;clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%)}
+  .stat h3{font-size:16px;color:var(--navy);margin-bottom:6px}
+  .stat p{font-size:14px;color:var(--grey);max-width:280px;margin:0 auto}
+  @media(max-width:720px){.stat-grid{grid-template-columns:1fr;gap:40px}}
+
+  /* ---------- GENERIC SECTION HEADERS ---------- */
+  .sec-head{max-width:720px;margin-bottom:54px}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head h2{font-size:clamp(28px,3.6vw,44px);line-height:1.08;font-weight:800;text-transform:uppercase;margin:14px 0 16px;color:var(--navy)}
+  .sec-head p{font-size:18px;color:var(--grey);font-weight:300}
+
+  /* ---------- HOW IT WORKS ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .step{background:#fff;border:1px solid var(--ice-mid);border-radius:4px;padding:34px 30px;position:relative;overflow:hidden}
+  .step .n{font-family:"Montserrat";font-weight:800;font-size:15px;color:var(--navy-2);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .step .n::before{content:"";width:26px;height:29px;background:var(--ice);clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%);display:inline-block}
+  .step h3{font-size:20px;color:var(--navy);margin-bottom:10px}
+  .step .ph{font-size:12px;font-weight:700;color:var(--navy-2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+  .step p{font-size:15px;color:var(--grey)}
+  @media(max-width:820px){.steps{grid-template-columns:1fr}}
+
+  .egg{margin-top:40px;background:var(--navy);color:#fff;border-radius:4px;padding:40px 44px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+  .egg .icon{width:70px;height:77px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%);display:flex;align-items:center;justify-content:center;font-size:30px}
+  .egg h3{font-size:19px;margin-bottom:8px;text-transform:uppercase;letter-spacing:.03em}
+  .egg p{color:#cfe0f2;font-size:15px;font-weight:300}
+  @media(max-width:620px){.egg{grid-template-columns:1fr;text-align:center;padding:32px 24px}.egg .icon{margin:0 auto}}
+
+  /* ---------- SPLIT (consumer / how sits) ---------- */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .split.rev{direction:rtl}.split.rev>*{direction:ltr}
+  .split img{width:100%;border-radius:6px;box-shadow:var(--shadow);object-fit:cover}
+  .split ul{list-style:none;margin-top:22px}
+  .split li{position:relative;padding-left:34px;margin-bottom:16px;font-size:16px;color:#33465e}
+  .split li::before{content:"";position:absolute;left:0;top:6px;width:18px;height:20px;background:var(--navy);clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%)}
+  .split li b{color:var(--navy)}
+  @media(max-width:820px){.split{grid-template-columns:1fr;gap:32px}.split.rev{direction:ltr}}
+
+  /* ---------- REVENUE ---------- */
+  .revenue{background:linear-gradient(160deg,#0a2a52,#12437a);color:#fff}
+  .revenue .sec-head h2{color:#fff}
+  .revenue .sec-head p{color:#c3d6ec}
+  .calc{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-bottom:42px}
+  .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:6px;padding:34px}
+  .card h3{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:#9fc0e6;margin-bottom:20px}
+  .row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dashed rgba(255,255,255,.16);font-size:15px;color:#dbe8f6}
+  .row.tot{border-bottom:none;border-top:2px solid rgba(255,255,255,.4);margin-top:8px;padding-top:16px;font-weight:700;font-size:18px;color:#fff}
+  .row .g{color:#7dd6a0;font-weight:700}
+  .big-projection{text-align:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:6px;padding:44px 30px}
+  .big-projection .num{font-family:"Montserrat";font-weight:800;font-size:clamp(46px,7vw,88px);line-height:1;color:#8fe0af}
+  .big-projection p{color:#c3d6ec;margin-top:12px;font-size:16px}
+  .fine{font-size:12px;color:#8ea9c7;margin-top:18px;text-align:center}
+  @media(max-width:720px){.calc{grid-template-columns:1fr}}
+
+  /* ---------- BEFORE/AFTER ---------- */
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);max-width:760px;margin:0 auto}
+  .ba figure{position:relative;margin:0}
+  .ba img{width:100%;height:520px;object-fit:cover;display:block}
+  .ba figcaption{position:absolute;top:16px;left:16px;background:var(--navy);color:#fff;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;font-weight:700}
+  .ba figure.after figcaption{background:#fff;color:var(--navy)}
+  @media(max-width:620px){.ba img{height:340px}}
+
+  /* ---------- PRODUCTS ---------- */
+  .prods{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .prod{border:1px solid var(--ice-mid);border-radius:6px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+  .prod .imgw{background:var(--ice-light);height:230px;display:flex;align-items:center;justify-content:center;padding:18px}
+  .prod .imgw img{max-height:100%;max-width:100%;object-fit:contain}
+  .prod .body{padding:22px 22px 26px}
+  .prod .tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--navy-2)}
+  .prod h3{font-size:18px;color:var(--navy);margin:6px 0 8px}
+  .prod p{font-size:14px;color:var(--grey);margin-bottom:14px}
+  .prod .price{font-family:"Montserrat";font-weight:700;color:var(--navy);font-size:15px}
+  .prod .price small{font-weight:400;color:var(--grey);font-size:12px}
+  @media(max-width:820px){.prods{grid-template-columns:1fr}}
+
+  .bundles{margin-top:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .bundle{border:1px solid var(--ice-mid);border-radius:6px;padding:24px;text-align:center;background:var(--ice-light)}
+  .bundle .nm{font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.06em;font-size:13px}
+  .bundle .pr{font-family:"Montserrat";font-weight:800;font-size:26px;color:var(--navy);margin:8px 0 4px}
+  .bundle small{color:var(--grey);font-size:13px}
+  @media(max-width:820px){.bundles{grid-template-columns:1fr}}
+
+  /* ---------- FEATURE PILLS ---------- */
+  .pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px}
+  .pill{border:1px solid var(--ice-mid);color:var(--navy-2);padding:9px 18px;border-radius:40px;font-size:13px;font-weight:600;background:#fff}
+
+  /* ---------- CTA ---------- */
+  .cta-final{background:var(--ice-light);text-align:center}
+  .cta-final h2{font-size:clamp(30px,4vw,46px);text-transform:uppercase;color:var(--navy);font-weight:800;margin-bottom:18px}
+  .cta-final p{font-size:18px;color:var(--grey);max-width:600px;margin:0 auto 30px;font-weight:300}
+  .cta-final .btn-primary{background:var(--navy);color:#fff}
+
+  footer{background:var(--navy);color:#a9c3e0;padding:44px 0;font-size:13px}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  footer img{height:22px}
+  footer a{color:#cfe0f2;text-decoration:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <span class="brand">Bond&nbsp;Rx</span>
+    <nav class="links">
+      <a href="#tech">Technologie</a>
+      <a href="#kunde">Für Ihre Kundin</a>
+      <a href="#umsatz">Zusatzumsatz</a>
+      <a href="#produkte">Sortiment</a>
+      <a href="#startangebot">Startangebot</a>
+      <a class="cta" href="#kontakt">Beratung anfordern</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="hexfloat f1"></span>
+  <span class="hexfloat f2"></span>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Paul Mitchell® · Bond Rx</span>
+      <h1>Schluss mit <span>Haarbruch.</span></h1>
+      <p class="lead">Aus jedem Farb- und Blondierservice einen Bond-Building-Service machen – ohne Rezepturänderung, ohne Mehrzeit. Das ist ein „Schluss mit Haarbruch“-Ergebnis, für das Kundinnen wiederkommen, und ein spürbarer Zusatzumsatz bei jeder Coloration.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#umsatz">Zusatzumsatz berechnen</a>
+        <a class="btn btn-ghost" href="#tech">So funktioniert es</a>
+      </div>
+      <div style="margin-top:30px;display:flex;gap:26px;flex-wrap:wrap;color:#bcd3ee;font-size:13px">
+        <span>★ People Beauty Award 2023</span>
+        <span>★ NewBeauty Award 2024</span>
+        <span>100 % vegan</span>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="./assets/hero_bondrx.jpg" alt="Bond Rx System – Step 1, Step 2, Shampoo, Conditioner, Treatment">
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" id="tech">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="hexnum">37%</div>
+        <h3>Reparatur</h3>
+        <p>der bereits gebrochenen Disulfidbrücken werden wiederhergestellt.</p>
+      </div>
+      <div class="stat">
+        <div class="hexnum">85%</div>
+        <h3>Schutz</h3>
+        <p>der Disulfidbrücken bleiben während der Aufhellung erhalten.</p>
+      </div>
+      <div class="stat">
+        <div class="hexnum">88%</div>
+        <h3>Pflege</h3>
+        <p>bessere Haarqualität durch das Heimpflege-Regime.</p>
+      </div>
+    </div>
+    <p class="fine" style="color:var(--grey);margin-top:34px">Werte aus klinischen Tests durch unabhängige Drittanbieter.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Die Technologie</span>
+      <h2>Zwei Schritte. Aktiviert durch Wärme.</h2>
+      <p>Anders als alle Wettbewerber wirkt Bond Rx nicht <i>während</i>, sondern <i>nach</i> dem chemischen Prozess – aktiviert durch die Föhnhitze. So konkurriert der Bond-Builder nicht mit der Farbe um die Haarfaser.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="n">Step 1 · Bond Builder</div>
+        <div class="ph">Öffnen · pH 9,0</div>
+        <h3>Eindringen &amp; vernetzen</h3>
+        <p>Das alkalische Milieu öffnet die Schuppenschicht. Der patentierte Protein-Silikon-Bond-Builder dringt in den Cortex ein und verbindet gebrochene Disulfidbrücken neu – geschützt während Färbung oder Aufhellung.</p>
+      </div>
+      <div class="step">
+        <div class="n">Step 2 · Sealant</div>
+        <div class="ph">Versiegeln · pH 4,0</div>
+        <h3>Glätten &amp; versiegeln</h3>
+        <p>Der saure pH-Wert stellt die natürlichen Lipide wieder her, glättet und versiegelt die Schuppenschicht. Weiches, geschmeidiges Haar mit gleichmäßiger Schutzbarriere von Wurzel bis Spitze.</p>
+      </div>
+      <div class="step">
+        <div class="n">Föhnen · Aktivierung</div>
+        <div class="ph">Fixieren · Hitze</div>
+        <h3>Dauerhaft einschließen</h3>
+        <p>Erst die Föhnhitze aktiviert den Bond-Builder: Die Proteine vernetzen sich irreversibel und bilden ein stabiles Netz. Die Brücken werden gefestigt – der Schlüsselmoment, den die Kundin sofort spürt.</p>
+      </div>
+    </div>
+
+    <div class="egg">
+      <div class="icon">🥚</div>
+      <div>
+        <h3>Die Ei-Analogie</h3>
+        <p>Wie beim Kochen eines Eies: Unter Hitze verlieren die Proteine ihre alte Struktur, ordnen sich neu und bilden ein festes, stabiles Netz. Genau das passiert beim Föhnen im Haar – der Bond-Builder wird unwiderruflich eingeschlossen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSUMER BENEFIT -->
+<section style="background:var(--ice-light)" id="kunde">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Für Ihre Kundin</span>
+      <h2 style="font-family:Montserrat;font-size:clamp(28px,3.6vw,44px);text-transform:uppercase;color:var(--navy);font-weight:800;line-height:1.08;margin:14px 0 8px">Blond ohne Reue.</h2>
+      <p style="color:var(--grey);font-size:17px">Die Kundin bekommt ihre Wunschfarbe – und Haar, das sich danach stärker anfühlt als vorher. Das Ergebnis ist spürbar, nicht nur behauptet.</p>
+      <ul>
+        <li><b>Weniger Bruch, mehr Länge:</b> gebrochene Brücken werden repariert, die Struktur bleibt intakt.</li>
+        <li><b>Sofort fühlbar:</b> weicheres, geschmeidigeres Haar schon beim Föhnen im Salon.</li>
+        <li><b>Glanz &amp; Kämmbarkeit:</b> versiegelte Schuppenschicht reflektiert Licht, entwirrt leichter.</li>
+        <li><b>Luxuriöser Duft:</b> Amber, Sandelholz und Vanille-Orchidee – untypisch schön für eine Technikmarke.</li>
+        <li><b>Schutz zu Hause:</b> dieselbe Technologie im Pflegesystem hält den Effekt zwischen den Terminen.</li>
+      </ul>
+    </div>
+    <div><img src="./assets/model_1.jpg" alt="Kundin mit gesundem, glänzendem Haar"></div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section>
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Sichtbares Ergebnis</span>
+      <h2>Vorher / Nachher</h2>
+    </div>
+    <div class="ba">
+      <figure><img src="./assets/before.jpg" alt="Vorher"><figcaption>Vorher</figcaption></figure>
+      <figure class="after"><img src="./assets/after.jpg" alt="Nachher"><figcaption>Nachher</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- REVENUE -->
+<section class="revenue" id="umsatz">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow" style="color:#9fc0e6">Für den Salon</span>
+      <h2>Aus Materialkosten wird Marge.</h2>
+      <p>Eine Dosierkappe Step 1 kostet rund <b style="color:#fff">0,70 €</b>. Der empfohlene Aufschlag liegt bei <b style="color:#fff">ab 4,50 € pro Messlöffel</b>. Jeder Farbservice wird so zum Bond-Building-Service – reiner Deckungsbeitrag.</p>
+    </div>
+
+    <div class="calc">
+      <div class="card">
+        <h3>Add-on zum Farbservice (1 Ganzfarbe)</h3>
+        <div class="row"><span>Materialkosten Step 1 (2 Kappen)</span><span>– 1,40 €</span></div>
+        <div class="row"><span>Aufschlag pro Anwendung</span><span>+ 9,00 €</span></div>
+        <div class="row tot"><span>Deckungsbeitrag / Service</span><span class="g">+ 7,60 €</span></div>
+      </div>
+      <div class="card">
+        <h3>Eigenständiges Care Treatment</h3>
+        <div class="row"><span>Materialkosten Step 1 + 2</span><span>– ca. 4,00 €</span></div>
+        <div class="row"><span>Servicepreis (kurz/mittel)</span><span>+ 25,00 €</span></div>
+        <div class="row tot"><span>Deckungsbeitrag / Service</span><span class="g">+ 21,00 €</span></div>
+      </div>
+    </div>
+
+    <div class="big-projection">
+      <div class="num">≈ 15.200 €</div>
+      <p>Zusätzlicher Rohertrag pro Jahr – bei nur <b style="color:#fff">40 Farb-Services pro Woche</b> mit Bond-Rx-Upgrade (40 × 7,60 € × 50 Wochen). Ganz ohne Zusatzzeit am Platz.</p>
+    </div>
+    <p class="fine">Beispielrechnung auf Basis empfohlener Aufschläge (ab 4,50 € / Messlöffel) und geschätzter Materialkosten. Tatsächliche Werte je nach Salon-Preisgestaltung.</p>
+
+    <div style="text-align:center;margin-top:26px">
+      <a class="btn btn-primary" href="#kontakt">Einführung im Salon planen</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY EASY / SALON ARGUMENTS -->
+<section>
+  <div class="wrap split rev">
+    <div><img src="./assets/step1.jpg" alt="Bond Rx Step 1 mit Dosierkappe"></div>
+    <div>
+      <span class="eyebrow">Kein Mehraufwand</span>
+      <h2 style="font-family:Montserrat;font-size:clamp(28px,3.6vw,44px);text-transform:uppercase;color:var(--navy);font-weight:800;line-height:1.08;margin:14px 0 8px">Die niedrigste Einstiegshürde am Markt.</h2>
+      <ul>
+        <li><b>Keine Rezepturänderung:</b> gleiche Farbe, gleicher Entwickler, gleiche Einwirkzeit.</li>
+        <li><b>Nur 1 Dosierkappe (3,75 ml)</b> Step 1 zur Mischung geben – fertig.</li>
+        <li><b>Kein Wirk-Wettbewerb:</b> aktiviert erst nach dem Service durch Föhnen.</li>
+        <li><b>Conquest-fähig:</b> überzeugt Salons, die heute mit Olaplex oder Fibreplex arbeiten.</li>
+        <li><b>Ganzes System:</b> vom Salonservice bis zur Heimpflege – die Kundin bleibt im Bond-Rx-Ökosystem.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section style="background:var(--ice-light)" id="produkte">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Das System</span>
+      <h2>Salon &amp; Heimpflege</h2>
+      <p>Zwei professionelle Schritte für den Service – drei Take-Home-Produkte mit derselben patentierten Technologie.</p>
+    </div>
+
+    <div class="prods">
+      <div class="prod">
+        <div class="imgw"><img src="./assets/step1.jpg" alt="Step 1"></div>
+        <div class="body">
+          <span class="tag">Salon · Step 1</span>
+          <h3>Professional Bond Builder</h3>
+          <p>pH 9,0 · vernetzt gebrochene Disulfidbrücken während des Farb-/Blondierservice. 250 ml.</p>
+          <div class="price">Salonexklusiv</div>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="imgw"><img src="./assets/step2.jpg" alt="Step 2"></div>
+        <div class="body">
+          <span class="tag">Salon · Step 2</span>
+          <h3>Bond-Building Sealant</h3>
+          <p>pH 4,0 · stellt Lipide wieder her, glättet und versiegelt. 500 ml, auch im Set.</p>
+          <div class="price">Salonexklusiv</div>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="imgw"><img src="./assets/product_group.jpg" alt="Heimpflege-Trio"></div>
+        <div class="body">
+          <span class="tag">Heimpflege · Trio</span>
+          <h3>Shampoo · Conditioner · Treatment</h3>
+          <p>Strengthen &amp; Protect – für den Schutz zwischen den Terminen. Sulfatfrei, vegan.</p>
+          <div class="price">ab 19,95 € <small>UVP (Treatment 75 ml)</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bundles">
+      <div class="bundle">
+        <div class="nm">Basis</div>
+        <div class="pr">70,90 €</div>
+        <small>Shampoo 250 ml + Conditioner 200 ml</small>
+      </div>
+      <div class="bundle">
+        <div class="nm">Komplett</div>
+        <div class="pr">90,85 €</div>
+        <small>+ Treatment 75 ml für 1× / Woche</small>
+      </div>
+      <div class="bundle">
+        <div class="nm">Vorrat</div>
+        <div class="pr">163,85 €</div>
+        <small>Shampoo &amp; Conditioner 710 ml + Treatment 150 ml</small>
+      </div>
+    </div>
+
+    <div class="pills" style="margin-top:40px">
+      <span class="pill">100 % vegan</span>
+      <span class="pill">Sulfatfrei</span>
+      <span class="pill">Parabenfrei</span>
+      <span class="pill">Glutenfrei</span>
+      <span class="pill">Nussfrei</span>
+      <span class="pill">Farbschonend</span>
+      <span class="pill">Extension-geeignet</span>
+    </div>
+  </div>
+</section>
+
+<!-- STARTANGEBOT -->
+<section style="background:#fff" id="startangebot">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Für neue Salonpartner</span>
+      <h2 style="font-family:Montserrat;font-size:clamp(28px,3.6vw,44px);text-transform:uppercase;color:var(--navy);font-weight:800;margin:14px 0 16px">Ihr Startangebot</h2>
+      <p style="font-size:18px;color:var(--grey);font-weight:300;max-width:640px;margin:0 auto">Zwei Einstiegs-Sets mit dem kompletten Bond-Rx-System – als limitiertes Salon-Special mit echtem Preisvorteil.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto">
+      <div style="border:1px solid var(--ice-mid);border-radius:8px;overflow:hidden">
+        <div style="background:var(--navy);color:#fff;padding:26px 30px">
+          <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9fc0e6">Einstieg · Medium Set</div>
+          <div style="display:flex;align-items:flex-end;gap:12px;margin-top:8px">
+            <span style="font-family:Montserrat;font-weight:800;font-size:32px">291,90 €</span>
+            <span style="background:#fff;color:var(--navy);font-weight:700;font-size:13px;padding:3px 10px;border-radius:2px;margin-bottom:6px">−25 %</span>
+          </div>
+          <div style="font-size:13px;color:#cfe0f2;margin-top:4px">statt 388,80 € · Sie sparen 96,90 €</div>
+        </div>
+        <div style="padding:22px 30px;font-size:14px;color:var(--grey)">
+          <b style="color:var(--navy)">Inhalt:</b> Medium Professional Set (Step 1 250 ml + Step 2 500 ml), 3× Shampoo, 3× Conditioner, 3× Treatment 150 ml, 3× Treatment 75 ml.<br>
+          <b style="color:var(--navy)">Plus Free:</b> Technikbuch, Service-Menü, Displayflyer &amp; Acryl-Display, Markenbroschüren, Poster, Regalsprecher, Spiegelaufkleber, Qualitätsmuster.
+        </div>
+      </div>
+      <div style="border:1px solid var(--navy);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)">
+        <div style="background:linear-gradient(160deg,#0a2a52,#1c5290);color:#fff;padding:26px 30px">
+          <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#9fc0e6">Top-Angebot · Large Set</div>
+          <div style="display:flex;align-items:flex-end;gap:12px;margin-top:8px">
+            <span style="font-family:Montserrat;font-weight:800;font-size:32px">416,30 €</span>
+            <span style="background:#fff;color:var(--navy);font-weight:700;font-size:13px;padding:3px 10px;border-radius:2px;margin-bottom:6px">−30 %</span>
+          </div>
+          <div style="font-size:13px;color:#cfe0f2;margin-top:4px">statt 595,05 € · Sie sparen 178,75 €</div>
+        </div>
+        <div style="padding:22px 30px;font-size:14px;color:var(--grey)">
+          <b style="color:var(--navy)">Inhalt:</b> Large Professional Set (Step 1 500 ml + Step 2 1 L), 4× Shampoo, 4× Conditioner, 3× Treatment, Bond Rx Lightener 680 g, 20 &amp; 30 Vol Cream Developer, Sprühflasche.<br>
+          <b style="color:var(--navy)">Plus Free:</b> volle Marketing-Ausstattung + Liter-Nachfüller &amp; Qualitätsmuster.
+        </div>
+      </div>
+    </div>
+    <p class="fine" style="text-align:center;margin-top:20px">Salon-EK (netto), zzgl. USt. · limitiertes Neukunden-Angebot · gültig bis 06.07.2027</p>
+  </div>
+</section>
+
+<!-- INTELLIGENTE KOERBE -->
+<section style="background:var(--ice-light)" id="baukasten">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Vorgefertigt &amp; clever</span>
+      <h2 style="font-family:Montserrat;font-size:clamp(28px,3.6vw,44px);text-transform:uppercase;color:var(--navy);font-weight:800;margin:14px 0 16px">Fertige Bestell-Körbe</h2>
+      <p style="font-size:18px;color:var(--grey);font-weight:300;max-width:660px;margin:0 auto">Sinnvoll zusammengestellt – nur Verkaufsware oder nur Backbar-Literware. Alles zum regulären Salon-EK (netto), <b>kein Rabatt</b> (den gibt es nur beim Startangebot), ausgelegt auf den Mindestbestellwert <b>400 € für Neukunden</b>.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto">
+      <div style="background:#fff;border:1px solid var(--ice-mid);border-top:5px solid var(--navy-2);border-radius:8px;padding:28px 32px">
+        <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--navy-2)">Nur Verkaufsware · Take-Home</div>
+        <div style="font-family:Montserrat;font-weight:800;font-size:26px;color:var(--navy);margin:6px 0 14px">403,95 €</div>
+        <ul style="list-style:none">
+          <li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--ice-mid);font-size:14px;color:#33465e"><span>6× Shampoo 250 ml</span><span>101,70 €</span></li>
+          <li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--ice-mid);font-size:14px;color:#33465e"><span>6× Conditioner 200 ml</span><span>104,70 €</span></li>
+          <li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--ice-mid);font-size:14px;color:#33465e"><span>6× Treatment 150 ml</span><span>107,70 €</span></li>
+          <li style="display:flex;justify-content:space-between;padding:8px 0;font-size:14px;color:#33465e"><span>3× Shampoo 710 ml</span><span>89,85 €</span></li>
+        </ul>
+      </div>
+      <div style="background:#fff;border:1px solid var(--ice-mid);border-top:5px solid var(--navy);border-radius:8px;padding:28px 32px">
+        <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--navy-2)">Nur Literware · Backbar</div>
+        <div style="font-family:Montserrat;font-weight:800;font-size:26px;color:var(--navy);margin:6px 0 14px">425,80 €</div>
+        <ul style="list-style:none">
+          <li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--ice-mid);font-size:14px;color:#33465e"><span>2× Step 2 Sealant 1 L</span><span>238,00 €</span></li>
+          <li style="display:flex;justify-content:space-between;padding:8px 0;font-size:14px;color:#33465e"><span>4× Step 1 Bond Builder 250 ml</span><span>187,80 €</span></li>
+        </ul>
+        <p style="font-size:12.5px;color:var(--grey);margin-top:12px">Der Salon-Verbrauch für den Farb-/Blondierservice – reicht für viele Anwendungen.</p>
+      </div>
+    </div>
+    <p class="fine" style="text-align:center;margin-top:20px">Summen aus regulären Netto-Einkaufspreisen (Produkt-Master). Frei anpassbar – jede Position auch einzeln bestellbar. Kein zusätzlicher Rabatt.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final" id="kontakt">
+  <div class="wrap">
+    <h2>Bringen Sie Bond Rx in Ihren Salon.</h2>
+    <p>Wir richten die Bonding-Station ein, schulen Ihr Team und hinterlegen den Service in Ihrer Preisliste. Ihr Brendel-&amp;-Söhne-Außendienst begleitet Sie von der ersten Anwendung bis zum Take-Home-Verkauf.</p>
+    <a class="btn btn-primary" href="mailto:office@brendel.at?subject=Bond%20Rx%20Beratung">Persönliche Beratung anfordern</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <strong style="color:#fff;letter-spacing:.14em">BRENDEL &amp; SÖHNE</strong><br>
+      Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich
+    </div>
+    <div style="text-align:right">
+      Paul Mitchell® Bond Rx · Vertrieb D-A-CH: Wild Beauty GmbH<br>
+      <a href="mailto:office@brendel.at">office@brendel.at</a>
+    </div>
+  </div>
+<div class="wrap" style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(140,140,140,.25);font-size:12px;letter-spacing:.02em;opacity:.85;display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span>© 2026 Brendel Handelsagentur</span><span>·</span><a href="/impressum/">Impressum</a><span>·</span><a href="/kontakt/">Kontakt</a><span>·</span><a href="/datenschutz/">Datenschutz</a></div>
+</footer>
+
+</body>
+</html>

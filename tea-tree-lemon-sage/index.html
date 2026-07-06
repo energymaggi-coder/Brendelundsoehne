@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tea Tree Lemon Sage – Volumen &amp; Kraft | Brendel &amp; Söhne</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --moss:#385B3B; --moss-d:#2b4a2e;
+    --beige:#F1F0EB; --beige2:#E7E5DC; --beige3:#dcd9cd;
+    --sand:#b0894a; --sand-l:#dcc79a;   /* Akzent: warmes Ocker/Zitrus */
+    --ink:#242820; --grey:#5c6355;
+    --shadow:0 22px 60px rgba(36,40,32,.16);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter","Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:"Cormorant Garamond",Georgia,serif}
+  .eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:11.5px;font-weight:600;color:var(--sand)}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+  section{padding:100px 0}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;font-size:14px;padding:15px 30px;border-radius:2px;letter-spacing:.04em}
+  .btn-primary{background:var(--moss);color:#fff}
+  .btn-ghost{border:1px solid var(--moss);color:var(--moss)}
+  header{position:sticky;top:0;z-index:50;background:rgba(241,240,235,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--beige3)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .nav .brand{font-family:"Cormorant Garamond",serif;font-weight:600;color:var(--moss);letter-spacing:.12em;font-size:20px;text-transform:uppercase}
+  .nav .links{display:flex;gap:24px;align-items:center}
+  .nav .links a{color:var(--moss);text-decoration:none;font-size:13px;font-weight:500;opacity:.85}
+  .nav .links a:hover{opacity:1}
+  .nav a.cta{background:var(--moss);color:#fff;opacity:1;padding:10px 20px;border-radius:2px;font-size:12.5px;letter-spacing:.05em}
+  @media(max-width:900px){.nav .links a:not(.cta){display:none}}
+  .hero{background:linear-gradient(160deg,#f6f5f0,var(--beige) 55%,var(--beige2))}
+  .hero-inner{display:grid;grid-template-columns:1.02fr .98fr;gap:50px;align-items:center;min-height:90vh}
+  .hero-copy{padding:70px 0}
+  .hero h1{font-weight:500;font-size:clamp(46px,6.4vw,86px);line-height:1.0;color:var(--moss);margin:18px 0 22px}
+  .hero h1 i{font-style:italic;color:var(--sand)}
+  .hero p.lead{font-size:19px;color:#3f473b;max-width:500px;font-weight:300}
+  .hero-actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero-trust{margin-top:32px;display:flex;gap:24px;flex-wrap:wrap;color:var(--moss);font-size:12.5px}
+  .hero-trust span{display:flex;align-items:center;gap:8px}
+  .hero-trust i{width:7px;height:7px;background:var(--sand);border-radius:50%;display:inline-block}
+  .hero-img{position:relative;height:100%;min-height:560px}
+  .hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% center}
+  .imgfull img{width:100%;display:block;border-radius:6px;box-shadow:var(--shadow)}
+  @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-img{min-height:420px}.hero-copy{padding:56px 0 10px}}
+  .story{position:relative;color:#fff}
+  .story .bg{position:relative;min-height:600px;display:flex;align-items:center}
+  .story .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%}
+  .story .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(44,32,16,.82),rgba(44,32,16,.4) 60%,rgba(44,32,16,.12))}
+  .story .content{position:relative;z-index:2;max-width:560px;padding:80px 0}
+  .story h2{font-weight:500;font-size:clamp(32px,4vw,50px);line-height:1.08;margin:14px 0 18px}
+  .story p{font-size:16px;color:#f0e8dc;font-weight:300;margin-bottom:16px}
+  .sec-head{max-width:720px;margin:0 auto 56px;text-align:center}
+  .sec-head h2{font-weight:500;font-size:clamp(34px,4.4vw,54px);line-height:1.05;color:var(--moss);margin:12px 0 16px}
+  .sec-head h2 i{font-style:italic;color:var(--sand)}
+  .sec-head p{font-size:17px;color:var(--grey);font-weight:300}
+  .anker{background:var(--beige)}
+  .anker-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center}
+  .anker .ic{width:60px;height:60px;margin:0 auto 16px;border-radius:50%;background:#fff;border:1px solid var(--beige3);display:flex;align-items:center;justify-content:center;font-size:24px}
+  .anker h3{font-family:Inter;font-weight:600;font-size:16px;color:var(--moss);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+  .anker p{font-size:14px;color:var(--grey);max-width:280px;margin:0 auto}
+  @media(max-width:820px){.anker-grid{grid-template-columns:1fr;gap:40px}}
+  .tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .tcard{border:1px solid var(--beige3);border-radius:6px;padding:34px 32px;background:#fff}
+  .tcard .n{font-family:Inter;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--sand)}
+  .tcard h3{font-weight:600;font-size:25px;color:var(--moss);margin:6px 0 10px}
+  .tcard p{font-size:15px;color:#3c443a}
+  @media(max-width:820px){.tech-grid{grid-template-columns:1fr}}
+  .phline{margin-top:34px;text-align:center;color:var(--grey);font-size:14px}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .split.rev{direction:rtl}.split.rev>*{direction:ltr}
+  .split h2{font-weight:500;font-size:clamp(30px,3.8vw,46px);color:var(--moss);line-height:1.08;margin:14px 0 10px}
+  .split h2 i{font-style:italic;color:var(--sand)}
+  .split .lead{color:var(--grey);font-size:16px;font-weight:300}
+  .split ul{list-style:none;margin-top:22px}
+  .split li{position:relative;padding-left:30px;margin-bottom:15px;font-size:15.5px;color:#33392f}
+  .split li::before{content:"";position:absolute;left:0;top:8px;width:12px;height:12px;background:var(--sand);border-radius:50%}
+  .split li b{color:var(--moss)}
+  @media(max-width:820px){.split{grid-template-columns:1fr;gap:32px}.split.rev{direction:ltr}}
+  .px-band{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#000;display:block}
+  .px-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .px-cap{position:absolute;left:0;right:0;bottom:0;padding:80px 7vw 40px;font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(24px,3vw,40px);color:#fff;background:linear-gradient(transparent,rgba(44,32,16,.72));pointer-events:none}
+  .px-cap-brand{display:block;font-family:Inter;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--sand-l);font-weight:600;margin-bottom:10px}
+  .lines{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .lcard{border:1px solid var(--beige3);border-radius:6px;padding:28px 30px;background:#fff}
+  .lcard .tag{display:inline-block;font-family:Inter;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--moss);padding:5px 12px;border-radius:40px}
+  .lcard h3{font-weight:600;font-size:22px;color:var(--moss);margin:12px 0 4px}
+  .lcard .sub{font-size:13px;color:var(--sand);font-weight:600;margin-bottom:14px}
+  .plist{list-style:none}
+  .plist li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--beige2);font-size:14px;color:#33392f}
+  .plist li span:last-child{font-weight:600;color:var(--moss);white-space:nowrap;padding-left:14px}
+  @media(max-width:820px){.lines{grid-template-columns:1fr}}
+  .kits{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:820px;margin:0 auto}
+  .kit{background:#fff;border:1px solid var(--beige3);border-top:5px solid var(--moss);border-radius:8px;padding:30px 34px;text-align:center}
+  .kit .k1{font-family:Inter;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--sand)}
+  .kit .k2{font-weight:600;font-size:22px;color:var(--moss);margin:8px 0 2px}
+  .kit .k3{color:var(--grey);font-size:14px}
+  .kit .k4{font-weight:700;font-family:Inter;font-size:32px;color:var(--moss);margin-top:12px}
+  .kit .k5{font-size:12.5px;color:var(--grey)}
+  .offer{max-width:760px;margin:0 auto;border:1px solid var(--beige3);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+  .offer .top{background:linear-gradient(160deg,var(--moss),var(--moss-d));color:#fff;padding:34px 38px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+  .offer .top .r{text-align:right}
+  .offer .strike{font-size:13px;color:#cdd8cb;text-decoration:line-through}
+  .offer .price{font-family:Inter;font-weight:700;font-size:34px;line-height:1}
+  .offer .save{display:inline-block;margin-top:6px;background:var(--sand);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:40px}
+  .offer .body{padding:26px 38px;color:#3c443a;font-size:15px}
+  .revenue{background:linear-gradient(160deg,var(--moss),var(--moss-d))}
+  .revenue .sec-head h2{color:#fff}.revenue .sec-head p{color:#cdd8cb}
+  .calc{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:900px;margin:0 auto}
+  .card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:30px 32px}
+  .card h3{font-family:Inter;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--sand-l);font-weight:700}
+  .card .big{font-family:Inter;font-weight:700;font-size:26px;color:#fff;margin:6px 0 14px}
+  .card ul{list-style:none}
+  .card li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:14px;color:#e4ebe1}
+  .card li:last-child{border-bottom:none}
+  .fine{font-size:12px;color:#a9bca8;margin-top:18px;text-align:center}
+  @media(max-width:720px){.calc{grid-template-columns:1fr}}
+  .pills{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;margin-top:44px}
+  .pill{border:1px solid var(--beige3);color:var(--moss);padding:9px 18px;border-radius:40px;font-size:13px;font-weight:500;background:#fff}
+  .cta-final{background:var(--beige);text-align:center}
+  .cta-final h2{font-weight:500;font-size:clamp(36px,4.6vw,58px);color:var(--moss);margin-bottom:16px}
+  .cta-final h2 i{font-style:italic;color:var(--sand)}
+  .cta-final p{font-size:17px;color:var(--grey);max-width:600px;margin:0 auto 30px;font-weight:300}
+  footer{background:var(--moss-d);color:#b9c7b6;padding:46px 0;font-size:13px}
+  .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+  footer a{color:#dbe5d8;text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <span class="brand">Tea Tree Lemon Sage</span>
+    <nav class="links">
+      <a href="#idee">Die Idee</a>
+      <a href="#wirkung">Wirkung</a>
+      <a href="#kunde">Für Ihre Kundin</a>
+      <a href="#sortiment">Sortiment</a>
+      <a href="#startangebot">Startangebot</a>
+      <a class="cta" href="#kontakt">Beratung anfordern</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Paul Mitchell® · Volumen für feines Haar</span>
+      <h1>Volumen <i>&amp; Kraft.</i></h1>
+      <p class="lead">Feinem Haar sichtbar Fülle geben – von der Wäsche bis zum Föhn-Finish. Lemon Sage mit belebender Zitrone und stärkendem Salbei ist Ihr Werkzeug für Volumen und Stand, das die Kundin gern mitnimmt.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#sortiment">Sortiment ansehen</a>
+        <a class="btn btn-ghost" href="#wirkung">Wie es wirkt</a>
+      </div>
+      <div class="hero-trust">
+        <span><i></i> Zitrone &amp; Salbei</span>
+        <span><i></i> Für feines Haar</span>
+        <span><i></i> 100 % australischer Teebaum</span>
+      </div>
+    </div>
+    <div class="hero-img"><img src="./assets/hero.jpg" alt="Tea Tree Lemon Sage – Volumen für feines Haar"></div>
+  </div>
+</section>
+
+<section class="story" id="idee">
+  <div class="bg">
+    <img src="./assets/story.jpg" alt="Zitrone und Salbei">
+    <div class="wrap"><div class="content">
+      <span class="eyebrow" style="color:var(--sand-l)">Die Idee</span>
+      <h2>Fülle beginnt an der Wurzel.</h2>
+      <p>Feines Haar braucht keine Beschwerung, sondern Kraft: Lemon Sage kombiniert belebende Zitrone mit stärkendem Salbei und Panthenol – für spürbar mehr Volumen, Stand und einen frischen, klaren Duft.</p>
+      <p>Das Ergebnis ist Haar, das voller wirkt und leichter bleibt – getragen von der Kraft des australischen Teebaums.</p>
+    </div></div>
+  </div>
+</section>
+
+<section class="anker">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Wofür Lemon Sage steht</span><h2>Drei <i>Versprechen.</i></h2></div>
+    <div class="anker-grid">
+      <div><div class="ic">🍋</div><h3>Volumen</h3><p>Belebende Zitrone gibt feinem Haar sichtbar mehr Fülle und Stand.</p></div>
+      <div><div class="ic">🌿</div><h3>Kraft</h3><p>Salbei und Panthenol stärken die Haarstruktur und beugen Haarbruch vor.</p></div>
+      <div><div class="ic">✨</div><h3>Frische</h3><p>Klarer Zitrus-Kräuter-Duft – leicht, belebend, alltagstauglich.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="wirkung">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">So funktioniert es</span><h2>Zitrone, Salbei &amp; <i>Struktur.</i></h2><p>Drei Bausteine für Fülle, Kraft und Frische.</p></div>
+    <div class="tech-grid">
+      <div class="tcard"><div class="n">Beleben</div><h3>Zitrone</h3><p>Erfrischt und klärt, verleiht feinem Haar Leichtigkeit und sichtbar mehr Volumen.</p></div>
+      <div class="tcard"><div class="n">Stärken</div><h3>Salbei</h3><p>Kräftigt die Haarstruktur und die Kopfhaut – für Griffigkeit und Stand statt Plattheit.</p></div>
+      <div class="tcard"><div class="n">Aufbauen</div><h3>Panthenol &amp; Keravis</h3><p>Pro-Vitamin B5 und der Keravis-Komplex verbessern die Struktur und beugen Haarbruch vor.</p></div>
+    </div>
+    <p class="phline">Für feines bis normales, kraftloses Haar – von der volumengebenden Wäsche bis zum Föhn-Finish.</p>
+  </div>
+</section>
+
+<section style="background:var(--beige)" id="kunde">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Für Ihre Kundin</span>
+      <h2>Feines Haar, <i>groß</i> rausgebracht.</h2>
+      <p class="lead">Für alle mit feinem, kraftlosem Haar, die Volumen und Stand suchen – ohne beschwerende Rückstände.</p>
+      <ul>
+        <li><b>Sichtbar mehr Fülle:</b> Zitrone verleiht Leichtigkeit und Volumen.</li>
+        <li><b>Kraft &amp; Stand:</b> Salbei und Panthenol stärken die Struktur.</li>
+        <li><b>Volumen beim Föhnen:</b> Thickening Spray und Blowout Gel geben Griff und Stand.</li>
+        <li><b>Gegen Haarbruch:</b> die Keravis Hair Lotion pflegt gezielt.</li>
+        <li><b>Frischer Duft:</b> klare Zitrus-Kräuter-Note für jeden Tag.</li>
+      </ul>
+    </div>
+    <div class="imgfull"><img src="./assets/consumer.jpg" alt="Tea Tree Lemon Sage Produkte"></div>
+  </div>
+</section>
+
+<div class="px-band" id="video-shampoo">
+  <video class="px-vid" muted loop autoplay playsinline preload="auto" poster="./assets/videos/poster-lemon-sage-shampoo.jpg">
+    <source src="./assets/videos/tt-lemon-sage-shampoo.mp4" type="video/mp4">
+  </video>
+  <div class="px-cap"><span class="px-cap-brand">Tea Tree Lemon Sage · auf dem Salon-Screen</span>Thickening Shampoo</div>
+</div>
+
+<section id="kits">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Sortenrein bestellbar</span><h2>Als <i>400-€-Kit.</i></h2><p>Die zwei Bestseller auch als sortenreines Kit – ein Produkt, Wert 400 € netto. Reguläre Netto-EK, kein Rabatt.</p></div>
+    <div class="kits">
+      <div class="kit"><div class="k1">Shampoo-Kit</div><div class="k2">Thickening Shampoo</div><div class="k3">31× 300 ml</div><div class="k4">410,75 €</div><div class="k5">netto · ab 400 €</div></div>
+      <div class="kit"><div class="k1">Conditioner-Kit</div><div class="k2">Thickening Conditioner</div><div class="k3">29× 300 ml</div><div class="k4">413,25 €</div><div class="k5">netto · ab 400 €</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="px-band" id="video-treatment">
+  <video class="px-vid" muted loop autoplay playsinline preload="auto" poster="./assets/videos/poster-lemon-sage-treatment.jpg">
+    <source src="./assets/videos/tt-lemon-sage-treatment.mp4" type="video/mp4">
+  </video>
+  <div class="px-cap"><span class="px-cap-brand">Tea Tree Lemon Sage · auf dem Salon-Screen</span>Thickening Treatment</div>
+</div>
+
+<section style="background:#fbfbf9" id="sortiment">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Das Sortiment</span><h2>Reinigen · Aufbauen · <i>Stylen.</i></h2><p>Von der volumengebenden Wäsche bis zum Föhn-Finish. UVP-Preise (Endkunde).</p></div>
+    <div class="lines">
+      <div class="lcard">
+        <span class="tag">Reinigen</span>
+        <h3>Volumen-Wäsche</h3>
+        <div class="sub">Zitrone · Salbei · Teebaum</div>
+        <ul class="plist">
+          <li><span>Thickening Shampoo · 300 ml</span><span>26,95 €</span></li>
+          <li><span>Thickening Conditioner · 300 ml</span><span>29,45 €</span></li>
+        </ul>
+      </div>
+      <div class="lcard">
+        <span class="tag">Aufbauen</span>
+        <h3>Struktur &amp; Kraft</h3>
+        <div class="sub">Panthenol · Keravis</div>
+        <ul class="plist">
+          <li><span>Thickening Treatment · 150 ml</span><span>27,45 €</span></li>
+          <li><span>Hair Lotion (Keravis) · 12× 6 ml</span><span>41,95 €</span></li>
+        </ul>
+      </div>
+      <div class="lcard">
+        <span class="tag">Stylen</span>
+        <h3>Volumen-Finish</h3>
+        <div class="sub">Stand &amp; Griff</div>
+        <ul class="plist">
+          <li><span>Thickening Spray · 200 ml</span><span>27,95 €</span></li>
+          <li><span>Thickening Blowout Gel · 150 ml</span><span>19,95 €</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pills">
+      <span class="pill">Zitrone &amp; Salbei</span>
+      <span class="pill">Für feines Haar</span>
+      <span class="pill">Panthenol &amp; Keravis</span>
+      <span class="pill">100 % australischer Teebaum</span>
+      <span class="pill">Vegan</span>
+    </div>
+  </div>
+</section>
+
+<section id="startangebot">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Für neue Salonpartner</span><h2>Ihr <i>Startangebot.</i></h2><p>Das Tea Tree Full Service Kit bringt die komplette Markenwelt (inkl. Lemon Sage) zum einmaligen Salon-Special.</p></div>
+    <div class="offer">
+      <div class="top">
+        <div><div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--sand-l)">Tea Tree · ART 702792</div><div class="serif" style="font-size:26px;margin-top:6px">Full Service Kit</div></div>
+        <div class="r"><div class="strike">Listenwert 1.940,50 €</div><div class="price">1.349,55 €</div><div class="save">Sie sparen 590,95 €</div></div>
+      </div>
+      <div class="body"><b style="color:var(--moss)">Inhalt:</b> Komplettbestückung aller Tea-Tree-Serien inkl. Lemon Sage, Special &amp; Lavender Mint – plus Qualitätsmuster &amp; Liter-Nachfüller.<br><span style="font-size:12.5px;color:var(--grey)">Salon-EK (netto), zzgl. USt. · gültig bis 06.07.2027</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="revenue" id="koerbe">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow" style="color:var(--sand-l)">Frei zusammenstellen</span><h2>Fertige <i>Bestell-Körbe.</i></h2><p>Sinnvoll kuratiert – nur Verkaufsware oder nur Backbar-Literware. Reguläre Netto-EK, kein Rabatt, Mindestbestellwert 400 € für Neukunden.</p></div>
+    <div class="calc">
+      <div class="card">
+        <h3>Nur Verkaufsware · Take-Home</h3><div class="big">413,70 €</div>
+        <ul>
+          <li><span>10× Thickening Shampoo 300 ml</span><span>132,50 €</span></li>
+          <li><span>10× Thickening Conditioner 300 ml</span><span>142,50 €</span></li>
+          <li><span>6× Thickening Treatment 150 ml</span><span>83,70 €</span></li>
+          <li><span>4× Thickening Spray 200 ml</span><span>55,00 €</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Nur Literware · Backbar</h3><div class="big">413,30 €</div>
+        <ul>
+          <li><span>8× Thickening Shampoo 1 L</span><span>215,60 €</span></li>
+          <li><span>6× Thickening Conditioner 1 L</span><span>197,70 €</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine">Summen aus regulären Netto-Einkaufspreisen (Produkt-Master). Frei anpassbar – jede Position auch einzeln bestellbar. Kein Rabatt.</p>
+  </div>
+</section>
+
+<section class="cta-final" id="kontakt">
+  <div class="wrap">
+    <h2>Mehr <i>Fülle</i> für Ihren Salon.</h2>
+    <p>Wir zeigen die Volumen-Routine, richten die Take-Home-Empfehlung ein und schulen das Lemon-Sage-Erlebnis. Ihr Brendel-&amp;-Söhne-Außendienst begleitet Sie.</p>
+    <a class="btn btn-primary" href="mailto:office@brendel.at?subject=Tea%20Tree%20Lemon%20Sage%20Beratung">Persönliche Beratung anfordern</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div><strong style="color:#fff;letter-spacing:.16em;font-family:'Cormorant Garamond',serif;font-size:16px">BRENDEL &amp; SÖHNE</strong><br>Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich</div>
+    <div style="text-align:right">Paul Mitchell® Tea Tree Lemon Sage<br><a href="mailto:office@brendel.at">office@brendel.at</a></div>
+  </div>
+<div class="wrap" style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(140,140,140,.25);font-size:12px;letter-spacing:.02em;opacity:.85;display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span>© 2026 Brendel Handelsagentur</span><span>·</span><a href="/impressum/">Impressum</a><span>·</span><a href="/kontakt/">Kontakt</a><span>·</span><a href="/datenschutz/">Datenschutz</a></div>
+</footer>
+
+<script>
+(function(){
+  document.querySelectorAll('.px-vid').forEach(function(v){ if(v.play){var p=v.play(); if(p&&p.catch)p.catch(function(){});} });
+})();
+</script>
+</body>
+</html>

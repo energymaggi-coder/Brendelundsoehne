@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tea Tree Special – Das Prickeln | Brendel &amp; Söhne</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --moss:#385B3B; --moss-d:#2b4a2e; --moss-l:#4a7150;
+    --beige:#F1F0EB; --beige2:#E7E5DC; --beige3:#dcd9cd;
+    --sand:#9c8a5f; --sand-l:#c7bb98;
+    --ink:#242820; --grey:#5c6355;
+    --shadow:0 22px 60px rgba(36,40,32,.16);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter","Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:"Cormorant Garamond",Georgia,serif}
+  .eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:11.5px;font-weight:600;color:var(--sand)}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+  section{padding:100px 0}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;font-size:14px;padding:15px 30px;border-radius:2px;letter-spacing:.04em}
+  .btn-primary{background:var(--moss);color:#fff}
+  .btn-ghost{border:1px solid var(--moss);color:var(--moss)}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:50;background:rgba(241,240,235,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--beige3)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .nav .brand{font-family:"Cormorant Garamond",serif;font-weight:600;color:var(--moss);letter-spacing:.14em;font-size:21px;text-transform:uppercase}
+  .nav .links{display:flex;gap:26px;align-items:center}
+  .nav .links a{color:var(--moss);text-decoration:none;font-size:13px;font-weight:500;opacity:.85}
+  .nav .links a:hover{opacity:1}
+  .nav a.cta{background:var(--moss);color:#fff;opacity:1;padding:10px 20px;border-radius:2px;font-size:12.5px;letter-spacing:.05em}
+  @media(max-width:900px){.nav .links a:not(.cta){display:none}}
+
+  /* HERO */
+  .hero{background:linear-gradient(160deg,#f6f5f0,var(--beige) 55%,var(--beige2))}
+  .hero-inner{display:grid;grid-template-columns:1.02fr .98fr;gap:50px;align-items:center;min-height:90vh}
+  .hero-copy{padding:70px 0}
+  .hero h1{font-weight:500;font-size:clamp(52px,7vw,96px);line-height:.98;color:var(--moss);margin:18px 0 22px}
+  .hero h1 i{font-style:italic;color:var(--sand)}
+  .hero p.lead{font-size:19px;color:#3f473b;max-width:500px;font-weight:300}
+  .hero-actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero-trust{margin-top:32px;display:flex;gap:24px;flex-wrap:wrap;color:var(--moss);font-size:12.5px}
+  .hero-trust span{display:flex;align-items:center;gap:8px}
+  .hero-trust i{width:7px;height:7px;background:var(--sand);border-radius:50%;display:inline-block}
+  .hero-img{position:relative;height:100%;min-height:560px}
+  .hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% center}
+  .imgfull img{width:100%;display:block;border-radius:6px;box-shadow:var(--shadow)}
+  @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-img{min-height:420px}.hero-copy{padding:56px 0 10px}}
+
+  /* STORY full-bleed */
+  .story{position:relative;color:#fff}
+  .story .bg{position:relative;min-height:600px;display:flex;align-items:center}
+  .story .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%}
+  .story .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,38,28,.84),rgba(28,38,28,.4) 60%,rgba(28,38,28,.15))}
+  .story .content{position:relative;z-index:2;max-width:560px;padding:80px 0}
+  .story h2{font-weight:500;font-size:clamp(32px,4vw,50px);line-height:1.08;margin:14px 0 18px}
+  .story p{font-size:16px;color:#e7ebe2;font-weight:300;margin-bottom:16px}
+
+  /* SECTION HEAD */
+  .sec-head{max-width:720px;margin:0 auto 56px;text-align:center}
+  .sec-head h2{font-weight:500;font-size:clamp(34px,4.4vw,54px);line-height:1.05;color:var(--moss);margin:12px 0 16px}
+  .sec-head h2 i{font-style:italic;color:var(--sand)}
+  .sec-head p{font-size:17px;color:var(--grey);font-weight:300}
+
+  /* ANKER BAND */
+  .anker{background:var(--beige)}
+  .anker-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center}
+  .anker .ic{width:60px;height:60px;margin:0 auto 16px;border-radius:50%;background:#fff;border:1px solid var(--beige3);display:flex;align-items:center;justify-content:center;font-size:24px}
+  .anker h3{font-family:Inter;font-weight:600;font-size:16px;color:var(--moss);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+  .anker p{font-size:14px;color:var(--grey);max-width:280px;margin:0 auto}
+  @media(max-width:820px){.anker-grid{grid-template-columns:1fr;gap:40px}}
+
+  /* TECH */
+  .tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .tcard{border:1px solid var(--beige3);border-radius:6px;padding:34px 32px;background:#fff}
+  .tcard .n{font-family:Inter;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--sand)}
+  .tcard h3{font-weight:600;font-size:26px;color:var(--moss);margin:6px 0 10px}
+  .tcard p{font-size:15px;color:#3c443a}
+  @media(max-width:820px){.tech-grid{grid-template-columns:1fr}}
+  .phline{margin-top:34px;text-align:center;color:var(--grey);font-size:14px}
+
+  /* SPLIT */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .split.rev{direction:rtl}.split.rev>*{direction:ltr}
+  .split h2{font-weight:500;font-size:clamp(30px,3.8vw,46px);color:var(--moss);line-height:1.08;margin:14px 0 10px}
+  .split h2 i{font-style:italic;color:var(--sand)}
+  .split .lead{color:var(--grey);font-size:16px;font-weight:300}
+  .split ul{list-style:none;margin-top:22px}
+  .split li{position:relative;padding-left:30px;margin-bottom:15px;font-size:15.5px;color:#33392f}
+  .split li::before{content:"";position:absolute;left:0;top:8px;width:12px;height:12px;background:var(--sand);border-radius:50%}
+  .split li b{color:var(--moss)}
+  @media(max-width:820px){.split{grid-template-columns:1fr;gap:32px}.split.rev{direction:ltr}}
+
+  /* Zoom images */
+  .zoomwrap{overflow:hidden;border-radius:6px;box-shadow:var(--shadow);line-height:0}
+  .zoomwrap img,.zoomimg{width:100%;display:block;transform:scale(1);transform-origin:center;will-change:transform}
+
+  /* Full-bleed videos */
+  .px-band{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#000;display:block}
+  .px-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .px-cap{position:absolute;left:0;right:0;bottom:0;padding:80px 7vw 40px;font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(24px,3vw,40px);color:#fff;background:linear-gradient(transparent,rgba(28,38,28,.72));pointer-events:none}
+  .px-cap-brand{display:block;font-family:Inter;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--sand-l);font-weight:600;margin-bottom:10px}
+
+  /* SORTIMENT */
+  .lines{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:760px;margin:0 auto}
+  .lcard{border:1px solid var(--beige3);border-radius:6px;padding:28px 30px;background:#fff}
+  .lcard .tag{display:inline-block;font-family:Inter;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--moss);padding:5px 12px;border-radius:40px}
+  .lcard h3{font-weight:600;font-size:23px;color:var(--moss);margin:12px 0 4px}
+  .lcard .sub{font-size:13px;color:var(--sand);font-weight:600;margin-bottom:14px}
+  .plist{list-style:none}
+  .plist li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--beige2);font-size:14px;color:#33392f}
+  .plist li span:last-child{font-weight:600;color:var(--moss);white-space:nowrap;padding-left:14px}
+  @media(max-width:820px){.lines{grid-template-columns:1fr}}
+
+  /* 400€ KITS */
+  .kits{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:820px;margin:0 auto}
+  .kit{background:#fff;border:1px solid var(--beige3);border-top:5px solid var(--moss);border-radius:8px;padding:30px 34px;text-align:center}
+  .kit .k1{font-family:Inter;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--sand)}
+  .kit .k2{font-weight:600;font-size:22px;color:var(--moss);margin:8px 0 2px}
+  .kit .k3{color:var(--grey);font-size:14px}
+  .kit .k4{font-weight:700;font-family:Inter;font-size:32px;color:var(--moss);margin-top:12px}
+  .kit .k5{font-size:12.5px;color:var(--grey)}
+
+  /* STARTANGEBOT */
+  .offer{max-width:760px;margin:0 auto;border:1px solid var(--beige3);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+  .offer .top{background:linear-gradient(160deg,var(--moss),var(--moss-d));color:#fff;padding:34px 38px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+  .offer .top .r{text-align:right}
+  .offer .strike{font-size:13px;color:#cdd8cb;text-decoration:line-through}
+  .offer .price{font-family:Inter;font-weight:700;font-size:34px;line-height:1}
+  .offer .save{display:inline-block;margin-top:6px;background:var(--sand);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:40px}
+  .offer .body{padding:26px 38px;color:#3c443a;font-size:15px}
+
+  /* REVENUE / KÖRBE */
+  .revenue{background:linear-gradient(160deg,var(--moss),var(--moss-d))}
+  .revenue .sec-head h2{color:#fff}.revenue .sec-head p{color:#cdd8cb}
+  .calc{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:900px;margin:0 auto}
+  .card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:30px 32px}
+  .card h3{font-family:Inter;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--sand-l);font-weight:700}
+  .card .big{font-family:Inter;font-weight:700;font-size:26px;color:#fff;margin:6px 0 14px}
+  .card ul{list-style:none}
+  .card li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:14px;color:#e4ebe1}
+  .card li:last-child{border-bottom:none}
+  .fine{font-size:12px;color:#a9bca8;margin-top:18px;text-align:center}
+  @media(max-width:720px){.calc{grid-template-columns:1fr}}
+
+  .pills{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;margin-top:44px}
+  .pill{border:1px solid var(--beige3);color:var(--moss);padding:9px 18px;border-radius:40px;font-size:13px;font-weight:500;background:#fff}
+
+  .cta-final{background:var(--beige);text-align:center}
+  .cta-final h2{font-weight:500;font-size:clamp(36px,4.6vw,58px);color:var(--moss);margin-bottom:16px}
+  .cta-final h2 i{font-style:italic;color:var(--sand)}
+  .cta-final p{font-size:17px;color:var(--grey);max-width:600px;margin:0 auto 30px;font-weight:300}
+
+  footer{background:var(--moss-d);color:#b9c7b6;padding:46px 0;font-size:13px}
+  .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+  footer a{color:#dbe5d8;text-decoration:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <span class="brand">Tea Tree Special</span>
+    <nav class="links">
+      <a href="#herkunft">Herkunft</a>
+      <a href="#tingle">Das Prickeln</a>
+      <a href="#kunde">Für Ihre Kundin</a>
+      <a href="#sortiment">Sortiment</a>
+      <a href="#startangebot">Startangebot</a>
+      <a class="cta" href="#kontakt">Beratung anfordern</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Paul Mitchell® · Kopfhautpflege</span>
+      <h1>Das <i>Prickeln.</i></h1>
+      <p class="lead">Aus der Haarwäsche einen Moment machen, den man im Salon spürt und zu Hause vermisst – das kühlende Prickeln des Tingle Complex. Teebaum, Pfefferminze und Lavendel machen Special zum sinnlichen Einstiegs-Erlebnis, das Kundinnen immer wieder wollen.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#sortiment">Sortiment ansehen</a>
+        <a class="btn btn-ghost" href="#tingle">Wie es wirkt</a>
+      </div>
+      <div class="hero-trust">
+        <span><i></i> 100 % australischer Teebaum</span>
+        <span><i></i> EcoVadis Platinum</span>
+        <span><i></i> 20 Jahre Aufforstung</span>
+      </div>
+    </div>
+    <div class="hero-img"><img src="./assets/hero.jpg" alt="Tea Tree Special – der erfrischende Prickel-Moment"></div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="herkunft">
+  <div class="bg">
+    <img src="./assets/story.jpg" alt="Australischer Teebaum">
+    <div class="wrap"><div class="content">
+      <span class="eyebrow" style="color:var(--sand-l)">Die Herkunft</span>
+      <h2>Aus der Kraft des australischen Teebaums.</h2>
+      <p>Was Australiens indigene Völker seit Jahrhunderten nutzen – zerriebene Teebaumblätter zur Pflege –, wurde zur Grundlage einer ganzen Kopfhaut-Linie. Melaleuca alternifolia ist eines der stärksten natürlichen Antiseptika; sein Wirkstoff Terpinen-4-ol gilt als vielfach wirksamer als Phenol.</p>
+      <p>Tea Tree verwendet 100 % australischen Teebaum von einer verantwortungsvoll zertifizierten Farm – ausgezeichnet mit dem EcoVadis Platinum Rating. Getragen von einem 20-jährigen Aufforstungs-Engagement.</p>
+    </div></div>
+  </div>
+</section>
+
+<!-- ANKER -->
+<section class="anker">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Wofür Tea Tree Special steht</span>
+      <h2>Drei <i>Versprechen.</i></h2>
+    </div>
+    <div class="anker-grid">
+      <div><div class="ic">❄️</div><h3>Das Prickeln</h3><p>Der kühlend-belebende Tingle Complex – von der Kopfhaut bis in die Zehenspitzen.</p></div>
+      <div><div class="ic">🌿</div><h3>100 % Teebaum</h3><p>Reines australisches Teebaumöl, antiseptisch und klärend – der rote Faden der Marke.</p></div>
+      <div><div class="ic">🌱</div><h3>Nachhaltig</h3><p>EcoVadis Platinum, konsequent auf Nachhaltigkeit umgestellt, 20 Jahre Aufforstung.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TINGLE / TECH -->
+<section id="tingle">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">So funktioniert es</span>
+      <h2>Der <i>Tingle Complex.</i></h2>
+      <p>Die Signatur-Mischung von Tea Tree Special – drei Wirkstoffe, ein unverwechselbares Gefühl.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tcard"><div class="n">Klären</div><h3>Teebaum</h3><p>Natürliches Antiseptikum. Dringt tief in die Haut ein, wirkt belebend und erfrischend, entfernt Unreinheiten.</p></div>
+      <div class="tcard"><div class="n">Kühlen</div><h3>Pfefferminze</h3><p>Fördert die Durchblutung der Kopfhaut, erzeugt das kühle Prickeln und kann als mildes Anästhetikum Juckreiz mindern.</p></div>
+      <div class="tcard"><div class="n">Beruhigen</div><h3>Lavendel</h3><p>Beruhigend, blumig-holziges Aroma. Rundet den kühlenden Effekt ab und macht die Wäsche zum Wohlfühlmoment.</p></div>
+    </div>
+    <p class="phline">Bewusst gestufte pH-Werte: Shampoo pH 6,0 · Conditioner &amp; Treatment pH 3,5 – klärend reinigen, sauer versiegeln.</p>
+  </div>
+</section>
+
+<!-- CONSUMER -->
+<section style="background:var(--beige)" id="kunde">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Für Ihre Kundin</span>
+      <h2>Ein <i>Frische-Kick</i> für die Kopfhaut.</h2>
+      <p class="lead">Tea Tree Special macht aus der Routine ein Erlebnis – spürbar, riechbar, sofort. Ideal für alle, die eine belebte, saubere Kopfhaut und frisches Haargefühl lieben.</p>
+      <ul>
+        <li><b>Das berühmte Prickeln:</b> kühlend und belebend bei jeder Wäsche.</li>
+        <li><b>Klärt &amp; erfrischt:</b> entfernt Unreinheiten, Haar sieht gesund und glänzend aus.</li>
+        <li><b>Beruhigt die Kopfhaut:</b> Teebaum wirkt von Natur aus antiseptisch, Minze mindert Juckreiz.</li>
+        <li><b>Frischer Signature-Duft:</b> Teebaum, Pfefferminze und Lavendel.</li>
+        <li><b>Auch als Shampoo Bar:</b> 95 % natürlichen Ursprungs, ohne Plastikflasche.</li>
+      </ul>
+    </div>
+    <div class="imgfull"><img src="./assets/consumer.jpg" alt="Tea Tree Special Sortiment"></div>
+  </div>
+</section>
+
+<!-- VIDEO 1 -->
+<div class="px-band" id="video-shampoo">
+  <video class="px-vid" muted loop autoplay playsinline preload="auto" poster="./assets/videos/poster-special-shampoo.jpg">
+    <source src="./assets/videos/tt-special-shampoo.mp4" type="video/mp4">
+  </video>
+  <div class="px-cap"><span class="px-cap-brand">Tea Tree Special · auf dem Salon-Screen</span>Special Shampoo</div>
+</div>
+
+<!-- 400€ KITS -->
+<section id="kits">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Sortenrein bestellbar</span>
+      <h2>Als <i>400-€-Kit.</i></h2>
+      <p>Die zwei Bestseller auch als sortenreines Kit – ein Produkt, Wert 400 € netto. Reguläre Netto-EK, kein Rabatt.</p>
+    </div>
+    <div class="kits">
+      <div class="kit"><div class="k1">Shampoo-Kit</div><div class="k2">Special Shampoo</div><div class="k3">31× 300 ml</div><div class="k4">410,75 €</div><div class="k5">netto · ab 400 €</div></div>
+      <div class="kit"><div class="k1">Conditioner-Kit</div><div class="k2">Special Conditioner</div><div class="k3">29× 300 ml</div><div class="k4">413,25 €</div><div class="k5">netto · ab 400 €</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO 2 -->
+<div class="px-band" id="video-conditioner">
+  <video class="px-vid" muted loop autoplay playsinline preload="auto" poster="./assets/videos/poster-special-conditioner.jpg">
+    <source src="./assets/videos/tt-special-conditioner.mp4" type="video/mp4">
+  </video>
+  <div class="px-cap"><span class="px-cap-brand">Tea Tree Special · auf dem Salon-Screen</span>Special Conditioner</div>
+</div>
+
+<!-- SORTIMENT -->
+<section style="background:#fbfbf9" id="sortiment">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Das Sortiment</span>
+      <h2>Special &amp; <i>Special Color.</i></h2>
+      <p>Der Klassiker und der Farbschutz – beide mit dem belebenden Tingle-Erlebnis. UVP-Preise (Endkunde). <span style="color:var(--sand)">Detox &amp; Peeling gibt's jetzt bei Scalp Care.</span></p>
+    </div>
+    <div class="lines">
+      <div class="lcard">
+        <span class="tag">Special · Der Klassiker</span>
+        <h3>Frische &amp; Tiefenreinigung</h3>
+        <div class="sub">pH 6,0 / 3,5 · Tingle Complex</div>
+        <ul class="plist">
+          <li><span>Special Shampoo · 300 ml</span><span>26,95 €</span></li>
+          <li><span>Special Conditioner · 300 ml</span><span>29,45 €</span></li>
+          <li><span>Hair &amp; Scalp Treatment · 150 ml</span><span>26,95 €</span></li>
+          <li><span>Shampoo Bar · 79 g</span><span>26,95 €</span></li>
+        </ul>
+      </div>
+      <div class="lcard">
+        <span class="tag">Special Color</span>
+        <h3>Farbschutz mit Prickeln</h3>
+        <div class="sub">Tingle Complex + Rooibos</div>
+        <ul class="plist">
+          <li><span>Special Color Shampoo · 300 ml</span><span>27,45 €</span></li>
+          <li><span>Special Color Conditioner · 300 ml</span><span>30,45 €</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pills">
+      <span class="pill">100 % australischer Teebaum</span>
+      <span class="pill">Vegan</span>
+      <span class="pill">EcoVadis Platinum</span>
+      <span class="pill">Shampoo Bar: 95 % natürlich</span>
+      <span class="pill">Signature „Tingle"</span>
+    </div>
+  </div>
+</section>
+
+<!-- STARTANGEBOT -->
+<section id="startangebot">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Für neue Salonpartner</span>
+      <h2>Ihr <i>Startangebot.</i></h2>
+      <p>Das Tea Tree Full Service Kit – die komplette Markenwelt (Special, Lavender Mint, Lemon Sage …) zum einmaligen Salon-Special.</p>
+    </div>
+    <div class="offer">
+      <div class="top">
+        <div>
+          <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--sand-l)">Tea Tree · ART 702792</div>
+          <div class="serif" style="font-size:26px;margin-top:6px">Full Service Kit</div>
+        </div>
+        <div class="r">
+          <div class="strike">Listenwert 1.940,50 €</div>
+          <div class="price">1.349,55 €</div>
+          <div class="save">Sie sparen 590,95 €</div>
+        </div>
+      </div>
+      <div class="body">
+        <b style="color:var(--moss)">Inhalt:</b> Komplettbestückung aller Tea-Tree-Serien inkl. Special, Lavender Mint, Lemon Sage &amp; Styling – plus Qualitätsmuster &amp; Liter-Nachfüller.<br>
+        <span style="font-size:12.5px;color:var(--grey)">Salon-EK (netto), zzgl. USt. · gültig bis 06.07.2027</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KÖRBE -->
+<section class="revenue" id="koerbe">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" style="color:var(--sand-l)">Frei zusammenstellen</span>
+      <h2>Fertige <i>Bestell-Körbe.</i></h2>
+      <p>Sinnvoll kuratiert – nur Verkaufsware oder nur Backbar-Literware. Reguläre Netto-EK, kein Rabatt, Mindestbestellwert 400 € für Neukunden.</p>
+    </div>
+    <div class="calc">
+      <div class="card">
+        <h3>Nur Verkaufsware · Take-Home</h3>
+        <div class="big">408,70 €</div>
+        <ul>
+          <li><span>10× Special Shampoo 300 ml</span><span>132,50 €</span></li>
+          <li><span>10× Special Conditioner 300 ml</span><span>142,50 €</span></li>
+          <li><span>6× Hair &amp; Scalp Treatment 150 ml</span><span>80,70 €</span></li>
+          <li><span>4× Special Shampoo Bar 79 g</span><span>53,00 €</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Nur Literware · Backbar</h3>
+        <div class="big">419,30 €</div>
+        <ul>
+          <li><span>6× Special Shampoo 1 L</span><span>161,70 €</span></li>
+          <li><span>6× Special Conditioner 1 L</span><span>197,70 €</span></li>
+          <li><span>2× Hair &amp; Scalp Treatment 500 ml</span><span>59,90 €</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine">Summen aus regulären Netto-Einkaufspreisen (Produkt-Master). Frei anpassbar – jede Position auch einzeln bestellbar. Kein Rabatt.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final" id="kontakt">
+  <div class="wrap">
+    <h2>Holen Sie das <i>Prickeln</i> in Ihren Salon.</h2>
+    <p>Wir richten die Tea-Tree-Wash-House-Zone ein, schulen das Prickel-Erlebnis und hinterlegen die Take-Home-Empfehlung. Ihr Brendel-&amp;-Söhne-Außendienst begleitet Sie.</p>
+    <a class="btn btn-primary" href="mailto:office@brendel.at?subject=Tea%20Tree%20Special%20Beratung">Persönliche Beratung anfordern</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div><strong style="color:#fff;letter-spacing:.16em;font-family:'Cormorant Garamond',serif;font-size:16px">BRENDEL &amp; SÖHNE</strong><br>Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich</div>
+    <div style="text-align:right">Paul Mitchell® Tea Tree Special · „Das Prickeln"<br><a href="mailto:office@brendel.at">office@brendel.at</a></div>
+  </div>
+<div class="wrap" style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(140,140,140,.25);font-size:12px;letter-spacing:.02em;opacity:.85;display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span>© 2026 Brendel Handelsagentur</span><span>·</span><a href="/impressum/">Impressum</a><span>·</span><a href="/kontakt/">Kontakt</a><span>·</span><a href="/datenschutz/">Datenschutz</a></div>
+</footer>
+
+<script>
+(function(){
+  document.querySelectorAll('.px-vid').forEach(function(v){ if(v.play){var p=v.play(); if(p&&p.catch)p.catch(function(){});} });
+  var MAX=0.10, imgs=[].slice.call(document.querySelectorAll('.zoomimg')), t=false;
+  function apply(){var vh=window.innerHeight;imgs.forEach(function(img){var b=img.parentElement.getBoundingClientRect();if(b.bottom<0||b.top>vh)return;var pr=1-((b.top+b.height/2)/vh);pr=Math.max(0,Math.min(1,pr));img.style.transform='scale('+(1+MAX*pr).toFixed(4)+')';});t=false;}
+  function on(){if(!t){t=true;requestAnimationFrame(apply);}}
+  window.addEventListener('scroll',on,{passive:true});window.addEventListener('resize',on);apply();
+})();
+</script>
+</body>
+</html>

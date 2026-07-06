@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul Mitchell – Care &amp; Style für jeden Kopf | Brendel &amp; Söhne</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#242527;--paper:#ffffff;--paper2:#f4f5f6;--line:#e4e6e8;--accent:#242527;--accent-d:#242527;--grey:#6a7078;--shadow:0 24px 60px rgba(36,37,39,.14);}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{font-family:"Inter","Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-weight:800;letter-spacing:-.01em}
+  .eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:11.5px;font-weight:700;color:var(--grey)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}section{padding:104px 0}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;font-size:14px;padding:15px 30px;border-radius:2px;letter-spacing:.02em}
+  .btn-primary{background:var(--ink);color:#fff}.btn-ghost{border:1px solid var(--ink);color:var(--ink)}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .nav .brand{font-weight:800;color:var(--ink);letter-spacing:.16em;font-size:16px;text-transform:uppercase}
+  .nav .links{display:flex;gap:26px;align-items:center}
+  .nav .links a{color:var(--ink);text-decoration:none;font-size:13px;font-weight:500;opacity:.8}.nav .links a:hover{opacity:1}
+  .nav a.cta{background:var(--ink);color:#fff;opacity:1;padding:10px 20px;border-radius:2px;font-size:12.5px}
+  @media(max-width:900px){.nav .links a:not(.cta){display:none}}
+  .hero{background:linear-gradient(160deg,#fff 0%,var(--paper2) 100%)}
+  .hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;min-height:86vh}
+  .hero-copy{padding:70px 0}
+  .hero h1{font-size:clamp(48px,6.6vw,92px);line-height:.98;text-transform:uppercase;margin:16px 0 22px}
+  .hero p.lead{font-size:19px;color:#40474d;max-width:500px;font-weight:300}
+  .hero-actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero-trust{margin-top:32px;display:flex;gap:24px;flex-wrap:wrap;color:var(--ink);font-size:12.5px}
+  .hero-trust span{display:flex;align-items:center;gap:8px}.hero-trust i{width:7px;height:7px;background:var(--ink);border-radius:50%;display:inline-block}
+  .hero-img{position:relative;height:100%;min-height:520px;background:radial-gradient(circle at 60% 45%,#fff,var(--paper2));display:flex;align-items:center;justify-content:center}
+  .hero-img img{width:100%;height:100%;object-fit:contain;padding:20px}
+  .story{position:relative;color:#fff}.story .bg{position:relative;min-height:540px;display:flex;align-items:center}
+  .story .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+  .story .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,30,32,.82),rgba(28,30,32,.4) 60%,rgba(28,30,32,.12))}
+  .story .content{position:relative;z-index:2;max-width:560px;padding:80px 0}
+  .story h2{font-size:clamp(32px,4vw,50px);line-height:1.05;text-transform:uppercase;margin:14px 0 18px}
+  .story p{font-size:16px;color:#e7ebef;font-weight:300;margin-bottom:16px}
+  .sec-head{max-width:720px;margin:0 auto 56px;text-align:center}
+  .sec-head h2{font-size:clamp(32px,4.2vw,52px);line-height:1.04;text-transform:uppercase;margin:12px 0 16px}
+  .sec-head p{font-size:17px;color:var(--grey);font-weight:300}
+  .stats{background:var(--paper2)}
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;text-align:center}
+  .stat .num{font-size:clamp(34px,4vw,50px);font-weight:900;color:var(--ink);line-height:1}
+  .stat .bar{width:40px;height:3px;background:var(--ink);margin:12px auto 12px}
+  .stat p{font-size:14px;color:var(--grey);max-width:230px;margin:0 auto}
+  @media(max-width:820px){.stat-grid{grid-template-columns:1fr 1fr;gap:36px 20px}}
+  .series{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .scard{display:block;text-decoration:none;border:1px solid var(--line);border-top:5px solid var(--c);border-radius:8px;overflow:hidden;background:#fff;transition:transform .2s,box-shadow .2s}
+  .scard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .scard .imgw{aspect-ratio:4/3;overflow:hidden;background:var(--paper2)}
+  .scard .imgw img{width:100%;height:100%;object-fit:cover}
+  .scard .body{padding:22px 24px}
+  .scard .cat{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--c)}
+  .scard h3{font-size:22px;margin:5px 0 6px;text-transform:uppercase}
+  .scard p{font-size:13.5px;color:var(--grey);margin-bottom:10px}
+  .scard .more{font-size:13px;font-weight:700;color:var(--ink)}.scard .more::after{content:" →"}
+  @media(max-width:820px){.series{grid-template-columns:1fr}}
+  .offer{max-width:760px;margin:0 auto;border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+  .offer .top{background:var(--ink);color:#fff;padding:34px 38px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+  .offer .top .r{text-align:right}.offer .strike{font-size:13px;color:#aab0b6;text-decoration:line-through}
+  .offer .price{font-weight:900;font-size:34px;line-height:1}
+  .offer .save{display:inline-block;margin-top:6px;background:#6a7078;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:40px}
+  .offer .body{padding:26px 38px;color:#3c4349;font-size:15px}
+  .pills{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;margin-top:44px}
+  .pill{border:1px solid var(--line);color:var(--ink);padding:9px 18px;border-radius:40px;font-size:13px;font-weight:500;background:#fff}
+  .cta-final{background:var(--paper2);text-align:center}
+  .cta-final h2{font-size:clamp(34px,4.4vw,56px);text-transform:uppercase;margin-bottom:16px}
+  .cta-final p{font-size:17px;color:var(--grey);max-width:600px;margin:0 auto 30px;font-weight:300}
+  footer{background:var(--ink);color:#9aa1a8;padding:46px 0;font-size:13px}
+  .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}footer a{color:#d3d8dc;text-decoration:none}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <span class="brand">Paul Mitchell</span>
+  <nav class="links"><a href="#linien">Linien</a><a href="#herkunft">Herkunft</a><a href="#startangebot">Startangebot</a><a class="cta" href="#kontakt">Beratung anfordern</a></nav>
+</div></header>
+
+<section class="hero"><div class="wrap hero-inner">
+  <div class="hero-copy">
+    <span class="eyebrow">John Paul Mitchell Systems · seit 1980</span>
+    <h1>Care &amp; Style<br>für jeden Kopf.</h1>
+    <p class="lead">Für jeden Kopf die passende Empfehlung – von Feuchtigkeit über Volumen bis Blond und Kids, alles aus einer Hand. Ein verlässliches Sortiment, das Ihren Alltag einfacher macht und Kundinnen zum Wiederkommen bringt – seit über 40 Jahren nur im Salon.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="#linien">Alle Linien</a><a class="btn btn-ghost" href="#herkunft">Die Herkunft</a></div>
+    <div class="hero-trust"><span><i></i> Seit 1980</span><span><i></i> Nur im Salon</span><span><i></i> Tierversuchsfrei</span></div>
+  </div>
+  <div class="hero-img"><img src="./assets/hero.jpg" alt="Paul Mitchell"></div>
+</div></section>
+
+<section class="story" id="herkunft"><div class="bg">
+  <img src="./assets/story.jpg" alt="Paul Mitchell">
+  <div class="wrap"><div class="content">
+    <span class="eyebrow" style="color:#cdd3d9">Die Herkunft</span>
+    <h2>700 Dollar. Drei Produkte. Eine Vision.</h2>
+    <p>1980 gründeten Paul Mitchell und John Paul DeJoria mit 700 US-Dollar John Paul Mitchell Systems – und verkauften ihre ersten Produkte von Tür zu Tür an Salons. Von Anfang an galt: nur im Salon.</p>
+    <p>Aus drei Produkten wurde eine Welt aus Care- und Style-Linien – bis heute familiengeführt, tierversuchsfrei und dem Salon verbunden.</p>
+  </div></div>
+</div></section>
+
+<section class="stats"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Warum Paul Mitchell</span><h2>Eine Marke, die trägt.</h2></div>
+  <div class="stat-grid">
+    <div class="stat"><div class="num">1980</div><div class="bar"></div><p>gegründet – von Tür zu Tür an Salons</p></div>
+    <div class="stat"><div class="num">80+</div><div class="bar"></div><p>Länder, in denen die Marke verkauft wird</p></div>
+    <div class="stat"><div class="num">Nur</div><div class="bar"></div><p>im Salon erhältlich – reine Profimarke</p></div>
+    <div class="stat"><div class="num">0</div><div class="bar"></div><p>Tierversuche – Pionier seit 1989</p></div>
+  </div>
+</div></section>
+
+<section id="linien"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Die Linien</span><h2>Für jedes Bedürfnis.</h2><p>Elf Care- und Style-Welten – jede mit eigener Seite, Sortiment und Startangebot.</p></div>
+  <div class="series">
+    <a class="scard" href="/paul-mitchell-hydrate/" style="--c:#8FACC4"><div class="imgw"><img src="./assets/thumb-hydrate.jpg" alt="Hydrate"></div><div class="body"><div class="cat">Feuchtigkeit</div><h3>Hydrate</h3><p>Sheer Hydration mit Meeresalgen – 93 % geschmeidiger.</p><span class="more">Zur Linie</span></div></a>
+    <a class="scard" href="/paul-mitchell-volume/" style="--c:#C2703D"><div class="imgw"><img src="./assets/thumb-volume.jpg" alt="Volume"></div><div class="body"><div class="cat">Fülle</div><h3>Volume</h3><p>Extra-Body – 87 % mehr Volumen für feines Haar.</p><span class="more">Zur Linie</span></div></a>
+    <a class="scard" href="/paul-mitchell-smooth/" style="--c:#84A881"><div class="imgw"><img src="./assets/thumb-smooth.jpg" alt="Smooth"></div><div class="body"><div class="cat">Anti-Frizz</div><h3>Smooth</h3><p>Super Smooth &amp; Super Skinny – glatt und frizzfrei.</p><span class="more">Zur Linie</span></div></a>
+    <a class="scard" href="/paul-mitchell-curl/" style="--c:#CDA469"><div class="imgw"><img src="./assets/thumb-curl.jpg" alt="Curl"></div><div class="body"><div class="cat">Locken</div><h3>Curl</h3><p>Definierte Locken mit Hamamelis, Jojoba &amp; Aloe.</p><span class="more">Zur Linie</span></div></a>
+    <a class="scard" href="/paul-mitchell-color/" style="--c:#C08566"><div class="imgw"><img src="./assets/thumb-color.jpg" alt="Color"></div><div class="body"><div class="cat">Farbschutz</div><h3>Color</h3><p>Color Protect – UV-Schutz gegen das Verblassen.</p><span class="more">Zur Linie</span></div></a>
+    <a class="scard" href="/paul-mitchell-clarify/" style="--c:#75B3AD"><div class="imgw"><img src="./assets/thumb-clarify.jpg" alt="Clarify"></div><div class="body"><div class="cat">Tiefenreinigung</div><h3>Clarify</h3><p>Shampoo Two, Three &amp; ACV – der frische Reset.</p><span class="more">Zur Linie</span></div></a>
+    <a class="scard" href="/paul-mitchell-blonde/" style="--c:#8C88A3"><div class="imgw"><img src="./assets/thumb-blonde.jpg" alt="Blonde"></div><div class="body"><div class="cat">Blond-Pflege</div><h3>Blonde</h3><p>Forever Blonde &amp; Platinum – Pflege und Anti-Gelbstich.</p><span class="more">Zur Linie</span></div></a>
+    <a class="scard" href="/paul-mitchell-sensitive/" style="--c:#C08C92"><div class="imgw"><img src="./assets/thumb-sensitive.jpg" alt="Sensitive"></div><div class="body"><div class="cat">Empfindlich</div><h3>Sensitive</h3><p>Clear – ohne Duft- &amp; Farbstoffe, dermatologisch getestet.</p><span class="more">Zur Linie</span></div></a>
+    <a class="scard" href="/paul-mitchell-classic/" style="--c:#717C87"><div class="imgw"><img src="./assets/thumb-classic.jpg" alt="Classic"></div><div class="body"><div class="cat">Die Originale</div><h3>Classic</h3><p>Shampoo One, The Conditioner &amp; Awapuhi – seit 1980.</p><span class="more">Zur Linie</span></div></a>
+    <a class="scard" href="/paul-mitchell-kids/" style="--c:#CF9B1E"><div class="imgw"><img src="./assets/thumb-kids.jpg" alt="Kids"></div><div class="body"><div class="cat">Für die Kleinen</div><h3>Kids</h3><p>Baby Don’t Cry – tränenfrei &amp; leichtes Kämmen.</p><span class="more">Zur Linie</span></div></a>
+    <a class="scard" href="/paul-mitchell-styling/" style="--c:#4B545E"><div class="imgw"><img src="./assets/thumb-styling.jpg" alt="Styling"></div><div class="body"><div class="cat">Halt</div><h3>Styling</h3><p>Firm, Flexible &amp; Soft Hold – für jeden Look.</p><span class="more">Zur Linie</span></div></a>
+    <div class="scard" style="--c:#242527;cursor:default;background:var(--paper2)"><div class="body" style="padding:32px 28px"><div class="cat">Und mehr</div><h3>Tea Tree · AWG · Bond Rx</h3><p>Kopfhaut, Luxus-Pflege und Bonding – eigene Markenwelten.</p><a class="more" style="text-decoration:none" href="/tea-tree/">Zu Tea Tree</a></div></div>
+  </div>
+</div></section>
+
+<section style="background:var(--paper2)" id="startangebot"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Für neue Salonpartner</span><h2>Ihr Startangebot.</h2><p>Das Paul Mitchell Salon Kit bringt die komplette Marke ins Regal – zum einmaligen Salon-Special.</p></div>
+  <div class="offer">
+    <div class="top"><div><div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#cdd3d9">Paul Mitchell · ART 703122</div><div style="font-weight:800;font-size:24px;margin-top:6px;text-transform:uppercase">Salon Kit</div></div>
+    <div class="r"><div class="strike">Listenwert 4.999,35 €</div><div class="price">3.366,35 €</div><div class="save">Sie sparen 1.633,00 €</div></div></div>
+    <div class="body"><b style="color:var(--ink)">Inhalt:</b> Komplettbestückung der Paul-Mitchell-Care- &amp; Style-Kategorien – plus Qualitätsmuster &amp; Salonmaterial.<br><span style="font-size:12.5px;color:var(--grey)">Salon-EK (netto), zzgl. USt. · gültig bis 06.07.2027</span></div>
+  </div>
+  <div class="pills"><span class="pill">Seit 1980</span><span class="pill">Nur im Salon</span><span class="pill">Tierversuchsfrei</span><span class="pill">11 Care- & Style-Linien</span><span class="pill">Familiengeführt</span></div>
+</div></section>
+
+<section class="cta-final" id="kontakt"><div class="wrap">
+  <h2>Paul Mitchell für Ihren Salon.</h2>
+  <p>Wir stellen die passenden Linien für Ihre Kundschaft zusammen, richten Regal &amp; Take-Home ein und schulen Ihr Team. Ihr Brendel-&amp;-Söhne-Außendienst begleitet Sie.</p>
+  <a class="btn btn-primary" href="mailto:office@brendel.at?subject=Paul%20Mitchell%20Beratung">Persönliche Beratung anfordern</a>
+</div></section>
+
+<footer><div class="wrap foot">
+  <div><strong style="color:#fff;letter-spacing:.12em">BRENDEL &amp; SÖHNE</strong><br>Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich</div>
+  <div style="text-align:right">Paul Mitchell® · John Paul Mitchell Systems<br><a href="mailto:office@brendel.at">office@brendel.at</a></div>
+</div><div class="wrap" style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(140,140,140,.25);font-size:12px;letter-spacing:.02em;opacity:.85;display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span>© 2026 Brendel Handelsagentur</span><span>·</span><a href="/impressum/">Impressum</a><span>·</span><a href="/kontakt/">Kontakt</a><span>·</span><a href="/datenschutz/">Datenschutz</a></div>
+</footer>
+</body></html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Awapuhi Wild Ginger – Hawaii's Beauty Secret | Brendel &amp; Söhne</title>
+<style>
+  :root{
+    --teal:#395A53;
+    --teal-d:#2c4842;
+    --petrol:#223542;
+    --mint:#E3F1F1;
+    --aqua:#DBEEEE;
+    --sage:#CCE1E0;
+    --gold:#988468;
+    --gold-soft:#c9bfa4;
+    --ink:#12120D;
+    --repair:#8ba0b3;
+    --hydrate:#7cc0b8;
+    --style:#a8926f;
+    --shadow:0 22px 60px rgba(34,53,66,.16);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter","Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.eyebrow{font-family:"Montserrat","Inter",sans-serif;letter-spacing:.04em}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+  .eyebrow{text-transform:uppercase;letter-spacing:.28em;font-size:11.5px;font-weight:600;color:var(--gold)}
+  section{padding:100px 0}
+  .leaf{border-radius:0 100% 0 100%}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--sage)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .nav .brand{font-family:Montserrat;font-weight:600;color:var(--teal);letter-spacing:.2em;font-size:13px;text-transform:uppercase}
+  .nav .links{display:flex;gap:28px;align-items:center}
+  .nav .links a{color:var(--teal);text-decoration:none;font-size:13px;font-weight:500;opacity:.8}
+  .nav .links a:hover{opacity:1}
+  .nav a.cta{background:var(--teal);color:#fff;opacity:1;padding:10px 20px;border-radius:2px;font-size:12.5px;letter-spacing:.06em}
+  @media(max-width:860px){.nav .links a:not(.cta){display:none}}
+
+  /* HERO */
+  .hero{background:linear-gradient(155deg,#eef6f5 0%,var(--mint) 45%,var(--sage) 100%);position:relative;overflow:hidden}
+  .hero-inner{display:grid;grid-template-columns:1.02fr .98fr;gap:50px;align-items:center;min-height:90vh}
+  .hero-copy{padding:70px 0}
+  .hero h1{font-family:Montserrat;font-weight:300;font-size:clamp(40px,5.6vw,72px);line-height:1.03;color:var(--teal);margin:20px 0 22px;letter-spacing:.01em}
+  .hero h1 b{font-weight:600}
+  .hero p.lead{font-size:19px;color:#334a44;max-width:500px;font-weight:300}
+  .hero-actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;font-size:14px;padding:15px 30px;border-radius:2px;letter-spacing:.05em}
+  .btn-primary{background:var(--teal);color:#fff}
+  .btn-ghost{border:1px solid var(--teal);color:var(--teal)}
+  .hero-trust{margin-top:34px;display:flex;gap:26px;flex-wrap:wrap;color:var(--teal);font-size:12.5px;letter-spacing:.02em}
+  .hero-trust span{display:flex;align-items:center;gap:8px}
+  .hero-trust i{width:7px;height:7px;background:var(--gold);border-radius:0 100% 0 100%;display:inline-block}
+  .hero-img{position:relative;height:100%;min-height:560px}
+  .hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%}
+  .hero-img .frame{position:absolute;inset:26px;border:1px solid rgba(255,255,255,.6);pointer-events:none;z-index:2}
+  @media(max-width:860px){.hero-inner{grid-template-columns:1fr}.hero-img{min-height:420px}.hero-copy{padding:56px 0 10px}}
+
+  /* STORY BAND */
+  .story{position:relative;color:#fff;padding:0}
+  .story .bg{position:relative;min-height:600px;display:flex;align-items:center}
+  .story .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+  .story .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,33,30,.82),rgba(20,33,30,.35) 60%,rgba(20,33,30,.15))}
+  .story .content{position:relative;z-index:2;max-width:560px;padding:80px 0}
+  .story h2{font-family:Montserrat;font-weight:300;font-size:clamp(28px,3.6vw,42px);line-height:1.12;margin:14px 0 18px}
+  .story p{font-size:16px;color:#e5ede9;font-weight:300;margin-bottom:16px}
+  .proverb{margin-top:26px;border-left:2px solid var(--gold-soft);padding-left:20px;font-style:italic;font-size:18px;color:#f2ede0}
+  .proverb small{display:block;font-style:normal;color:#c9d3cd;font-size:13px;margin-top:8px}
+
+  /* STATS */
+  .stats{background:var(--mint)}
+  .sec-head{max-width:720px;margin:0 auto 56px;text-align:center}
+  .sec-head h2{font-family:Montserrat;font-weight:300;font-size:clamp(28px,3.8vw,44px);line-height:1.1;color:var(--teal);margin:14px 0 16px}
+  .sec-head h2 b{font-weight:600}
+  .sec-head p{font-size:17px;color:#40564f;font-weight:300}
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+  .stat .num{font-family:Montserrat;font-weight:300;font-size:clamp(38px,4.4vw,54px);color:var(--teal)}
+  .stat .num b{font-weight:600}
+  .stat .bar{width:44px;height:2px;background:var(--gold);margin:12px auto 14px}
+  .stat p{font-size:14px;color:#40564f}
+  @media(max-width:820px){.stat-grid{grid-template-columns:1fr 1fr;gap:36px 20px}}
+
+  /* TWO TECHNOLOGIES */
+  .tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  .tech{border:1px solid var(--sage);border-radius:6px;padding:40px 38px;background:#fff;position:relative;overflow:hidden}
+  .tech::before{content:"";position:absolute;top:0;left:0;right:0;height:5px}
+  .tech.repair::before{background:var(--repair)}
+  .tech.hydrate::before{background:var(--hydrate)}
+  .tech .cat{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--petrol)}
+  .tech h3{font-family:Montserrat;font-weight:400;font-size:26px;color:var(--teal);margin:8px 0 6px}
+  .tech .sub{font-size:14px;color:var(--gold);font-weight:600;letter-spacing:.04em;margin-bottom:16px}
+  .tech p{font-size:15px;color:#3c524b;margin-bottom:18px}
+  .tech ol{list-style:none;counter-reset:s}
+  .tech li{counter-increment:s;position:relative;padding-left:40px;margin-bottom:12px;font-size:14.5px;color:#3c524b}
+  .tech li::before{content:counter(s);position:absolute;left:0;top:-2px;width:26px;height:26px;border-radius:50%;background:var(--mint);color:var(--teal);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+  @media(max-width:820px){.tech-grid{grid-template-columns:1fr}}
+
+  /* SPLIT */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .split.rev{direction:rtl}.split.rev>*{direction:ltr}
+  .split img{width:100%;border-radius:6px;box-shadow:var(--shadow)}
+  .split h2{font-family:Montserrat;font-weight:300;font-size:clamp(26px,3.4vw,40px);color:var(--teal);line-height:1.12;margin:14px 0 10px}
+  .split h2 b{font-weight:600}
+  .split .lead{color:#40564f;font-size:16px;font-weight:300}
+  .split ul{list-style:none;margin-top:22px}
+  .split li{position:relative;padding-left:32px;margin-bottom:15px;font-size:15.5px;color:#33463f}
+  .split li::before{content:"";position:absolute;left:0;top:7px;width:15px;height:16px;background:var(--gold);border-radius:0 100% 0 100%}
+  .split li b{color:var(--teal)}
+  @media(max-width:820px){.split{grid-template-columns:1fr;gap:32px}.split.rev{direction:ltr}}
+
+  /* BEFORE/AFTER */
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);max-width:720px;margin:0 auto}
+  .ba figure{position:relative;margin:0}
+  .ba img{width:100%;height:520px;object-fit:cover;object-position:center top;display:block}
+  .ba figcaption{position:absolute;top:16px;left:16px;background:rgba(57,90,83,.92);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;font-weight:600}
+  .ba figure.after figcaption{background:#fff;color:var(--teal)}
+  @media(max-width:620px){.ba img{height:340px}}
+
+  /* REVENUE */
+  .revenue{background:linear-gradient(160deg,var(--teal),var(--teal-d))}
+  .revenue .sec-head h2,.revenue .sec-head p{color:#fff}
+  .revenue .sec-head p{color:#cfe0da}
+  .calc{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:40px}
+  .card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:6px;padding:34px}
+  .card h3{font-family:Montserrat;font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-soft);margin-bottom:20px;font-weight:600}
+  .row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dashed rgba(255,255,255,.18);font-size:15px;color:#e4efeb}
+  .row.tot{border-bottom:none;border-top:2px solid rgba(255,255,255,.4);margin-top:8px;padding-top:16px;font-weight:700;font-size:18px;color:#fff}
+  .row .g{color:#a9e3cf;font-weight:700}
+  .big{text-align:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:6px;padding:44px 30px}
+  .big .num{font-family:Montserrat;font-weight:300;font-size:clamp(44px,7vw,84px);line-height:1;color:#b7e8d4}
+  .big p{color:#cfe0da;margin-top:12px;font-size:16px}
+  .fine{font-size:12px;color:#9fbdb2;margin-top:18px;text-align:center}
+  @media(max-width:720px){.calc{grid-template-columns:1fr}}
+
+  /* SORTIMENT / LINES */
+  .line{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:60px}
+  .line:nth-child(even){direction:rtl}.line:nth-child(even)>*{direction:ltr}
+  .line img{width:100%;border-radius:6px;box-shadow:var(--shadow)}
+  .line .tagcat{display:inline-block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:5px 12px;border-radius:40px;color:#fff}
+  .line.rep .tagcat{background:var(--repair)}
+  .line.hyd .tagcat{background:var(--hydrate)}
+  .line.sty .tagcat{background:var(--style)}
+  .line h3{font-family:Montserrat;font-weight:300;font-size:30px;color:var(--teal);margin:12px 0 6px}
+  .line h3 b{font-weight:600}
+  .line .desc{color:#40564f;font-size:15px;margin-bottom:18px;font-weight:300}
+  .plist{list-style:none}
+  .plist li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--sage);font-size:14.5px;color:#33463f}
+  .plist li span:last-child{font-family:Montserrat;font-weight:600;color:var(--teal);white-space:nowrap;padding-left:16px}
+  .kit{margin-top:16px;background:var(--mint);border-radius:4px;padding:14px 18px;font-size:14px;color:var(--teal)}
+  .kit b{font-family:Montserrat}
+  @media(max-width:820px){.line{grid-template-columns:1fr;gap:28px}.line:nth-child(even){direction:ltr}}
+
+  .pills{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;margin-top:44px}
+  .pill{border:1px solid var(--sage);color:var(--teal);padding:9px 18px;border-radius:40px;font-size:13px;font-weight:500;background:#fff}
+
+  /* CTA */
+  .cta-final{background:var(--mint);text-align:center}
+  .cta-final h2{font-family:Montserrat;font-weight:300;font-size:clamp(30px,4vw,46px);color:var(--teal);margin-bottom:18px}
+  .cta-final h2 b{font-weight:600}
+  .cta-final p{font-size:17px;color:#40564f;max-width:600px;margin:0 auto 30px;font-weight:300}
+
+  /* Sehr dezenter Scroll-Zoom auf Produktbildern (max +10%) */
+  .zoomwrap{overflow:hidden;border-radius:6px;box-shadow:var(--shadow);line-height:0}
+  .zoomwrap img,.zoomimg{width:100%;display:block;border-radius:0;box-shadow:none;transform:scale(1);transform-origin:center center;will-change:transform}
+
+  /* Full-bleed Videos · volle Breite, ganzes Bild (16:9, kein Schnitt) */
+  .px-band{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#000;display:block}
+  .px-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .px-cap{position:absolute;left:0;right:0;bottom:0;padding:80px 7vw 40px;font-family:Montserrat;font-weight:600;font-size:clamp(20px,2.6vw,32px);color:#fff;background:linear-gradient(transparent,rgba(20,33,30,.7));letter-spacing:.01em;pointer-events:none}
+  .px-cap-brand{display:block;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-bottom:10px}
+
+  footer{background:var(--petrol);color:#a9bcc4;padding:46px 0;font-size:13px}
+  .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+  footer a{color:#d6e2e6;text-decoration:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <span class="brand">Awapuhi Wild Ginger</span>
+    <nav class="links">
+      <a href="#story">Herkunft</a>
+      <a href="#tech">Technologie</a>
+      <a href="#kunde">Für Ihre Kundin</a>
+      <a href="#umsatz">Zusatzumsatz</a>
+      <a href="#startangebot">Startangebot</a>
+      <a class="cta" href="#kontakt">Beratung anfordern</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Paul Mitchell® · seit 1980</span>
+      <h1>Hawaii's<br><b>Beauty Secret.</b></h1>
+      <p class="lead">Awapuhi Wild Ginger ist der schöne Moment im Salontag – ein Hauch Hawaii, den Sie sich und Ihrer Kundin gönnen. Das Express Glossing zaubert in Sekunden spiegelnden Glanz; ein kleines Ritual, das Ihren Service veredelt und im Verkauf für sich spricht.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#umsatz">Zusatzumsatz berechnen</a>
+        <a class="btn btn-ghost" href="#tech">Die Technologien</a>
+      </div>
+      <div class="hero-trust">
+        <span><i></i> Eigene Farm auf Hawaii</span>
+        <span><i></i> Tierversuchsfrei seit 1989</span>
+        <span><i></i> Bis 100 % PCR-Verpackung</span>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="./assets/hero.jpg" alt="Awapuhi Wild Ginger – luxuriös gepflegtes Haar">
+      <span class="frame"></span>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="bg">
+    <img src="./assets/hawaii.jpg" alt="Hawaii – die Awapuhi-Heimat">
+    <div class="wrap"><div class="content">
+      <span class="eyebrow" style="color:var(--gold-soft)">Die Herkunft</span>
+      <h2>Ein Tropfen aus der Awapuhi-Blüte – seit Jahrhunderten Hawaiis Schönheitsgeheimnis.</h2>
+      <p>Anfang der 1980er sah Paul Mitchell auf Hawaii, wie eine Frau den Saft einer ʻAwapuhi-Blüte ins Haar gab. 1983 gründete er mit John Paul DeJoria die eigene Farm in Paʻauilo – 30 Acres, komplett netzunabhängig, mit Solarstrom und Regenwasser. Bis heute wird die Wurzel in Handarbeit geerntet, solar getrocknet und jeder Rezeptur beigemischt.</p>
+      <div class="proverb">„Mōhala i ka wai ka maka o ka pua."
+        <small>Mit jedem Tropfen Wasser zeigt sich die Schönheit der Blumen.</small>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" id="tech">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Labortestierte Wirkung</span>
+      <h2>Zahlen, die <b>überzeugen.</b></h2>
+      <p>Zwei patentierte Technologien – für Regeneration und für Feuchtigkeit.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat"><div class="num">bis <b>80%</b></div><div class="bar"></div><p>weniger Haarbruch<br><small style="color:#8aa19a">KeraTriplex · Repair</small></p></div>
+      <div class="stat"><div class="num">bis <b>35%</b></div><div class="bar"></div><p>mehr Glanz<br><small style="color:#8aa19a">KeraTriplex · Repair</small></p></div>
+      <div class="stat"><div class="num">bis <b>67%</b></div><div class="bar"></div><p>weniger Farbverlust<br><small style="color:#8aa19a">KeraTriplex · Repair</small></p></div>
+      <div class="stat"><div class="num"><b>82%</b></div><div class="bar"></div><p>geschmeidigeres Haar<br><small style="color:#8aa19a">HydraTriplex · Hydrate</small></p></div>
+    </div>
+    <p class="fine" style="color:#6f8880;margin-top:30px">Werte vs. unbehandeltes Haar, unabhängiges Prüflabor – Ergebnisse können variieren.</p>
+  </div>
+</section>
+
+<!-- TWO TECHNOLOGIES -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">So funktioniert es</span>
+      <h2>Zwei Wirkkomplexe, <b>ein Anspruch.</b></h2>
+      <p>Exklusiv für Awapuhi Wild Ginger – jeweils auf ein konkretes Haarbedürfnis zugeschnitten.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech repair">
+        <div class="cat">Repair</div>
+        <h3>KeraTriplex®</h3>
+        <div class="sub">Drei Keratine für Struktur &amp; Stärke</div>
+        <p>Ein Konzentrat aus drei Keratin-Proteinen mit unterschiedlichem Molekulargewicht – dem menschlichen Haarkeratin nahezu identisch.</p>
+        <ol>
+          <li><b>Eindringen</b> – die Proteine erreichen von der Kutikula bis in den Kortex.</li>
+          <li><b>Stärken</b> – im Kortex verstärken sie beschädigte Peptidbindungen.</li>
+          <li><b>Schützen</b> – ein langlebiger „Opferschild" glättet die Schuppenschicht.</li>
+        </ol>
+      </div>
+      <div class="tech hydrate">
+        <div class="cat">Hydrate</div>
+        <h3>HydraTriplex®</h3>
+        <div class="sub">11 Aminosäuren &amp; 3 nährende Öle</div>
+        <p>Eine reichhaltige Mischung aus Aminosäuren, pflanzlichen Proteinen und Ölen (Jojoba, Macadamia, Avocado) – dreifach wirksam.</p>
+        <ol>
+          <li><b>Hydrate</b> – Humectants und Awapuhi lagern Feuchtigkeit ein.</li>
+          <li><b>Bind</b> – 11 Aminosäuren verankern sich im Kortex und binden Feuchtigkeit.</li>
+          <li><b>Seal</b> – drei Öle bilden einen Schutzmantel, der Feuchtigkeit versiegelt.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSUMER -->
+<section style="background:var(--aqua)" id="kunde">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Für Ihre Kundin</span>
+      <h2>Ein Spa-Moment, <b>der bleibt.</b></h2>
+      <p class="lead">Awapuhi Wild Ginger ist kein Produkt, sondern ein Erlebnis – warmer Duft aus Ingwertee, Bergamotte und Zitrone, spürbar seidiges Haar und die Ruhe einer hawaiianischen Ritual-Pflege.</p>
+      <ul>
+        <li><b>Sichtbar gesünderes Haar:</b> weniger Bruch, mehr Glanz, geschützte Farbe.</li>
+        <li><b>Seidig &amp; kämmbar:</b> bis zu 82 % geschmeidigeres Gefühl vom Ansatz bis in die Spitzen.</li>
+        <li><b>Feuchtigkeit, die hält:</b> Hyaluron, veganes Kollagen und drei nährende Öle.</li>
+        <li><b>Luxus mit Haltung:</b> tierversuchsfrei, veganer Awapuhi-Extrakt, PCR-Verpackung.</li>
+        <li><b>Ritual für zu Hause:</b> dasselbe Pflegegefühl zwischen den Salonbesuchen.</li>
+      </ul>
+    </div>
+    <div class="zoomwrap"><img class="zoomimg" src="./assets/family.jpg" alt="Awapuhi Wild Ginger Sortiment vor Hawaii-Kulisse"></div>
+  </div>
+</section>
+
+<!-- BEFORE/AFTER -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Sichtbares Ergebnis</span>
+      <h2>Von trocken &amp; strapaziert zu <b>definiert &amp; seidig.</b></h2>
+    </div>
+    <div class="ba">
+      <figure><img src="./assets/before.jpg" alt="Vorher"><figcaption>Vorher</figcaption></figure>
+      <figure class="after"><img src="./assets/after.jpg" alt="Nachher"><figcaption>Nachher</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- REVENUE -->
+<section class="revenue" id="umsatz">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" style="color:var(--gold-soft)">Für den Salon</span>
+      <h2>Luxus-Pflege mit <b>Luxus-Marge.</b></h2>
+      <p>Der Wash-House-Service verkauft die Take-Home-Pflege fast von selbst. Auf jedem Ritual liegt rund 51 % Handelsspanne.</p>
+    </div>
+
+    <div class="calc">
+      <div class="card">
+        <h3>Take-Home-Ritual „Repair" (3 Produkte)</h3>
+        <div class="row"><span>Nourishing Shampoo 250 ml</span><span>34,95 €</span></div>
+        <div class="row"><span>Cream Rinse 250 ml</span><span>36,55 €</span></div>
+        <div class="row"><span>Intensive Treatment 150 ml</span><span>41,95 €</span></div>
+        <div class="row"><span>Verkaufswert (UVP)</span><span>113,45 €</span></div>
+        <div class="row tot"><span>Rohertrag / Ritual (~51 %)</span><span class="g">+ 58,30 €</span></div>
+      </div>
+      <div class="card">
+        <h3>In-Salon-Treatment als Add-on</h3>
+        <div class="row"><span>Express Glossing / HydraTriplex</span><span>10–15 Min.</span></div>
+        <div class="row"><span>Materialeinsatz je Ampulle/Anwendung</span><span>ca. 4–6 €</span></div>
+        <div class="row"><span>Beispiel-Servicepreis</span><span>+ 25,00 €</span></div>
+        <div class="row tot"><span>Deckungsbeitrag / Service</span><span class="g">+ ~20 €</span></div>
+      </div>
+    </div>
+
+    <div class="big">
+      <div class="num">≈ 29.000 €</div>
+      <p>zusätzlicher Rohertrag pro Jahr – bei nur <b style="color:#fff">10 Take-Home-Ritualen pro Woche</b> (10 × 58 € × 50 Wochen). In-Salon-Treatments kommen obendrauf.</p>
+    </div>
+    <p class="fine">Beispielrechnung auf Basis der UVP und ~51 % Handelsspanne (Produkt-Master). Servicepreise je nach Salon-Kalkulation.</p>
+    <div style="text-align:center;margin-top:26px"><a class="btn btn-primary" style="background:#fff;color:var(--teal)" href="#kontakt">Wash-House-Konzept anfragen</a></div>
+  </div>
+</section>
+
+<!-- SORTIMENT -->
+<section style="background:#fbfdfd" id="sortiment">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Das Sortiment</span>
+      <h2>Drei Welten: <b>Repair · Hydrate · Style.</b></h2>
+      <p>Als geschlossene Markenwelt präsentiert – nicht zwischen anderen Linien gemischt.</p>
+    </div>
+
+    <div class="line rep">
+      <div class="zoomwrap"><img class="zoomimg" src="./assets/repair.jpg" alt="Awapuhi Wild Ginger Repair"></div>
+      <div>
+        <span class="tagcat">Repair · KeraTriplex</span>
+        <h3>Regeneration für <b>geschädigtes Haar</b></h3>
+        <p class="desc">Für trockenes, gefärbtes und brüchiges Haar. Der 2-Step-Repair mit Leave-In-KeraTriplex baut Struktur von innen auf.</p>
+        <ul class="plist">
+          <li><span>Repair Nourishing Shampoo · 250 ml</span><span>34,95 €</span></li>
+          <li><span>Repair Cream Rinse · 250 ml</span><span>36,55 €</span></li>
+          <li><span>Repair Intensive Treatment · 150 ml</span><span>41,95 €</span></li>
+        </ul>
+        <div class="kit"><b>Take-Home-Kit:</b> KeraTriplex 2-Step Take-Home-Kit — UVP 64,95 €</div>
+      </div>
+    </div>
+
+    <div class="line hyd">
+      <div class="zoomwrap"><img class="zoomimg" src="./assets/hydrate.jpg" alt="Awapuhi Wild Ginger Hydrate"></div>
+      <div>
+        <span class="tagcat">Hydrate · HydraTriplex</span>
+        <h3>Feuchtigkeit für <b>durstiges Haar</b></h3>
+        <p class="desc">Für trockenes, Frizz-anfälliges Haar. Mit Hyaluron, veganem Kollagen und Meerespflanzen-Extrakt für seidige Geschmeidigkeit.</p>
+        <ul class="plist">
+          <li><span>HydraSoft Shampoo · 250 ml</span><span>34,45 €</span></li>
+          <li><span>HydraSoft Conditioner · 250 ml</span><span>36,55 €</span></li>
+          <li><span>HydraSoft Glossing Treatment · 236 ml</span><span>40,95 €</span></li>
+        </ul>
+        <div class="kit"><b>Premium-Upsell:</b> HydraTriplex Treatment 4er-Box — UVP 47,95 €</div>
+      </div>
+    </div>
+
+    <div class="line sty">
+      <div class="zoomwrap"><img class="zoomimg" src="./assets/style.jpg" alt="Awapuhi Wild Ginger Style"></div>
+      <div>
+        <span class="tagcat">Style · Finish</span>
+        <h3>High-Performance <b>Styling &amp; Glanz</b></h3>
+        <p class="desc">Pflege trifft Finish – vom seidigen Treatment-Öl bis zum spiegelnden Shine-Spray. Awapuhi in jeder Formel.</p>
+        <ul class="plist">
+          <li><span>Styling Treatment Oil · 100 ml</span><span>45,45 €</span></li>
+          <li><span>HydroMist Blow-Out Spray · 150 ml</span><span>35,45 €</span></li>
+          <li><span>Texturizing Sea Spray · 150 ml</span><span>32,95 €</span></li>
+          <li><span>Finishing Hairspray · 300 ml</span><span>34,95 €</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pills">
+      <span class="pill">Awapuhi-Extrakt · eigene Farm</span>
+      <span class="pill">Tierversuchsfrei</span>
+      <span class="pill">Veganer Awapuhi</span>
+      <span class="pill">Bis 100 % PCR-Verpackung</span>
+      <span class="pill">Hyaluron &amp; veganes Kollagen</span>
+      <span class="pill">~51 % Handelsspanne</span>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO 1 · Glossing · full-bleed Parallax -->
+<div class="px-band" id="video-glossing">
+  <video class="px-vid" muted loop autoplay playsinline preload="auto" poster="./assets/videos/poster-glossing-treatment.jpg">
+    <source src="./assets/videos/awg-glossing-treatment.mp4" type="video/mp4">
+  </video>
+  <div class="px-cap"><span class="px-cap-brand">Awapuhi Wild Ginger · auf dem Salon-Screen</span>HydraSoft Glossing Treatment</div>
+</div>
+
+<!-- EINZELPRODUKT-KITS 400 € -->
+<section style="background:#fbfdfd" id="produkt-kits">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Direkt aus dem Video</span>
+      <h2>Als <b>400-€-Kit</b> bestellbar.</h2>
+      <p>Die beiden Hero-Produkte gibt es auch als sortenreines Kit – ein Produkt, ein Wert von 400 € netto. Reguläre Netto-EK, kein Rabatt.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:820px;margin:0 auto">
+      <div style="background:#fff;border:1px solid var(--sage);border-top:5px solid var(--hydrate);border-radius:8px;padding:30px 34px;text-align:center">
+        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--petrol)">Glossing-Kit</div>
+        <div style="font-family:Montserrat;font-weight:300;font-size:20px;color:var(--teal);margin:8px 0 4px">HydraSoft Glossing Treatment</div>
+        <div style="color:#6f8880;font-size:14px">21× 236 ml</div>
+        <div style="font-family:Montserrat;font-weight:600;font-size:34px;color:var(--teal);margin-top:14px">418,95 €</div>
+        <div style="font-size:12.5px;color:#6f8880">netto · ab 400 €</div>
+      </div>
+      <div style="background:#fff;border:1px solid var(--sage);border-top:5px solid var(--style);border-radius:8px;padding:30px 34px;text-align:center">
+        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--petrol)">Sea-Spray-Kit</div>
+        <div style="font-family:Montserrat;font-weight:300;font-size:20px;color:var(--teal);margin:8px 0 4px">Texturizing Sea Spray</div>
+        <div style="color:#6f8880;font-size:14px">25× 150 ml</div>
+        <div style="font-family:Montserrat;font-weight:600;font-size:34px;color:var(--teal);margin-top:14px">406,25 €</div>
+        <div style="font-size:12.5px;color:#6f8880">netto · ab 400 €</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO 2 · Sea Spray · full-bleed Parallax -->
+<div class="px-band" id="video-seaspray">
+  <video class="px-vid" muted loop autoplay playsinline preload="auto" poster="./assets/videos/poster-texturizing-sea-spray.jpg">
+    <source src="./assets/videos/awg-texturizing-sea-spray.mp4" type="video/mp4">
+  </video>
+  <div class="px-cap"><span class="px-cap-brand">Awapuhi Wild Ginger · auf dem Salon-Screen</span>Texturizing Sea Spray</div>
+</div>
+
+<!-- STARTANGEBOT -->
+<section style="background:#fff" id="startangebot">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Für neue Salonpartner</span>
+      <h2>Ihr <b>Startangebot.</b></h2>
+      <p>Das komplette AWG-Sortiment als Einstiegs-Kit – zum einmaligen Salon-Special mit echter Ersparnis.</p>
+    </div>
+    <div style="max-width:760px;margin:0 auto;border:1px solid var(--sage);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)">
+      <div style="background:linear-gradient(160deg,var(--teal),var(--teal-d));color:#fff;padding:34px 38px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap">
+        <div>
+          <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft)">Awapuhi Wild Ginger · ART 731226</div>
+          <div style="font-family:Montserrat;font-weight:300;font-size:26px;margin-top:6px">Restage Kit</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:13px;color:#cfe0da;text-decoration:line-through">Listenwert 1.333,90 €</div>
+          <div style="font-family:Montserrat;font-weight:600;font-size:34px;line-height:1">911,55 €</div>
+          <div style="display:inline-block;margin-top:6px;background:var(--gold);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:40px">Sie sparen 422,35 €</div>
+        </div>
+      </div>
+      <div style="padding:28px 38px;color:#3c524b;font-size:15px">
+        <b style="color:var(--teal)">Inhalt:</b> Komplettbestückung Repair, Hydrate &amp; Style – inkl. KeraTriplex- &amp; HydraTriplex-Treatments und Take-Home-Kit.<br>
+        <b style="color:var(--teal)">Plus Free:</b> Liter-Nachfüller (Shampoo, Conditioner, Cream Rinse, Intensive Treatment), Fahne, Poster, Produktwissen &amp; Endverbraucher­broschüren.
+        <div style="margin-top:16px;font-size:12.5px;color:#6f8880">Salon-EK (netto), zzgl. USt. · gültig bis 06.07.2027</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTELLIGENTE KOERBE -->
+<section style="background:var(--mint)" id="baukasten">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Vorgefertigt &amp; clever</span>
+      <h2>Fertige Bestell-Körbe – <b>zum Netto-Preis.</b></h2>
+      <p>Sinnvoll zusammengestellt für einen Zweck – nur eine Linie, nur Backbar-Literware oder nur Verkaufsware. Alles zum regulären Salon-EK (netto), <b>kein Rabatt</b>, ausgelegt auf den Mindestbestellwert <b>400 € für Neukunden</b>.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <div style="background:#fff;border:1px solid var(--sage);border-top:5px solid var(--repair);border-radius:6px;padding:28px 30px;display:flex;flex-direction:column">
+        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--petrol)">Nur Repair-Linie</div>
+        <div style="font-family:Montserrat;font-weight:600;font-size:28px;color:var(--teal);margin:6px 0 14px">434,80 €</div>
+        <ul class="plist" style="flex:1">
+          <li><span>6× Nourishing Shampoo 250 ml</span><span>101,70 €</span></li>
+          <li><span>6× Cream Rinse 250 ml</span><span>106,50 €</span></li>
+          <li><span>6× Intensive Treatment 150 ml</span><span>122,70 €</span></li>
+          <li><span>2× KeraTriplex Treatment 10er</span><span>103,90 €</span></li>
+        </ul>
+      </div>
+      <div style="background:#fff;border:1px solid var(--sage);border-top:5px solid var(--style);border-radius:6px;padding:28px 30px;display:flex;flex-direction:column">
+        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--petrol)">Nur Verkaufsware</div>
+        <div style="font-family:Montserrat;font-weight:600;font-size:28px;color:var(--teal);margin:6px 0 14px">404,50 €</div>
+        <ul class="plist" style="flex:1">
+          <li><span>4× HydraSoft Shampoo 250 ml</span><span>67,00 €</span></li>
+          <li><span>4× HydraSoft Conditioner 250 ml</span><span>71,00 €</span></li>
+          <li><span>4× HydraSoft Glossing 236 ml</span><span>79,80 €</span></li>
+          <li><span>4× Repair Shampoo 250 ml</span><span>67,80 €</span></li>
+          <li><span>4× Repair Cream Rinse 250 ml</span><span>71,00 €</span></li>
+          <li><span>2× HydraTriplex Treatment 4er</span><span>47,90 €</span></li>
+        </ul>
+      </div>
+      <div style="background:#fff;border:1px solid var(--sage);border-top:5px solid var(--hydrate);border-radius:6px;padding:28px 30px;display:flex;flex-direction:column">
+        <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--petrol)">Nur Literware · Backbar</div>
+        <div style="font-family:Montserrat;font-weight:600;font-size:28px;color:var(--teal);margin:6px 0 14px">442,95 €</div>
+        <ul class="plist" style="flex:1">
+          <li><span>3× Repair Shampoo 1 L</span><span>113,85 €</span></li>
+          <li><span>3× Repair Cream Rinse 1 L</span><span>121,35 €</span></li>
+          <li><span>3× HydraSoft Shampoo 1 L</span><span>113,85 €</span></li>
+          <li><span>2× Intensive Treatment 500 ml</span><span>93,90 €</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine" style="color:#6f8880;margin-top:22px">Summen aus regulären Netto-Einkaufspreisen (Produkt-Master). Frei anpassbar – jede Position auch einzeln bestellbar. Kein zusätzlicher Rabatt.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final" id="kontakt">
+  <div class="wrap">
+    <h2>Bringen Sie <b>Hawaii</b> in Ihren Salon.</h2>
+    <p>Wir gestalten Ihr Wash-House-Erlebnis, schulen das Take-Home-Gespräch und richten die AWG-Markenwelt an Rezeption und Schaufenster ein. Ihr Brendel-&amp;-Söhne-Außendienst begleitet Sie dabei.</p>
+    <a class="btn btn-primary" href="mailto:office@brendel.at?subject=Awapuhi%20Wild%20Ginger%20Beratung">Persönliche Beratung anfordern</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <strong style="color:#fff;letter-spacing:.16em">BRENDEL &amp; SÖHNE</strong><br>
+      Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich
+    </div>
+    <div style="text-align:right">
+      Paul Mitchell® Awapuhi Wild Ginger · „Hawaii's Beauty Secret"<br>
+      <a href="mailto:office@brendel.at">office@brendel.at</a>
+    </div>
+  </div>
+<div class="wrap" style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(140,140,140,.25);font-size:12px;letter-spacing:.02em;opacity:.85;display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span>© 2026 Brendel Handelsagentur</span><span>·</span><a href="/impressum/">Impressum</a><span>·</span><a href="/kontakt/">Kontakt</a><span>·</span><a href="/datenschutz/">Datenschutz</a></div>
+</footer>
+
+<script>
+(function(){
+  // Videos laufen durchgehend als Loop, volles Bild (kein Schnitt). Nur Autoplay sichern.
+  document.querySelectorAll('.px-vid').forEach(function(v){
+    if (v.play){ var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+  });
+
+  // Sehr dezenter Scroll-Zoom: Produktbilder zoomen beim Durchscrollen um max. 10% ran.
+  var MAX = 0.10;
+  var imgs = Array.prototype.slice.call(document.querySelectorAll('.zoomimg'));
+  var ticking = false;
+  function apply(){
+    var vh = window.innerHeight;
+    imgs.forEach(function(img){
+      var box = img.parentElement.getBoundingClientRect();
+      if (box.bottom < 0 || box.top > vh) return;
+      var center = box.top + box.height/2;
+      var prog = 1 - (center / vh);                 // 0 = Mitte am unteren Rand, 1 = am oberen Rand
+      prog = Math.max(0, Math.min(1, prog));
+      img.style.transform = 'scale(' + (1 + MAX*prog).toFixed(4) + ')';
+    });
+    ticking = false;
+  }
+  function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(apply); } }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  apply();
+})();
+</script>
+</body>
+</html>

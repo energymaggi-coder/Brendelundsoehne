@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul Mitchell Blonde – Strahlend blond | Brendel & Söhne</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#242527;--paper:#ffffff;--paper2:#f4f5f6;--line:#e4e6e8;--accent:#8C88A3;--accent-d:#635f7d;--grey:#6a7078;--shadow:0 24px 60px rgba(36,37,39,.14);}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{font-family:"Inter","Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-weight:800;letter-spacing:-.01em}
+  .eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:11.5px;font-weight:700;color:var(--accent-d)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}section{padding:104px 0}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;font-size:14px;padding:15px 30px;border-radius:2px;letter-spacing:.02em}
+  .btn-primary{background:var(--ink);color:#fff}.btn-ghost{border:1px solid var(--ink);color:var(--ink)}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .nav .brand{font-weight:800;color:var(--ink);letter-spacing:.12em;font-size:15px;text-transform:uppercase}
+  .nav .brand span{color:var(--accent-d);font-weight:700}
+  .nav .links{display:flex;gap:26px;align-items:center}
+  .nav .links a{color:var(--ink);text-decoration:none;font-size:13px;font-weight:500;opacity:.8}.nav .links a:hover{opacity:1}
+  .nav a.cta{background:var(--ink);color:#fff;opacity:1;padding:10px 20px;border-radius:2px;font-size:12.5px}
+  @media(max-width:900px){.nav .links a:not(.cta){display:none}}
+  .hero{background:linear-gradient(160deg,#fff 0%,var(--paper2) 100%)}
+  .hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;min-height:88vh}
+  .hero-copy{padding:70px 0}
+  .hero .cat{display:inline-block;background:var(--accent);color:#fff;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:5px 14px;border-radius:40px;margin-bottom:18px}
+  .hero h1{font-size:clamp(46px,6.6vw,88px);line-height:.98;text-transform:uppercase;margin-bottom:22px}
+  .hero h1 span{color:var(--accent-d)}
+  .hero p.lead{font-size:19px;color:#40474d;max-width:500px;font-weight:300}
+  .hero-actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero-trust{margin-top:32px;display:flex;gap:24px;flex-wrap:wrap;color:var(--ink);font-size:12.5px}
+  .hero-trust span{display:flex;align-items:center;gap:8px}.hero-trust i{width:7px;height:7px;background:var(--accent);border-radius:50%;display:inline-block}
+  .hero-img{position:relative;height:100%;min-height:540px;background:radial-gradient(circle at 60% 45%,#fff,var(--paper2));display:flex;align-items:center;justify-content:center}
+  .hero-img img{width:100%;height:100%;object-fit:contain;padding:20px}
+  .imgfull img{width:100%;display:block;border-radius:4px;box-shadow:var(--shadow)}
+  @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-img{min-height:380px}.hero-copy{padding:52px 0 6px}}
+  .story{position:relative;color:#fff}.story .bg{position:relative;min-height:560px;display:flex;align-items:center}
+  .story .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+  .story .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,30,32,.82),rgba(28,30,32,.4) 60%,rgba(28,30,32,.12))}
+  .story .content{position:relative;z-index:2;max-width:560px;padding:80px 0}
+  .story h2{font-size:clamp(32px,4vw,50px);line-height:1.05;text-transform:uppercase;margin:14px 0 18px}
+  .story p{font-size:16px;color:#e7ebef;font-weight:300;margin-bottom:16px}
+  .sec-head{max-width:720px;margin:0 auto 56px;text-align:center}
+  .sec-head h2{font-size:clamp(32px,4.2vw,52px);line-height:1.04;text-transform:uppercase;margin:12px 0 16px}
+  .sec-head h2 span{color:var(--accent-d)}
+  .sec-head p{font-size:17px;color:var(--grey);font-weight:300}
+  .stats{background:var(--paper2)}
+  .stat-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:26px;text-align:center;max-width:900px;margin:0 auto}
+  .stat .num{font-size:clamp(44px,5.2vw,66px);font-weight:900;color:var(--ink);line-height:1}
+  .stat .num span{color:var(--accent-d)}
+  .stat .bar{width:44px;height:3px;background:var(--accent);margin:14px auto 14px}
+  .stat p{font-size:14px;color:var(--grey);max-width:250px;margin:0 auto}
+  @media(max-width:820px){.stat-grid{grid-template-columns:1fr;gap:40px}}
+  .tech-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;max-width:900px;margin:0 auto}
+  .tcard{border:1px solid var(--line);border-radius:6px;padding:36px 34px;background:#fff}
+  .tcard .n{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--accent-d)}
+  .tcard h3{font-size:24px;margin:6px 0 10px;text-transform:uppercase}.tcard p{font-size:15px;color:#3c4349}
+  @media(max-width:820px){.tech-grid{grid-template-columns:1fr}}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .split h2{font-size:clamp(28px,3.6vw,44px);line-height:1.05;text-transform:uppercase;margin:14px 0 10px}.split h2 span{color:var(--accent-d)}
+  .split .lead{color:var(--grey);font-size:16px;font-weight:300}.split ul{list-style:none;margin-top:22px}
+  .split li{position:relative;padding-left:30px;margin-bottom:15px;font-size:15.5px;color:#33393f}
+  .split li::before{content:"";position:absolute;left:0;top:8px;width:12px;height:12px;background:var(--accent);border-radius:2px}.split li b{color:var(--ink)}
+  @media(max-width:820px){.split{grid-template-columns:1fr;gap:32px}}
+  .px-band{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#000;display:block}
+  .px-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .px-cap{position:absolute;left:0;right:0;bottom:0;padding:80px 7vw 40px;font-weight:800;font-size:clamp(22px,2.8vw,36px);text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(28,30,32,.72));pointer-events:none}
+  .px-cap-brand{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px}
+  .lines{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:820px;margin:0 auto}
+  .lcard{border:1px solid var(--line);border-radius:6px;padding:28px 30px;background:#fff}
+  .lcard .tag{display:inline-block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--accent);padding:5px 12px;border-radius:40px}
+  .lcard h3{font-size:20px;margin:12px 0 4px;text-transform:uppercase}.lcard .sub{font-size:13px;color:var(--accent-d);font-weight:600;margin-bottom:14px}
+  .plist{list-style:none}.plist li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px;color:#33393f}
+  .plist li span:last-child{font-weight:700;color:var(--ink);white-space:nowrap;padding-left:14px}
+  @media(max-width:820px){.lines{grid-template-columns:1fr}}
+  .kits{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:820px;margin:0 auto}
+  .kit{background:#fff;border:1px solid var(--line);border-top:5px solid var(--accent);border-radius:8px;padding:30px 34px;text-align:center}
+  .kit .k1{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--accent-d)}
+  .kit .k2{font-weight:700;font-size:20px;margin:8px 0 2px;text-transform:uppercase}.kit .k3{color:var(--grey);font-size:14px}
+  .kit .k4{font-weight:900;font-size:32px;color:var(--ink);margin-top:12px}.kit .k5{font-size:12.5px;color:var(--grey)}
+  .offer{max-width:760px;margin:0 auto;border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+  .offer .top{background:var(--ink);color:#fff;padding:34px 38px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+  .offer .top .r{text-align:right}.offer .strike{font-size:13px;color:#aab0b6;text-decoration:line-through}
+  .offer .price{font-weight:900;font-size:34px;line-height:1}
+  .offer .save{display:inline-block;margin-top:6px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:40px}
+  .offer .body{padding:26px 38px;color:#3c4349;font-size:15px}
+  .revenue{background:var(--ink)}
+  .revenue .sec-head h2{color:#fff}.revenue .sec-head p{color:#aab0b6}
+  .calc{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;max-width:900px;margin:0 auto}
+  .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:30px 32px}
+  .card h3{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);font-weight:700}
+  .card .big{font-weight:900;font-size:26px;color:#fff;margin:6px 0 14px}.card ul{list-style:none}
+  .card li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:14px;color:#dfe3e7}.card li:last-child{border-bottom:none}
+  .fine{font-size:12px;color:#8c939a;margin-top:18px;text-align:center}@media(max-width:720px){.calc{grid-template-columns:1fr}}
+  .pills{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;margin-top:44px}
+  .pill{border:1px solid var(--line);color:var(--ink);padding:9px 18px;border-radius:40px;font-size:13px;font-weight:500;background:#fff}
+  .cta-final{background:var(--paper2);text-align:center}
+  .cta-final h2{font-size:clamp(34px,4.4vw,56px);text-transform:uppercase;margin-bottom:16px}.cta-final h2 span{color:var(--accent-d)}
+  .cta-final p{font-size:17px;color:var(--grey);max-width:600px;margin:0 auto 30px;font-weight:300}
+  footer{background:var(--ink);color:#9aa1a8;padding:46px 0;font-size:13px}
+  .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}footer a{color:#d3d8dc;text-decoration:none}
+</style></head><body>
+<header><div class="wrap nav"><span class="brand">Paul Mitchell <span>· Blonde</span></span>
+<nav class="links"><a href="#herkunft">Herkunft</a><a href="#wirkung">Wirkung</a><a href="#kunde">Für Ihre Kundin</a><a href="#sortiment">Sortiment</a><a href="#startangebot">Startangebot</a><a class="cta" href="#kontakt">Beratung anfordern</a></nav></div></header>
+<section class="hero"><div class="wrap hero-inner"><div class="hero-copy"><span class="cat">Blonde · Blond-Pflege</span>
+<h1>Strahlend<br><span>blond.</span></h1><p class="lead">Das Blond Ihrer Kundinnen zwischen den Terminen kühl und gepflegt halten. „Forever Blonde“ pflegt mit veganem Keratin, die Platinum-Linie neutralisiert Gelbstich – zwei Regalklassiker, nach denen Blondkundinnen von selbst fragen.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="#sortiment">Sortiment ansehen</a><a class="btn btn-ghost" href="#wirkung">Wie es wirkt</a></div>
+<div class="hero-trust"><span><i></i> Veganes KerActive-Keratin</span><span><i></i> 75 % mehr Pflege*</span><span><i></i> Anti-Gelbstich</span></div></div>
+<div class="hero-img"><img src="./assets/hero.jpg" alt="Blonde"></div></div></section>
+<section class="story" id="herkunft"><div class="bg"><img src="./assets/story.jpg" alt="Blonde">
+<div class="wrap"><div class="content"><span class="eyebrow" style="color:var(--accent)">Die Idee</span>
+<h2>Blond, das gepflegt bleibt.</h2><p>Blondiertes Haar braucht zweierlei: intensive Pflege und Neutralisierung. Forever Blonde pflegt mit veganem KerActive-Keratin und repariert Schäden, während die Platinum-Linie mit violetten Pigmenten unerwünschte Gelbstiche neutralisiert.</p><p>So bleibt Blond hell, kühl und gesund – Wäsche für Wäsche.</p></div></div></div></section>
+<section class="stats" id="ergebnis"><div class="wrap"><div class="sec-head"><span class="eyebrow">Labortestiert</span><h2>Spürbar <span>gepflegter.</span></h2></div><div class="stat-grid"><div class="stat"><div class="num">75<span>%</span></div><div class="bar"></div><p>mehr Pflegewirkung (Forever Blonde System)</p></div></div><p class="fine" style="color:var(--grey);margin-top:30px">*vs. unbehandeltes Haar. Ergebnisse können abweichen.</p></div></section>
+<section id="wirkung"><div class="wrap"><div class="sec-head"><span class="eyebrow">So funktioniert es</span><h2>Keratin & <span>Pigmente.</span></h2><p>Pflege und Neutralisierung für blondes Haar.</p></div>
+<div class="tech-grid"><div class="tcard"><div class="n">Pflegen</div><h3>Veganes KerActive-Keratin</h3><p>Pflegt und schützt blondiertes Haar und unterstützt die Reparatur von Schäden – für 75 % mehr Pflegewirkung.*</p></div><div class="tcard"><div class="n">Neutralisieren</div><h3>Violette Pigmente</h3><p>Neutralisieren unerwünschte Gelb- und Warmtöne – von sanft (Platinum) bis intensiv (Platinum Plus).</p></div></div><p class="fine" style="color:var(--grey);margin-top:30px">Für blondiertes, aufgehelltes und graues Haar – Pflege und Anti-Gelbstich in einem System.</p></div></section>
+<section style="background:var(--paper2)" id="kunde"><div class="wrap split"><div><span class="eyebrow">Für Ihre Kundin</span>
+<h2>Blond, das <span>bleibt.</span></h2><p class="lead">Für alle mit blondiertem, aufgehelltem oder grauem Haar, die kühles, gepflegtes Blond ohne Gelbstich suchen.</p><ul><li><b>75 % mehr Pflege:</b> veganes KerActive-Keratin.*</li><li><b>Anti-Gelbstich:</b> violette Pigmente neutralisieren.</li><li><b>Zwei Intensitäten:</b> Platinum sanft, Platinum Plus intensiv.</li><li><b>Leave-In-Schutz:</b> Forever Blonde Treatment Spray.</li><li><b>Gesundes Blond:</b> repariert und schützt.</li></ul></div>
+<div class="imgfull"><img src="./assets/consumer.jpg" alt="Blonde"></div></div></section>
+<div class="px-band"><video class="px-vid" muted loop autoplay playsinline preload="auto" poster="./assets/videos/poster-blonde-fb-shampoo.jpg"><source src="./assets/videos/pm-blonde-fb-shampoo.mp4" type="video/mp4"></video>
+<div class="px-cap"><span class="px-cap-brand">Paul Mitchell Blonde · auf dem Salon-Screen</span>Forever Blonde Shampoo</div></div>
+<section id="kits"><div class="wrap"><div class="sec-head"><span class="eyebrow">Sortenrein bestellbar</span><h2>Als <span>400-€-Kit.</span></h2><p>Die zwei Bestseller auch als sortenreines Kit – ein Produkt, Wert 400 € netto. Reguläre Netto-EK, kein Rabatt.</p></div><div class="kits"><div class="kit"><div class="k1">Shampoo-Kit</div><div class="k2">Forever Blonde Shampoo</div><div class="k3">24× 300 ml</div><div class="k4">414,00 €</div><div class="k5">netto · ab 400 €</div></div><div class="kit"><div class="k1">Conditioner-Kit</div><div class="k2">Forever Blonde Conditioner</div><div class="k3">19× 300 ml</div><div class="k4">407,55 €</div><div class="k5">netto · ab 400 €</div></div></div></div></section>
+<div class="px-band"><video class="px-vid" muted loop autoplay playsinline preload="auto" poster="./assets/videos/poster-blonde-pp-toning-drops.jpg"><source src="./assets/videos/pm-blonde-pp-toning-drops.mp4" type="video/mp4"></video>
+<div class="px-cap"><span class="px-cap-brand">Paul Mitchell Blonde · auf dem Salon-Screen</span>Platinum Plus Toning Drops</div></div>
+<section style="background:#fafbfb" id="sortiment"><div class="wrap"><div class="sec-head"><span class="eyebrow">Das Sortiment</span><h2>Forever Blonde & <span>Platinum.</span></h2><p>Pflege und Anti-Gelbstich – für strahlendes Blond. UVP-Preise (Endkunde).</p></div>
+<div class="lines"><div class="lcard"><span class="tag">Pflege</span><h3>Forever Blonde</h3><div class="sub">Veganes KerActive-Keratin</div><ul class="plist"><li><span>Forever Blonde Shampoo · 300 ml</span><span>35,45 €</span></li><li><span>Forever Blonde Conditioner · 300 ml</span><span>44,45 €</span></li><li><span>Forever Blonde Leave-In Spray · 150 ml</span><span>30,95 €</span></li></ul></div><div class="lcard"><span class="tag">Anti-Gelbstich</span><h3>Platinum</h3><div class="sub">Violette Pigmente</div><ul class="plist"><li><span>Platinum Blonde Violet Shampoo · 300 ml</span><span>27,35 €</span></li><li><span>Platinum Plus Deep Violet Shampoo · 300 ml</span><span>34,45 €</span></li><li><span>Platinum Plus Violet Toning Drops · 25 ml</span><span>25,95 €</span></li></ul></div></div><div class="pills"><span class="pill">Veganes KerActive-Keratin</span><span class="pill">75 % mehr Pflege*</span><span class="pill">Violette Pigmente</span><span class="pill">Anti-Gelbstich</span><span class="pill">Für blondiertes Haar</span></div></div></section>
+<section id="startangebot"><div class="wrap"><div class="sec-head"><span class="eyebrow">Für neue Salonpartner</span><h2>Ihr <span>Startangebot.</span></h2><p>Das Paul Mitchell Salon Kit bringt die komplette Marke ins Regal – zum einmaligen Salon-Special.</p></div>
+<div class="offer"><div class="top"><div><div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)">Paul Mitchell · ART 703122</div><div style="font-weight:800;font-size:24px;margin-top:6px;text-transform:uppercase">Salon Kit</div></div>
+<div class="r"><div class="strike">Listenwert 4.999,35 €</div><div class="price">3.366,35 €</div><div class="save">Sie sparen 1.633,00 €</div></div></div>
+<div class="body"><b style="color:var(--ink)">Inhalt:</b> Komplettbestückung der Paul-Mitchell-Care- &amp; Style-Kategorien (inkl. Blonde) – plus Qualitätsmuster &amp; Salonmaterial.<br><span style="font-size:12.5px;color:var(--grey)">Salon-EK (netto), zzgl. USt. · gültig bis 06.07.2027</span></div></div></div></section>
+<section class="revenue" id="koerbe"><div class="wrap"><div class="sec-head"><span class="eyebrow" style="color:var(--accent)">Frei zusammenstellen</span><h2>Fertige <span style="color:#fff">Bestell-Körbe.</span></h2><p>Sinnvoll kuratiert zum regulären Netto-EK. Kein Rabatt, Mindestbestellwert 400 € für Neukunden.</p></div>
+<div class="calc"><div class="card"><h3>Nur Verkaufsware · Take-Home</h3><div class="big">412,85 €</div><ul><li><span>8× Forever Blonde Shampoo 300 ml</span><span>138,00 €</span></li><li><span>8× Forever Blonde Conditioner 300 ml</span><span>171,60 €</span></li><li><span>7× Forever Blonde Leave-In Spray 150 ml</span><span>103,25 €</span></li></ul></div><div class="card"><h3>Nur Literware · Backbar</h3><div class="big">413,25 €</div><ul><li><span>6× Forever Blonde Shampoo 1 L</span><span>223,50 €</span></li><li><span>5× Forever Blonde Conditioner 1 L</span><span>189,75 €</span></li></ul></div></div><p class="fine">Summen aus regulären Netto-Einkaufspreisen (Produkt-Master). Frei anpassbar – jede Position auch einzeln bestellbar. Kein Rabatt.</p></div></section>
+<section class="cta-final" id="kontakt"><div class="wrap"><h2>Strahlendes <span>Blond</span> für Ihren Salon.</h2><p>Wir zeigen die Blond-Routine, richten die Take-Home-Empfehlung ein und schulen das Forever-Blonde- &amp; Platinum-Erlebnis. Ihr Brendel-&-Söhne-Außendienst begleitet Sie.</p>
+<a class="btn btn-primary" href="mailto:office@brendel.at?subject=Paul%20Mitchell%20Blonde%20Beratung">Persönliche Beratung anfordern</a></div></section>
+<footer><div class="wrap foot"><div><strong style="color:#fff;letter-spacing:.12em">BRENDEL &amp; SÖHNE</strong><br>Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich</div>
+<div style="text-align:right">Paul Mitchell® Blonde · Forever Blonde · Platinum<br><a href="mailto:office@brendel.at">office@brendel.at</a></div></div><div class="wrap" style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(140,140,140,.25);font-size:12px;letter-spacing:.02em;opacity:.85;display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span>© 2026 Brendel Handelsagentur</span><span>·</span><a href="/impressum/">Impressum</a><span>·</span><a href="/kontakt/">Kontakt</a><span>·</span><a href="/datenschutz/">Datenschutz</a></div>
+</footer>
+<script>(function(){document.querySelectorAll('.px-vid').forEach(function(v){if(v.play){var p=v.play();if(p&&p.catch)p.catch(function(){});}});})();</script>
+</body></html>
