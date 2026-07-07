@@ -75,7 +75,16 @@
   footer{background:var(--moss-d);color:#b9c7b6;padding:46px 0;font-size:13px}
   .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}footer a{color:#dbe5d8;text-decoration:none}
 </style>
-</head>
+<style id="bxc-mobile">
+@media(max-width:760px){
+ [style*="grid-template-columns:repeat(3,1fr)"],[style*="grid-template-columns:repeat(2,1fr)"],[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important}
+ .offer .top{flex-direction:column;align-items:flex-start !important;gap:12px}
+ .offer .top .r,.offer .r{text-align:left !important}
+ .plist li,.calc ul li,ul li[style*="space-between"]{flex-wrap:wrap}
+}
+img{max-width:100%}
+html,body{max-width:100%;overflow-x:hidden}
+</style></head>
 <body>
 <header><div class="wrap nav">
   <span class="brand">Tea Tree</span>
@@ -172,7 +181,7 @@
 <section class="cta-final" id="kontakt"><div class="wrap">
   <h2>Holen Sie das <i>Prickeln</i> in Ihren Salon.</h2>
   <p>Wir richten die Tea-Tree-Wash-House-Zone ein, wählen die passenden Serien für Ihre Kundschaft und schulen das Erlebnis. Ihr Brendel-&amp;-Söhne-Außendienst begleitet Sie.</p>
-  <a class="btn btn-primary" href="mailto:office@brendel.at?subject=Tea%20Tree%20Beratung">Persönliche Beratung anfordern</a>
+  <a class="btn btn-primary" href="https://wa.me/43676842752300?text=Guten%20Tag%20Brendel%20%26%20S%C3%B6hne%21%20Ich%20interessiere%20mich%20f%C3%BCr%20eine%20pers%C3%B6nliche%20Beratung%20zu%20Tea%20Tree%20f%C3%BCr%20meinen%20Salon.%20Bitte%20melden%20Sie%20sich%20bei%20mir." target="_blank" rel="noopener">Persönliche Beratung anfordern</a>
 </div></section>
 
 <footer><div class="wrap foot">

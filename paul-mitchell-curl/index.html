@@ -150,7 +150,16 @@
 .bxc-note a{color:#1a1a1a}
 @media(max-width:520px){.bxc-fab{right:14px;bottom:14px;padding:12px 16px}}
 </style>
-</head><body>
+<style id="bxc-mobile">
+@media(max-width:760px){
+ [style*="grid-template-columns:repeat(3,1fr)"],[style*="grid-template-columns:repeat(2,1fr)"],[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important}
+ .offer .top{flex-direction:column;align-items:flex-start !important;gap:12px}
+ .offer .top .r,.offer .r{text-align:left !important}
+ .plist li,.calc ul li,ul li[style*="space-between"]{flex-wrap:wrap}
+}
+img{max-width:100%}
+html,body{max-width:100%;overflow-x:hidden}
+</style></head><body>
 <header><div class="wrap nav"><span class="brand">Paul Mitchell <span>· Curl</span></span>
 <nav class="links"><a href="#herkunft">Herkunft</a><a href="#wirkung">Wirkung</a><a href="#kunde">Für Ihre Kundin</a><a href="#sortiment">Sortiment</a><a href="#startangebot">Startangebot</a><a class="cta" href="#kontakt">Beratung anfordern</a></nav></div></header>
 <section class="hero"><div class="wrap hero-inner"><div class="hero-copy"><span class="cat">Curl · Locken</span>
@@ -169,7 +178,6 @@
 <div class="imgfull"><img src="./assets/consumer.jpg" alt="Curl"></div></div></section>
 <div class="px-band"><video class="px-vid" muted loop autoplay playsinline preload="auto" poster="./assets/videos/poster-curl-twirl.jpg"><source src="./assets/videos/pm-curl-twirl.mp4" type="video/mp4"></video>
 <div class="px-cap"><span class="px-cap-brand">Paul Mitchell Curl · auf dem Salon-Screen</span>Twirl Around Cream Serum</div></div>
-<section id="kits"><div class="wrap"><div class="sec-head"><span class="eyebrow">Sortenrein bestellbar</span><h2>Als <span>400-€-Kit.</span></h2><p>Die zwei Bestseller als sortenreines Kit – ein Produkt, Wert 400 € netto. Reguläre Netto-EK, kein Rabatt.</p></div><div class="kits"><div class="kit"><div class="k1">Serum-Kit</div><div class="k2">Twirl Around Cream Serum</div><div class="k3">22× 150 ml</div><div class="k4">412,50 €</div><div class="k5">netto · ab 400 €</div><button type="button" class="bxc-add" data-n="Twirl Around Cream Serum – Serum-Kit" data-p="412.50">+ In die Bestellliste</button></div><div class="kit"><div class="k1">Pomade-Kit</div><div class="k2">Foaming Pomade</div><div class="k3">23× 250 ml</div><div class="k4">412,85 €</div><div class="k5">netto · ab 400 €</div><button type="button" class="bxc-add" data-n="Foaming Pomade – Pomade-Kit" data-p="412.85">+ In die Bestellliste</button></div></div></div></section>
 <div class="px-band"><video class="px-vid" muted loop autoplay playsinline preload="auto" poster="./assets/videos/poster-curl-foaming-pomade.jpg"><source src="./assets/videos/pm-curl-foaming-pomade.mp4" type="video/mp4"></video>
 <div class="px-cap"><span class="px-cap-brand">Paul Mitchell Curl · auf dem Salon-Screen</span>Foaming Pomade</div></div>
 <section style="background:#fafbfb" id="sortiment"><div class="wrap"><div class="sec-head"><span class="eyebrow">Das Sortiment</span><h2>Definieren & <span>Halten.</span></h2><p>Cremes, Seren und Pomade für jede Locke. UVP-Preise (Endkunde).</p></div>
@@ -178,10 +186,10 @@
 <div class="offer"><div class="top"><div><div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)">Paul Mitchell · ART 703122</div><div style="font-weight:800;font-size:24px;margin-top:6px;text-transform:uppercase">Salon Kit</div></div>
 <div class="r"><div class="strike">Listenwert 4.999,35 €</div><div class="price">3.366,35 €</div><div class="save">Sie sparen 1.633,00 €</div></div></div>
 <div class="body"><b style="color:var(--ink)">Inhalt:</b> Komplettbestückung der Paul-Mitchell-Care- &amp; Style-Kategorien (inkl. Curl) – plus Qualitätsmuster &amp; Salonmaterial.<br><span style="font-size:12.5px;color:var(--grey)">Salon-EK (netto), zzgl. USt. · gültig bis 06.07.2027</span></div><div style="text-align:center;margin-top:16px"><button type="button" class="bxc-add" data-n="Startangebot – Salon Kit" data-p="3366.35">+ In die Bestellliste</button></div></div></div></section>
-<section class="revenue" id="koerbe"><div class="wrap"><div class="sec-head"><span class="eyebrow" style="color:var(--accent)">Frei zusammenstellen</span><h2>Fertige <span style="color:#fff">Bestell-Körbe.</span></h2><p>Sinnvoll kuratiert zum regulären Netto-EK. Kein Rabatt, Mindestbestellwert 400 € für Neukunden.</p></div>
+<section class="revenue" id="koerbe"><div class="wrap"><div class="sec-head"><span class="eyebrow" style="color:var(--accent)">Rund um Ihre Bestseller</span><h2><span style="color:#fff">Bestellpakete ab 400 €.</span></h2><p>Sinnvoll kuratiert zum regulären Netto-EK. Kein Rabatt, Mindestbestellwert 400 € für Neukunden.</p></div>
 <div class="calc"><div class="card"><h3>Definieren & Halten</h3><div class="big">409,50 €</div><ul><li><span>6× Full Circle Leave-In 150 ml</span><span>77,70 €</span></li><li><span>6× Quick Slip Styling Cream 150 ml</span><span>71,70 €</span></li><li><span>6× Round Trip Defining Serum 150 ml</span><span>63,90 €</span></li><li><span>6× Refreshing Mist 250 ml</span><span>83,70 €</span></li><li><span>6× Twirl Around Cream Serum 150 ml</span><span>112,50 €</span></li></ul><button type="button" class="bxc-add" data-n="Definieren &amp; Halten · Bestell-Korb" data-p="409.50">+ In die Bestellliste</button></div><div class="card"><h3>Pomade & Definition</h3><div class="big">406,70 €</div><ul><li><span>8× Foaming Pomade 250 ml</span><span>143,60 €</span></li><li><span>8× Twirl Around Cream Serum 150 ml</span><span>150,00 €</span></li><li><span>8× Round Trip Defining Serum 150 ml</span><span>85,20 €</span></li><li><span>2× Refreshing Mist 250 ml</span><span>27,90 €</span></li></ul><button type="button" class="bxc-add" data-n="Pomade &amp; Definition · Bestell-Korb" data-p="406.70">+ In die Bestellliste</button></div></div><p class="fine">Summen aus regulären Netto-Einkaufspreisen (Produkt-Master). Frei anpassbar – jede Position auch einzeln bestellbar. Kein Rabatt.</p></div></section>
 <section class="cta-final" id="kontakt"><div class="wrap"><h2>Definierte <span>Locken</span> für Ihren Salon.</h2><p>Wir zeigen die Locken-Routine, richten die Take-Home-Empfehlung ein und schulen das Curl-Erlebnis. Ihr Brendel-&-Söhne-Außendienst begleitet Sie.</p>
-<a class="btn btn-primary" href="mailto:office@brendel.at?subject=Paul%20Mitchell%20Curl%20Beratung">Persönliche Beratung anfordern</a></div></section>
+<a class="btn btn-primary" href="https://wa.me/43676842752300?text=Guten%20Tag%20Brendel%20%26%20S%C3%B6hne%21%20Ich%20interessiere%20mich%20f%C3%BCr%20eine%20pers%C3%B6nliche%20Beratung%20zu%20Paul%20Mitchell%20Curl%20f%C3%BCr%20meinen%20Salon.%20Bitte%20melden%20Sie%20sich%20bei%20mir." target="_blank" rel="noopener">Persönliche Beratung anfordern</a></div></section>
 <footer><div class="wrap foot"><div><strong style="color:#fff;letter-spacing:.12em">BRENDEL &amp; SÖHNE</strong><br>Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich</div>
 <div style="text-align:right">Paul Mitchell® Curl · Curls<br><a href="mailto:office@brendel.at">office@brendel.at</a></div></div><div class="wrap" style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(140,140,140,.25);font-size:12px;letter-spacing:.02em;opacity:.85;display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span>© 2026 Brendel Handelsagentur</span><span>·</span><a href="/impressum/">Impressum</a><span>·</span><a href="/kontakt/">Kontakt</a><span>·</span><a href="/datenschutz/">Datenschutz</a></div>
 </footer>

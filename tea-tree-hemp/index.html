@@ -147,7 +147,16 @@
 .bxc-note a{color:#1a1a1a}
 @media(max-width:520px){.bxc-fab{right:14px;bottom:14px;padding:12px 16px}}
 </style>
-</head>
+<style id="bxc-mobile">
+@media(max-width:760px){
+ [style*="grid-template-columns:repeat(3,1fr)"],[style*="grid-template-columns:repeat(2,1fr)"],[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important}
+ .offer .top{flex-direction:column;align-items:flex-start !important;gap:12px}
+ .offer .top .r,.offer .r{text-align:left !important}
+ .plist li,.calc ul li,ul li[style*="space-between"]{flex-wrap:wrap}
+}
+img{max-width:100%}
+html,body{max-width:100%;overflow-x:hidden}
+</style></head>
 <body>
 <header><div class="wrap nav">
   <span class="brand">Tea Tree Hemp</span>
@@ -226,14 +235,6 @@
   <div class="px-cap"><span class="px-cap-brand">Tea Tree Hemp · auf dem Salon-Screen</span>Restoring Shampoo &amp; Body Wash</div>
 </div>
 
-<section id="kits"><div class="wrap">
-  <div class="sec-head"><span class="eyebrow">Sortenrein bestellbar</span><h2>Als <i>400-€-Kit.</i></h2><p>Die zwei Bestseller auch als sortenreines Kit – ein Produkt, Wert 400 € netto. Reguläre Netto-EK, kein Rabatt.</p></div>
-  <div class="kits">
-    <div class="kit"><div class="k1">Shampoo-Kit</div><div class="k2">Restoring Shampoo &amp; Body Wash</div><div class="k3">30× 300 ml</div><div class="k4">412,50 €</div><div class="k5">netto · ab 400 €</div><button type="button" class="bxc-add" data-n="Restoring Shampoo &amp; Body Wash – Shampoo-Kit" data-p="412.50">+ In die Bestellliste</button></div>
-    <div class="kit"><div class="k1">Conditioner-Kit</div><div class="k2">Restoring Conditioner &amp; Body Lotion</div><div class="k3">28× 300 ml</div><div class="k4">413,00 €</div><div class="k5">netto · ab 400 €</div><button type="button" class="bxc-add" data-n="Restoring Conditioner &amp; Body Lotion – Conditioner-Kit" data-p="413.00">+ In die Bestellliste</button></div>
-  </div>
-</div></section>
-
 <div class="px-band" id="video-oil">
   <video class="px-vid" muted loop autoplay playsinline preload="auto" poster="./assets/videos/poster-hemp-oil.jpg">
     <source src="./assets/videos/tt-hemp-oil.mp4" type="video/mp4">
@@ -280,7 +281,7 @@
 </div></section>
 
 <section class="revenue" id="koerbe"><div class="wrap">
-  <div class="sec-head"><span class="eyebrow" style="color:var(--sand-l)">Frei zusammenstellen</span><h2>Fertige <i>Bestell-Körbe.</i></h2><p>Sinnvoll kuratiert – nur Verkaufsware oder nur Backbar-Literware. Reguläre Netto-EK, kein Rabatt, Mindestbestellwert 400 € für Neukunden.</p></div>
+  <div class="sec-head"><span class="eyebrow" style="color:var(--sand-l)">Rund um Ihre Bestseller</span><h2><i>Bestellpakete ab 400 €.</i></h2><p>Sinnvoll kuratiert – nur Verkaufsware oder nur Backbar-Literware. Reguläre Netto-EK, kein Rabatt, Mindestbestellwert 400 € für Neukunden.</p></div>
   <div class="calc">
     <div class="card"><h3>Nur Verkaufsware · Take-Home</h3><div class="big">410,55 €</div><ul>
       <li><span>10× Shampoo &amp; Body Wash 300 ml</span><span>137,50 €</span></li>
@@ -299,7 +300,7 @@
 <section class="cta-final" id="kontakt"><div class="wrap">
   <h2>Regeneration für <i>Ihren</i> Salon.</h2>
   <p>Wir zeigen das 2-in-1-Ritual, richten die Take-Home-Empfehlung ein und schulen das Hemp-Erlebnis. Ihr Brendel-&amp;-Söhne-Außendienst begleitet Sie.</p>
-  <a class="btn btn-primary" href="mailto:office@brendel.at?subject=Tea%20Tree%20Hemp%20Beratung">Persönliche Beratung anfordern</a>
+  <a class="btn btn-primary" href="https://wa.me/43676842752300?text=Guten%20Tag%20Brendel%20%26%20S%C3%B6hne%21%20Ich%20interessiere%20mich%20f%C3%BCr%20eine%20pers%C3%B6nliche%20Beratung%20zu%20Tea%20Tree%20Hemp%20f%C3%BCr%20meinen%20Salon.%20Bitte%20melden%20Sie%20sich%20bei%20mir." target="_blank" rel="noopener">Persönliche Beratung anfordern</a>
 </div></section>
 
 <footer><div class="wrap foot">
