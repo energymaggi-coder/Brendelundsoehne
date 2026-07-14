@@ -154,7 +154,41 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:54px 32p
 .foot .nm{font-family:"Cormorant Garamond",serif;font-size:19px;color:var(--ink)}
 .foot small{display:block;color:var(--muted);margin-top:14px;font-size:11.5px;max-width:440px}
 
+/* Badge im Dry+-Block */
+.badge{display:inline-block;margin:2px 0 14px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);border:1px solid var(--hair);padding:7px 12px}
+
+/* Ersparnis-Rechner */
+.calc{background:var(--paper2);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.calcgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.field{margin-bottom:26px}
+.field label{display:flex;justify-content:space-between;align-items:baseline;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.field label b{font-family:"Cormorant Garamond",serif;font-size:24px;color:var(--ink);letter-spacing:0;text-transform:none;font-weight:500}
+.field input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:1px;background:var(--ink);outline:none;cursor:pointer}
+.field input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--ink);cursor:pointer}
+.field input[type=range]::-moz-range-thumb{width:18px;height:18px;border:none;border-radius:50%;background:var(--ink);cursor:pointer}
+.field .sub{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.calcout{background:var(--black);color:#F3F0E9;padding:44px 34px;text-align:center}
+.calcout .big{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(46px,6vw,80px);line-height:1}
+.calcout .big em{font-style:italic;color:#cdbf9f}
+.calcout .cap{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#b7afa0;margin-top:14px}
+.calcout .rows{display:flex;justify-content:center;gap:40px;margin-top:26px;flex-wrap:wrap}
+.calcout .rows div{font-size:12.5px;color:#b7afa0}
+.calcout .rows b{display:block;font-family:"Cormorant Garamond",serif;font-size:26px;color:#F3F0E9;font-weight:400}
+.calcnote{font-size:12.5px;color:var(--muted);font-weight:300;margin-top:26px;line-height:1.65;max-width:760px}
+
+/* Regal / Weiterverkauf */
+.stats2{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:640px;margin:38px 0 30px}
+.stats2 b{display:block;font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(40px,5vw,58px);line-height:1;color:var(--ink)}
+.stats2 span{display:block;margin-top:10px;font-size:13.5px;color:#5c574d;font-weight:300;line-height:1.6}
+.regal-cta{max-width:560px;color:#5c574d;font-weight:300;font-size:16px}
+.regal-cta .btn{margin-top:20px}
+.src-note{margin-top:26px;font-size:11.5px;color:var(--muted);font-weight:300}
+.grid-acc{display:grid;grid-template-columns:repeat(2,minmax(0,230px));gap:26px}
+
 @media(max-width:880px){
+  .calcgrid{grid-template-columns:1fr;gap:32px}
+  .stats2{grid-template-columns:1fr;gap:26px}
+  .grid-acc{grid-template-columns:1fr 1fr}
   .hero .scrim{background:linear-gradient(0deg,rgba(10,10,12,.92) 0%,rgba(10,10,12,.55) 45%,rgba(10,10,12,.3) 100%)}
   .tech .wrap{grid-template-columns:1fr;gap:28px;padding:42px 32px}
   .tech .col{padding:0;border-left:none;border-top:1px solid var(--hair);padding-top:22px}.tech .col:first-child{border-top:none;padding-top:0}
@@ -206,10 +240,59 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:54px 32p
         <div class="row"><span class="v">3 Aufsätze</span><span class="k">Diffusor · Düse · Pick</span></div>
         <div class="row"><span class="v">2 Jahre</span><span class="k">Garantie</span></div>
       </div>
+      <span class="badge">25 % weniger Strom — bei gleicher Kraft</span>
       <div class="priceline"><span class="uvp">UVP 265 €</span><span class="req">· Salonpreis (netto) auf Anfrage</span></div>
       <button class="btn btn-ink" onclick="addToCart('dryplus')">Auf die Anfrageliste</button>
     </div>
   </div>
+</div></section>
+
+<!-- RECHNET SICH — Ersparnis-Rechner -->
+<section class="block calc" id="rechnet-sich"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Rechnet sich</span>
+    <h2 class="serif">Was ein Salonjahr Föhnen <em style="font-style:italic">wirklich</em> kostet.</h2>
+    <p class="lead">Der Dry+ liefert volle Profi-Kraft mit 1.500 Watt statt der üblichen 2.000. Stell die Regler auf deinen Salon — und sieh, was das Tag für Tag ausmacht.</p></div>
+  <div class="calcgrid">
+    <div>
+      <div class="field">
+        <label>Aktive Föhnzeit pro Tag <b><span id="hVal">3,0</span> h</b></label>
+        <input type="range" id="c_hours" min="0.5" max="7" step="0.5" value="3">
+      </div>
+      <div class="field sub">
+        <div>
+          <label>Arbeitstage / Jahr <b><span id="dVal">300</span></b></label>
+          <input type="range" id="c_days" min="200" max="340" step="10" value="300">
+        </div>
+        <div>
+          <label>Strompreis <b><span id="pVal">25</span> ct</b></label>
+          <input type="range" id="c_price" min="15" max="45" step="1" value="25">
+        </div>
+      </div>
+    </div>
+    <div class="calcout">
+      <div class="big">≈ <em id="perYear">113 €</em></div>
+      <div class="cap">gespart — Jahr für Jahr, pro Föhn</div>
+      <div class="rows">
+        <div><b id="kwhOut">450</b> kWh weniger / Jahr</div>
+        <div><b id="perFive">563 €</b> über 5 Jahre</div>
+      </div>
+    </div>
+  </div>
+  <p class="calcnote" id="calcNote"></p>
+</div></section>
+
+<!-- DER DRY+ IM REGAL -->
+<section class="block" id="regal"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Mehr als ein Salon-Gerät</span>
+    <h2 class="serif">Der Dry+ im <em style="font-style:italic">Regal</em>.</h2>
+    <p class="lead">Deine Kundinnen föhnen ohnehin zu Hause — nur eben mit einem Gerät aus dem Elektromarkt. Der Dry+ ist eines der wenigen Profi-Werkzeuge, das sie mit nach Hause nehmen wollen.</p></div>
+  <div class="stats2">
+    <div><b>≈ 12 Stück</b><span>bestellen Salons im Schnitt, die den Dry+ ins Regal nehmen.</span></div>
+    <div><b>9 von 10</b><span>dieser Salons bestellen nach — er bleibt nicht stehen.</span></div>
+  </div>
+  <p class="regal-cta">Die Spanne ist attraktiv — die Details bespricht dein Berater gern persönlich mit dir. Wir stellen dir einen <strong>Aufsteller</strong> in den Salon und bringen Muster mit.<br>
+    <a class="btn btn-ink" onclick="openVisit()">Aufsteller &amp; Muster anfragen</a></p>
+  <p class="src-note">Zahlen aus unseren eigenen Verkaufsdaten 2024–2026.</p>
 </div></section>
 
 <section class="block" id="geraete" style="padding-top:0"><div class="wrap">
@@ -226,7 +309,7 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:54px 32p
 
 <!-- Artistic / Im Einsatz -->
 <section class="block" style="padding-top:0"><div class="wrap">
-  <div class="cat-h"><h3 class="serif">Im Einsatz</h3><div class="line"></div></div>
+  <div class="cat-h"><h3 class="serif">Im Detail</h3><div class="line"></div></div>
   <div class="artgal" id="artGrid"></div>
 </div></section>
 
@@ -234,7 +317,7 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:54px 32p
 
 <section class="block"><div class="wrap">
   <div class="cat-h"><h3 class="serif">Zubehör</h3><div class="line"></div></div>
-  <div class="grid4" id="accGrid"></div>
+  <div class="grid-acc" id="accGrid"></div>
 </div></section>
 
 <section class="order" id="bestellen"><div class="wrap">
@@ -316,7 +399,7 @@ const DEVICES=[
  {id:"curlplus",n:"Neuro Curl+",cat:"Lockenstab 32 mm",art:"604054",uvp:175,sp:"TensionTune · SmartSense+ · NeutraHeat."},
  {id:"smooth",n:"Neuro Smooth 1.25\"",cat:"Glätt-/Styling-Eisen",art:"604055",uvp:175,sp:"CeraShine · CurvEdge · SmartSense+ (250×/Sek.)."},
  {id:"unclipped",n:"Unclipped 3-in-1",cat:"Lockenstab-Set · klemmlos",art:"604037",uvp:175,sp:"Zwei Konen + Stab, ohne Klemme — natürliche Wellen &amp; Locken."},
- {id:"texture3",n:"Texture 3-in-1",cat:"Styling-Tool",art:"604066",uvp:null,sp:"Wandelbares Set mit Kamm-Aufsatz &amp; Hitzeschutz."},
+ {id:"texture3",n:"Texture 3-in-1",cat:"Styling-Tool",art:"604066",uvp:175,sp:"Wandelbares Set mit Kamm-Aufsatz &amp; Hitzeschutz."},
  {id:"pinkdry",n:"Dry+ Limited Edition",cat:"Föhn · Pink Edition",art:"706375",uvp:164.95,sp:"Der ikonische Dry+ in limitiertem Pink."},
 ];
 const KAEMME=[
@@ -331,7 +414,7 @@ const ACC=[
  {id:"sharkclips",n:"Y.S. Park Shark Clips",art:"604133",uvp:null},
  {id:"prostix",n:"Paul Mitchell Prostix",art:"706168",uvp:null},
 ];
-const ARTGAL=["art_comb_seafoam","art_comb_pink","art_comb_nightsky","pinkdry_5","art_detbrush","art_unclipped"];
+const ARTGAL=["art_neuro_dryplus","art_neuro_group","art_neuro_trio","art_comb_seafoam","art_comb_pink","art_comb_nightsky"];
 const ALL={};[DRY,...DEVICES,...KAEMME,...ACC].forEach(m=>ALL[m.id]=m);
 const primaryImg=id=>{const m=ALL[id]||{};return m.img?m.img:(VARIANTS[id]?`images/${VARIANTS[id].find(v=>v[0]===COLORSEL[id])[1]}.jpg`:`images/${id}_1.jpg`);};
 const eur=v=>v.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2})+' €';
@@ -410,6 +493,27 @@ function sendVisit(){
   const parts=["*Anfrage: Tools im Salon ansehen*","",`Name: ${v('b_vorname')} ${v('b_nachname')}`,`Salon: ${v('b_salon')}`,`Ort/Adresse: ${v('b_ort')}`,v('b_tel')?`Telefon: ${v('b_tel')}`:'',v('b_zeit')?`Wunsch-Zeitraum: ${v('b_zeit')}`:'',picks.length?`Interesse an: ${picks.join(', ')}`:'',v('b_msg')?`Nachricht: ${v('b_msg')}`:'',"","Bitte bringt die Neuro+ Tools zum Ansehen vorbei."].filter(Boolean);
   window.open(`https://wa.me/${ORDER_WA}?text=${encodeURIComponent(parts.join('\n'))}`,'_blank');
 }
+/* ---- Ersparnis-Rechner ---- */
+(function(){
+  const $=id=>document.getElementById(id);
+  const DELTA=0.5; // kW Differenz: 2.000 W - 1.500 W
+  const money=v=>Math.round(v).toLocaleString('de-DE')+' €';
+  function calc(){
+    const h=parseFloat($('c_hours').value), d=parseInt($('c_days').value), ct=parseInt($('c_price').value), p=ct/100;
+    $('hVal').textContent=h.toLocaleString('de-DE',{minimumFractionDigits:1});
+    $('dVal').textContent=d; $('pVal').textContent=ct;
+    const kwh=DELTA*h*d, year=kwh*p;
+    $('kwhOut').textContent=Math.round(kwh).toLocaleString('de-DE');
+    $('perYear').textContent=money(year);
+    $('perFive').textContent=money(year*5);
+    $('calcNote').textContent='Annahme: 0,5 kW weniger Leistung (1.500 statt 2.000 W) über '+h.toLocaleString('de-DE')+
+      ' h aktives Föhnen an '+d+' Tagen, '+ct+' ct/kWh. Gleiche Föhnleistung — der BLDC-Motor trocknet eher schneller. '+
+      'Die Zeitersparnis ist hier nicht eingerechnet und kommt obendrauf.';
+  }
+  ['c_hours','c_days','c_price'].forEach(id=>$(id).addEventListener('input',calc));
+  calc();
+})();
+
 /* ---- Hero-Video: Autoplay robust + sehr sanftes Parallax ---- */
 const hv=document.getElementById('heroVideo');
 function kick(){hv.muted=true;const p=hv.play();if(p&&p.catch)p.catch(()=>{});}
