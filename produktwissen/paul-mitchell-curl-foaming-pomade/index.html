@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Foaming Pomade · Brendel &amp; Söhne</title>
-<meta name="description" content="Federleichte Formel. Konzentrierte Rezeptur – bei Bedarf mehr verwenden">
+<meta name="description" content="Pomade als Schaum — Glanz und Definition &lt;b&gt;ohne schweres Pomaden-Feeling&lt;/b&gt;. Für Locken und Texturen die glänzen sollen, ohne beschwert zu werden.">
 <meta name="theme-color" content="#7C6440">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,6 +107,51 @@
               border-bottom: 1px solid var(--linie); }
   .klein { font-size: .78rem; color: var(--leise); }
 
+  /* Steckbrief — was man in zwei Sekunden erfassen koennen muss */
+  .steckbrief { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1.1rem; }
+  .steckbrief div { border: 1px solid var(--linie); border-radius: .5rem;
+                     padding: .35rem .6rem; }
+  .steckbrief dt { font-size: .55rem; letter-spacing: .14em; text-transform: uppercase;
+                    color: var(--leise); }
+  .steckbrief dd { font-size: .85rem; font-weight: 600; margin-top: .05rem; }
+
+  .meta { margin-top: .65rem; font-size: .8rem; color: var(--leise); }
+  .beleg { padding-left: .85rem; border-left: 2px solid var(--linie); }
+
+  /* Inhaltsstoffe: Name fett, dahinter der Klartext */
+  .stoffe { list-style: none; margin-top: 1.1rem; }
+  .stoffe li { font-size: .92rem; color: var(--gedaempft); padding: .4rem 0;
+                border-top: 1px solid rgba(255,255,255,.09); }
+  .stoffe li:first-child { border-top: 0; }
+  .stoffe b { color: var(--weiss); font-weight: 600; margin-right: .35rem; }
+  .vorteile { margin-top: .9rem; }
+
+  .stark { list-style: none; margin-top: .2rem; }
+  .stark li { font-size: .95rem; color: var(--gedaempft); position: relative;
+               padding: .26rem 0 .26rem 1rem; }
+  .stark li::before { content: "—"; position: absolute; left: 0; color: var(--leise); }
+  .gegen { font-size: .63rem; letter-spacing: .2em; text-transform: uppercase;
+            font-weight: 600; color: var(--leise); margin: 1.4rem 0 .5rem; }
+  .grenztext { padding-left: .85rem; border-left: 2px solid var(--linie); }
+
+  .liste { list-style: none; }
+  .liste li { font-size: .95rem; padding: .32rem 0; color: var(--gedaempft);
+               border-top: 1px solid rgba(255,255,255,.09); }
+  .liste li:first-child { border-top: 0; }
+  .liste a { color: var(--weiss); text-decoration: none; font-weight: 600;
+              border-bottom: 1px solid var(--linie); }
+  .liste .grund { display: block; font-size: .78rem; color: var(--leise);
+                   margin-top: .1rem; }
+  .liste.rollen li { display: flex; gap: .8rem; align-items: baseline; }
+  .liste.rollen .rolle { flex: 0 0 4.6rem; }
+
+  /* Der Fachteil — deutlich abgesetzt, damit klar ist: nicht fuer die Kundin */
+  .team { border-top: 2px solid rgba(255,255,255,.45); margin-top: .5rem; }
+  .team h2 { color: var(--gedaempft); }
+  .team ul { list-style: none; }
+  .team li { font-size: .9rem; color: var(--gedaempft); margin-bottom: .28rem;
+              padding: .32rem 0 .32rem .9rem; border-left: 1px solid var(--linie); }
+
   dl { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   dt { font-size: .63rem; letter-spacing: .16em; text-transform: uppercase;
         color: var(--leise); margin-bottom: .2rem; }
@@ -128,21 +173,28 @@
       <h1>Foaming Pomade</h1>
       <p class="untertitel">Ultimative Definition. Glanz</p>
       <p class="preis"><span>250 ml</span><span class="trenner">·</span><span>€ 39,45</span></p>
-      <p class="kern">Federleichte Formel. Konzentrierte Rezeptur – bei Bedarf mehr verwenden</p>
+      <p class="kern">Pomade als Schaum — Glanz und Definition <b>ohne schweres Pomaden-Feeling</b>. Für Locken und Texturen die glänzen sollen, ohne beschwert zu werden.</p>
+      <dl class="steckbrief"><div><dt>Schritt</dt><dd>Stylen</dd></div><div><dt>Haartyp</dt><dd>welligem/lockigem/krausem Haar</dd></div><div><dt>Halt</dt><dd>leicht</dd></div><div><dt>Volumen</dt><dd>gering</dd></div></dl>
     </header>
 
+      <section><h2>Anwendung</h2><p>Gut schütteln. Kleine Menge in feuchten Händen verreiben, auf feuchtes Haar auftragen und stylen. Auch als Finishing auf trockenem Haar.</p><p class="meta">golfballgroß · bei jedem Styling</p></section>
+      <section><h2>Warum es wirkt</h2><p>Die federleichte Formel glättet, pflegt und macht das Haar geschmeidig, während Frizz bekämpft wird und strahlender Glanz entsteht.</p><ul class="stoffe"><li><b>Mineralöl</b> — Glanz, Geschmeidigkeit</li><li><b>Petrolatum</b> — Versiegelt, Hochglanz</li><li><b>Polyquaternium-7</b> — Leichter Filmbildner</li></ul></section>
+      <section><h2>Stark bei</h2><ul class="stark"><li>Locken die Glanz und Definition brauchen</li><li>Naturlocken-Styling — definiert ohne zu beschweren</li><li>Als leichtere Alternative zu klassischer Pomade</li></ul><h3 class="gegen">Was es nicht leistet</h3><p class="grenztext"><b>Kein starker Halt</b> — hält lockige Frisuren nicht bombenfest. Bei glattem Haar zu wenig Kontrolle für geformte Styles.</p></section>
       <section><h2>Die Linie</h2><p>Ideal bei welligem, lockigem oder krausem Haar</p></section>
-      <section><h2>Merkmale</h2><ul class="chips"><li>vegan</li><li>extensionsgeeignet</li><li>farbschonend</li><li>parabenfrei</li><li>nussfrei</li><li>Recycling-Flasche</li></ul></section>
+      <section><h2>Merkmale</h2><ul class="chips"><li>vegan</li><li>farbschonend</li><li>parabenfrei</li><li>nussfrei</li><li>glutenfrei</li></ul></section>
       <section class="system">
         <h2>Das System</h2>
         <ol class="treppe"><li class=""><span class="nr">1</span>Säubern</li><li class=""><span class="nr">2</span>Pflegen</li><li class="jetzt"><span class="nr">3</span>Stylen</li><li class=""><span class="nr">4</span>Finish</li></ol>
-        <p class="systemsatz">Die Produkte einer Linie sind aufeinander abgestimmt. Ein Shampoo allein reinigt — erst mit Pflege, Styling und Finish aus derselben Linie hält das Ergebnis. Deshalb wird im Salon in vier Schritten beraten.</p>
+        <p class="systemsatz">Teil des Curls-Bereichs. Gut kombinierbar mit Spring Loaded Shampoo/Conditioner.</p>
         <h3>So wird sie angewendet — Lockiges Haar (Curl)</h3>
         <ol class="routine"><li><span class="rolle">1 – Waschen</span><span class="was">PM Shampoo nach Wahl<span class="wann">–</span></span></li><li><span class="rolle">2 – Pflegen</span><span class="was">Full Circle Leave-In Cream<span class="wann">Nicht ausspülen, Locken in Form kneten</span></span></li><li><span class="rolle">3 – Definieren</span><span class="was">Quick Slip (leichter Halt) ODER Twirl Around (stärkerer Halt) ODER Round Trip (flüssig)<span class="wann">Feuchtes Haar</span></span></li><li><span class="rolle">4 – Trocknen</span><span class="was">Lufttrocknen oder Diffusor<span class="wann">–</span></span></li><li><span class="rolle">Refresh</span><span class="was">Refreshing Mist<span class="wann">Auf trockene Locken, Dreadlocks, Zöpfe</span></span></li></ol>
         <h3>Das gehört dazu</h3>
-        <div class="dazu"><div class="stufe"><h4>Säubern</h4><ul><li><a href="../paul-mitchell-classic-15-in-1-spray/">15-in-1 Spray <span class="klein">150 ml · Classic</span></a></li><li><a href="../paul-mitchell-classic-awapuhi-shampoo/">Awapuhi Shampoo <span class="klein">300 ml · Classic</span></a></li><li><a href="../paul-mitchell-kids-baby-dont-cry-shampoo/">Baby Don&#x27;t Cry Shampoo <span class="klein">300 ml · Kids</span></a></li></ul></div><div class="stufe"><h4>Pflegen</h4><ul><li><a href="../paul-mitchell-curl-full-circle-leave-in-cream/">Full Circle Leave-In Cream <span class="klein">150 ml</span></a></li><li><a href="../paul-mitchell-curl-refreshing-mist/">Refreshing Mist <span class="klein">250 ml</span></a></li><li><a href="../paul-mitchell-classic-15-in-1-mask/">15-in-1 Mask <span class="klein">200 ml · Classic</span></a></li></ul></div><div class="stufe"><h4>Stylen</h4><ul><li><a href="../paul-mitchell-curl-quick-slip-styling-cream/">Quick Slip Styling Cream <span class="klein">150 ml</span></a></li><li><a href="../paul-mitchell-firm-hold-dry-wax/">Dry Wax <span class="klein">50 g · Firm Hold</span></a></li><li><a href="../paul-mitchell-flexible-hold-esp/">ESP <span class="klein">50 ml · Flexible Hold</span></a></li></ul></div><div class="stufe"><h4>Finish</h4><ul><li><a href="../paul-mitchell-curl-round-trip-defining-serum/">Round Trip Defining Serum <span class="klein">150 ml</span></a></li><li><a href="../paul-mitchell-curl-twirl-around-cream-serum/">Twirl Around Cream Serum <span class="klein">150 ml</span></a></li><li><a href="../paul-mitchell-volume-extra-body-firm-hairspray/">Extra-Body Firm Hairspray <span class="klein">300 ml · Volume</span></a></li></ul></div></div>
+        <ul class="liste rollen"><li><span class="rolle">Pflegen</span><span class="was"><a href="../paul-mitchell-curl-full-circle-leave-in-cream/">Full Circle Leave-In Cream</a><span class="klein">150 ml · € 27,95</span></span></li><li><span class="rolle">Pflegen</span><span class="was"><a href="../paul-mitchell-curl-refreshing-mist/">Refreshing Mist</a><span class="klein">250 ml · € 28,75</span></span></li><li><span class="rolle">Pflegen</span><span class="was"><a href="../paul-mitchell-curl-round-trip-defining-serum/">Round Trip Defining Serum</a><span class="klein">150 ml · € 23,75</span></span></li><li><span class="rolle">Stylen</span><span class="was"><a href="../paul-mitchell-curl-quick-slip-styling-cream/">Quick Slip Styling Cream</a><span class="klein">150 ml · € 25,95</span></span></li></ul>
+        <h3>Alternativen</h3>
+        <ul class="liste"><li><a href="../paul-mitchell-curl-twirl-around-cream-serum/">Twirl Around Cream Serum</a><span class="klein">150 ml · € 38,95</span><span class="grund">definiert Locken ohne Pomaden-Glanz</span></li></ul>
       </section>
-    <section><h2>Daten</h2><dl><div><dt>Inhalt</dt><dd>250 ml</dd></div><div><dt>UVP</dt><dd>€ 39,45</dd></div><div><dt>pH-Wert</dt><dd>5,5</dd></div><div><dt>Artikelnummer</dt><dd>131242</dd></div></dl></section>
+    <section><h2>Daten</h2><dl class="daten"><div><dt>Inhalt</dt><dd>250 ml</dd></div><div><dt>UVP</dt><dd>€ 39,45</dd></div><div><dt>pH-Wert</dt><dd>5,5</dd></div><div><dt>Artikelnummer</dt><dd>131242</dd></div></dl></section>
+      <section class="team"><h2>Für das Salonteam</h2><ul><li>Enthält Mineralöl und Petrolatum — kann Build-up verursachen, regelmäßig mit klärendem Shampoo waschen.</li><li>Entzündbar (Isopentan).</li></ul></section>
     <footer>
       <strong>BRENDEL &amp; SÖHNE</strong><br>
       Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich<br>

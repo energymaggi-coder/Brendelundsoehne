@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Protect Conditioner · Brendel &amp; Söhne</title>
-<meta name="description" content="Enthält Sonnenblumenextrakt, stärkt gleichzeitig das Haar">
+<meta name="description" content="Die Farbschutz-Spülung mit Leinsamen und Borretschöl — pflegt das colorierte Haar, macht es kämmbar und schützt die Farbe. Vegan, silikonfrei.">
 <meta name="theme-color" content="#885E48">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,6 +107,51 @@
               border-bottom: 1px solid var(--linie); }
   .klein { font-size: .78rem; color: var(--leise); }
 
+  /* Steckbrief — was man in zwei Sekunden erfassen koennen muss */
+  .steckbrief { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1.1rem; }
+  .steckbrief div { border: 1px solid var(--linie); border-radius: .5rem;
+                     padding: .35rem .6rem; }
+  .steckbrief dt { font-size: .55rem; letter-spacing: .14em; text-transform: uppercase;
+                    color: var(--leise); }
+  .steckbrief dd { font-size: .85rem; font-weight: 600; margin-top: .05rem; }
+
+  .meta { margin-top: .65rem; font-size: .8rem; color: var(--leise); }
+  .beleg { padding-left: .85rem; border-left: 2px solid var(--linie); }
+
+  /* Inhaltsstoffe: Name fett, dahinter der Klartext */
+  .stoffe { list-style: none; margin-top: 1.1rem; }
+  .stoffe li { font-size: .92rem; color: var(--gedaempft); padding: .4rem 0;
+                border-top: 1px solid rgba(255,255,255,.09); }
+  .stoffe li:first-child { border-top: 0; }
+  .stoffe b { color: var(--weiss); font-weight: 600; margin-right: .35rem; }
+  .vorteile { margin-top: .9rem; }
+
+  .stark { list-style: none; margin-top: .2rem; }
+  .stark li { font-size: .95rem; color: var(--gedaempft); position: relative;
+               padding: .26rem 0 .26rem 1rem; }
+  .stark li::before { content: "—"; position: absolute; left: 0; color: var(--leise); }
+  .gegen { font-size: .63rem; letter-spacing: .2em; text-transform: uppercase;
+            font-weight: 600; color: var(--leise); margin: 1.4rem 0 .5rem; }
+  .grenztext { padding-left: .85rem; border-left: 2px solid var(--linie); }
+
+  .liste { list-style: none; }
+  .liste li { font-size: .95rem; padding: .32rem 0; color: var(--gedaempft);
+               border-top: 1px solid rgba(255,255,255,.09); }
+  .liste li:first-child { border-top: 0; }
+  .liste a { color: var(--weiss); text-decoration: none; font-weight: 600;
+              border-bottom: 1px solid var(--linie); }
+  .liste .grund { display: block; font-size: .78rem; color: var(--leise);
+                   margin-top: .1rem; }
+  .liste.rollen li { display: flex; gap: .8rem; align-items: baseline; }
+  .liste.rollen .rolle { flex: 0 0 4.6rem; }
+
+  /* Der Fachteil — deutlich abgesetzt, damit klar ist: nicht fuer die Kundin */
+  .team { border-top: 2px solid rgba(255,255,255,.45); margin-top: .5rem; }
+  .team h2 { color: var(--gedaempft); }
+  .team ul { list-style: none; }
+  .team li { font-size: .9rem; color: var(--gedaempft); margin-bottom: .28rem;
+              padding: .32rem 0 .32rem .9rem; border-left: 1px solid var(--linie); }
+
   dl { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   dt { font-size: .63rem; letter-spacing: .16em; text-transform: uppercase;
         color: var(--leise); margin-bottom: .2rem; }
@@ -128,19 +173,24 @@
       <h1>Protect Conditioner</h1>
       <p class="untertitel">Verhindert Verblassen. Verleiht Glanz</p>
       <p class="preis"><span>300 ml</span><span class="trenner">·</span><span>€ 31,45</span></p>
-      <p class="kern">Enthält Sonnenblumenextrakt, stärkt gleichzeitig das Haar</p>
+      <p class="kern">Die Farbschutz-Spülung mit Leinsamen und Borretschöl — pflegt das colorierte Haar, macht es kämmbar und schützt die Farbe. Vegan, silikonfrei.</p>
+      <dl class="steckbrief"><div><dt>Schritt</dt><dd>Pflegen</dd></div><div><dt>Haartyp</dt><dd>farbbehandeltem Haar</dd></div><div><dt>Volumen</dt><dd>gering</dd></div><div><dt>Feuchtigkeit</dt><dd>mittel</dd></div></dl>
     </header>
 
+      <section><h2>Anwendung</h2><p>Nach dem Shampoo kleine Menge <b>auf das feuchte Haar auftragen</b>, einmassieren, ausspülen.</p><p class="meta">haselnussgroß · bei jeder Haarwäsche</p></section>
+      <section><h2>Warum es wirkt</h2><p>Enthält Sonnenblumenextrakt, der vor dem Verblassen durch Sonneneinstrahlung <b>schützt und gleichzeitig hilft</b>, das Haar zu stärken.</p><ul class="stoffe"><li><b>Quaternium-87</b> — Silikonfreier Conditioner-Wirkstoff, Kämmbarkeit</li><li><b>Borago Officinalis Seed Oil</b> — Borretschöl, Gamma-Linolensäure</li><li><b>Linum Usitatissimum Seed Extract</b> — Leinsamen, Schutzfilm</li><li><b>Punica Granatum Pericarp Extract</b> — Granatapfel, Antioxidans</li></ul></section>
+      <section><h2>Stark bei</h2><ul class="stark"><li>Tägliche Spülung für coloriertes Haar</li><li>Detangling und Kämmbarkeit nach dem Shampoo</li><li>Empfindliche Kopfhaut und farbbehandeltes Haar</li></ul><h3 class="gegen">Was es nicht leistet</h3><p class="grenztext"><b>Keine intensive Reparatur</b> — bei Strukturschäden Repair-Linie verwenden. Kein Leave-in (ausspülen).</p></section>
       <section><h2>Die Linie</h2><p>Ideal bei farbbehandeltem Haar – mit Sonnenblumenextrakt</p></section>
-      <section><h2>Merkmale</h2><ul class="chips"><li>vegan</li><li>extensionsgeeignet</li><li>glutenfrei</li><li>farbschonend</li><li>parabenfrei</li><li>nussfrei</li><li>Recycling-Flasche</li></ul></section>
+      <section><h2>Merkmale</h2><ul class="chips"><li>vegan</li><li>glutenfrei</li><li>farbschonend</li><li>parabenfrei</li><li>nussfrei</li><li>silikonfrei</li></ul></section>
       <section class="system">
         <h2>Das System</h2>
         <ol class="treppe"><li class=""><span class="nr">1</span>Säubern</li><li class="jetzt"><span class="nr">2</span>Pflegen</li><li class=""><span class="nr">3</span>Stylen</li><li class=""><span class="nr">4</span>Finish</li></ol>
-        <p class="systemsatz">Die Produkte einer Linie sind aufeinander abgestimmt. Ein Shampoo allein reinigt — erst mit Pflege, Styling und Finish aus derselben Linie hält das Ergebnis. Deshalb wird im Salon in vier Schritten beraten.</p>
+        <p class="systemsatz">Zweiter Schritt im Color Protect System. Danach ggf. Color Protect Treatment als Leave-in.</p>
         <h3>Das gehört dazu</h3>
-        <div class="dazu"><div class="stufe"><h4>Säubern</h4><ul><li><a href="../paul-mitchell-color-protect-shampoo/">Protect Shampoo <span class="klein">300 ml</span></a></li><li><a href="../paul-mitchell-classic-15-in-1-spray/">15-in-1 Spray <span class="klein">150 ml · Classic</span></a></li><li><a href="../paul-mitchell-classic-awapuhi-shampoo/">Awapuhi Shampoo <span class="klein">300 ml · Classic</span></a></li></ul></div><div class="stufe"><h4>Pflegen</h4><ul><li><a href="../paul-mitchell-classic-15-in-1-mask/">15-in-1 Mask <span class="klein">200 ml · Classic</span></a></li><li><a href="../paul-mitchell-classic-awapuhi-conditioner/">Awapuhi Conditioner <span class="klein">300 ml · Classic</span></a></li><li><a href="../paul-mitchell-hydrate-awapuhi-moisture-mist/">Awapuhi Moisture Mist <span class="klein">250 ml · Hydrate</span></a></li></ul></div><div class="stufe"><h4>Stylen</h4><ul><li><a href="../paul-mitchell-color-protect-locking-spray/">Protect Locking Spray <span class="klein">250 ml</span></a></li><li><a href="../paul-mitchell-firm-hold-dry-wax/">Dry Wax <span class="klein">50 g · Firm Hold</span></a></li><li><a href="../paul-mitchell-flexible-hold-esp/">ESP <span class="klein">50 ml · Flexible Hold</span></a></li></ul></div><div class="stufe"><h4>Finish</h4><ul><li><a href="../paul-mitchell-volume-extra-body-firm-hairspray/">Extra-Body Firm Hairspray <span class="klein">300 ml · Volume</span></a></li><li><a href="../paul-mitchell-volume-extra-body-hairspray/">Extra-Body Hairspray <span class="klein">300 ml · Volume</span></a></li><li><a href="../paul-mitchell-flexible-hold-fast-drying-sculpting-hairspray/">Fast Drying Sculpting Hairspray <span class="klein">250 ml · Flexible Hold</span></a></li></ul></div></div>
+        <ul class="liste rollen"><li><span class="rolle">Säubern</span><span class="was"><a href="../paul-mitchell-color-protect-shampoo/">Protect Shampoo</a><span class="klein">300 ml · € 25,45</span></span></li></ul>
       </section>
-    <section><h2>Daten</h2><dl><div><dt>Inhalt</dt><dd>300 ml</dd></div><div><dt>UVP</dt><dd>€ 31,45</dd></div><div><dt>pH-Wert</dt><dd>4,25</dd></div><div><dt>Artikelnummer</dt><dd>130933</dd></div></dl></section>
+    <section><h2>Daten</h2><dl class="daten"><div><dt>Inhalt</dt><dd>300 ml</dd></div><div><dt>UVP</dt><dd>€ 31,45</dd></div><div><dt>pH-Wert</dt><dd>4,25</dd></div><div><dt>Artikelnummer</dt><dd>130933</dd></div></dl></section>
+
     <footer>
       <strong>BRENDEL &amp; SÖHNE</strong><br>
       Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich<br>

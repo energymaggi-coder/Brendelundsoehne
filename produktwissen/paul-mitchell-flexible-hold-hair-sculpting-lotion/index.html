@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Hair Sculpting Lotion · Brendel &amp; Söhne</title>
-<meta name="description" content="Reaktivierbar mit Hitze/Wasser">
+<meta name="description" content="Flexible Stylinglotion für jeden Tag — gibt leichten Halt und Kontrolle, &lt;b&gt;ohne steif zu werden&lt;/b&gt;. Das unauffälligste Stylingprodukt im Sortiment.">
 <meta name="theme-color" content="#B12F37">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,6 +107,51 @@
               border-bottom: 1px solid var(--linie); }
   .klein { font-size: .78rem; color: var(--leise); }
 
+  /* Steckbrief — was man in zwei Sekunden erfassen koennen muss */
+  .steckbrief { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1.1rem; }
+  .steckbrief div { border: 1px solid var(--linie); border-radius: .5rem;
+                     padding: .35rem .6rem; }
+  .steckbrief dt { font-size: .55rem; letter-spacing: .14em; text-transform: uppercase;
+                    color: var(--leise); }
+  .steckbrief dd { font-size: .85rem; font-weight: 600; margin-top: .05rem; }
+
+  .meta { margin-top: .65rem; font-size: .8rem; color: var(--leise); }
+  .beleg { padding-left: .85rem; border-left: 2px solid var(--linie); }
+
+  /* Inhaltsstoffe: Name fett, dahinter der Klartext */
+  .stoffe { list-style: none; margin-top: 1.1rem; }
+  .stoffe li { font-size: .92rem; color: var(--gedaempft); padding: .4rem 0;
+                border-top: 1px solid rgba(255,255,255,.09); }
+  .stoffe li:first-child { border-top: 0; }
+  .stoffe b { color: var(--weiss); font-weight: 600; margin-right: .35rem; }
+  .vorteile { margin-top: .9rem; }
+
+  .stark { list-style: none; margin-top: .2rem; }
+  .stark li { font-size: .95rem; color: var(--gedaempft); position: relative;
+               padding: .26rem 0 .26rem 1rem; }
+  .stark li::before { content: "—"; position: absolute; left: 0; color: var(--leise); }
+  .gegen { font-size: .63rem; letter-spacing: .2em; text-transform: uppercase;
+            font-weight: 600; color: var(--leise); margin: 1.4rem 0 .5rem; }
+  .grenztext { padding-left: .85rem; border-left: 2px solid var(--linie); }
+
+  .liste { list-style: none; }
+  .liste li { font-size: .95rem; padding: .32rem 0; color: var(--gedaempft);
+               border-top: 1px solid rgba(255,255,255,.09); }
+  .liste li:first-child { border-top: 0; }
+  .liste a { color: var(--weiss); text-decoration: none; font-weight: 600;
+              border-bottom: 1px solid var(--linie); }
+  .liste .grund { display: block; font-size: .78rem; color: var(--leise);
+                   margin-top: .1rem; }
+  .liste.rollen li { display: flex; gap: .8rem; align-items: baseline; }
+  .liste.rollen .rolle { flex: 0 0 4.6rem; }
+
+  /* Der Fachteil — deutlich abgesetzt, damit klar ist: nicht fuer die Kundin */
+  .team { border-top: 2px solid rgba(255,255,255,.45); margin-top: .5rem; }
+  .team h2 { color: var(--gedaempft); }
+  .team ul { list-style: none; }
+  .team li { font-size: .9rem; color: var(--gedaempft); margin-bottom: .28rem;
+              padding: .32rem 0 .32rem .9rem; border-left: 1px solid var(--linie); }
+
   dl { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   dt { font-size: .63rem; letter-spacing: .16em; text-transform: uppercase;
         color: var(--leise); margin-bottom: .2rem; }
@@ -128,19 +173,27 @@
       <h1>Hair Sculpting Lotion</h1>
       <p class="untertitel">Spürbare Kontrolle. Glanz</p>
       <p class="preis"><span>250 ml</span><span class="trenner">·</span><span>€ 19,95</span></p>
-      <p class="kern">Reaktivierbar mit Hitze/Wasser</p>
+      <p class="kern">Flexible Stylinglotion für jeden Tag — gibt leichten Halt und Kontrolle, <b>ohne steif zu werden</b>. Das unauffälligste Stylingprodukt im Sortiment.</p>
+      <dl class="steckbrief"><div><dt>Schritt</dt><dd>Stylen</dd></div><div><dt>Haartyp</dt><dd>alle Haartypen</dd></div><div><dt>Halt</dt><dd>leicht</dd></div><div><dt>Volumen</dt><dd>gering</dd></div></dl>
     </header>
 
+      <section><h2>Anwendung</h2><p>Kleine Menge <b>auf das feuchte Haar auftragen</b>. Wie gewünscht stylen.</p><p class="meta">1-2 Pumpstöße · bei jedem Styling</p></section>
+      <section><h2>Warum es wirkt</h2><p>Ermöglicht flexible Stylings, die den persönlichen Stil unterstreichen.</p><ul class="stoffe"><li><b>Polyquaternium-11</b> — Kationischer Filmbildner, flexibler leichter Halt</li><li><b>Panthenol</b> — Provitamin B5, Pflege</li><li><b>Glycerin</b> — Humektant</li></ul></section>
+      <section><h2>Stark bei</h2><ul class="stark"><li>Natürliche Looks die dezent in Form bleiben sollen</li><li>Wickeltechniken und Set-Arbeiten</li><li>Feines Haar, das nur minimal Halt braucht</li></ul><h3 class="gegen">Was es nicht leistet</h3><p class="grenztext"><b>Kein starker Halt</b>. Kein Volumenwunder.</p></section>
+      <section><h2>Gut zu wissen</h2><p>Lässt sich durch Hitze oder Wasser einfach reaktivieren – für schnelles, unkompliziertes Umstyling.</p></section>
       <section><h2>Die Linie</h2><p>Ideal für alle Haartypen – Flexibler Halt</p></section>
-      <section><h2>Merkmale</h2><ul class="chips"><li>vegan</li><li>extensionsgeeignet</li><li>glutenfrei</li><li>farbschonend</li><li>parabenfrei</li><li>nussfrei</li><li>Recycling-Flasche</li></ul></section>
+      <section><h2>Merkmale</h2><ul class="chips"><li>vegan</li><li>glutenfrei</li><li>farbschonend</li><li>parabenfrei</li><li>nussfrei</li></ul></section>
       <section class="system">
         <h2>Das System</h2>
         <ol class="treppe"><li class=""><span class="nr">1</span>Säubern</li><li class=""><span class="nr">2</span>Pflegen</li><li class="jetzt"><span class="nr">3</span>Stylen</li><li class=""><span class="nr">4</span>Finish</li></ol>
-        <p class="systemsatz">Die Produkte einer Linie sind aufeinander abgestimmt. Ein Shampoo allein reinigt — erst mit Pflege, Styling und Finish aus derselben Linie hält das Ergebnis. Deshalb wird im Salon in vier Schritten beraten.</p>
+        <p class="systemsatz">Standalone — universell einsetzbar.</p>
         <h3>Das gehört dazu</h3>
-        <div class="dazu"><div class="stufe"><h4>Säubern</h4><ul><li><a href="../paul-mitchell-classic-15-in-1-spray/">15-in-1 Spray <span class="klein">150 ml · Classic</span></a></li><li><a href="../paul-mitchell-classic-awapuhi-shampoo/">Awapuhi Shampoo <span class="klein">300 ml · Classic</span></a></li><li><a href="../paul-mitchell-kids-baby-dont-cry-shampoo/">Baby Don&#x27;t Cry Shampoo <span class="klein">300 ml · Kids</span></a></li></ul></div><div class="stufe"><h4>Pflegen</h4><ul><li><a href="../paul-mitchell-classic-15-in-1-mask/">15-in-1 Mask <span class="klein">200 ml · Classic</span></a></li><li><a href="../paul-mitchell-classic-awapuhi-conditioner/">Awapuhi Conditioner <span class="klein">300 ml · Classic</span></a></li><li><a href="../paul-mitchell-hydrate-awapuhi-moisture-mist/">Awapuhi Moisture Mist <span class="klein">250 ml · Hydrate</span></a></li></ul></div><div class="stufe"><h4>Stylen</h4><ul><li><a href="../paul-mitchell-flexible-hold-esp/">ESP <span class="klein">50 ml</span></a></li><li><a href="../paul-mitchell-flexible-hold-hot-off-the-press-heat-protectant/">Hot Off The Press Heat Protectant <span class="klein">300 ml</span></a></li><li><a href="../paul-mitchell-flexible-hold-re-works-styling-cream/">Re-Works Styling Cream <span class="klein">150 ml</span></a></li></ul></div><div class="stufe"><h4>Finish</h4><ul><li><a href="../paul-mitchell-flexible-hold-fast-drying-sculpting-hairspray/">Fast Drying Sculpting Hairspray <span class="klein">250 ml</span></a></li><li><a href="../paul-mitchell-flexible-hold-hold-me-tight-hairspray/">Hold Me Tight Hairspray <span class="klein">300 ml</span></a></li><li><a href="../paul-mitchell-flexible-hold-spray-wax/">Spray Wax <span class="klein">300 ml</span></a></li></ul></div></div>
+        <ul class="liste rollen"><li><span class="rolle">Stylen</span><span class="was"><a href="../paul-mitchell-flexible-hold-esp/">ESP</a><span class="klein">50 ml · € 29,95</span></span></li><li><span class="rolle">Stylen</span><span class="was"><a href="../paul-mitchell-flexible-hold-fast-drying-sculpting-hairspray/">Fast Drying Sculpting Hairspray</a><span class="klein">250 ml · € 22,95</span></span></li><li><span class="rolle">Stylen</span><span class="was"><a href="../paul-mitchell-flexible-hold-hot-off-the-press-heat-protectant/">Hot Off The Press Heat Protectant</a><span class="klein">300 ml · € 40,95</span></span></li><li><span class="rolle">Stylen</span><span class="was"><a href="../paul-mitchell-flexible-hold-re-works-styling-cream/">Re-Works Styling Cream</a><span class="klein">150 ml · € 27,95</span></span></li></ul>
+        <h3>Alternativen</h3>
+        <ul class="liste"><li><a href="../paul-mitchell-clear-sensitive-styling-glaze/">Styling Glaze</a><span class="klein">150 ml · € 27,45</span><span class="grund">mehr Halt, Gel-Textur</span></li><li><a href="../paul-mitchell-soft-hold-sculpting-spray-gel/">Sculpting Spray Gel</a><span class="klein">250 ml · € 19,25</span><span class="grund">als Spray</span></li></ul>
       </section>
-    <section><h2>Daten</h2><dl><div><dt>Inhalt</dt><dd>250 ml</dd></div><div><dt>UVP</dt><dd>€ 19,95</dd></div><div><dt>pH-Wert</dt><dd>5,0</dd></div><div><dt>Artikelnummer</dt><dd>131412</dd></div></dl></section>
+    <section><h2>Daten</h2><dl class="daten"><div><dt>Inhalt</dt><dd>250 ml</dd></div><div><dt>UVP</dt><dd>€ 19,95</dd></div><div><dt>pH-Wert</dt><dd>5,0</dd></div><div><dt>Artikelnummer</dt><dd>131412</dd></div></dl></section>
+
     <footer>
       <strong>BRENDEL &amp; SÖHNE</strong><br>
       Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich<br>

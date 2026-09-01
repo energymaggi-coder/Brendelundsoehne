@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>HydraSoft Conditioner · Brendel &amp; Söhne</title>
-<meta name="description" content="Der HydraTriplex-Wirkstoffkomplex aus Aminosäuren, pflanzlichen Proteinen und nährenden Ölen versorgt das Haar intensiv mit Feuchtigkeit und schließt diese im …">
+<meta name="description" content="Die tägliche Feuchtigkeitsspülung im Premium-Segment — macht das Haar sofort kämmbar, weich und geschmeidig, &lt;b&gt;ohne es zu beschweren&lt;/b&gt;. Perfekt für Haar, das Feuchtigkeit braucht, aber nicht schwer werden darf.">
 <meta name="theme-color" content="#395A53">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,6 +107,51 @@
               border-bottom: 1px solid var(--linie); }
   .klein { font-size: .78rem; color: var(--leise); }
 
+  /* Steckbrief — was man in zwei Sekunden erfassen koennen muss */
+  .steckbrief { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1.1rem; }
+  .steckbrief div { border: 1px solid var(--linie); border-radius: .5rem;
+                     padding: .35rem .6rem; }
+  .steckbrief dt { font-size: .55rem; letter-spacing: .14em; text-transform: uppercase;
+                    color: var(--leise); }
+  .steckbrief dd { font-size: .85rem; font-weight: 600; margin-top: .05rem; }
+
+  .meta { margin-top: .65rem; font-size: .8rem; color: var(--leise); }
+  .beleg { padding-left: .85rem; border-left: 2px solid var(--linie); }
+
+  /* Inhaltsstoffe: Name fett, dahinter der Klartext */
+  .stoffe { list-style: none; margin-top: 1.1rem; }
+  .stoffe li { font-size: .92rem; color: var(--gedaempft); padding: .4rem 0;
+                border-top: 1px solid rgba(255,255,255,.09); }
+  .stoffe li:first-child { border-top: 0; }
+  .stoffe b { color: var(--weiss); font-weight: 600; margin-right: .35rem; }
+  .vorteile { margin-top: .9rem; }
+
+  .stark { list-style: none; margin-top: .2rem; }
+  .stark li { font-size: .95rem; color: var(--gedaempft); position: relative;
+               padding: .26rem 0 .26rem 1rem; }
+  .stark li::before { content: "—"; position: absolute; left: 0; color: var(--leise); }
+  .gegen { font-size: .63rem; letter-spacing: .2em; text-transform: uppercase;
+            font-weight: 600; color: var(--leise); margin: 1.4rem 0 .5rem; }
+  .grenztext { padding-left: .85rem; border-left: 2px solid var(--linie); }
+
+  .liste { list-style: none; }
+  .liste li { font-size: .95rem; padding: .32rem 0; color: var(--gedaempft);
+               border-top: 1px solid rgba(255,255,255,.09); }
+  .liste li:first-child { border-top: 0; }
+  .liste a { color: var(--weiss); text-decoration: none; font-weight: 600;
+              border-bottom: 1px solid var(--linie); }
+  .liste .grund { display: block; font-size: .78rem; color: var(--leise);
+                   margin-top: .1rem; }
+  .liste.rollen li { display: flex; gap: .8rem; align-items: baseline; }
+  .liste.rollen .rolle { flex: 0 0 4.6rem; }
+
+  /* Der Fachteil — deutlich abgesetzt, damit klar ist: nicht fuer die Kundin */
+  .team { border-top: 2px solid rgba(255,255,255,.45); margin-top: .5rem; }
+  .team h2 { color: var(--gedaempft); }
+  .team ul { list-style: none; }
+  .team li { font-size: .9rem; color: var(--gedaempft); margin-bottom: .28rem;
+              padding: .32rem 0 .32rem .9rem; border-left: 1px solid var(--linie); }
+
   dl { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   dt { font-size: .63rem; letter-spacing: .16em; text-transform: uppercase;
         color: var(--leise); margin-bottom: .2rem; }
@@ -128,24 +173,29 @@
       <h1>HydraSoft Conditioner</h1>
       <p class="untertitel">Samtweiches Haargefühl</p>
       <p class="preis"><span>250 ml</span><span class="trenner">·</span><span>€ 37,45</span></p>
-      <p class="kern">Der HydraTriplex-Wirkstoffkomplex aus Aminosäuren, pflanzlichen Proteinen und nährenden Ölen versorgt das Haar intensiv mit Feuchtigkeit und schließt diese im …</p>
+      <p class="kern">Die tägliche Feuchtigkeitsspülung im Premium-Segment — macht das Haar sofort kämmbar, weich und geschmeidig, <b>ohne es zu beschweren</b>. Perfekt für Haar, das Feuchtigkeit braucht, aber nicht schwer werden darf.</p>
+      <dl class="steckbrief"><div><dt>Schritt</dt><dd>Pflegen</dd></div><div><dt>Volumen</dt><dd>gering</dd></div><div><dt>Feuchtigkeit</dt><dd>hoch</dd></div><div><dt>Glanz</dt><dd>natürlich</dd></div></dl>
     </header>
 
-      <section><h2>Anwendung</h2><p>Eine kleine Menge in das gewaschene, feuchte Haar einmassieren. Ausspülen. Für die tägliche Anwendung geeignet.</p></section>
-      <section><h2>Wirkung</h2><p>Der HydraTriplex-Wirkstoffkomplex aus Aminosäuren, pflanzlichen Proteinen und nährenden Ölen versorgt das Haar intensiv mit Feuchtigkeit und schließt diese im Haar ein.</p></section>
+      <section><h2>Anwendung</h2><p>Eine kleine Menge in das gewaschene, feuchte Haar einmassieren (Längen und Spitzen). 1-2 Minuten einwirken lassen, <b>gründlich ausspülen</b>.</p><p class="meta">haselnussgroß bis walnussgroß, je nach Haarlänge · bei jeder Haarwäsche, für die tägliche Anwendung geeignet</p></section>
+      <section><h2>Warum es wirkt</h2><p>Der HydraTriplex- Wirkstoffkomplex aus Aminosäuren, pflanzlichen Proteinen und nährenden Ölen versorgt das Haar intensiv mit Feuchtigkeit und schließt diese im Haar ein.</p><ul class="stoffe"><li><b>Trimethylsiloxyamodimethicone</b> — Kationisches Silikon, lagert sich selektiv an porösen Stellen an</li><li><b>Panthenol</b> — Provitamin B5, bindet Feuchtigkeit, verbessert Elastizität</li><li><b>Hedychium Coronarium Root Extract</b> — White Ginger (Awapuhi), pflegt und stärkt die Faser</li><li><b>Laminaria Digitata Extract</b> — Braunalge, Polysaccharid-Schutzfilm, mineralienreich</li></ul></section>
+      <section><h2>Stark bei</h2><ul class="stark"><li>Normales bis trockenes Haar als täglicher Feuchtigkeits-Conditioner</li><li>Feines bis mittleres Haar, das leichte Pflege ohne Beschweren braucht</li><li>Als Pendant zum HydraSoft Shampoo im täglichen System</li></ul><h3 class="gegen">Was es nicht leistet</h3><p class="grenztext"><b>Kein Intensiv-Treatment</b> — bei stark geschädigtem Haar reicht der tägliche Conditioner nicht, dann HydraSoft Glossing Treatment oder HydraTriplex ergänzen. Kein Keratin-Reparaturprodukt — bei Strukturschäden eher Keratin Cream Rinse wählen.</p></section>
       <section><h2>Gut zu wissen</h2><p>Hyaluronsäure, veganes Kollagen und Meerespflanzenextrakte versorgen das Haar optimal mit Feuchtigkeit, ohne es zu beschweren.</p></section>
       <section><h2>Die Linie</h2><p>Ideal bei trockenem Haar – mit Irischer Rotalge + Spirulina</p></section>
-      <section><h2>Merkmale</h2><ul class="chips"><li>extensionsgeeignet</li><li>glutenfrei</li><li>sulfatfrei</li><li>UV-Schutz</li><li>parabenfrei</li><li>nussfrei</li></ul></section>
+      <section><h2>Merkmale</h2><ul class="chips"><li>glutenfrei</li><li>sulfatfrei</li><li>parabenfrei</li><li>nussfrei</li><li>vegan</li></ul></section>
       <section class="system">
         <h2>Das System</h2>
         <ol class="treppe"><li class=""><span class="nr">1</span>Säubern</li><li class="jetzt"><span class="nr">2</span>Pflegen</li><li class=""><span class="nr">3</span>Stylen</li><li class=""><span class="nr">4</span>Finish</li></ol>
-        <p class="systemsatz">Die Produkte einer Linie sind aufeinander abgestimmt. Ein Shampoo allein reinigt — erst mit Pflege, Styling und Finish aus derselben Linie hält das Ergebnis. Deshalb wird im Salon in vier Schritten beraten.</p>
+        <p class="systemsatz">Zweiter Schritt im Awapuhi HydraSoft-System nach dem HydraSoft Shampoo. Wöchentlich HydraSoft Glossing Treatment als Tiefenglanz-Booster ergänzen. Monatlich HydraTriplex Treatment für extra Keratin + Feuchtigkeit.</p>
         <h3>So wird sie angewendet — HYDRATE (bei trockenem/Frizz-Haar)</h3>
         <ol class="routine"><li><span class="rolle">Reinigung</span><span class="was">HydraSoft Shampoo<span class="wann">täglich</span></span></li><li><span class="rolle">Pflege</span><span class="was">HydraSoft Conditioner<span class="wann">täglich</span></span></li><li><span class="rolle">Geschmeidigkeit &amp; Glanz</span><span class="was">HydraSoft Glossing Treatment<span class="wann">1–3x/Woche</span></span></li><li><span class="rolle">Tiefenpflege</span><span class="was">HydraTriplex Treatment (4er-Box)<span class="wann">1–2x/Monat</span></span></li><li><span class="rolle">Styling</span><span class="was">HydroMist Blowout Spray, Texturizing Sea Spray, HydroCream Whip, Styling Treatment Oil, Anti-Frizz Hairspray, Finishing Hairspray<span class="wann">täglich</span></span></li></ol>
         <h3>Das gehört dazu</h3>
-        <div class="dazu"><div class="stufe"><h4>Säubern</h4><ul><li><a href="../awapuhi-wild-ginger-hydrate-hydrasoft-shampoo/">HydraSoft Shampoo <span class="klein">250 ml</span></a></li><li><a href="../awapuhi-wild-ginger-repair-nourishing-shampoo/">Nourishing Shampoo <span class="klein">250 ml · Repair</span></a></li></ul></div><div class="stufe"><h4>Pflegen</h4><ul><li><a href="../awapuhi-wild-ginger-hydrate-hydrasoft-glossing-treatment/">HydraSoft Glossing Treatment <span class="klein">236 ml</span></a></li><li><a href="../awapuhi-wild-ginger-hydrate-hydratriplex-treatment/">HydraTriplex Treatment <span class="klein">4 Ampullen à 10 ml</span></a></li><li><a href="../awapuhi-wild-ginger-repair-cream-rinse/">Cream Rinse <span class="klein">250 ml · Repair</span></a></li></ul></div><div class="stufe"><h4>Stylen</h4><ul><li><a href="../awapuhi-wild-ginger-style-hydrocream-whip/">HydroCream Whip <span class="klein">200 ml · Style</span></a></li><li><a href="../awapuhi-wild-ginger-style-hydromist-blow-out-spray/">Hydromist Blow-Out Spray <span class="klein">150 ml · Style</span></a></li><li><a href="../awapuhi-wild-ginger-style-styling-treatment-oil/">Styling Treatment Oil <span class="klein">150 ml · Style</span></a></li></ul></div><div class="stufe"><h4>Finish</h4><ul><li><a href="../awapuhi-wild-ginger-style-anti-frizz-hairspray/">Anti-Frizz Hairspray <span class="klein">307 ml · Style</span></a></li><li><a href="../awapuhi-wild-ginger-style-finishing-hairspray/">Finishing Hairspray <span class="klein">300 ml · Style</span></a></li></ul></div></div>
+        <ul class="liste rollen"><li><span class="rolle">Säubern</span><span class="was"><a href="../awapuhi-wild-ginger-hydrate-hydrasoft-shampoo/">HydraSoft Shampoo</a><span class="klein">250 ml · € 35,95</span></span></li><li><span class="rolle">Pflegen</span><span class="was"><a href="../awapuhi-wild-ginger-hydrate-hydrasoft-glossing-treatment/">HydraSoft Glossing Treatment</a><span class="klein">236 ml · € 41,95</span></span></li><li><span class="rolle">Pflegen</span><span class="was"><a href="../awapuhi-wild-ginger-hydrate-hydratriplex-treatment/">HydraTriplex Treatment</a><span class="klein">4 Ampullen à 10 ml · € 47,95</span></span></li></ul>
+        <h3>Alternativen</h3>
+        <ul class="liste"><li><a href="../awapuhi-wild-ginger-repair-cream-rinse/">Cream Rinse</a><span class="klein">250 ml · € 37,45</span><span class="grund">schwerer, Keratin-fokussiert statt reine Feuchtigkeit</span></li><li><a href="../awapuhi-wild-ginger-hydrate-hydrasoft-glossing-treatment/">HydraSoft Glossing Treatment</a><span class="klein">236 ml · € 41,95</span><span class="grund">wöchentlicher Glanz-Boost</span></li></ul>
       </section>
-    <section><h2>Daten</h2><dl><div><dt>Inhalt</dt><dd>250 ml</dd></div><div><dt>UVP</dt><dd>€ 37,45</dd></div><div><dt>pH-Wert</dt><dd>4,0</dd></div><div><dt>Artikelnummer</dt><dd>311402</dd></div></dl></section>
+    <section><h2>Daten</h2><dl class="daten"><div><dt>Inhalt</dt><dd>250 ml</dd></div><div><dt>UVP</dt><dd>€ 37,45</dd></div><div><dt>pH-Wert</dt><dd>4,0</dd></div><div><dt>Artikelnummer</dt><dd>311402</dd></div></dl></section>
+      <section class="team"><h2>Für das Salonteam</h2><ul><li>Enthält MI/MCI (Isothiazolinone) — bei Kontaktallergie auf Isothiazolinone Vorsicht.</li><li>Augenkontakt vermeiden. Bei Nebenwirkungen Anwendung einstellen und ggf. Arzt konsultieren.</li></ul></section>
     <footer>
       <strong>BRENDEL &amp; SÖHNE</strong><br>
       Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich<br>

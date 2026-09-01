@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>HydraTriplex Treatment · Brendel &amp; Söhne</title>
-<meta name="description" content="Der reichhaltige Wirkstoffkomplex aus Aminosäuren (11 Stück), pflanzlichen Proteinen und nährenden Ölen (Jojoba, Macadamia, Avocado) versorgt das Haar intensiv …">
+<meta name="description" content="Die Kombi-Tube für Haar, das gleichzeitig Keratin-Reparatur und intensive Feuchtigkeit braucht — dreifaches Keratin plus Macadamia, Jojoba und Avocado in einer Einweg-Anwendung.">
 <meta name="theme-color" content="#395A53">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,6 +107,51 @@
               border-bottom: 1px solid var(--linie); }
   .klein { font-size: .78rem; color: var(--leise); }
 
+  /* Steckbrief — was man in zwei Sekunden erfassen koennen muss */
+  .steckbrief { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1.1rem; }
+  .steckbrief div { border: 1px solid var(--linie); border-radius: .5rem;
+                     padding: .35rem .6rem; }
+  .steckbrief dt { font-size: .55rem; letter-spacing: .14em; text-transform: uppercase;
+                    color: var(--leise); }
+  .steckbrief dd { font-size: .85rem; font-weight: 600; margin-top: .05rem; }
+
+  .meta { margin-top: .65rem; font-size: .8rem; color: var(--leise); }
+  .beleg { padding-left: .85rem; border-left: 2px solid var(--linie); }
+
+  /* Inhaltsstoffe: Name fett, dahinter der Klartext */
+  .stoffe { list-style: none; margin-top: 1.1rem; }
+  .stoffe li { font-size: .92rem; color: var(--gedaempft); padding: .4rem 0;
+                border-top: 1px solid rgba(255,255,255,.09); }
+  .stoffe li:first-child { border-top: 0; }
+  .stoffe b { color: var(--weiss); font-weight: 600; margin-right: .35rem; }
+  .vorteile { margin-top: .9rem; }
+
+  .stark { list-style: none; margin-top: .2rem; }
+  .stark li { font-size: .95rem; color: var(--gedaempft); position: relative;
+               padding: .26rem 0 .26rem 1rem; }
+  .stark li::before { content: "—"; position: absolute; left: 0; color: var(--leise); }
+  .gegen { font-size: .63rem; letter-spacing: .2em; text-transform: uppercase;
+            font-weight: 600; color: var(--leise); margin: 1.4rem 0 .5rem; }
+  .grenztext { padding-left: .85rem; border-left: 2px solid var(--linie); }
+
+  .liste { list-style: none; }
+  .liste li { font-size: .95rem; padding: .32rem 0; color: var(--gedaempft);
+               border-top: 1px solid rgba(255,255,255,.09); }
+  .liste li:first-child { border-top: 0; }
+  .liste a { color: var(--weiss); text-decoration: none; font-weight: 600;
+              border-bottom: 1px solid var(--linie); }
+  .liste .grund { display: block; font-size: .78rem; color: var(--leise);
+                   margin-top: .1rem; }
+  .liste.rollen li { display: flex; gap: .8rem; align-items: baseline; }
+  .liste.rollen .rolle { flex: 0 0 4.6rem; }
+
+  /* Der Fachteil — deutlich abgesetzt, damit klar ist: nicht fuer die Kundin */
+  .team { border-top: 2px solid rgba(255,255,255,.45); margin-top: .5rem; }
+  .team h2 { color: var(--gedaempft); }
+  .team ul { list-style: none; }
+  .team li { font-size: .9rem; color: var(--gedaempft); margin-bottom: .28rem;
+              padding: .32rem 0 .32rem .9rem; border-left: 1px solid var(--linie); }
+
   dl { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   dt { font-size: .63rem; letter-spacing: .16em; text-transform: uppercase;
         color: var(--leise); margin-bottom: .2rem; }
@@ -128,23 +173,29 @@
       <h1>HydraTriplex Treatment</h1>
       <p class="untertitel">82% geschmeidigeres Haar</p>
       <p class="preis"><span>4 Ampullen à 10 ml</span><span class="trenner">·</span><span>€ 47,95</span></p>
-      <p class="kern">Der reichhaltige Wirkstoffkomplex aus Aminosäuren (11 Stück), pflanzlichen Proteinen und nährenden Ölen (Jojoba, Macadamia, Avocado) versorgt das Haar intensiv …</p>
+      <p class="kern">Die Kombi-Tube für Haar, das gleichzeitig Keratin-Reparatur und intensive Feuchtigkeit braucht — dreifaches Keratin plus Macadamia, Jojoba und Avocado in einer Einweg-Anwendung.</p>
+      <dl class="steckbrief"><div><dt>Schritt</dt><dd>Pflegen</dd></div><div><dt>Volumen</dt><dd>gering</dd></div><div><dt>Feuchtigkeit</dt><dd>sehr hoch</dd></div><div><dt>Glanz</dt><dd>glänzend</dd></div></dl>
     </header>
 
-      <section><h2>Wirkung</h2><p>Der reichhaltige Wirkstoffkomplex aus Aminosäuren (11 Stück), pflanzlichen Proteinen und nährenden Ölen (Jojoba, Macadamia, Avocado) versorgt das Haar intensiv mit Feuchtigkeit. Regeneriert trockenes, strapaziertes Haar mit nur einer Ampulle.</p></section>
+      <section><h2>Anwendung</h2><p>Das Haar mit Moisturizing Lather Shampoo oder HydraSoft Shampoo waschen. 1-2 Tuben <b>auf das handtuchtrockene Haar auftragen</b>. 10-15 Minuten einwirken lassen (unter Wärme intensivere Wirkung). Gründlich ausspülen. Danach ggf.</p><p class="meta">1-2 Tuben (je 10 ml), je nach Haarlänge und -dichte · 1x pro Monat als Intensivbehandlung</p></section>
+      <section><h2>Warum es wirkt</h2><p>Bereits eine Tube sorgt für sichtbar geschmeidigeres, besser kämmbares Haar.</p><ul class="stoffe"><li><b>Keratin</b> — Natives Haarprotein, füllt strukturelle Lücken in der Cortex</li><li><b>Hydrolyzed Keratin</b> — Niedermolekulares Keratin, dringt tief in die Faser ein</li><li><b>Oxidized Keratin</b> — Oxidiertes Keratin, verbindet sich mit geschädigten Disulfidbrücken</li><li><b>Amodimethicone</b> — Kationisches Silikon, lagert sich selektiv an porösen Stellen an</li></ul></section>
+      <section><h2>Stark bei</h2><ul class="stark"><li>Haar, das sowohl strukturgeschädigt als auch ausgetrocknet ist (typisch nach Sommerurlaub, Meer + Sonne)</li><li>Wenn KeraTriplex Treatment allein zu wenig Pflege liefert und reine Feuchtigkeit zu wenig Reparatur</li><li>Brückenprodukt zwischen Keratin- und HydraSoft-Linie</li></ul><h3 class="gegen">Was es nicht leistet</h3><p class="grenztext"><b>Kein Ersatz für regelmäßiges Keratin-System</b> (Shampoo + Conditioner) — ist ein monatlicher Boost, kein Dauerpflegeprodukt. Die Tube ist eine Einzeldosis, kein wiederverwendbares Produkt. Bei extrem langem, dickem Haar reicht eine Tube möglicherweise nicht.</p></section>
       <section><h2>Gut zu wissen</h2><p>Das Haar wird weicher und ist leichter frisierbar.</p></section>
       <section><h2>Die Linie</h2><p>Ideal bei trockenem Haar – mit Irischer Rotalge + Spirulina</p></section>
-      <section><h2>Merkmale</h2><ul class="chips"><li>extensionsgeeignet</li><li>sulfatfrei</li><li>farbschonend</li><li>parabenfrei</li></ul></section>
+      <section><h2>Merkmale</h2><ul class="chips"><li>sulfatfrei</li><li>farbschonend</li><li>parabenfrei</li><li>nussfrei</li></ul></section>
       <section class="system">
         <h2>Das System</h2>
         <ol class="treppe"><li class=""><span class="nr">1</span>Säubern</li><li class="jetzt"><span class="nr">2</span>Pflegen</li><li class=""><span class="nr">3</span>Stylen</li><li class=""><span class="nr">4</span>Finish</li></ol>
-        <p class="systemsatz">Die Produkte einer Linie sind aufeinander abgestimmt. Ein Shampoo allein reinigt — erst mit Pflege, Styling und Finish aus derselben Linie hält das Ergebnis. Deshalb wird im Salon in vier Schritten beraten.</p>
+        <p class="systemsatz">Hybrid-Produkt zwischen Keratin- und HydraSoft-Linie. Wird als Einweg-Tube nach dem Shampoo aufgetragen (ausspülen!). Kann das KeraTriplex Treatment ersetzen, wenn gleichzeitig Feuchtigkeit fehlt. In der Anwendungshinweise wird explizit HydraSoft Shampoo empfohlen — funktioniert aber auch mit Moisturizing Lather Shampoo.</p>
         <h3>So wird sie angewendet — HYDRATE (bei trockenem/Frizz-Haar)</h3>
         <ol class="routine"><li><span class="rolle">Reinigung</span><span class="was">HydraSoft Shampoo<span class="wann">täglich</span></span></li><li><span class="rolle">Pflege</span><span class="was">HydraSoft Conditioner<span class="wann">täglich</span></span></li><li><span class="rolle">Geschmeidigkeit &amp; Glanz</span><span class="was">HydraSoft Glossing Treatment<span class="wann">1–3x/Woche</span></span></li><li><span class="rolle">Tiefenpflege</span><span class="was">HydraTriplex Treatment (4er-Box)<span class="wann">1–2x/Monat</span></span></li><li><span class="rolle">Styling</span><span class="was">HydroMist Blowout Spray, Texturizing Sea Spray, HydroCream Whip, Styling Treatment Oil, Anti-Frizz Hairspray, Finishing Hairspray<span class="wann">täglich</span></span></li></ol>
         <h3>Das gehört dazu</h3>
-        <div class="dazu"><div class="stufe"><h4>Säubern</h4><ul><li><a href="../awapuhi-wild-ginger-hydrate-hydrasoft-shampoo/">HydraSoft Shampoo <span class="klein">250 ml</span></a></li><li><a href="../awapuhi-wild-ginger-repair-nourishing-shampoo/">Nourishing Shampoo <span class="klein">250 ml · Repair</span></a></li></ul></div><div class="stufe"><h4>Pflegen</h4><ul><li><a href="../awapuhi-wild-ginger-hydrate-hydrasoft-conditioner/">HydraSoft Conditioner <span class="klein">250 ml</span></a></li><li><a href="../awapuhi-wild-ginger-hydrate-hydrasoft-glossing-treatment/">HydraSoft Glossing Treatment <span class="klein">236 ml</span></a></li><li><a href="../awapuhi-wild-ginger-repair-cream-rinse/">Cream Rinse <span class="klein">250 ml · Repair</span></a></li></ul></div><div class="stufe"><h4>Stylen</h4><ul><li><a href="../awapuhi-wild-ginger-style-hydrocream-whip/">HydroCream Whip <span class="klein">200 ml · Style</span></a></li><li><a href="../awapuhi-wild-ginger-style-hydromist-blow-out-spray/">Hydromist Blow-Out Spray <span class="klein">150 ml · Style</span></a></li><li><a href="../awapuhi-wild-ginger-style-styling-treatment-oil/">Styling Treatment Oil <span class="klein">150 ml · Style</span></a></li></ul></div><div class="stufe"><h4>Finish</h4><ul><li><a href="../awapuhi-wild-ginger-style-anti-frizz-hairspray/">Anti-Frizz Hairspray <span class="klein">307 ml · Style</span></a></li><li><a href="../awapuhi-wild-ginger-style-finishing-hairspray/">Finishing Hairspray <span class="klein">300 ml · Style</span></a></li></ul></div></div>
+        <ul class="liste rollen"><li><span class="rolle">Säubern</span><span class="was"><a href="../awapuhi-wild-ginger-hydrate-hydrasoft-shampoo/">HydraSoft Shampoo</a><span class="klein">250 ml · € 35,95</span></span></li><li><span class="rolle">Pflegen</span><span class="was"><a href="../awapuhi-wild-ginger-repair-cream-rinse/">Cream Rinse</a><span class="klein">250 ml · € 37,45</span></span></li><li><span class="rolle">Pflegen</span><span class="was"><a href="../awapuhi-wild-ginger-hydrate-hydrasoft-conditioner/">HydraSoft Conditioner</a><span class="klein">250 ml · € 37,45</span></span></li></ul>
+        <h3>Alternativen</h3>
+        <ul class="liste"><li><a href="../awapuhi-wild-ginger-repair-intensive-treatment/">Intensive Treatment</a><span class="klein">150 ml · € 42,95</span><span class="grund">wöchentlich, weniger Öl-Anteil</span></li></ul>
       </section>
-    <section><h2>Daten</h2><dl><div><dt>Inhalt</dt><dd>4 Ampullen à 10 ml</dd></div><div><dt>UVP</dt><dd>€ 47,95</dd></div><div><dt>pH-Wert</dt><dd>4,0</dd></div><div><dt>Artikelnummer</dt><dd>311421</dd></div></dl></section>
+    <section><h2>Daten</h2><dl class="daten"><div><dt>Inhalt</dt><dd>4 Ampullen à 10 ml</dd></div><div><dt>UVP</dt><dd>€ 47,95</dd></div><div><dt>pH-Wert</dt><dd>4,0</dd></div><div><dt>Artikelnummer</dt><dd>311421</dd></div></dl></section>
+      <section class="team"><h2>Für das Salonteam</h2><ul><li>Ideal als monatlicher Salon-Boost.</li><li>Als monatlicher Salon-Intensiv-Service bei coloriertem, porösem Haar</li><li>Enthält MI/MCI (Isothiazolinone) — bei Kontaktallergie auf Isothiazolinone Vorsicht.</li><li>Augenkontakt vermeiden. Bei Nebenwirkungen Anwendung einstellen und ggf. Arzt konsultieren.</li></ul></section>
     <footer>
       <strong>BRENDEL &amp; SÖHNE</strong><br>
       Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich<br>

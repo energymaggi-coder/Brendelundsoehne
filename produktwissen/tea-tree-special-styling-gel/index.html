@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Styling Gel · Brendel &amp; Söhne</title>
-<meta name="description" content="flexibler Halt, feuchtes/trockenes Haar, Wet-Looks">
+<meta name="description" content="Festigt das Styling, verleiht Glanz und Fülle und macht das Haar leicht frisierbar. Der flexible Halt ermöglicht ein leichtes Umstylen.">
 <meta name="theme-color" content="#385B3B">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,6 +107,51 @@
               border-bottom: 1px solid var(--linie); }
   .klein { font-size: .78rem; color: var(--leise); }
 
+  /* Steckbrief — was man in zwei Sekunden erfassen koennen muss */
+  .steckbrief { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1.1rem; }
+  .steckbrief div { border: 1px solid var(--linie); border-radius: .5rem;
+                     padding: .35rem .6rem; }
+  .steckbrief dt { font-size: .55rem; letter-spacing: .14em; text-transform: uppercase;
+                    color: var(--leise); }
+  .steckbrief dd { font-size: .85rem; font-weight: 600; margin-top: .05rem; }
+
+  .meta { margin-top: .65rem; font-size: .8rem; color: var(--leise); }
+  .beleg { padding-left: .85rem; border-left: 2px solid var(--linie); }
+
+  /* Inhaltsstoffe: Name fett, dahinter der Klartext */
+  .stoffe { list-style: none; margin-top: 1.1rem; }
+  .stoffe li { font-size: .92rem; color: var(--gedaempft); padding: .4rem 0;
+                border-top: 1px solid rgba(255,255,255,.09); }
+  .stoffe li:first-child { border-top: 0; }
+  .stoffe b { color: var(--weiss); font-weight: 600; margin-right: .35rem; }
+  .vorteile { margin-top: .9rem; }
+
+  .stark { list-style: none; margin-top: .2rem; }
+  .stark li { font-size: .95rem; color: var(--gedaempft); position: relative;
+               padding: .26rem 0 .26rem 1rem; }
+  .stark li::before { content: "—"; position: absolute; left: 0; color: var(--leise); }
+  .gegen { font-size: .63rem; letter-spacing: .2em; text-transform: uppercase;
+            font-weight: 600; color: var(--leise); margin: 1.4rem 0 .5rem; }
+  .grenztext { padding-left: .85rem; border-left: 2px solid var(--linie); }
+
+  .liste { list-style: none; }
+  .liste li { font-size: .95rem; padding: .32rem 0; color: var(--gedaempft);
+               border-top: 1px solid rgba(255,255,255,.09); }
+  .liste li:first-child { border-top: 0; }
+  .liste a { color: var(--weiss); text-decoration: none; font-weight: 600;
+              border-bottom: 1px solid var(--linie); }
+  .liste .grund { display: block; font-size: .78rem; color: var(--leise);
+                   margin-top: .1rem; }
+  .liste.rollen li { display: flex; gap: .8rem; align-items: baseline; }
+  .liste.rollen .rolle { flex: 0 0 4.6rem; }
+
+  /* Der Fachteil — deutlich abgesetzt, damit klar ist: nicht fuer die Kundin */
+  .team { border-top: 2px solid rgba(255,255,255,.45); margin-top: .5rem; }
+  .team h2 { color: var(--gedaempft); }
+  .team ul { list-style: none; }
+  .team li { font-size: .9rem; color: var(--gedaempft); margin-bottom: .28rem;
+              padding: .32rem 0 .32rem .9rem; border-left: 1px solid var(--linie); }
+
   dl { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   dt { font-size: .63rem; letter-spacing: .16em; text-transform: uppercase;
         color: var(--leise); margin-bottom: .2rem; }
@@ -128,19 +173,27 @@
       <h1>Styling Gel</h1>
       <p class="untertitel">Fülle. Glanz</p>
       <p class="preis"><span>150 ml</span><span class="trenner">·</span><span>€ 19,95</span></p>
-      <p class="kern">flexibler Halt, feuchtes/trockenes Haar, Wet-Looks</p>
+      <p class="kern">Festigt das Styling, verleiht Glanz und Fülle und macht das Haar leicht frisierbar. Der flexible Halt ermöglicht ein leichtes Umstylen.</p>
+      <dl class="steckbrief"><div><dt>Schritt</dt><dd>Stylen</dd></div><div><dt>Halt</dt><dd>mittel</dd></div><div><dt>Volumen</dt><dd>mittel</dd></div><div><dt>Feuchtigkeit</dt><dd>gering</dd></div></dl>
     </header>
 
+      <section><h2>Anwendung</h2><p>Um Volumen aufzubauen, die Haar-Paste vor dem Styling nahe an der Kopfhaut auftragen. Um den Glanz zu intensivieren und für Wet-Looks, das Hair-Gel auf handtuchtrockenem Haar anwenden. Danach die Styling-Creme <b>gleichmäßig verteilen</b> und lufttrocknen lassen.</p><p class="meta">haselnussgroß · bei jedem Styling</p></section>
+      <section><h2>Warum es wirkt</h2><p>Styling- und Pflegewirkstoffe formen das Haar. Teebaum, Pfefferminze und Lavendel beleben die Sinne.</p><ul class="stoffe"><li><b>Melaleuca Alternifolia (Tea Tree) Leaf Water</b> — Teebaumöl, klärend, reguliert Kopfhaut</li><li><b>Menthol</b> — Kühlender Wirkstoff, belebt die Kopfhaut</li></ul></section>
+      <section><h2>Stark bei</h2><ul class="stark"><li>Wet-Look Styling (auf feuchtem Haar)</li><li>Volumenaufbau am Ansatz (auf feuchtem Haar, föhnen)</li><li>Definition für kurzes bis mittellanges Haar</li></ul><h3 class="gegen">Was es nicht leistet</h3><p class="grenztext"><b>Kein extremer Halt</b> — für extreme Looks besser Firm Hold Gel. Kein Hitzeschutz. Wird bei sehr hoher Luftfeuchtigkeit weicher.</p></section>
+      <section><h2>Gut zu wissen</h2><p>Die vielseitige Rezeptur kann auf feuchtem oder trockenem Haar angewendet werden.</p></section>
       <section><h2>Die Linie</h2><p>Reinigend. Belebend. Prickelnd. — Der Klassiker. Tingle Complex (Teebaum, Pfefferminze, Lavendel). Ideal für: Frische-Kick mit Prickeln, alle Haartypen.</p></section>
-
+      <section><h2>Merkmale</h2><ul class="chips"><li>parabenfrei</li><li>silikonfrei</li><li>vegan</li></ul></section>
       <section class="system">
         <h2>Das System</h2>
         <ol class="treppe"><li class=""><span class="nr">1</span>Säubern</li><li class=""><span class="nr">2</span>Pflegen</li><li class="jetzt"><span class="nr">3</span>Stylen</li><li class=""><span class="nr">4</span>Finish</li></ol>
-        <p class="systemsatz">Die Produkte einer Linie sind aufeinander abgestimmt. Ein Shampoo allein reinigt — erst mit Pflege, Styling und Finish aus derselben Linie hält das Ergebnis. Deshalb wird im Salon in vier Schritten beraten.</p>
+        <p class="systemsatz">Styling-Ergänzung zum Tea Tree Special System. Kann mit jedem Tea Tree Shampoo + Conditioner kombiniert werden.</p>
         <h3>Das gehört dazu</h3>
-        <div class="dazu"><div class="stufe"><h4>Säubern</h4><ul><li><a href="../tea-tree-special-body-bar/">Body Bar <span class="klein">150 g</span></a></li><li><a href="../tea-tree-special-color-shampoo/">Color Shampoo <span class="klein">300 ml</span></a></li><li><a href="../tea-tree-special-detox-foaming-salt-scrub/">Detox Foaming Salt Scrub <span class="klein">184 g</span></a></li></ul></div><div class="stufe"><h4>Pflegen</h4><ul><li><a href="../tea-tree-special-color-conditioner/">Color Conditioner <span class="klein">300 ml</span></a></li><li><a href="../tea-tree-special-hair-lotion-keravis/">Hair Lotion Keravis <span class="klein">12 Ampullen à 6 ml</span></a></li><li><a href="../tea-tree-special-hair-and-scalp-treatment/">Hair and Scalp Treatment <span class="klein">150 ml</span></a></li></ul></div><div class="stufe"><h4>Stylen</h4><ul><li><a href="../tea-tree-special-firm-hold-gel/">Firm Hold Gel <span class="klein">150 ml</span></a></li><li><a href="../tea-tree-special-forming-cream/">Forming Cream <span class="klein">85 g</span></a></li><li><a href="../tea-tree-special-grooming-pomade/">Grooming Pomade <span class="klein">85 g</span></a></li></ul></div></div>
+        <ul class="liste rollen"><li><span class="rolle">Säubern</span><span class="was"><a href="../tea-tree-special-special-shampoo/">Special Shampoo</a><span class="klein">300 ml · € 28,25</span></span></li><li><span class="rolle">Pflegen</span><span class="was"><a href="../tea-tree-special-special-conditioner/">Special Conditioner</a><span class="klein">300 ml · € 30,45</span></span></li></ul>
+        <h3>Alternativen</h3>
+        <ul class="liste"><li><a href="../tea-tree-special-firm-hold-gel/">Firm Hold Gel</a><span class="klein">150 ml · € 19,95</span><span class="grund">mehr Halt</span></li><li><a href="../tea-tree-special-forming-cream/">Forming Cream</a><span class="klein">85 g · € 26,95</span><span class="grund">natürlicherer Look</span></li></ul>
       </section>
-    <section><h2>Daten</h2><dl><div><dt>Inhalt</dt><dd>150 ml</dd></div><div><dt>UVP</dt><dd>€ 19,95</dd></div><div><dt>pH-Wert</dt><dd>5,5</dd></div><div><dt>Artikelnummer</dt><dd>204213</dd></div></dl></section>
+    <section><h2>Daten</h2><dl class="daten"><div><dt>Inhalt</dt><dd>150 ml</dd></div><div><dt>UVP</dt><dd>€ 19,95</dd></div><div><dt>pH-Wert</dt><dd>5,5</dd></div><div><dt>Artikelnummer</dt><dd>204213</dd></div></dl></section>
+      <section class="team"><h2>Für das Salonteam</h2><ul><li>Ein vielseitiges Gel mit mittlerem Halt und Teebaum-Frische — definiert, gibt Volumen oder erzeugt Wet-Looks, je nachdem wie du es anwendest.</li><li>Menthol-Kühleffekt — bei sehr empfindlicher oder entzündeter Kopfhaut kann Menthol reizen.</li><li>Enthält Teebaumöl — bei bekannter Allergie auf Teebaumöl meiden.</li><li>Achtung: Augenkontakt vermeiden. Sollten Nebenwirkungen auftreten, verwenden Sie das Produkt nicht weiter. Falls die Nebenwirkungen andauern, kontaktieren Sie einen Arzt.</li></ul></section>
     <footer>
       <strong>BRENDEL &amp; SÖHNE</strong><br>
       Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich<br>

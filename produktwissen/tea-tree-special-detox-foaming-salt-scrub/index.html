@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Detox Foaming Salt Scrub · Brendel &amp; Söhne</title>
-<meta name="description" content="Reinigend. Belebend. Prickelnd. — Der Klassiker. Tingle Complex (Teebaum, Pfefferminze, Lavendel). Ideal für: Frische-Kick mit Prickeln, alle Haartypen.">
+<meta name="description" content="Ein schäumendes Kopfhaut-Peeling mit Meersalz und Vulkansand — löst Schuppen und Ablagerungen mechanisch, Teebaumöl beruhigt danach. Perfekt als monatlicher Reset für die Kopfhaut.">
 <meta name="theme-color" content="#385B3B">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,6 +107,51 @@
               border-bottom: 1px solid var(--linie); }
   .klein { font-size: .78rem; color: var(--leise); }
 
+  /* Steckbrief — was man in zwei Sekunden erfassen koennen muss */
+  .steckbrief { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1.1rem; }
+  .steckbrief div { border: 1px solid var(--linie); border-radius: .5rem;
+                     padding: .35rem .6rem; }
+  .steckbrief dt { font-size: .55rem; letter-spacing: .14em; text-transform: uppercase;
+                    color: var(--leise); }
+  .steckbrief dd { font-size: .85rem; font-weight: 600; margin-top: .05rem; }
+
+  .meta { margin-top: .65rem; font-size: .8rem; color: var(--leise); }
+  .beleg { padding-left: .85rem; border-left: 2px solid var(--linie); }
+
+  /* Inhaltsstoffe: Name fett, dahinter der Klartext */
+  .stoffe { list-style: none; margin-top: 1.1rem; }
+  .stoffe li { font-size: .92rem; color: var(--gedaempft); padding: .4rem 0;
+                border-top: 1px solid rgba(255,255,255,.09); }
+  .stoffe li:first-child { border-top: 0; }
+  .stoffe b { color: var(--weiss); font-weight: 600; margin-right: .35rem; }
+  .vorteile { margin-top: .9rem; }
+
+  .stark { list-style: none; margin-top: .2rem; }
+  .stark li { font-size: .95rem; color: var(--gedaempft); position: relative;
+               padding: .26rem 0 .26rem 1rem; }
+  .stark li::before { content: "—"; position: absolute; left: 0; color: var(--leise); }
+  .gegen { font-size: .63rem; letter-spacing: .2em; text-transform: uppercase;
+            font-weight: 600; color: var(--leise); margin: 1.4rem 0 .5rem; }
+  .grenztext { padding-left: .85rem; border-left: 2px solid var(--linie); }
+
+  .liste { list-style: none; }
+  .liste li { font-size: .95rem; padding: .32rem 0; color: var(--gedaempft);
+               border-top: 1px solid rgba(255,255,255,.09); }
+  .liste li:first-child { border-top: 0; }
+  .liste a { color: var(--weiss); text-decoration: none; font-weight: 600;
+              border-bottom: 1px solid var(--linie); }
+  .liste .grund { display: block; font-size: .78rem; color: var(--leise);
+                   margin-top: .1rem; }
+  .liste.rollen li { display: flex; gap: .8rem; align-items: baseline; }
+  .liste.rollen .rolle { flex: 0 0 4.6rem; }
+
+  /* Der Fachteil — deutlich abgesetzt, damit klar ist: nicht fuer die Kundin */
+  .team { border-top: 2px solid rgba(255,255,255,.45); margin-top: .5rem; }
+  .team h2 { color: var(--gedaempft); }
+  .team ul { list-style: none; }
+  .team li { font-size: .9rem; color: var(--gedaempft); margin-bottom: .28rem;
+              padding: .32rem 0 .32rem .9rem; border-left: 1px solid var(--linie); }
+
   dl { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   dt { font-size: .63rem; letter-spacing: .16em; text-transform: uppercase;
         color: var(--leise); margin-bottom: .2rem; }
@@ -128,19 +173,26 @@
       <h1>Detox Foaming Salt Scrub</h1>
       <p class="untertitel">Peeling &amp; Erfrischung für die Kopfhaut</p>
       <p class="preis"><span>184 g</span><span class="trenner">·</span><span>€ 36,95</span></p>
-      <p class="kern">Reinigend. Belebend. Prickelnd. — Der Klassiker. Tingle Complex (Teebaum, Pfefferminze, Lavendel). Ideal für: Frische-Kick mit Prickeln, alle Haartypen.</p>
+      <p class="kern">Ein schäumendes Kopfhaut-Peeling mit Meersalz und Vulkansand — löst Schuppen und Ablagerungen mechanisch, Teebaumöl beruhigt danach. Perfekt als monatlicher Reset für die Kopfhaut.</p>
+      <dl class="steckbrief"><div><dt>Schritt</dt><dd>Säubern</dd></div><div><dt>Reinigung</dt><dd>klärend</dd></div><div><dt>Feuchtigkeit</dt><dd>gering</dd></div><div><dt>Textur</dt><dd>cream</dd></div></dl>
     </header>
 
-      <section><h2>Anwendung</h2><p>vor dem Shampoo auf feuchte Kopfhaut, kreisend einmassieren, ausspülen. 1×/Woche o. n. Bedarf. **Pro-Tipp:** in den Händen mit Wasser zu reichem Schaum emulgieren; oder 1 TL Scrub + 10 ml heißes Wasser zu cremiger Konsistenz.</p></section>
-
+      <section><h2>Anwendung</h2><p>Vor dem Shampoonieren <b>auf die feuchte Kopfhaut auftragen</b> und für ein sanftes Peeling in kreisenden Bewegungen einmassieren. Ausspülen. Anschließend Shampoo und Condi-tioner verwenden. Einmal wöchentlich oder je nach Bedarf anwenden.</p><p class="meta">walnussgroß, direkt auf die feuchte Kopfhaut · 1x wöchentlich oder bei Bedarf, maximal 2x pro Woche</p></section>
+      <section><h2>Warum es wirkt</h2><p>Gründlich exfolierte Kopfhaut, danach spürbar sauberer Ansatz. Folgeprodukte (Shampoo, Treatment) können besser wirken. Fühlt sich <b>sofort befreit an</b>.</p><p class="meta beleg">Nach nur einer Anwendung ist die Kopfhaut befreit von trockenen Hautschuppen und Rückständen. — Basierend auf einer klinischen Studie mit 29 Teilnehmern.</p><ul class="stoffe"><li><b>Sea Salt (Sel Marin</b> — Meersalz, peelend, volumengebend</li><li><b>Melaleuca Alternifolia (Tea Tree) Leaf Oil</b> — Teebaumöl, klärend, reguliert Kopfhaut</li><li><b>Tocopherol</b> — Vitamin E (natürlich), Antioxidans</li><li><b>Ethylhexylglycerin</b> — Humektant, zieht Feuchtigkeit ins Haar</li></ul></section>
+      <section><h2>Stark bei</h2><ul class="stark"><li>Kopfhaut mit hartnäckigen Ablagerungen (Schuppen, Talg, Styling-Rückstände)</li><li>Bei Kopfhaut die trotz Waschen nicht richtig sauber wird</li><li>Saisonal: nach dem Winter wenn die Kopfhaut trocken-schuppig ist</li></ul><h3 class="gegen">Was es nicht leistet</h3><p class="grenztext"><b>Kein Pflegeprodukt</b> — danach muss Shampoo + Conditioner folgen. Kein Anti-Schuppen-Wirkstoff drin (nur mechanische Ablösung). Kein Ersatz für medizinische Kopfhautbehandlung.</p></section>
+      <section><h2>Die Linie</h2><p>Reinigend. Belebend. Prickelnd. — Der Klassiker. Tingle Complex (Teebaum, Pfefferminze, Lavendel). Ideal für: Frische-Kick mit Prickeln, alle Haartypen.</p></section>
+      <section><h2>Merkmale</h2><ul class="chips"><li>glutenfrei</li><li>nussfrei</li><li>parabenfrei</li><li>vegan</li><li>sulfatfrei</li><li>silikonfrei</li></ul></section>
       <section class="system">
         <h2>Das System</h2>
         <ol class="treppe"><li class="jetzt"><span class="nr">1</span>Säubern</li><li class=""><span class="nr">2</span>Pflegen</li><li class=""><span class="nr">3</span>Stylen</li><li class=""><span class="nr">4</span>Finish</li></ol>
-        <p class="systemsatz">Die Produkte einer Linie sind aufeinander abgestimmt. Ein Shampoo allein reinigt — erst mit Pflege, Styling und Finish aus derselben Linie hält das Ergebnis. Deshalb wird im Salon in vier Schritten beraten.</p>
+        <p class="systemsatz">Vor dem Shampoo anwenden. Immer danach Shampoo + Conditioner. Kann mit Tea Tree Special oder Lavender Mint System kombiniert werden.</p>
         <h3>Das gehört dazu</h3>
-        <div class="dazu"><div class="stufe"><h4>Säubern</h4><ul><li><a href="../tea-tree-special-body-bar/">Body Bar <span class="klein">150 g</span></a></li><li><a href="../tea-tree-special-color-shampoo/">Color Shampoo <span class="klein">300 ml</span></a></li><li><a href="../tea-tree-special-detox-kombucha-rinse/">Detox Kombucha Rinse <span class="klein">200 ml</span></a></li></ul></div><div class="stufe"><h4>Pflegen</h4><ul><li><a href="../tea-tree-special-color-conditioner/">Color Conditioner <span class="klein">300 ml</span></a></li><li><a href="../tea-tree-special-hair-lotion-keravis/">Hair Lotion Keravis <span class="klein">12 Ampullen à 6 ml</span></a></li><li><a href="../tea-tree-special-hair-and-scalp-treatment/">Hair and Scalp Treatment <span class="klein">150 ml</span></a></li></ul></div><div class="stufe"><h4>Stylen</h4><ul><li><a href="../tea-tree-special-firm-hold-gel/">Firm Hold Gel <span class="klein">150 ml</span></a></li><li><a href="../tea-tree-special-forming-cream/">Forming Cream <span class="klein">85 g</span></a></li><li><a href="../tea-tree-special-grooming-pomade/">Grooming Pomade <span class="klein">85 g</span></a></li></ul></div></div>
+        <ul class="liste rollen"><li><span class="rolle">Säubern</span><span class="was"><a href="../tea-tree-special-special-shampoo/">Special Shampoo</a><span class="klein">300 ml · € 28,25</span></span></li><li><span class="rolle">Pflegen</span><span class="was"><a href="../tea-tree-special-special-conditioner/">Special Conditioner</a><span class="klein">300 ml · € 30,45</span></span></li></ul>
+        <h3>Alternativen</h3>
+        <ul class="liste"><li><a href="../tea-tree-special-detox-kombucha-rinse/">Detox Kombucha Rinse</a><span class="klein">200 ml · € 33,95</span><span class="grund">chemischer Detox, sanfter</span></li></ul>
       </section>
-    <section><h2>Daten</h2><dl><div><dt>Inhalt</dt><dd>184 g</dd></div><div><dt>UVP</dt><dd>€ 36,95</dd></div><div><dt>pH-Wert</dt><dd>4,5</dd></div><div><dt>Artikelnummer</dt><dd>204142</dd></div></dl></section>
+    <section><h2>Daten</h2><dl class="daten"><div><dt>Inhalt</dt><dd>184 g</dd></div><div><dt>UVP</dt><dd>€ 36,95</dd></div><div><dt>pH-Wert</dt><dd>4,5</dd></div><div><dt>Artikelnummer</dt><dd>204142</dd></div></dl></section>
+      <section class="team"><h2>Für das Salonteam</h2><ul><li>Vor einer Kopfhautbehandlung im Salon als Vorbereitung</li><li>Enthält Teebaumöl — bei bekannter Allergie auf Teebaumöl meiden.</li><li>Achtung: Augenkontakt vermeiden. Sollten Nebenwirkungen auftreten, verwenden Sie das Produkt nicht weiter. Falls die Nebenwirkungen andauern, kontaktieren Sie einen Arzt.</li></ul></section>
     <footer>
       <strong>BRENDEL &amp; SÖHNE</strong><br>
       Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich<br>
