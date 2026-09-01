@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cream Rinse · Brendel &amp; Söhne</title>
+<meta name="description" content="Die proteinspendende Rezeptur stärkt strapaziertes Haar mit der KeraTriplex-Keratinprotein-Technologie, hilft bei der Reparatur der Haarfasern und schützt vor …">
+<meta name="theme-color" content="#395A53">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --marke: #395A53;
+    --weiss: #fff;
+    --gedaempft: rgba(255,255,255,.74);
+    --leise: rgba(255,255,255,.52);
+    --linie: rgba(255,255,255,.2);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--marke); color: var(--weiss);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased; line-height: 1.5;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+             env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+  .wrap { max-width: 33rem; margin: 0 auto; padding: 0 1.4rem; }
+
+  /* Der Kopf. Kein Vollbild-Block, keine reservierte Bildschirmhoehe: was
+     zaehlt, steht oben, und direkt darunter geht die Seite weiter. */
+  header { padding: 2.2rem 0 0; }
+  .kicker {
+    font-size: .63rem; letter-spacing: .22em; text-transform: uppercase;
+    font-weight: 600; color: var(--gedaempft);
+  }
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif; font-style: italic;
+    font-weight: 600; line-height: 1.05; margin: .55rem 0 0;
+    font-size: clamp(2.1rem, 9.5vw, 3rem);
+  }
+  .untertitel {
+    font-size: .95rem; font-style: italic; color: var(--gedaempft);
+    margin-top: .55rem;
+  }
+  .preis {
+    font-family: "Cormorant Garamond", Georgia, serif; font-style: italic;
+    font-size: 1.6rem; margin-top: 1.4rem;
+    display: flex; align-items: baseline; gap: .7rem;
+  }
+  .preis .trenner { opacity: .45; }
+  .kern {
+    margin-top: .9rem; font-size: 1rem; line-height: 1.55;
+    color: var(--gedaempft);
+  }
+
+  main { padding-bottom: 2.5rem; }
+  section { border-top: 1px solid var(--linie); padding: 1.4rem 0; }
+  section:first-of-type { margin-top: 1.8rem; }
+  h2 {
+    font-size: .63rem; letter-spacing: .2em; text-transform: uppercase;
+    font-weight: 600; color: var(--leise); margin-bottom: .55rem;
+  }
+  section p { font-size: .97rem; line-height: 1.55; color: var(--gedaempft); }
+
+  .chips { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; }
+  .chips li {
+    border: 1px solid var(--linie); border-radius: 999px;
+    padding: .32rem .8rem; font-size: .8rem; color: var(--gedaempft);
+  }
+
+  /* Die vier Schritte als Treppe, der eigene hervorgehoben */
+  .treppe { list-style: none; display: flex; gap: .4rem; margin-bottom: 1rem; }
+  .treppe li {
+    flex: 1; text-align: center; font-size: .67rem; letter-spacing: .03em;
+    padding: .55rem .2rem; border: 1px solid var(--linie); border-radius: .6rem;
+    color: var(--leise); line-height: 1.3;
+  }
+  .treppe .nr { display: block; font-size: .58rem; opacity: .7; }
+  .treppe .jetzt {
+    background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.45);
+    color: var(--weiss); font-weight: 600;
+  }
+  .systemsatz { font-size: .93rem; line-height: 1.55; color: var(--gedaempft); }
+  .system h3 {
+    font-size: .63rem; letter-spacing: .18em; text-transform: uppercase;
+    font-weight: 600; color: var(--leise); margin: 1.5rem 0 .6rem;
+  }
+  .routine { list-style: none; }
+  .routine li {
+    display: flex; gap: .8rem; padding: .55rem 0;
+    border-top: 1px solid rgba(255,255,255,.09); font-size: .93rem;
+  }
+  .routine li:first-child { border-top: 0; padding-top: 0; }
+  .rolle { flex: 0 0 5.8rem; color: var(--leise); font-size: .8rem; padding-top: .1rem; }
+  .was { color: var(--gedaempft); }
+  .wann { display: block; font-size: .78rem; color: var(--leise); margin-top: .15rem; }
+  .dazu { display: grid; gap: 1rem; }
+  .stufe h4 {
+    font-size: .63rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--leise); font-weight: 600; margin-bottom: .35rem;
+  }
+  .stufe ul { list-style: none; }
+  .stufe li { font-size: .93rem; padding: .25rem 0; color: var(--gedaempft); }
+  .stufe a { color: var(--weiss); text-decoration: none;
+              border-bottom: 1px solid var(--linie); }
+  .klein { font-size: .78rem; color: var(--leise); }
+
+  dl { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  dt { font-size: .63rem; letter-spacing: .16em; text-transform: uppercase;
+        color: var(--leise); margin-bottom: .2rem; }
+  dd { font-size: .97rem; }
+
+  footer {
+    border-top: 1px solid var(--linie); padding: 1.5rem 0 2.4rem;
+    font-size: .76rem; color: var(--leise); line-height: 1.75;
+  }
+  footer a { color: var(--gedaempft); text-decoration: none;
+              border-bottom: 1px solid var(--linie); }
+  footer .rechts { margin-top: .8rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="kicker">AWAPUHI WILD GINGER · REPAIR</p>
+      <h1>Cream Rinse</h1>
+      <p class="untertitel">Entwirrend. Belebend</p>
+      <p class="preis"><span>250 ml</span><span class="trenner">·</span><span>€ 37,45</span></p>
+      <p class="kern">Die proteinspendende Rezeptur stärkt strapaziertes Haar mit der KeraTriplex-Keratinprotein-Technologie, hilft bei der Reparatur der Haarfasern und schützt vor …</p>
+    </header>
+
+      <section><h2>Anwendung</h2><p>Großzügig vom Ansatz bis in die Spitzen einmassieren. Ausspülen. Tägliche Anwendung.</p></section>
+      <section><h2>Wirkung</h2><p>Die proteinspendende Rezeptur stärkt strapaziertes Haar mit der KeraTriplex-Keratinprotein-Technologie, hilft bei der Reparatur der Haarfasern und schützt vor weiteren Schäden.</p></section>
+      <section><h2>Gut zu wissen</h2><p>Awapuhi-Extrakt verleiht zusätzliche Geschmeidigkeit und Glanz.</p></section>
+      <section><h2>Merkmale</h2><ul class="chips"><li>extensionsgeeignet</li><li>sulfatfrei</li><li>farbschonend</li><li>parabenfrei</li><li>nussfrei</li></ul></section>
+      <section class="system">
+        <h2>Das System</h2>
+        <ol class="treppe"><li class=""><span class="nr">1</span>Säubern</li><li class="jetzt"><span class="nr">2</span>Pflegen</li><li class=""><span class="nr">3</span>Stylen</li><li class=""><span class="nr">4</span>Finish</li></ol>
+        <p class="systemsatz">Die Produkte einer Linie sind aufeinander abgestimmt. Ein Shampoo allein reinigt — erst mit Pflege, Styling und Finish aus derselben Linie hält das Ergebnis. Deshalb wird im Salon in vier Schritten beraten.</p>
+        <h3>So wird sie angewendet — REPAIR (bei geschädigtem/gefärbtem Haar)</h3>
+        <ol class="routine"><li><span class="rolle">Reinigung</span><span class="was">Nourishing Shampoo<span class="wann">täglich</span></span></li><li><span class="rolle">Pflege</span><span class="was">Cream Rinse<span class="wann">täglich</span></span></li><li><span class="rolle">Regeneration</span><span class="was">Intensive Treatment<span class="wann">wöchentlich</span></span></li><li><span class="rolle">Styling</span><span class="was">HydroMist Blowout Spray, Texturizing Sea Spray, HydroCream Whip, Styling Treatment Oil, Anti-Frizz Hairspray, Finishing Hairspray<span class="wann">täglich</span></span></li></ol>
+        <h3>Das gehört dazu</h3>
+        <div class="dazu"><div class="stufe"><h4>Säubern</h4><ul><li><a href="../awapuhi-wild-ginger-repair-nourishing-shampoo/">Nourishing Shampoo <span class="klein">250 ml</span></a></li><li><a href="../awapuhi-wild-ginger-hydrate-hydrasoft-shampoo/">HydraSoft Shampoo <span class="klein">250 ml · Hydrate</span></a></li></ul></div><div class="stufe"><h4>Pflegen</h4><ul><li><a href="../awapuhi-wild-ginger-repair-intensive-treatment/">Intensive Treatment <span class="klein">150 ml</span></a></li><li><a href="../awapuhi-wild-ginger-hydrate-hydrasoft-conditioner/">HydraSoft Conditioner <span class="klein">250 ml · Hydrate</span></a></li><li><a href="../awapuhi-wild-ginger-hydrate-hydrasoft-glossing-treatment/">HydraSoft Glossing Treatment <span class="klein">236 ml · Hydrate</span></a></li></ul></div><div class="stufe"><h4>Stylen</h4><ul><li><a href="../awapuhi-wild-ginger-style-hydrocream-whip/">HydroCream Whip <span class="klein">200 ml · Style</span></a></li><li><a href="../awapuhi-wild-ginger-style-hydromist-blow-out-spray/">Hydromist Blow-Out Spray <span class="klein">150 ml · Style</span></a></li><li><a href="../awapuhi-wild-ginger-style-styling-treatment-oil/">Styling Treatment Oil <span class="klein">150 ml · Style</span></a></li></ul></div><div class="stufe"><h4>Finish</h4><ul><li><a href="../awapuhi-wild-ginger-style-anti-frizz-hairspray/">Anti-Frizz Hairspray <span class="klein">307 ml · Style</span></a></li><li><a href="../awapuhi-wild-ginger-style-finishing-hairspray/">Finishing Hairspray <span class="klein">300 ml · Style</span></a></li></ul></div></div>
+      </section>
+    <section><h2>Daten</h2><dl><div><dt>Inhalt</dt><dd>250 ml</dd></div><div><dt>UVP</dt><dd>€ 37,45</dd></div><div><dt>pH-Wert</dt><dd>3,5</dd></div><div><dt>Artikelnummer</dt><dd>310612</dd></div></dl></section>
+    <footer>
+      <strong>BRENDEL &amp; SÖHNE</strong><br>
+      Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich<br>
+      <a href="mailto:office@brendel.at">office@brendel.at</a>
+      <div class="rechts">
+        <a href="/produktwissen/">Alle Produkte</a>
+        <a href="/impressum/">Impressum</a>
+        <a href="/kontakt/">Kontakt</a>
+        <a href="/datenschutz/">Datenschutz</a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

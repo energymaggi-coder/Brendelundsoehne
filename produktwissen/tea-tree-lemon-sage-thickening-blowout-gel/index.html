@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thickening Blowout Gel · Brendel &amp; Söhne</title>
+<meta name="description" content="Vitalisierend. Erfrischend. Stärkend. — Volumen &amp; Kraft für feines Haar (Thickening). Zitrone, Salbei, Pfefferminze, Teebaum, Panthenol.">
+<meta name="theme-color" content="#385B3B">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --marke: #385B3B;
+    --weiss: #fff;
+    --gedaempft: rgba(255,255,255,.74);
+    --leise: rgba(255,255,255,.52);
+    --linie: rgba(255,255,255,.2);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--marke); color: var(--weiss);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased; line-height: 1.5;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+             env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+  .wrap { max-width: 33rem; margin: 0 auto; padding: 0 1.4rem; }
+
+  /* Der Kopf. Kein Vollbild-Block, keine reservierte Bildschirmhoehe: was
+     zaehlt, steht oben, und direkt darunter geht die Seite weiter. */
+  header { padding: 2.2rem 0 0; }
+  .kicker {
+    font-size: .63rem; letter-spacing: .22em; text-transform: uppercase;
+    font-weight: 600; color: var(--gedaempft);
+  }
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif; font-style: italic;
+    font-weight: 600; line-height: 1.05; margin: .55rem 0 0;
+    font-size: clamp(2.1rem, 9.5vw, 3rem);
+  }
+  .untertitel {
+    font-size: .95rem; font-style: italic; color: var(--gedaempft);
+    margin-top: .55rem;
+  }
+  .preis {
+    font-family: "Cormorant Garamond", Georgia, serif; font-style: italic;
+    font-size: 1.6rem; margin-top: 1.4rem;
+    display: flex; align-items: baseline; gap: .7rem;
+  }
+  .preis .trenner { opacity: .45; }
+  .kern {
+    margin-top: .9rem; font-size: 1rem; line-height: 1.55;
+    color: var(--gedaempft);
+  }
+
+  main { padding-bottom: 2.5rem; }
+  section { border-top: 1px solid var(--linie); padding: 1.4rem 0; }
+  section:first-of-type { margin-top: 1.8rem; }
+  h2 {
+    font-size: .63rem; letter-spacing: .2em; text-transform: uppercase;
+    font-weight: 600; color: var(--leise); margin-bottom: .55rem;
+  }
+  section p { font-size: .97rem; line-height: 1.55; color: var(--gedaempft); }
+
+  .chips { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; }
+  .chips li {
+    border: 1px solid var(--linie); border-radius: 999px;
+    padding: .32rem .8rem; font-size: .8rem; color: var(--gedaempft);
+  }
+
+  /* Die vier Schritte als Treppe, der eigene hervorgehoben */
+  .treppe { list-style: none; display: flex; gap: .4rem; margin-bottom: 1rem; }
+  .treppe li {
+    flex: 1; text-align: center; font-size: .67rem; letter-spacing: .03em;
+    padding: .55rem .2rem; border: 1px solid var(--linie); border-radius: .6rem;
+    color: var(--leise); line-height: 1.3;
+  }
+  .treppe .nr { display: block; font-size: .58rem; opacity: .7; }
+  .treppe .jetzt {
+    background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.45);
+    color: var(--weiss); font-weight: 600;
+  }
+  .systemsatz { font-size: .93rem; line-height: 1.55; color: var(--gedaempft); }
+  .system h3 {
+    font-size: .63rem; letter-spacing: .18em; text-transform: uppercase;
+    font-weight: 600; color: var(--leise); margin: 1.5rem 0 .6rem;
+  }
+  .routine { list-style: none; }
+  .routine li {
+    display: flex; gap: .8rem; padding: .55rem 0;
+    border-top: 1px solid rgba(255,255,255,.09); font-size: .93rem;
+  }
+  .routine li:first-child { border-top: 0; padding-top: 0; }
+  .rolle { flex: 0 0 5.8rem; color: var(--leise); font-size: .8rem; padding-top: .1rem; }
+  .was { color: var(--gedaempft); }
+  .wann { display: block; font-size: .78rem; color: var(--leise); margin-top: .15rem; }
+  .dazu { display: grid; gap: 1rem; }
+  .stufe h4 {
+    font-size: .63rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--leise); font-weight: 600; margin-bottom: .35rem;
+  }
+  .stufe ul { list-style: none; }
+  .stufe li { font-size: .93rem; padding: .25rem 0; color: var(--gedaempft); }
+  .stufe a { color: var(--weiss); text-decoration: none;
+              border-bottom: 1px solid var(--linie); }
+  .klein { font-size: .78rem; color: var(--leise); }
+
+  dl { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  dt { font-size: .63rem; letter-spacing: .16em; text-transform: uppercase;
+        color: var(--leise); margin-bottom: .2rem; }
+  dd { font-size: .97rem; }
+
+  footer {
+    border-top: 1px solid var(--linie); padding: 1.5rem 0 2.4rem;
+    font-size: .76rem; color: var(--leise); line-height: 1.75;
+  }
+  footer a { color: var(--gedaempft); text-decoration: none;
+              border-bottom: 1px solid var(--linie); }
+  footer .rechts { margin-top: .8rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="kicker">TEA TREE · LEMON SAGE</p>
+      <h1>Thickening Blowout Gel</h1>
+      
+      <p class="preis"><span>150 ml</span><span class="trenner">·</span><span>€ 19,95</span></p>
+      <p class="kern">Vitalisierend. Erfrischend. Stärkend. — Volumen &amp; Kraft für feines Haar (Thickening). Zitrone, Salbei, Pfefferminze, Teebaum, Panthenol.</p>
+    </header>
+
+      <section><h2>Die Linie</h2><p>Vitalisierend. Erfrischend. Stärkend. — Volumen &amp; Kraft für feines Haar (Thickening). Zitrone, Salbei, Pfefferminze, Teebaum, Panthenol. Duft: reife Zitronen + Salbei, mediterran.</p></section>
+
+      <section class="system">
+        <h2>Das System</h2>
+        <ol class="treppe"><li class=""><span class="nr">1</span>Säubern</li><li class=""><span class="nr">2</span>Pflegen</li><li class="jetzt"><span class="nr">3</span>Stylen</li><li class=""><span class="nr">4</span>Finish</li></ol>
+        <p class="systemsatz">Die Produkte einer Linie sind aufeinander abgestimmt. Ein Shampoo allein reinigt — erst mit Pflege, Styling und Finish aus derselben Linie hält das Ergebnis. Deshalb wird im Salon in vier Schritten beraten.</p>
+        <h3>Das gehört dazu</h3>
+        <div class="dazu"><div class="stufe"><h4>Säubern</h4><ul><li><a href="../tea-tree-lemon-sage-thickening-shampoo/">Thickening Shampoo <span class="klein">300 ml</span></a></li><li><a href="../tea-tree-special-body-bar/">Body Bar <span class="klein">150 g · Special</span></a></li><li><a href="../tea-tree-special-color-shampoo/">Color Shampoo <span class="klein">300 ml · Special</span></a></li></ul></div><div class="stufe"><h4>Pflegen</h4><ul><li><a href="../tea-tree-lemon-sage-hair-lotion-keravis/">Hair Lotion Keravis <span class="klein">12 Ampullen à 6 ml</span></a></li><li><a href="../tea-tree-lemon-sage-thickening-conditioner/">Thickening Conditioner <span class="klein">300 ml</span></a></li><li><a href="../tea-tree-lemon-sage-thickening-treatment/">Thickening Treatment <span class="klein">150 ml</span></a></li></ul></div><div class="stufe"><h4>Stylen</h4><ul><li><a href="../tea-tree-lemon-sage-thickening-spray/">Thickening Spray <span class="klein">200 ml</span></a></li><li><a href="../tea-tree-lavender-mint-curl-refresh-foam/">Curl Refresh Foam <span class="klein">200 ml · Lavender Mint</span></a></li><li><a href="../tea-tree-lavender-mint-defining-gel/">Defining Gel <span class="klein">200 ml · Lavender Mint</span></a></li></ul></div></div>
+      </section>
+    <section><h2>Daten</h2><dl><div><dt>Inhalt</dt><dd>150 ml</dd></div><div><dt>UVP</dt><dd>€ 19,95</dd></div><div><dt>Artikelnummer</dt><dd>202365</dd></div></dl></section>
+    <footer>
+      <strong>BRENDEL &amp; SÖHNE</strong><br>
+      Handelsagentur für Premium-Haarprodukte · Wien &amp; Niederösterreich<br>
+      <a href="mailto:office@brendel.at">office@brendel.at</a>
+      <div class="rechts">
+        <a href="/produktwissen/">Alle Produkte</a>
+        <a href="/impressum/">Impressum</a>
+        <a href="/kontakt/">Kontakt</a>
+        <a href="/datenschutz/">Datenschutz</a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
