@@ -72,6 +72,19 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdro
 .final p{font-size:16.5px;color:var(--grey);max-width:560px;margin:0 auto 30px;font-weight:300}
 .final .weg{margin-top:26px;font-size:14px;color:var(--grey)}
 .final .weg a{color:var(--ink);font-weight:600}
+.anm{background:#fff;border:1px solid var(--line);border-radius:8px;padding:44px 46px;max-width:620px;margin:0 auto;text-align:left}
+.anm h3{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:30px;margin-bottom:8px}
+.anm .intro{font-size:15px;color:var(--grey);margin-bottom:28px}
+.anm label{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:var(--ink);margin:18px 0 7px}
+.anm input,.anm select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:2px;font-family:inherit;font-size:15px;color:var(--ink);background:#fff}
+.anm input:focus,.anm select:focus{outline:none;border-color:var(--aqua-d)}
+.anm .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.anm{padding:32px 24px}.anm .row{grid-template-columns:1fr}}
+.anm button{width:100%;margin-top:26px;background:var(--ink);color:#fff;border:none;padding:17px;border-radius:2px;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;letter-spacing:.02em}
+.anm button:hover{background:#000}
+.anm .fein{font-size:12.5px;color:var(--grey);margin-top:14px;text-align:center}
+.anm .fein a{color:var(--ink)}
+.anm .fehler{color:#B4241F;font-size:13px;margin-top:12px;display:none}
 .rec{background:var(--aqua);color:var(--dark);text-align:center;padding:64px 0}
 .rec h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(26px,3.4vw,38px);margin-bottom:12px}
 .rec p{font-size:15.5px;margin-bottom:24px}
@@ -87,7 +100,7 @@ footer a{color:#c9cdd1;text-decoration:none}footer a:hover{color:#fff}
 
 <header><nav class="nav">
   <a class="brand" href="https://brendelundsoehne.com/">Brendel &amp; Söhne</a>
-  <a class="cta" href="https://wa.me/43676842752300" target="_blank" rel="noopener">Anmelden</a>
+  <a class="cta" href="#anmelden">Anmelden</a>
 </nav></header>
 
 <section class="hero"><div class="wrap"><div class="hero-inner">
@@ -100,9 +113,9 @@ footer a{color:#c9cdd1;text-decoration:none}footer a:hover{color:#fff}
       <div class="fact"><b>rund 60 Minuten, mit Zeit für Fragen</b><span>Dauer</span></div>
       <div class="fact"><b>Online, als Videokonferenz</b><span>Wo</span></div>
     </div>
-    <div class="hero-actions"><a class="btn btn-primary" href="https://wa.me/43676842752300" target="_blank" rel="noopener">Über WhatsApp anmelden</a>
+    <div class="hero-actions"><a class="btn btn-primary" href="#anmelden">Zum Webinar anmelden</a>
       <a class="btn btn-ghost" href="#programm">Was gezeigt wird</a>
-      <small>Schreib uns kurz, wer dabei ist — wir melden dein Team an und schicken den Link.</small>
+      <small>Vier Felder, eine Minute — den Zugangslink schicken wir dir rechtzeitig vorher.</small>
     </div>
   </div>
   <img src="/produkte/assets/toner-model.jpg" alt="Pre-Bonded Lightener">
@@ -121,6 +134,59 @@ footer a{color:#c9cdd1;text-decoration:none}footer a:hover{color:#fff}
   <div class="spk-grid"><div class="spk"><div class="av">DB</div><div><h3>Daniel Birke</h3><div class="rolle">Trainer</div><p>Die Blondierung am echten Kopf — anrichten, auftragen, kontrollieren.</p></div></div><div class="spk"><div class="av">LB</div><div><h3>Lisa Bedrava</h3><div class="rolle">Trainerin Österreich, Wild Beauty</div><p>Die Toner in Echtzeit und die Fragerunde für die österreichischen Salons.</p></div></div></div>
 </div></section>
 
+<section id="anmelden"><div class="wrap"><div class="anm">
+  <h3>Anmelden</h3>
+  <p class="intro">Ein Zugang reicht für den ganzen Salon. Trag kurz ein, wer dabei ist — wir schicken den Zugangslink.</p>
+  <form id="anmeldeform" onsubmit="return absenden(event)">
+    <div class="row">
+      <div><label for="f_salon">Salon</label>
+        <input id="f_salon" name="salon" required autocomplete="organization"></div>
+      <div><label for="f_name">Dein Name</label>
+        <input id="f_name" name="name" required autocomplete="name"></div>
+    </div>
+    <label for="f_kontakt">E-Mail oder Telefon</label>
+    <input id="f_kontakt" name="kontakt" required
+           placeholder="damit wir den Zugangslink schicken können">
+    <label for="f_anzahl">Wie viele seht ihr zu?</label>
+    <select id="f_anzahl" name="anzahl"><option>1 Person</option><option>2 bis 3</option><option>4 und mehr</option><option>steht noch nicht fest</option></select>
+    <button type="submit">Anmeldung senden</button>
+    <div class="fehler" id="f_fehler">Bitte Salon, Name und einen Kontaktweg ausfüllen.</div>
+    <p class="fein">Die Anmeldung geht als Nachricht an uns — es wird nichts auf dieser Seite gespeichert.<br>
+      Kein WhatsApp? <a href="#" onclick="return absenden(event, true)">Per E-Mail schicken</a>.</p>
+  </form>
+</div></div></section>
+
+<script>
+// Die Anmeldung wird NICHT auf dieser Seite gespeichert. Aus den Feldern wird eine
+// fertige Nachricht gebaut, die sich in WhatsApp (oder im Mailprogramm) oeffnet —
+// dort, wo die Anfragen ohnehin bearbeitet werden. Deshalb braucht die Seite keinen
+// Server, keine Zugangsdaten und keine Datenhaltung.
+function absenden(ev, perMail) {
+  ev.preventDefault();
+  var g = function (id) { return (document.getElementById(id).value || '').trim(); };
+  var salon = g('f_salon'), name = g('f_name'), kontakt = g('f_kontakt'),
+      anzahl = g('f_anzahl');
+  if (!salon || !name || !kontakt) {
+    document.getElementById('f_fehler').style.display = 'block';
+    return false;
+  }
+  var text = 'Anmeldung Webinar 28. September\n\n'
+           + 'Salon: ' + salon + '\n'
+           + 'Name: ' + name + '\n'
+           + 'Kontakt: ' + kontakt + '\n'
+           + 'Dabei: ' + anzahl;
+  if (perMail) {
+    window.location.href = 'mailto:office@brendel.at'
+      + '?subject=' + encodeURIComponent('Anmeldung Webinar 28. September')
+      + '&body=' + encodeURIComponent(text);
+  } else {
+    window.open('https://wa.me/43676842752300?text='
+      + encodeURIComponent(text), '_blank', 'noopener');
+  }
+  return false;
+}
+</script>
+
 <section class="aktion"><div class="wrap"><div class="grid">
   <div>
     <span class="cat">Solange das Webinar läuft</span>
@@ -134,7 +200,7 @@ footer a{color:#c9cdd1;text-decoration:none}footer a:hover{color:#fff}
 <section class="final"><div class="wrap">
   <h2>Am 28. September 2026 <em>dabei sein</em></h2>
   <p>Das ganze Team kann zusehen — ein Zugang reicht für den Salon.</p>
-  <a class="btn btn-primary" href="https://wa.me/43676842752300" target="_blank" rel="noopener">Über WhatsApp anmelden</a>
+  <a class="btn btn-primary" href="#anmelden">Zum Webinar anmelden</a>
   <div class="weg">Lieber persönlich? <a href="https://wa.me/43676842752300" target="_blank" rel="noopener">Schreib uns auf WhatsApp</a>
     oder an <a href="mailto:office@brendel.at">office@brendel.at</a>.<br>
     Wer an dem Abend nicht kann, sagt Bescheid — wir schicken die Aufzeichnung.</div>
