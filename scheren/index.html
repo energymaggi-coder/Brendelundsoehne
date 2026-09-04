@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Donald Scott NYC — Sommer-Aktion · Brendel &amp; Söhne</title>
-<meta name="description" content="Sommer 2026: 10 % Rabatt und gratis Gravur auf alle Donald Scott NYC Scheren. Direkt per WhatsApp bestellen — exklusiv über Brendel & Söhne.">
+<title>Donald Scott NYC — Scheren-Aktion · Brendel &amp; Söhne</title>
+<meta name="description" content="10 % Rabatt und gratis Gravur auf alle Donald Scott NYC Scheren — verlängert bis 31. Oktober 2026. Direkt per WhatsApp bestellen — exklusiv über Brendel & Söhne.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -234,8 +234,8 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
     <div class="hero-text">
       <span class="eyebrow">Für Friseursalons — Donald Scott NYC</span>
       <h1>Zehn Prozent. <em>Gravur</em><br>inklusive.</h1>
-      <p class="sub">Donald Scott NYC — »Free Form Precision«: ausbalanciert, kugelgelagert, präzise. Profi-Werkzeug für ein ganzes Berufsleben. Den ganzen Sommer mit 10 % Rabatt und kostenloser Gravur.</p>
-      <p class="valid">1. Juli – 31. August · exklusiv über Brendel &amp; Söhne</p>
+      <p class="sub">Donald Scott NYC — »Free Form Precision«: ausbalanciert, kugelgelagert, präzise. Profi-Werkzeug für ein ganzes Berufsleben. Noch bis 31. Oktober mit 10 % Rabatt und kostenloser Gravur.</p>
+      <p class="valid">Verlängert bis 31. Oktober · exklusiv über Brendel &amp; Söhne</p>
       <div class="hero-cta">
         <a class="btn btn-solid" href="#besuch">Scheren-Besuch vereinbaren</a>
         <a class="btn btn-line" href="#modelle">Scheren ansehen</a>
@@ -248,7 +248,7 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
 
 <div class="action">
   <div class="wrap">
-    <div class="col"><div class="num serif">I</div><h3 class="serif">Zehn Prozent</h3><p>Auf jede Donald Scott Schere im Aktionszeitraum Juli und August.</p></div>
+    <div class="col"><div class="num serif">I</div><h3 class="serif">Zehn Prozent</h3><p>Auf jede Donald Scott Schere aus dem laufenden Sortiment — noch bis 31. Oktober.</p></div>
     <div class="col"><div class="num serif">II</div><h3 class="serif">Gravur inklusive</h3><p>Name oder Salonname kostenlos auf der Klinge — dein Werkzeug, dein Zeichen.</p></div>
     <div class="col"><div class="num serif">III</div><h3 class="serif">Mit Punkten gratis</h3><p>Genug Prämienpunkte gesammelt? Eine Schere ohne Aufpreis. Mehr dazu unten.</p></div>
   </div>
@@ -346,7 +346,7 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
       <div class="nm">Brendel &amp; Söhne</div>
       Offizieller Paul Mitchell &amp; Donald Scott NYC Vertrieb · Wien &amp; Niederösterreich<br>
       <a href="mailto:office@brendel.at">office@brendel.at</a> &nbsp;·&nbsp; <a href="tel:+43676842752300">+43 676 842 752 300</a> &nbsp;·&nbsp; <a href="https://wa.me/43676842752300" target="_blank">WhatsApp</a> &nbsp;·&nbsp; <a href="/impressum/">Impressum</a>
-      <small>Aktion gültig 1. Juli – 31. August 2026. Preise in Euro: Salon-Netto-EK sowie Endkundenpreis inkl. 19 % MwSt. (dt. USt.) ausgewiesen. Irrtümer und Zwischenverkauf vorbehalten.</small>
+      <small>Aktion gültig 1. Juli – 31. Oktober 2026 (verlängert). Titan und Dama sind als Neuheiten von den 10 % ausgenommen. Preise in Euro: Salon-Netto-EK sowie Endkundenpreis inkl. 19 % MwSt. (dt. USt.) ausgewiesen. Irrtümer und Zwischenverkauf vorbehalten.</small>
     </div>
     <div class="r">
       <div class="nm" style="font-style:italic">Donald Scott NYC</div>
@@ -420,6 +420,12 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
 <script>
 const ORDER_WA = "43676842752300"; // Bestell-WhatsApp
 const MODELS = [
+  {cat:"Neu im Sortiment", neu:true, items:[
+    {id:"titan", n:"Titan", size:"6.0\u2033", p:495, kein_rabatt:true,
+     d:"Titanbeschichtete Klinge, extrem verschlei\u00dfarm. Die leiseste im Sortiment \u2014 gebaut f\u00fcr Salons, die jeden Tag damit arbeiten."},
+    {id:"dama", n:"Dama", size:"6.0\u2033", p:795, kein_rabatt:true,
+     d:"Damaszener-Stahl, jede Klinge im Muster ein Unikat. Das Spitzenmodell von Donald Scott NYC."},
+  ]},
   {cat:"Premium / Signature", items:[
     {id:"iconic", n:"Iconic", size:"6.0″", p:445, pts:8900, d:"Ikonisches Design, maximale Ergonomie, breites Blatt, softer Schnitt."},
     {id:"twister", n:"Twister", size:"6.0″", p:445, pts:8900, d:"Drehbares Daumenauge entlastet das Gelenk und folgt jeder Bewegung."},
@@ -447,8 +453,10 @@ const MODELS = [
 ];
 const MAP={}; MODELS.forEach(g=>g.items.forEach(m=>MAP[m.id]=m));
 const eur = v => v.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2})+' €';
-const akt = p => Math.round(p*0.9*100)/100;
-const bruttoAkt = p => Math.round(p*0.9*1.19*100)/100; // Aktionspreis inkl. 19 % MwSt. (dt. USt.)
+// Titan und Dama sind Neuheiten und laut Katalog S. 43/44 von den 10 % ausgenommen —
+// deshalb rechnet alles ueber m (das Modell), nicht mehr ueber den nackten Preis.
+const akt = m => m.kein_rabatt ? m.p : Math.round(m.p*0.9*100)/100;
+const bruttoAkt = m => Math.round(akt(m)*1.19*100)/100; // inkl. 19 % MwSt. (dt. USt.)
 const bruttoSum = n => Math.round(n*1.19*100)/100;
 const CART = {};
 
@@ -461,9 +469,11 @@ const CART = {};
         <div class="pic"><img src="images/${m.id}.jpg" alt="Donald Scott ${m.n}"></div>
         <h4>${m.n}</h4><div class="size">${m.size}</div>
         <div class="desc">${m.d}</div>
-        <div class="pr"><span class="old">${eur(m.p)}</span><span class="new">${eur(akt(m.p))}</span></div>
-        <div class="ptsline">Salon-Netto · <b>${eur(bruttoAkt(m.p))}</b> inkl. MwSt.</div>
-        <div class="ptsline">oder ${m.pts.toLocaleString('de-DE')} Punkte · inkl. 10 %</div>
+        <div class="pr">${m.kein_rabatt ? `<span class="new">${eur(m.p)}</span>`
+          : `<span class="old">${eur(m.p)}</span><span class="new">${eur(akt(m))}</span>`}</div>
+        <div class="ptsline">Salon-Netto · <b>${eur(bruttoAkt(m))}</b> inkl. MwSt.</div>
+        <div class="ptsline">${m.kein_rabatt ? 'Neuheit — von den 10 % ausgenommen'
+          : `oder ${m.pts.toLocaleString('de-DE')} Punkte · inkl. 10 %`}</div>
         <button class="add" onclick="addToCart('${m.id}')">+ In den Warenkorb</button>
       </div>`;
     });
@@ -502,11 +512,11 @@ function renderCart(){
     body.innerHTML='<div class="cart-empty">Noch keine Schere gewählt.<br>Tippe bei einem Modell auf »In den Warenkorb«.</div>';
   } else {
     let h="";
-    ids.forEach(id=>{const m=MAP[id],q=CART[id],lp=akt(m.p)*q;sum+=lp;count+=q;
+    ids.forEach(id=>{const m=MAP[id],q=CART[id],lp=akt(m)*q;sum+=lp;count+=q;
       h+=`<div class="crow">
         <img src="images/${id}.jpg" alt="${m.n}">
         <div class="ci"><div class="cn">${m.n} <span style="font-size:.7em;color:var(--muted)">${m.size}</span></div>
-          <div class="cp">${eur(akt(m.p))} / Stück</div>
+          <div class="cp">${eur(akt(m))} / Stück</div>
           <div class="qty"><button onclick="setQty('${id}',-1)">−</button><span>${q}</span><button onclick="setQty('${id}',1)">+</button></div>
         </div>
         <button class="rm" onclick="removeItem('${id}')">Entfernen</button>
@@ -528,11 +538,11 @@ function sendOrder(){
   const vor=v('f_vorname'),nach=v('f_nachname'),adr=v('f_adresse');
   if(!vor||!nach||!adr){alert('Bitte Vorname, Nachname und Adresse ausfüllen — die brauchen wir für die Lieferung.');return;}
   let sum=0,lines=[];
-  ids.forEach(id=>{const m=MAP[id],q=CART[id],lp=akt(m.p)*q;sum+=lp;
-    lines.push(`• ${q}× ${m.n} ${m.size} — ${eur(akt(m.p))}/Stk = ${eur(lp)}`);});
+  ids.forEach(id=>{const m=MAP[id],q=CART[id],lp=akt(m)*q;sum+=lp;
+    lines.push(`• ${q}× ${m.n} ${m.size} — ${eur(akt(m))}/Stk = ${eur(lp)}` + (m.kein_rabatt ? ' (Neuheit, ohne Aktionsrabatt)' : ''));});
   const parts=[
-    "*Scheren-Bestellung — Sommer-Aktion*","",
-    ...lines,"",`*Summe netto: ${eur(sum)}* (inkl. 10 %, Gravur gratis)`,`Summe inkl. MwSt.: ${eur(bruttoSum(sum))}`,"",
+    "*Scheren-Bestellung — Donald Scott NYC*","",
+    ...lines,"",`*Summe netto: ${eur(sum)}* (10 % auf das laufende Sortiment, Gravur gratis)`,`Summe inkl. MwSt.: ${eur(bruttoSum(sum))}`,"",
     `Name: ${vor} ${nach}`,`Adresse: ${adr}`,
     v('f_salon')?`Salon: ${v('f_salon')}`:"",v('f_tel')?`Telefon: ${v('f_tel')}`:"",
     v('f_gravur')?`Gravur: ${v('f_gravur')}`:"",v('f_msg')?`Nachricht: ${v('f_msg')}`:"",
