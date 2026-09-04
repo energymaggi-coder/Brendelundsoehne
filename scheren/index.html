@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Donald Scott NYC — Scheren-Aktion · Brendel &amp; Söhne</title>
-<meta name="description" content="10 % Rabatt und gratis Gravur auf alle Donald Scott NYC Scheren — verlängert bis 31. Oktober 2026. Direkt per WhatsApp bestellen — exklusiv über Brendel & Söhne.">
+<meta name="description" content="Neu ab 7. September: Titan und Dama. Dazu 10 % Rabatt und gratis Gravur auf das laufende Donald-Scott-Sortiment — verlängert bis 31. Oktober 2026. Direkt per WhatsApp bestellen — exklusiv über Brendel & Söhne.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -238,7 +238,7 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
       <p class="valid">Verlängert bis 31. Oktober · exklusiv über Brendel &amp; Söhne</p>
       <div class="hero-cta">
         <a class="btn btn-solid" href="#besuch">Scheren-Besuch vereinbaren</a>
-        <a class="btn btn-line" href="#modelle">Scheren ansehen</a>
+        <a class="btn btn-line" href="#neuheiten">Die zwei Neuen ansehen</a>
       </div>
       <p class="herohint">Wir kommen mit der Scherenmappe direkt zu dir in den Salon — in Ruhe ansehen, ausprobieren, ganz ohne Kaufzwang. <a href="#besuch">Termin anfragen ›</a></p>
     </div>
@@ -253,6 +253,50 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
     <div class="col"><div class="num serif">III</div><h3 class="serif">Mit Punkten gratis</h3><p>Genug Prämienpunkte gesammelt? Eine Schere ohne Aufpreis. Mehr dazu unten.</p></div>
   </div>
 </div>
+
+<section class="block" id="neuheiten" style="background:#fff">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Ab 7. September &middot; neu im Sortiment</span>
+      <h2 class="serif">Zwei, die aus der Reihe fallen</h2>
+      <p class="lead">Donald Scott NYC bringt zwei Modelle, die es so noch nicht gab: eine mit
+      Werkstoff aus der Luft- und Raumfahrt, eine aus schwedischem Damast. Beide sind Neuheiten
+      und deshalb von der 10-%-Aktion ausgenommen &mdash; der Preis unten ist der volle Salon-Netto.</p>
+    </div>
+
+    <div class="feature">
+      <div class="pic"><img src="images/titan.jpg" alt="Donald Scott NYC Titan"></div>
+      <div class="meta">
+        <div class="tag">Neu &middot; Titanbeschichtung</div>
+        <h3 class="serif">Titan <span style="font-size:.5em;color:var(--muted)">6.0&Prime;</span></h3>
+        <p class="why">Pure Edge 10 mit Titanbeschichtung &mdash; ein Werkstoff aus der Luft- und
+        Raumfahrt, auf ein schlankes, ausbalanciertes Blatt gebracht. Semi-Offset, flaches
+        Schraubsystem, weicher Schnitt. F&uuml;r alle, die jeden Tag damit arbeiten und wollen,
+        dass die Schneide das aush&auml;lt.</p>
+        <div class="priceline"><span class="new">495,00 &euro;</span><span class="brut">&middot; <b>589,05 &euro;</b> inkl. MwSt.</span></div>
+        <div class="ptsline" style="font-size:12.5px;color:var(--muted);margin-top:4px">Salon-Netto &middot; Neuheit, von den 10&nbsp;% ausgenommen &middot; lieferbar ab 7.&nbsp;September</div>
+        <button class="add" onclick="addToCart('titan')">+ In den Warenkorb</button>
+      </div>
+    </div>
+
+    <hr class="rule">
+
+    <div class="feature rev" style="margin-top:30px">
+      <div class="pic"><img src="images/dama.jpg" alt="Donald Scott NYC Dama"></div>
+      <div class="meta">
+        <div class="tag">Neu &middot; das Spitzenmodell</div>
+        <h3 class="serif">Dama <span style="font-size:.5em;color:var(--muted)">6.0&Prime;</span></h3>
+        <p class="why">Schwedischer Damast-Stahl aus S&ouml;derfors, rund 150 Lagen gefaltet &mdash;
+        deshalb tr&auml;gt jede Klinge ein anderes Muster. Kr&auml;ftiges, kopflastiges Blatt mit
+        integrierter Schraube und maximaler H&auml;rte. Eine Schere, die man einmal kauft und
+        herzeigt.</p>
+        <div class="priceline"><span class="new">795,00 &euro;</span><span class="brut">&middot; <b>946,05 &euro;</b> inkl. MwSt.</span></div>
+        <div class="ptsline" style="font-size:12.5px;color:var(--muted);margin-top:4px">Salon-Netto &middot; Neuheit, von den 10&nbsp;% ausgenommen &middot; lieferbar ab 7.&nbsp;September</div>
+        <button class="add" onclick="addToCart('dama')">+ In den Warenkorb</button>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="block" id="modelle">
   <div class="wrap">
@@ -422,9 +466,9 @@ const ORDER_WA = "43676842752300"; // Bestell-WhatsApp
 const MODELS = [
   {cat:"Neu im Sortiment", neu:true, items:[
     {id:"titan", n:"Titan", size:"6.0\u2033", p:495, kein_rabatt:true,
-     d:"Titanbeschichtete Klinge, extrem verschlei\u00dfarm. Die leiseste im Sortiment \u2014 gebaut f\u00fcr Salons, die jeden Tag damit arbeiten."},
+     d:"Pure Edge 10 mit Titanbeschichtung, schlankes ausbalanciertes Blatt, Semi-Offset, weicher Schnitt."},
     {id:"dama", n:"Dama", size:"6.0\u2033", p:795, kein_rabatt:true,
-     d:"Damaszener-Stahl, jede Klinge im Muster ein Unikat. Das Spitzenmodell von Donald Scott NYC."},
+     d:"Schwedischer Damast (ca. 150 Lagen), kraeftiges kopflastiges Blatt, maximale Haerte \u2014 jede Klinge ein Unikat."},
   ]},
   {cat:"Premium / Signature", items:[
     {id:"iconic", n:"Iconic", size:"6.0″", p:445, pts:8900, d:"Ikonisches Design, maximale Ergonomie, breites Blatt, softer Schnitt."},
