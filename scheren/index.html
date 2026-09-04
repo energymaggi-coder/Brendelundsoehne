@@ -426,12 +426,19 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
       <div><label>Vorname <span class="req">*</span></label><input id="f_vorname"></div>
       <div><label>Nachname <span class="req">*</span></label><input id="f_nachname"></div>
       <div class="full"><label>Adresse (Straße, PLZ, Ort) <span class="req">*</span></label><input id="f_adresse"></div>
-      <div><label>Salon</label><input id="f_salon"></div>
+      <div><label>Salon <span class="req">*</span></label><input id="f_salon"></div>
       <div><label>Telefon</label><input id="f_tel"></div>
       <div class="full"><label>Gravur-Wunsch (gratis)</label><input id="f_gravur" placeholder="Name oder Salonname (nur Text)"></div>
       <div class="full"><label>Nachricht (optional)</label><textarea id="f_msg" rows="2"></textarea></div>
     </div>
     <p class="gutschein-hint">Deiner Lieferung liegt ein Gutschein für den gratis Erstschliff bei — am besten gleich aufbewahren.</p>
+    <button class="btn btn-ink" id="payBtn" onclick="startPayment()">Jetzt bezahlen — Apple Pay, Google Pay, Karte</button>
+    <div id="payPanel" style="display:none;margin:2px 0 9px">
+      <div id="payment-element" style="margin-bottom:12px"></div>
+      <button class="btn btn-ink" id="payConfirmBtn" onclick="confirmPayment()">Bezahlen</button>
+      <p id="payMsg" style="font-size:12px;color:var(--muted);font-weight:300;margin-top:8px"></p>
+    </div>
+    <span class="chat" style="display:block;margin:4px 0 9px">oder</span>
     <button class="btn btn-ink" onclick="sendOrder()">Bestellung per WhatsApp senden</button>
     <span class="chat">oder <a href="https://wa.me/43676842752300" target="_blank">einfach einen WhatsApp-Chat starten</a></span>
   </div>
@@ -579,8 +586,8 @@ function sendOrder(){
   const ids=Object.keys(CART);
   if(!ids.length){alert('Dein Warenkorb ist leer. Bitte lege zuerst eine Schere hinein.');return;}
   const v=id=>document.getElementById(id).value.trim();
-  const vor=v('f_vorname'),nach=v('f_nachname'),adr=v('f_adresse');
-  if(!vor||!nach||!adr){alert('Bitte Vorname, Nachname und Adresse ausfüllen — die brauchen wir für die Lieferung.');return;}
+  const vor=v('f_vorname'),nach=v('f_nachname'),adr=v('f_adresse'),sal=v('f_salon');
+  if(!vor||!nach||!adr||!sal){alert('Bitte Vorname, Nachname, Adresse und Salon ausfüllen — die brauchen wir für die Lieferung.');return;}
   let sum=0,lines=[];
   ids.forEach(id=>{const m=MAP[id],q=CART[id],lp=akt(m)*q;sum+=lp;
     lines.push(`• ${q}× ${m.n} ${m.size} — ${eur(akt(m))}/Stk = ${eur(lp)}` + (m.kein_rabatt ? ' (Neuheit, ohne Aktionsrabatt)' : ''));});
@@ -608,6 +615,57 @@ function hideToast(){var t=document.getElementById('toast');if(t)t.classList.rem
   function onScroll(){ if(mod && mod.getBoundingClientRect().top < window.innerHeight*0.6){ show(); window.removeEventListener('scroll',onScroll); clearTimeout(timer); } }
   window.addEventListener('scroll',onScroll,{passive:true});
 })();
+</script>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+// Eingebettete Zahlung (Apple Pay / Google Pay / Karte) — ersetzt WhatsApp nicht, steht daneben.
+// Der Kunde verlaesst brendelundsoehne.com nie: create-invoice.js legt im Hintergrund eine
+// Stripe-Rechnung (Praefix WEB-, fix 20 % AT-USt) an und liefert den PaymentIntent zurueck,
+// den Stripe.js hier direkt im Warenkorb anzeigt.
+var stripe = Stripe('pk_live_51O4lJhGamm77mtPPQhI6CissG0wsgVeE0llW6tXnfOvV04KEZGp68YwH6bSEEZIE1oHaauyZAn01nQzpg9VLQyYf006vUeK1gU');
+var payElements = null, payInvoiceUrl = null;
+
+async function startPayment(){
+  var v=id=>document.getElementById(id).value.trim();
+  var vor=v('f_vorname'),nach=v('f_nachname'),adr=v('f_adresse'),sal=v('f_salon');
+  if(!Object.keys(CART).length){alert('Dein Warenkorb ist leer. Bitte lege zuerst eine Schere hinein.');return;}
+  if(!vor||!nach||!adr||!sal){alert('Bitte Vorname, Nachname, Adresse und Salon ausfüllen — die brauchen wir für die Rechnung.');return;}
+  var btn=document.getElementById('payBtn');
+  btn.disabled=true; var btnLabel=btn.textContent; btn.textContent='Einen Moment …';
+  try{
+    var r=await fetch('/api/create-invoice',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({cart:CART,vorname:vor,nachname:nach,adresse:adr,salon:sal,tel:v('f_tel'),gravur:v('f_gravur'),msg:v('f_msg')})});
+    var data=await r.json();
+    if(!r.ok) throw new Error(data.error||'Die Zahlung konnte nicht vorbereitet werden.');
+    payInvoiceUrl = data.hostedInvoiceUrl;
+    payElements = stripe.elements({clientSecret:data.clientSecret, appearance:{theme:'flat',
+      variables:{colorPrimary:'#18181A', colorText:'#18181A', fontFamily:'Inter, sans-serif', borderRadius:'0px'}}});
+    var paymentEl = payElements.create('payment');
+    paymentEl.mount('#payment-element');
+    document.getElementById('payPanel').style.display='block';
+    btn.style.display='none';
+  }catch(e){
+    alert(e.message);
+    btn.disabled=false; btn.textContent=btnLabel;
+  }
+}
+
+async function confirmPayment(){
+  var btn=document.getElementById('payConfirmBtn');
+  btn.disabled=true; btn.textContent='Zahlung wird verarbeitet …';
+  var res=await stripe.confirmPayment({elements:payElements, confirmParams:{return_url:window.location.href}, redirect:'if_required'});
+  if(res.error){
+    document.getElementById('payMsg').textContent = res.error.message;
+    btn.disabled=false; btn.textContent='Bezahlen';
+  } else {
+    document.getElementById('payPanel').innerHTML =
+      '<p style="font-size:14px">Zahlung erfolgreich, danke! '
+      + (payInvoiceUrl ? '<a href="'+payInvoiceUrl+'" target="_blank" style="border-bottom:1px solid var(--hair)">Rechnung ansehen</a>' : '')
+      + '</p>';
+    CART={}; renderCart();
+  }
+}
 </script>
 </body>
 </html>
