@@ -31,12 +31,12 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,250,246,.92);backdro
 .hdr-r a.cta{color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px}
 
 .hero{background:var(--black);color:#F3F0E9}
-.hero-grid{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;min-height:82vh}
-.hero-text{padding:0 32px;display:flex;flex-direction:column;justify-content:center;padding-block:80px}
+.hero-grid{max-width:800px;margin:0 auto;min-height:64vh;display:flex;align-items:center}
+.hero-text{padding:0 32px;display:flex;flex-direction:column;justify-content:center;padding-block:90px;width:100%}
 .hero .eyebrow{color:#b7afa0}
 .hero h1{font-size:clamp(46px,7vw,92px);font-weight:300;margin:26px 0 0;color:#F6F3EC}
 .hero h1 em{font-style:italic;color:#cdbf9f}
-.hero .sub{margin-top:28px;max-width:430px;font-size:16px;line-height:1.75;color:#cfc9bd;font-weight:300}
+.hero .sub{margin-top:28px;max-width:580px;font-size:16px;line-height:1.75;color:#cfc9bd;font-weight:300}
 .hero .valid{margin-top:22px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#b7afa0}
 .hero-cta{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap}
 .herohint{margin-top:20px;font-size:13px;color:#b7afa0;font-weight:300}
@@ -49,8 +49,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,250,246,.92);backdro
 .vp-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px}
 .vp-grid label{display:flex;gap:8px;align-items:center;font-size:12.5px;color:var(--ink);font-weight:400;cursor:pointer}
 .vp-grid input{accent-color:var(--ink);width:15px;height:15px}
-.hero-img{position:relative;background:#100F0D}
-.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 
 .btn{display:inline-block;padding:14px 28px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
   text-decoration:none;font-weight:500;transition:.18s;border:1px solid transparent;cursor:pointer;font-family:inherit}
@@ -207,7 +205,6 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
 .gutschein-hint{font-size:11.5px;line-height:1.5;color:var(--muted);font-weight:300;margin:2px 0 14px}
 
 @media(max-width:880px){
-  .hero-grid{grid-template-columns:1fr}.hero-img{min-height:46vh;order:-1}.hero-img img{position:relative}
   .action .wrap{grid-template-columns:1fr;gap:34px;padding:48px 32px}
   .action .col{padding:0;border-left:none;border-top:1px solid var(--hair);padding-top:26px}
   .action .col:first-child{border-top:none;padding-top:0}
@@ -256,17 +253,8 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
       </p>
       <p class="herohint">Willst du sie zuerst in der Hand halten? Wir bringen sie dir direkt in den Salon — in Ruhe ansehen, ausprobieren, ganz ohne Kaufzwang. <a href="#besuch">Termin anfragen ›</a></p>
     </div>
-    <div class="hero-img"><img src="images/dama-hero.jpg" alt="Donald Scott NYC Dama — schwedischer Damast-Stahl, offizielle Produktaufnahme"></div>
   </div>
 </section>
-
-<div class="action">
-  <div class="wrap">
-    <div class="col"><div class="num serif">I</div><h3 class="serif">Zehn Prozent</h3><p>Auf jede Donald Scott Schere aus dem laufenden Sortiment — noch bis 31. Oktober.</p></div>
-    <div class="col"><div class="num serif">II</div><h3 class="serif">Gravur inklusive</h3><p>Name oder Salonname kostenlos auf der Klinge — dein Werkzeug, dein Zeichen.</p></div>
-    <div class="col"><div class="num serif">III</div><h3 class="serif">Mit Punkten gratis</h3><p>Genug Prämienpunkte gesammelt? Eine Schere ohne Aufpreis. Mehr dazu unten.</p></div>
-  </div>
-</div>
 
 <section class="block" id="neuheiten" style="background:#fff">
   <div class="wrap">
@@ -311,6 +299,14 @@ footer{background:var(--paper);border-top:1px solid var(--hair);padding:56px 32p
     </div>
   </div>
 </section>
+
+<div class="action">
+  <div class="wrap">
+    <div class="col"><div class="num serif">I</div><h3 class="serif">Zehn Prozent</h3><p>Auf jede Donald Scott Schere aus dem laufenden Sortiment — noch bis 31. Oktober.</p></div>
+    <div class="col"><div class="num serif">II</div><h3 class="serif">Gravur inklusive</h3><p>Name oder Salonname kostenlos auf der Klinge — dein Werkzeug, dein Zeichen.</p></div>
+    <div class="col"><div class="num serif">III</div><h3 class="serif">Mit Punkten gratis</h3><p>Genug Prämienpunkte gesammelt? Eine Schere ohne Aufpreis. Mehr dazu unten.</p></div>
+  </div>
+</div>
 
 <section class="block" id="modelle">
   <div class="wrap">
