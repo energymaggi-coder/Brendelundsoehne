@@ -634,7 +634,7 @@ async function startPayment(){
   var btn=document.getElementById('payBtn');
   btn.disabled=true; var btnLabel=btn.textContent; btn.textContent='Einen Moment …';
   try{
-    var r=await fetch('/api/create-invoice',{method:'POST',headers:{'Content-Type':'application/json'},
+    var r=await fetch('/api/create-invoice/',{method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({cart:CART,vorname:vor,nachname:nach,adresse:adr,salon:sal,tel:v('f_tel'),gravur:v('f_gravur'),msg:v('f_msg')})});
     var data=await r.json();
     if(!r.ok) throw new Error(data.error||'Die Zahlung konnte nicht vorbereitet werden.');
